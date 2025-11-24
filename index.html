@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly Letter - November 3-7, 2025</title>
+    <title>DelCampo High School Weekly Bulletin</title>
     <style>
         * {
             margin: 0;
@@ -12,152 +12,205 @@
         }
 
         body {
-            font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
             padding: 20px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             background-color: white;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
         .header {
-            background: linear-gradient(135deg, #2d5a27 0%, #4a7c4e 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-
-        .week-info {
-            font-size: 1.2em;
-            opacity: 0.95;
-            font-style: italic;
-        }
-
-        .content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-        }
-
-        .language-column {
-            padding: 40px;
-        }
-
-        .english {
-            border-right: 1px solid #e0e0e0;
-        }
-
-        .spanish {
-            background-color: #fafafa;
-        }
-
-        .language-label {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #2d5a27;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .letter-content {
-            font-size: 1em;
-        }
-
-        .letter-content p {
-            margin-bottom: 20px;
-        }
-
-        .greeting {
-            margin-bottom: 25px;
-        }
-
-        .schedule-section {
-            background-color: #f0f4ee;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 8px;
-            border-left: 4px solid #2d5a27;
-        }
-
-        .schedule-section h3 {
-            color: #2d5a27;
-            margin-bottom: 15px;
-            font-size: 1.2em;
-        }
-
-        .schedule-item {
-            padding: 8px 0;
-            border-bottom: 1px solid #d0d0d0;
-        }
-
-        .schedule-item:last-child {
-            border-bottom: none;
-        }
-
-        .day {
-            font-weight: bold;
-            color: #2d5a27;
-        }
-
-        .important-note {
-            background-color: #fff9e6;
-            padding: 15px;
-            margin: 20px 0;
-            border-left: 4px solid #ffc107;
-            border-radius: 4px;
-        }
-
-        .signature {
-            margin-top: 40px;
-        }
-
-        .signature-name {
-            font-weight: bold;
-            color: #2d5a27;
-            margin-top: 10px;
-        }
-
-        .footer {
-            background-color: #2d5a27;
+            background: linear-gradient(135deg, #2d5e3f 0%, #3a7d52 100%);
             color: white;
             padding: 30px;
             text-align: center;
         }
 
-        .footer-quote {
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header .date {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            color: #2d5e3f;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3a7d52;
+            font-weight: 600;
+        }
+
+        .message-box {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-left: 5px solid #3a7d52;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .english, .spanish {
+            margin-bottom: 25px;
+        }
+
+        .spanish {
             font-style: italic;
-            font-size: 1em;
-            margin-bottom: 20px;
-            line-height: 1.6;
         }
 
-        .footer-contact {
-            font-size: 0.95em;
-            opacity: 0.9;
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
 
-        @media (max-width: 768px) {
-            .content-wrapper {
-                grid-template-columns: 1fr;
+        .schedule-table th {
+            background-color: #2d5e3f;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .schedule-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .schedule-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .day-number {
+            background-color: #3a7d52;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .break-day {
+            background-color: #28a745;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .reminder-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .reminder-box strong {
+            color: #856404;
+            font-size: 1.1em;
+        }
+
+        .celebration-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 5px solid #ff9800;
+            padding: 25px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);
+        }
+
+        .celebration-box strong {
+            color: #e65100;
+            font-size: 1.2em;
+        }
+
+        .celebration-box p {
+            margin-top: 10px;
+            line-height: 1.7;
+            color: #333;
+            font-size: 1.05em;
+        }
+
+        .celebration-icon {
+            font-size: 2em;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .reminder-box p {
+            margin-top: 10px;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .signature {
+            margin-top: 25px;
+            padding-top: 15px;
+        }
+
+        .signature-name {
+            font-weight: 600;
+            color: #2d5e3f;
+            font-size: 1.1em;
+        }
+
+        .signature-title {
+            color: #666;
+            font-style: italic;
+        }
+
+        .slogan {
+            background-color: #3a7d52;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1em;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .footer {
+            background-color: #2d5e3f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
             }
-            
-            .english {
-                border-right: none;
-                border-bottom: 1px solid #e0e0e0;
+            .container {
+                box-shadow: none;
             }
         }
     </style>
@@ -165,118 +218,139 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>High Standards</h1>
-            <div class="week-info">DelCampo High School Weekly Bulletin | November 3-7, 2025</div>
+            <h1>🌿 DelCampo High School 🌿</h1>
+            <div class="date">Weekly Bulletin | November 24-28, 2025</div>
         </div>
 
-        <div class="content-wrapper">
-            <div class="language-column english">
-                <div class="language-label">English</div>
-                <div class="letter-content">
-                    <p class="greeting">Dear colleagues,</p>
-                    
-                    <p>As we approach this week's Parent-Teacher Conferences, I want to invite us all to pause and reflect on the profound opportunity we have before us. These conversations are not merely status reports—they are pedagogical moments where we can illuminate the learning journey of each student and strengthen our partnership with families in fulfilling our mission to <strong>Foster Students' Highest Potential</strong>.</p>
-
-                    <p>This has been a uniquely challenging year for every generation in our building. Our 9th graders are navigating their first year of high school, learning new systems and expectations. Our 12th graders are balancing their final year with the weight of college applications and future decisions. Our 10th graders are experiencing the rigor of AP courses for the first time. And our 11th graders are carrying the heaviest academic load in high school—eleven different classes—while building the foundation for their senior year.</p>
-
-                    <p>When you sit with parents on Wednesday, I encourage you to ground your conversations in the pedagogical work we do daily. Share specific examples of how their child engages in your classroom. Describe the learning strategies we're employing and how students are responding. Communicate clearly about our expectations and the intentional changes we've implemented this year. Help parents understand not just <em>what</em> their child is learning, but <em>how</em> they are growing as learners and thinkers.</p>
-
-                    <p>Remember, we are working to <strong>Inspire and be Inspired by High-quality Education</strong>. Your conversations should reflect this vision—celebrating growth, addressing challenges with specific strategies, and inviting families into partnership with us. These 15-minute conversations carry tremendous power to shape how families support their children at home.</p>
-
-                    <p>Thank you for approaching these conferences with the professionalism, care, and pedagogical clarity that defines our work.</p>
-
-                    <div class="schedule-section">
-                        <h3>📅 This Week's Schedule</h3>
-                        <div class="schedule-item"><span class="day">Monday, November 3</span> - Day 4</div>
-                        <div class="schedule-item"><span class="day">Tuesday, November 4</span> - Day 5 - Co-Curricular Clubs</div>
-                        <div class="schedule-item"><span class="day">Wednesday, November 5</span> - Day 6 - Parent-Teacher Conferences</div>
-                        <div class="schedule-item"><span class="day">Thursday, November 6</span> - Day 1</div>
-                        <div class="schedule-item"><span class="day">Friday, November 7</span> - Day 2</div>
+        <div class="content">
+            <!-- Principal's Message -->
+            <div class="section">
+                <h2 class="section-title">Principal's Message | Mensaje del Director</h2>
+                <div class="message-box">
+                    <div class="english">
+                        <p>Dear colleagues,</p>
+                        <p style="margin-top: 15px;">As we approach this week before Thanksgiving, I want to reflect on an essential truth about education: knowledge is not compartmentalized into isolated subjects, but rather a rich tapestry where disciplines interweave and strengthen one another.</p>
+                        <p style="margin-top: 15px;">In the real world, solving complex problems requires drawing from mathematics, science, language, history, and the arts simultaneously. A sustainable solution to environmental challenges needs scientific understanding, mathematical modeling, historical context, persuasive communication, and creative thinking—all working together as one.</p>
+                        <p style="margin-top: 15px;">This is why our shift toward multidisciplinary projects is so important. We are not simply changing how we assess; we are changing how we teach our students to think. When they learn to see connections across disciplines, they develop the kind of integrated thinking that will serve them throughout their lives.</p>
+                        <p style="margin-top: 15px;">As we begin implementing these projects, I encourage you to embrace the collaboration required. Talk with your colleagues across departments. Find the natural intersections between your subjects. Model for students what it means to think interdisciplinarily.</p>
+                        <p style="margin-top: 15px;">This approach is challenging, but it is also deeply meaningful work. Thank you for your commitment to this vision.</p>
                     </div>
-
-                    <div class="important-note">
-                        <strong>🎯 Tuesday - Co-Curricular Clubs Day</strong><br>
-                        Please ensure students are directed to their respective club activities. This is an important opportunity for our students to develop their interests beyond the classroom.
+                    <div class="spanish">
+                        <p>Queridos colegas,</p>
+                        <p style="margin-top: 15px;">Mientras nos acercamos a esta semana antes de Acción de Gracias, quiero reflexionar sobre una verdad esencial en educación: el conocimiento no está compartimentado en materias aisladas, sino que es un rico tapiz donde las disciplinas se entrelazan y se fortalecen mutuamente.</p>
+                        <p style="margin-top: 15px;">En el mundo real, resolver problemas complejos requiere recurrir simultáneamente a las matemáticas, las ciencias, el lenguaje, la historia y las artes. Una solución sostenible a los desafíos ambientales necesita comprensión científica, modelado matemático, contexto histórico, comunicación persuasiva y pensamiento creativo—todo trabajando junto como uno.</p>
+                        <p style="margin-top: 15px;">Por eso nuestro cambio hacia proyectos multidisciplinarios es tan importante. No estamos simplemente cambiando cómo evaluamos; estamos cambiando cómo enseñamos a nuestros estudiantes a pensar. Cuando aprenden a ver conexiones entre disciplinas, desarrollan el tipo de pensamiento integrado que les servirá toda la vida.</p>
+                        <p style="margin-top: 15px;">Mientras comenzamos a implementar estos proyectos, les animo a abrazar la colaboración requerida. Hablen con sus colegas de otros departamentos. Encuentren las intersecciones naturales entre sus materias. Modelen para los estudiantes lo que significa pensar interdisciplinariamente.</p>
+                        <p style="margin-top: 15px;">Este enfoque es desafiante, pero también es un trabajo profundamente significativo. Gracias por su compromiso con esta visión.</p>
                     </div>
-
-                    <div class="important-note">
-                        <strong>👥 Wednesday - Parent-Teacher Conferences</strong><br>
-                        <strong>Time:</strong> 7:30 a.m. - 4:00 p.m.<br>
-                        <strong>Lunch Break:</strong> 11:00 - 11:45 a.m. (all staff)<br>
-                        <strong>Meeting Duration:</strong> Maximum 15 minutes per conference<br>
-                        <strong>Students:</strong> Not required to attend<br><br>
-                        We will pause our rotating schedule on Wednesday for these important conferences. If parents need extended time beyond 15 minutes, they should schedule additional appointments through the office. We will resume with Day 1 on Thursday.
-                    </div>
-
-                    <p>As you prepare for Wednesday's conferences, take time to reflect on the specific growth you've witnessed in each student. Your pedagogical insights and clear communication will help families understand how to best support their children through this challenging year. Together, we continue to foster each student's highest potential.</p>
-
                     <div class="signature">
-                        <p>Have a wonderful week,</p>
-                        <p class="signature-name">Nicolás Rivas</p>
-                        <p>High School Principal</p>
+                        <div class="english">
+                            <p>Have a wonderful week,</p>
+                            <p class="signature-name">Nicolás Rivas</p>
+                            <p class="signature-title">High School Principal</p>
+                        </div>
+                        <div class="spanish" style="margin-top: 15px;">
+                            <p>Que tengan una excelente semana,</p>
+                            <p class="signature-name">Nicolás Rivas</p>
+                            <p class="signature-title">Director de High School</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="language-column spanish">
-                <div class="language-label">Español</div>
-                <div class="letter-content">
-                    <p class="greeting">Queridos colegas,</p>
-                    
-                    <p>A medida que nos acercamos a las Conferencias de Padres-Maestros de esta semana, quiero invitarnos a todos a hacer una pausa y reflexionar sobre la profunda oportunidad que tenemos ante nosotros. Estas conversaciones no son simplemente informes de estado—son momentos pedagógicos donde podemos iluminar el viaje de aprendizaje de cada estudiante y fortalecer nuestra colaboración con las familias en el cumplimiento de nuestra misión de <strong>Fomentar el Máximo Potencial de los Estudiantes</strong>.</p>
+            <!-- Weekly Schedule -->
+            <div class="section">
+                <h2 class="section-title">Weekly Schedule | Horario Semanal</h2>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Day | Día</th>
+                            <th>Date | Fecha</th>
+                            <th>Rotation Day | Día de Rotación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday | Lunes</td>
+                            <td>November 24</td>
+                            <td><span class="day-number">Day 1</span></td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday | Martes</td>
+                            <td>November 25</td>
+                            <td><span class="day-number">Day 2</span></td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday | Miércoles</td>
+                            <td>November 26</td>
+                            <td><span class="day-number">Day 3</span></td>
+                        </tr>
+                        <tr>
+                            <td>Thursday | Jueves</td>
+                            <td>November 27</td>
+                            <td><span class="break-day">Thanksgiving Break</span></td>
+                        </tr>
+                        <tr>
+                            <td>Friday | Viernes</td>
+                            <td>November 28</td>
+                            <td><span class="break-day">Thanksgiving Break</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                    <p>Este ha sido un año singularmente desafiante para cada generación en nuestro edificio. Nuestros estudiantes de 9º grado están navegando su primer año de high school, aprendiendo nuevos sistemas y expectativas. Nuestros estudiantes de 12º grado están equilibrando su año final con el peso de las aplicaciones universitarias y decisiones futuras. Nuestros estudiantes de 10º grado están experimentando el rigor de los cursos AP por primera vez. Y nuestros estudiantes de 11º grado están llevando la carga académica más pesada de high school—once clases diferentes—mientras construyen la base para su último año.</p>
-
-                    <p>Cuando se sienten con los padres el miércoles, los animo a fundamentar sus conversaciones en el trabajo pedagógico que hacemos diariamente. Compartan ejemplos específicos de cómo su hijo o hija participa en su clase. Describan las estrategias de aprendizaje que estamos empleando y cómo están respondiendo los estudiantes. Comuniquen claramente sobre nuestras expectativas y los cambios intencionales que hemos implementado este año. Ayuden a los padres a entender no solo <em>qué</em> está aprendiendo su hijo, sino <em>cómo</em> están creciendo como aprendices y pensadores.</p>
-
-                    <p>Recuerden, estamos trabajando para <strong>Inspirar y Ser Inspirados por Educación de Alta Calidad</strong>. Sus conversaciones deben reflejar esta visión—celebrando el crecimiento, abordando los desafíos con estrategias específicas, e invitando a las familias a asociarse con nosotros. Estas conversaciones de 15 minutos tienen un tremendo poder para moldear cómo las familias apoyan a sus hijos en casa.</p>
-
-                    <p>Gracias por abordar estas conferencias con el profesionalismo, cuidado y claridad pedagógica que define nuestro trabajo.</p>
-
-                    <div class="schedule-section">
-                        <h3>📅 Horario de Esta Semana</h3>
-                        <div class="schedule-item"><span class="day">Lunes, 3 de noviembre</span> - Día 4</div>
-                        <div class="schedule-item"><span class="day">Martes, 4 de noviembre</span> - Día 5 - Clubes Co-Curriculares</div>
-                        <div class="schedule-item"><span class="day">Miércoles, 5 de noviembre</span> - Día 6 - Conferencias Padres-Maestros</div>
-                        <div class="schedule-item"><span class="day">Jueves, 6 de noviembre</span> - Día 1</div>
-                        <div class="schedule-item"><span class="day">Viernes, 7 de noviembre</span> - Día 2</div>
+            <!-- Important Reminders -->
+            <div class="section">
+                <h2 class="section-title">Important Reminders | Recordatorios Importantes</h2>
+                
+                <!-- Celebration Announcement -->
+                <div class="celebration-box">
+                    <div class="english">
+                        <p><span class="celebration-icon">🎉</span><strong>GREAT NEWS!</strong></p>
+                        <p><strong>This Wednesday, November 26th, teachers can leave at 1:30 PM to start your well-deserved Thanksgiving break!</strong></p>
+                        <p>Enjoy the extra time with your families and loved ones. You've earned it! 🦃🍂</p>
                     </div>
-
-                    <div class="important-note">
-                        <strong>🎯 Martes - Día de Clubes Co-Curriculares</strong><br>
-                        Por favor asegúrese de dirigir a los estudiantes a sus respectivas actividades de clubes. Esta es una oportunidad importante para que nuestros estudiantes desarrollen sus intereses más allá del aula.
+                    <div class="spanish" style="margin-top: 20px;">
+                        <p><span class="celebration-icon">🎉</span><strong>¡EXCELENTE NOTICIA!</strong></p>
+                        <p><strong>Este miércoles 26 de noviembre, los maestros pueden salir a la 1:30 PM para comenzar su merecido descanso de Acción de Gracias!</strong></p>
+                        <p>¡Disfruten el tiempo extra con sus familias y seres queridos. Se lo han ganado! 🦃🍂</p>
                     </div>
+                </div>
 
-                    <div class="important-note">
-                        <strong>👥 Miércoles - Conferencias de Padres-Maestros</strong><br>
-                        <strong>Horario:</strong> 7:30 a.m. - 4:00 p.m.<br>
-                        <strong>Descanso para Almuerzo:</strong> 11:00 - 11:45 a.m. (todo el personal)<br>
-                        <strong>Duración de Reuniones:</strong> Máximo 15 minutos por conferencia<br>
-                        <strong>Estudiantes:</strong> No se requiere su asistencia<br><br>
-                        Pausaremos nuestro horario rotativo el miércoles para estas importantes conferencias. Si los padres necesitan tiempo adicional más allá de 15 minutos, deben programar citas adicionales a través de la oficina. Reanudaremos con el Día 1 el jueves.
+                <div class="reminder-box">
+                    <strong>IMPORTANT | IMPORTANTE:</strong>
+                    <div class="english">
+                        <p><strong>Post-Election Planning:</strong></p>
+                        <p>Everybody should be taking their computers home and awaiting instructions on how we will work after the elections on November 30th. Please pay close attention to your emails and the WhatsApp group for information.</p>
                     </div>
+                    <div class="spanish" style="margin-top: 15px;">
+                        <p><strong>Planificación Post-Electoral:</strong></p>
+                        <p>Todos deben llevarse sus computadoras a casa y estar atentos a las instrucciones sobre cómo trabajaremos después de las elecciones del 30 de noviembre. Por favor, presten mucha atención a sus correos electrónicos y al grupo de WhatsApp para recibir información.</p>
+                    </div>
+                </div>
 
-                    <p>Mientras se preparan para las conferencias del miércoles, tomen tiempo para reflexionar sobre el crecimiento específico que han presenciado en cada estudiante. Sus conocimientos pedagógicos y comunicación clara ayudarán a las familias a comprender cómo apoyar mejor a sus hijos durante este año desafiante. Juntos, continuamos fomentando el máximo potencial de cada estudiante.</p>
-
-                    <div class="signature">
-                        <p>Que tengan una semana maravillosa,</p>
-                        <p class="signature-name">Nicolás Rivas</p>
-                        <p>Director de High School</p>
+                <div class="reminder-box" style="margin-top: 20px;">
+                    <strong>IMPORTANT | IMPORTANTE:</strong>
+                    <div class="english">
+                        <p><strong>This week, please explain to students:</strong></p>
+                        <p>This quarter we will not have traditional exams (except for AP classes). Instead, the grades for exams will be obtained through the multidisciplinary projects that some of you have already started working on.</p>
+                        <p style="margin-top: 10px;">If you haven't finished planning how your project is going to work, please tell students that they will be advised on how this will work soon. Talk to your peers about it so we can have those projects clearly defined and being executed by our students.</p>
+                    </div>
+                    <div class="spanish" style="margin-top: 20px;">
+                        <p><strong>Esta semana, por favor expliquen a los estudiantes:</strong></p>
+                        <p>Este trimestre no tendremos exámenes tradicionales (excepto para las clases AP). En su lugar, las calificaciones de los exámenes se obtendrán a través de los proyectos multidisciplinarios en los que algunos de ustedes ya han comenzado a trabajar.</p>
+                        <p style="margin-top: 10px;">Si no han terminado de planificar cómo funcionará su proyecto, por favor digan a los estudiantes que se les informará sobre cómo funcionará esto pronto. Hablen con sus colegas al respecto para que podamos tener esos proyectos claramente definidos y siendo ejecutados por nuestros estudiantes.</p>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="slogan">
+            "High expectations are the key to everything | Las altas expectativas son la clave para todo"
         </div>
 
         <div class="footer">
-            <div class="footer-quote">
-                "The mediocre teacher tells. The good teacher explains. The superior teacher demonstrates. The great teacher inspires."<br>
-                - William Arthur Ward<br><br>
-                "El maestro mediocre cuenta. El buen maestro explica. El maestro superior demuestra. El gran maestro inspira."<br>
-                - William Arthur Ward
-            </div>
-            <div class="footer-contact">
-                DelCampo High School | nrivas@delcamposchool.org | +504 96505926
-            </div>
+            <p>DelCampo High School | Email: nrivas@delcamposchool.org | Phone: +504 96505926</p>
         </div>
     </div>
 </body>
