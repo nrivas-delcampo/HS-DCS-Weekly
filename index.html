@@ -107,8 +107,8 @@
             font-weight: 600;
         }
 
-        .break-day {
-            background-color: #28a745;
+        .no-school {
+            background-color: #dc3545;
             color: white;
             padding: 4px 10px;
             border-radius: 4px;
@@ -127,37 +127,38 @@
             font-size: 1.1em;
         }
 
-        .celebration-box {
-            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-            border-left: 5px solid #ff9800;
-            padding: 25px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);
+        .reminder-box p {
+            margin-top: 10px;
+            line-height: 1.7;
+            color: #333;
         }
 
-        .celebration-box strong {
-            color: #e65100;
+        .urgent-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+            border: 3px solid #dc3545;
+            border-left: 8px solid #dc3545;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+        }
+
+        .urgent-box strong {
+            color: #c82333;
             font-size: 1.2em;
         }
 
-        .celebration-box p {
+        .urgent-box p {
             margin-top: 10px;
             line-height: 1.7;
             color: #333;
             font-size: 1.05em;
         }
 
-        .celebration-icon {
-            font-size: 2em;
+        .urgent-icon {
+            font-size: 1.5em;
             display: inline-block;
-            margin-right: 10px;
-        }
-
-        .reminder-box p {
-            margin-top: 10px;
-            line-height: 1.7;
-            color: #333;
+            margin-right: 8px;
         }
 
         .signature {
@@ -213,13 +214,37 @@
                 box-shadow: none;
             }
         }
+
+        /* Christmas decorative elements */
+        .christmas-decoration {
+            text-align: center;
+            font-size: 1.5em;
+            padding: 15px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-top: 2px solid #3a7d52;
+            border-bottom: 2px solid #3a7d52;
+        }
+
+        .section-title::before {
+            content: "⭐ ";
+            color: #ffc107;
+        }
+
+        .section-title::after {
+            content: " ⭐";
+            color: #ffc107;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🌿 DelCampo High School 🌿</h1>
-            <div class="date">Weekly Bulletin | November 24-28, 2025</div>
+            <h1>🎄 DelCampo High School 🎄</h1>
+            <div class="date">Weekly Bulletin | December 1-5, 2025 ❄️</div>
+        </div>
+
+        <div class="christmas-decoration">
+            🎅 ⭐ 🎁 ❄️ 🔔 ⛄ 🌟 🎄 🌟 ⛄ 🔔 ❄️ 🎁 ⭐ 🎅
         </div>
 
         <div class="content">
@@ -229,28 +254,30 @@
                 <div class="message-box">
                     <div class="english">
                         <p>Dear colleagues,</p>
-                        <p style="margin-top: 15px;">As we approach this week before Thanksgiving, I want to reflect on an essential truth about education: knowledge is not compartmentalized into isolated subjects, but rather a rich tapestry where disciplines interweave and strengthen one another.</p>
-                        <p style="margin-top: 15px;">In the real world, solving complex problems requires drawing from mathematics, science, language, history, and the arts simultaneously. A sustainable solution to environmental challenges needs scientific understanding, mathematical modeling, historical context, persuasive communication, and creative thinking—all working together as one.</p>
-                        <p style="margin-top: 15px;">This is why our shift toward multidisciplinary projects is so important. We are not simply changing how we assess; we are changing how we teach our students to think. When they learn to see connections across disciplines, they develop the kind of integrated thinking that will serve them throughout their lives.</p>
-                        <p style="margin-top: 15px;">As we begin implementing these projects, I encourage you to embrace the collaboration required. Talk with your colleagues across departments. Find the natural intersections between your subjects. Model for students what it means to think interdisciplinarily.</p>
-                        <p style="margin-top: 15px;">This approach is challenging, but it is also deeply meaningful work. Thank you for your commitment to this vision.</p>
+                        <p style="margin-top: 15px;">As we begin December and navigate the complexities of final projects, AP exams, and evolving schedules, I want to reflect on one of the most crucial values we can teach our students—and one we must model ourselves: <strong>adaptation</strong>.</p>
+                        <p style="margin-top: 15px;">The world our students will inherit is one of constant change. Technologies evolve, careers transform, global challenges shift, and solutions that worked yesterday may not work tomorrow. The ability to adapt—to remain flexible, resilient, and creative in the face of uncertainty—is not just a helpful skill; it is essential for success and well-being.</p>
+                        <p style="margin-top: 15px;">But here's the profound truth: our students learn adaptation not primarily from what we tell them, but from what they see us do. When we adjust our teaching strategies to meet new challenges, when we pivot our plans with grace rather than frustration, when we embrace change as an opportunity for growth rather than a threat to stability—we are teaching them the most important lesson of all.</p>
+                        <p style="margin-top: 15px;">This week, as we continue to refine our schedule around AP exams and project evaluations, we are modeling adaptation in real time. Our willingness to stay flexible, to communicate clearly through uncertainty, and to keep our focus on what truly matters—student learning and growth—demonstrates the very mindset we hope to cultivate in them.</p>
+                        <p style="margin-top: 15px;">Adaptation is not about abandoning our values or lowering our standards. It's about finding new pathways to reach our goals when the original road is blocked. It's about staying committed to excellence while remaining open to better ways of achieving it.</p>
+                        <p style="margin-top: 15px;">Thank you for embodying this spirit of adaptability and for showing our students what it means to thrive in a changing world.</p>
                     </div>
                     <div class="spanish">
                         <p>Queridos colegas,</p>
-                        <p style="margin-top: 15px;">Mientras nos acercamos a esta semana antes de Acción de Gracias, quiero reflexionar sobre una verdad esencial en educación: el conocimiento no está compartimentado en materias aisladas, sino que es un rico tapiz donde las disciplinas se entrelazan y se fortalecen mutuamente.</p>
-                        <p style="margin-top: 15px;">En el mundo real, resolver problemas complejos requiere recurrir simultáneamente a las matemáticas, las ciencias, el lenguaje, la historia y las artes. Una solución sostenible a los desafíos ambientales necesita comprensión científica, modelado matemático, contexto histórico, comunicación persuasiva y pensamiento creativo—todo trabajando junto como uno.</p>
-                        <p style="margin-top: 15px;">Por eso nuestro cambio hacia proyectos multidisciplinarios es tan importante. No estamos simplemente cambiando cómo evaluamos; estamos cambiando cómo enseñamos a nuestros estudiantes a pensar. Cuando aprenden a ver conexiones entre disciplinas, desarrollan el tipo de pensamiento integrado que les servirá toda la vida.</p>
-                        <p style="margin-top: 15px;">Mientras comenzamos a implementar estos proyectos, les animo a abrazar la colaboración requerida. Hablen con sus colegas de otros departamentos. Encuentren las intersecciones naturales entre sus materias. Modelen para los estudiantes lo que significa pensar interdisciplinariamente.</p>
-                        <p style="margin-top: 15px;">Este enfoque es desafiante, pero también es un trabajo profundamente significativo. Gracias por su compromiso con esta visión.</p>
+                        <p style="margin-top: 15px;">Al comenzar diciembre y navegar las complejidades de los proyectos finales, los exámenes AP y los horarios cambiantes, quiero reflexionar sobre uno de los valores más cruciales que podemos enseñar a nuestros estudiantes—y uno que debemos modelar nosotros mismos: <strong>la adaptación</strong>.</p>
+                        <p style="margin-top: 15px;">El mundo que nuestros estudiantes heredarán es uno de cambio constante. Las tecnologías evolucionan, las carreras se transforman, los desafíos globales cambian, y las soluciones que funcionaron ayer pueden no funcionar mañana. La capacidad de adaptarse—de permanecer flexibles, resilientes y creativos frente a la incertidumbre—no es solo una habilidad útil; es esencial para el éxito y el bienestar.</p>
+                        <p style="margin-top: 15px;">Pero aquí está la verdad profunda: nuestros estudiantes aprenden la adaptación no principalmente de lo que les decimos, sino de lo que nos ven hacer. Cuando ajustamos nuestras estrategias de enseñanza para enfrentar nuevos desafíos, cuando cambiamos nuestros planes con gracia en lugar de frustración, cuando abrazamos el cambio como una oportunidad de crecimiento en lugar de una amenaza a la estabilidad—estamos enseñándoles la lección más importante de todas.</p>
+                        <p style="margin-top: 15px;">Esta semana, mientras continuamos refinando nuestro horario alrededor de los exámenes AP y las evaluaciones de proyectos, estamos modelando la adaptación en tiempo real. Nuestra disposición a mantenernos flexibles, a comunicarnos claramente a través de la incertidumbre, y a mantener nuestro enfoque en lo que realmente importa—el aprendizaje y crecimiento de los estudiantes—demuestra la mentalidad que esperamos cultivar en ellos.</p>
+                        <p style="margin-top: 15px;">La adaptación no se trata de abandonar nuestros valores o bajar nuestros estándares. Se trata de encontrar nuevos caminos para alcanzar nuestras metas cuando el camino original está bloqueado. Se trata de permanecer comprometidos con la excelencia mientras permanecemos abiertos a mejores formas de lograrla.</p>
+                        <p style="margin-top: 15px;">Gracias por encarnar este espíritu de adaptabilidad y por mostrar a nuestros estudiantes lo que significa prosperar en un mundo cambiante.</p>
                     </div>
                     <div class="signature">
                         <div class="english">
-                            <p>Have a wonderful week,</p>
+                            <p>With gratitude and respect,</p>
                             <p class="signature-name">Nicolás Rivas</p>
                             <p class="signature-title">High School Principal</p>
                         </div>
                         <div class="spanish" style="margin-top: 15px;">
-                            <p>Que tengan una excelente semana,</p>
+                            <p>Con gratitud y respeto,</p>
                             <p class="signature-name">Nicolás Rivas</p>
                             <p class="signature-title">Director de High School</p>
                         </div>
@@ -272,81 +299,116 @@
                     <tbody>
                         <tr>
                             <td>Monday | Lunes</td>
-                            <td>November 24</td>
-                            <td><span class="day-number">Day 1</span></td>
+                            <td>December 1</td>
+                            <td><span class="no-school">No School Day</span></td>
                         </tr>
                         <tr>
                             <td>Tuesday | Martes</td>
-                            <td>November 25</td>
-                            <td><span class="day-number">Day 2</span></td>
+                            <td>December 2</td>
+                            <td><span class="day-number">Day 4</span></td>
                         </tr>
                         <tr>
                             <td>Wednesday | Miércoles</td>
-                            <td>November 26</td>
-                            <td><span class="day-number">Day 3</span></td>
+                            <td>December 3</td>
+                            <td><span class="day-number">Day 5</span></td>
                         </tr>
                         <tr>
                             <td>Thursday | Jueves</td>
-                            <td>November 27</td>
-                            <td><span class="break-day">Thanksgiving Break</span></td>
+                            <td>December 4</td>
+                            <td><span class="day-number">Day 6</span></td>
                         </tr>
                         <tr>
                             <td>Friday | Viernes</td>
-                            <td>November 28</td>
-                            <td><span class="break-day">Thanksgiving Break</span></td>
+                            <td>December 5</td>
+                            <td><span class="day-number">Day 1</span></td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <!-- Urgent Communication -->
+            <div class="section">
+                <h2 class="section-title">⚠️ URGENT: Stay Informed | URGENTE: Manténgase Informado ⚠️</h2>
+                <div class="urgent-box">
+                    <div class="english">
+                        <p><span class="urgent-icon">📢</span><strong>CRITICAL COMMUNICATION:</strong></p>
+                        <p><strong>Teachers, please pay close attention to our WhatsApp group, your email, and Slack for updates on how we will continue this week (virtual or regular classes).</strong></p>
+                        <p style="margin-top: 10px;">This depends on the monitoring we are conducting of different situations in the city. We need everyone to stay alert and responsive to communications. Check these channels frequently for the latest updates.</p>
+                    </div>
+                    <div class="spanish" style="margin-top: 20px;">
+                        <p><span class="urgent-icon">📢</span><strong>COMUNICACIÓN CRÍTICA:</strong></p>
+                        <p><strong>Maestros, por favor presten mucha atención a nuestro grupo de WhatsApp, su correo electrónico y Slack para recibir actualizaciones sobre cómo continuaremos esta semana (clases virtuales o regulares).</strong></p>
+                        <p style="margin-top: 10px;">Esto depende del monitoreo que estamos realizando de diferentes situaciones en la ciudad. Necesitamos que todos estén atentos y respondan a las comunicaciones. Revisen estos canales frecuentemente para las últimas actualizaciones.</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Important Reminders -->
             <div class="section">
                 <h2 class="section-title">Important Reminders | Recordatorios Importantes</h2>
                 
-                <!-- Celebration Announcement -->
-                <div class="celebration-box">
+                <div class="reminder-box">
+                    <strong>🎄 IMPORTANT: Project Evaluations | IMPORTANTE: Evaluaciones de Proyectos 🎄</strong>
                     <div class="english">
-                        <p><span class="celebration-icon">🎉</span><strong>GREAT NEWS!</strong></p>
-                        <p><strong>This Wednesday, November 26th, teachers can leave at 1:30 PM to start your well-deserved Thanksgiving break!</strong></p>
-                        <p>Enjoy the extra time with your families and loved ones. You've earned it! 🦃🍂</p>
+                        <p><strong>This Week (December 1-5):</strong> This is the week for evaluating <strong>minor subjects final projects</strong>.</p>
+                        <p style="margin-top: 10px;"><strong>Next Week:</strong> We will have the evaluation of the <strong>interdisciplinary projects that include major classes</strong>.</p>
+                        <p style="margin-top: 10px;"><strong>Schedule Update:</strong> We are still studying how the schedule will work <strong>next week</strong>, since we have AP classes doing exams. We will keep you posted after analyzing the situation completely. Please stay tuned for updates.</p>
                     </div>
                     <div class="spanish" style="margin-top: 20px;">
-                        <p><span class="celebration-icon">🎉</span><strong>¡EXCELENTE NOTICIA!</strong></p>
-                        <p><strong>Este miércoles 26 de noviembre, los maestros pueden salir a la 1:30 PM para comenzar su merecido descanso de Acción de Gracias!</strong></p>
-                        <p>¡Disfruten el tiempo extra con sus familias y seres queridos. Se lo han ganado! 🦃🍂</p>
-                    </div>
-                </div>
-
-                <div class="reminder-box">
-                    <strong>IMPORTANT | IMPORTANTE:</strong>
-                    <div class="english">
-                        <p><strong>Post-Election Planning:</strong></p>
-                        <p>Everybody should be taking their computers home and awaiting instructions on how we will work after the elections on November 30th. Please pay close attention to your emails and the WhatsApp group for information.</p>
-                    </div>
-                    <div class="spanish" style="margin-top: 15px;">
-                        <p><strong>Planificación Post-Electoral:</strong></p>
-                        <p>Todos deben llevarse sus computadoras a casa y estar atentos a las instrucciones sobre cómo trabajaremos después de las elecciones del 30 de noviembre. Por favor, presten mucha atención a sus correos electrónicos y al grupo de WhatsApp para recibir información.</p>
+                        <p><strong>Esta Semana (1-5 de diciembre):</strong> Esta es la semana para evaluar los <strong>proyectos finales de materias menores</strong>.</p>
+                        <p style="margin-top: 10px;"><strong>Próxima Semana:</strong> Tendremos la evaluación de los <strong>proyectos interdisciplinarios que incluyen las clases principales</strong>.</p>
+                        <p style="margin-top: 10px;"><strong>Actualización de Horario:</strong> Todavía estamos estudiando cómo funcionará el horario de la <strong>próxima semana</strong>, ya que tenemos clases AP haciendo exámenes. Los mantendremos informados después de analizar la situación completamente. Por favor estén atentos a las actualizaciones.</p>
                     </div>
                 </div>
 
                 <div class="reminder-box" style="margin-top: 20px;">
-                    <strong>IMPORTANT | IMPORTANTE:</strong>
+                    <strong>🎄 Christmas Rehearsal Schedule | Horario de Ensayos Navideños 🎄</strong>
                     <div class="english">
-                        <p><strong>This week, please explain to students:</strong></p>
-                        <p>This quarter we will not have traditional exams (except for AP classes). Instead, the grades for exams will be obtained through the multidisciplinary projects that some of you have already started working on.</p>
-                        <p style="margin-top: 10px;">If you haven't finished planning how your project is going to work, please tell students that they will be advised on how this will work soon. Talk to your peers about it so we can have those projects clearly defined and being executed by our students.</p>
+                        <p>This week we will continue having <strong>Christmas rehearsal schedules on Tuesday, Thursday, and Friday</strong>. Please plan accordingly and ensure your students are prepared for rehearsals on these days.</p>
+                    </div>
+                    <div class="spanish" style="margin-top: 15px;">
+                        <p>Esta semana continuaremos con los <strong>horarios de ensayos navideños los martes, jueves y viernes</strong>. Por favor planifiquen en consecuencia y asegúrense de que sus estudiantes estén preparados para los ensayos en estos días.</p>
+                    </div>
+                </div>
+
+                <div class="reminder-box" style="margin-top: 20px;">
+                    <strong>🎁 Christmas Baskets for Our Workers | Canastas Navideñas para Nuestros Trabajadores 🎁</strong>
+                    <div class="english">
+                        <p><strong>Homeroom teachers:</strong> Please remind your students to bring the selected items for the Christmas baskets. This is a beautiful campaign to recognize the hard work of our workers, so please motivate your students to keep bringing the items for the baskets. Your support in this initiative is greatly appreciated!</p>
+                    </div>
+                    <div class="spanish" style="margin-top: 15px;">
+                        <p><strong>Maestros de homeroom:</strong> Por favor recuerden a sus estudiantes traer los artículos seleccionados para las canastas navideñas. Esta es una hermosa campaña para reconocer el arduo trabajo de nuestros trabajadores, así que por favor motiven a sus estudiantes a seguir trayendo los artículos para las canastas. ¡Su apoyo en esta iniciativa es muy apreciado!</p>
+                    </div>
+                </div>
+
+                <div class="celebration-box" style="margin-top: 20px;">
+                    <div class="english">
+                        <p><span class="celebration-icon">📅</span><strong>THIS WEEK'S SCHEDULE & CHRISTMAS EVENT!</strong></p>
+                        <p><strong>Wednesday, December 4th:</strong> Normal schedule (7:25 AM to 3:00 PM)</p>
+                        <p style="margin-top: 10px;"><strong>Friday, December 5th:</strong> Short day schedule for students (7:25 AM to 12:50 PM)</p>
+                        <p style="margin-top: 15px;"><span class="celebration-icon">🎄🎉</span><strong>CHRISTMAS EVENT - December 5th at the Green Court from 1:00 PM to 4:00 PM!</strong></p>
+                        <p style="margin-top: 5px;">We will see you there! 🎅🎁</p>
                     </div>
                     <div class="spanish" style="margin-top: 20px;">
-                        <p><strong>Esta semana, por favor expliquen a los estudiantes:</strong></p>
-                        <p>Este trimestre no tendremos exámenes tradicionales (excepto para las clases AP). En su lugar, las calificaciones de los exámenes se obtendrán a través de los proyectos multidisciplinarios en los que algunos de ustedes ya han comenzado a trabajar.</p>
-                        <p style="margin-top: 10px;">Si no han terminado de planificar cómo funcionará su proyecto, por favor digan a los estudiantes que se les informará sobre cómo funcionará esto pronto. Hablen con sus colegas al respecto para que podamos tener esos proyectos claramente definidos y siendo ejecutados por nuestros estudiantes.</p>
+                        <p><span class="celebration-icon">📅</span><strong>¡HORARIO DE ESTA SEMANA Y EVENTO NAVIDEÑO!</strong></p>
+                        <p><strong>Miércoles 4 de diciembre:</strong> Horario normal (7:25 AM a 3:00 PM)</p>
+                        <p style="margin-top: 10px;"><strong>Viernes 5 de diciembre:</strong> Horario de día corto para estudiantes (7:25 AM a 12:50 PM)</p>
+                        <p style="margin-top: 15px;"><span class="celebration-icon">🎄🎉</span><strong>¡EVENTO NAVIDEÑO - 5 de diciembre en la Cancha Verde de 1:00 PM a 4:00 PM!</strong></p>
+                        <p style="margin-top: 5px;">¡Nos vemos allí! 🎅🎁</p>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="christmas-decoration">
+            🎅 ⭐ 🎁 ❄️ 🔔 ⛄ 🌟 🎄 🌟 ⛄ 🔔 ❄️ 🎁 ⭐ 🎅
+        </div>
+
         <div class="slogan">
             "High expectations are the key to everything | Las altas expectativas son la clave para todo"
+            <div style="margin-top: 10px; font-size: 0.95em; opacity: 0.9;">
+                🎄 Wishing you a joyful December season | Les deseamos una feliz temporada de diciembre 🎄
+            </div>
         </div>
 
         <div class="footer">
