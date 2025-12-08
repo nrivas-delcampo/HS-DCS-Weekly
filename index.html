@@ -3,291 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DelCampo High School Weekly Bulletin</title>
+    <title>🎄 DelCampo High School Weekly Bulletin - December 8-12, 2025</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
+            line-height: 1.6;
+            margin: 0;
             padding: 20px;
+            background-color: #f5f7f2;
         }
-
         .container {
             max-width: 900px;
             margin: 0 auto;
             background-color: white;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
         }
-
         .header {
-            background: linear-gradient(135deg, #2d5e3f 0%, #3a7d52 100%);
+            background: linear-gradient(135deg, #2d5a27 0%, #3d7a37 100%);
             color: white;
             padding: 30px;
             text-align: center;
+            border-bottom: 5px solid #FFD700;
         }
-
         .header h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            font-weight: 600;
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-
-        .header .date {
+        .christmas-icons {
+            font-size: 1.5em;
+            margin: 15px 0;
+            letter-spacing: 10px;
+        }
+        .week-dates {
             font-size: 1.3em;
-            opacity: 0.95;
             margin-top: 10px;
+            color: #FFD700;
         }
-
         .content {
-            padding: 40px;
+            padding: 30px;
         }
-
         .section {
-            margin-bottom: 35px;
-        }
-
-        .section-title {
-            color: #2d5e3f;
-            font-size: 1.6em;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #3a7d52;
-            font-weight: 600;
-        }
-
-        .message-box {
-            background-color: #f8f9fa;
-            padding: 25px;
-            border-left: 5px solid #3a7d52;
             margin-bottom: 30px;
-            line-height: 1.8;
         }
-
-        .english, .spanish {
-            margin-bottom: 25px;
+        .section-title {
+            color: #2d5a27;
+            font-size: 1.8em;
+            border-bottom: 3px solid #2d5a27;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
-
-        .spanish {
-            font-style: italic;
+        .message-box {
+            background-color: #f0f8f0;
+            border-left: 5px solid #2d5a27;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
         }
-
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
-
         .schedule-table th {
-            background-color: #2d5e3f;
+            background-color: #2d5a27;
             color: white;
             padding: 12px;
             text-align: left;
-            font-weight: 600;
         }
-
         .schedule-table td {
-            padding: 12px;
+            padding: 10px;
             border-bottom: 1px solid #ddd;
         }
-
         .schedule-table tr:hover {
-            background-color: #f5f5f5;
+            background-color: #f5f7f2;
         }
-
-        .day-number {
-            background-color: #3a7d52;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        .no-school {
-            background-color: #dc3545;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        .reminder-box {
-            background-color: #fff3cd;
-            border-left: 5px solid #ffc107;
-            padding: 20px;
+        .exam-box {
+            background-color: #fff9e6;
+            border: 2px solid #FFD700;
+            padding: 15px;
             margin: 15px 0;
+            border-radius: 5px;
         }
-
-        .reminder-box strong {
-            color: #856404;
-            font-size: 1.1em;
+        .exam-box h4 {
+            color: #2d5a27;
+            margin-top: 0;
         }
-
-        .reminder-box p {
-            margin-top: 10px;
-            line-height: 1.7;
-            color: #333;
+        .exam-list {
+            margin: 10px 0;
+            padding-left: 20px;
         }
-
-        .urgent-box {
-            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
-            border: 3px solid #dc3545;
-            border-left: 8px solid #dc3545;
-            padding: 25px;
+        .exam-list li {
+            margin: 5px 0;
+        }
+        .important-box {
+            background-color: #ffe6e6;
+            border-left: 5px solid #d32f2f;
+            padding: 20px;
             margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+            border-radius: 5px;
         }
-
-        .urgent-box strong {
-            color: #c82333;
+        .holiday-box {
+            background: linear-gradient(135deg, #c41e3a 0%, #165B33 100%);
+            color: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+            text-align: center;
             font-size: 1.2em;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
-
-        .urgent-box p {
-            margin-top: 10px;
-            line-height: 1.7;
-            color: #333;
-            font-size: 1.05em;
-        }
-
-        .urgent-icon {
-            font-size: 1.5em;
-            display: inline-block;
-            margin-right: 8px;
-        }
-
-        .signature {
-            margin-top: 25px;
-            padding-top: 15px;
-        }
-
-        .signature-name {
-            font-weight: 600;
-            color: #2d5e3f;
-            font-size: 1.1em;
-        }
-
-        .signature-title {
-            color: #666;
-            font-style: italic;
-        }
-
-        .slogan {
-            background-color: #3a7d52;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 1.1em;
-            font-style: italic;
-            font-weight: 500;
-        }
-
         .footer {
-            background-color: #2d5e3f;
+            background-color: #2d5a27;
             color: white;
-            text-align: center;
             padding: 20px;
+            text-align: center;
             font-size: 0.9em;
         }
-
+        .emoji {
+            font-size: 1.2em;
+        }
         ul {
-            margin-left: 20px;
-            margin-top: 10px;
             line-height: 1.8;
         }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        @media print {
-            body {
-                background-color: white;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-            }
-        }
-
-        /* Christmas decorative elements */
-        .christmas-decoration {
-            text-align: center;
-            font-size: 1.5em;
-            padding: 15px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-top: 2px solid #3a7d52;
-            border-bottom: 2px solid #3a7d52;
-        }
-
-        .section-title::before {
-            content: "⭐ ";
-            color: #ffc107;
-        }
-
-        .section-title::after {
-            content: " ⭐";
-            color: #ffc107;
+        strong {
+            color: #2d5a27;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Header -->
         <div class="header">
             <h1>🎄 DelCampo High School 🎄</h1>
-            <div class="date">Weekly Bulletin | December 1-5, 2025 ❄️</div>
+            <div class="christmas-icons">🎅 ⭐ 🎁 ❄️ 🔔 ⛄ 🌟 🎄 🌟 ⛄ 🔔 ❄️ 🎁 ⭐ 🎅</div>
+            <div class="week-dates">Weekly Bulletin | December 8-12, 2025 ❄️</div>
         </div>
 
-        <div class="christmas-decoration">
-            🎅 ⭐ 🎁 ❄️ 🔔 ⛄ 🌟 🎄 🌟 ⛄ 🔔 ❄️ 🎁 ⭐ 🎅
-        </div>
-
+        <!-- Content -->
         <div class="content">
+            
             <!-- Principal's Message -->
             <div class="section">
-                <h2 class="section-title">Principal's Message | Mensaje del Director</h2>
+                <h2 class="section-title">💚 Principal's Message | Mensaje del Director 💚</h2>
+                
                 <div class="message-box">
-                    <div class="english">
-                        <p>Dear colleagues,</p>
-                        <p style="margin-top: 15px;">As we begin December and navigate the complexities of final projects, AP exams, and evolving schedules, I want to reflect on one of the most crucial values we can teach our students—and one we must model ourselves: <strong>adaptation</strong>.</p>
-                        <p style="margin-top: 15px;">The world our students will inherit is one of constant change. Technologies evolve, careers transform, global challenges shift, and solutions that worked yesterday may not work tomorrow. The ability to adapt—to remain flexible, resilient, and creative in the face of uncertainty—is not just a helpful skill; it is essential for success and well-being.</p>
-                        <p style="margin-top: 15px;">But here's the profound truth: our students learn adaptation not primarily from what we tell them, but from what they see us do. When we adjust our teaching strategies to meet new challenges, when we pivot our plans with grace rather than frustration, when we embrace change as an opportunity for growth rather than a threat to stability—we are teaching them the most important lesson of all.</p>
-                        <p style="margin-top: 15px;">This week, as we continue to refine our schedule around AP exams and project evaluations, we are modeling adaptation in real time. Our willingness to stay flexible, to communicate clearly through uncertainty, and to keep our focus on what truly matters—student learning and growth—demonstrates the very mindset we hope to cultivate in them.</p>
-                        <p style="margin-top: 15px;">Adaptation is not about abandoning our values or lowering our standards. It's about finding new pathways to reach our goals when the original road is blocked. It's about staying committed to excellence while remaining open to better ways of achieving it.</p>
-                        <p style="margin-top: 15px;">Thank you for embodying this spirit of adaptability and for showing our students what it means to thrive in a changing world.</p>
-                    </div>
-                    <div class="spanish">
-                        <p>Queridos colegas,</p>
-                        <p style="margin-top: 15px;">Al comenzar diciembre y navegar las complejidades de los proyectos finales, los exámenes AP y los horarios cambiantes, quiero reflexionar sobre uno de los valores más cruciales que podemos enseñar a nuestros estudiantes—y uno que debemos modelar nosotros mismos: <strong>la adaptación</strong>.</p>
-                        <p style="margin-top: 15px;">El mundo que nuestros estudiantes heredarán es uno de cambio constante. Las tecnologías evolucionan, las carreras se transforman, los desafíos globales cambian, y las soluciones que funcionaron ayer pueden no funcionar mañana. La capacidad de adaptarse—de permanecer flexibles, resilientes y creativos frente a la incertidumbre—no es solo una habilidad útil; es esencial para el éxito y el bienestar.</p>
-                        <p style="margin-top: 15px;">Pero aquí está la verdad profunda: nuestros estudiantes aprenden la adaptación no principalmente de lo que les decimos, sino de lo que nos ven hacer. Cuando ajustamos nuestras estrategias de enseñanza para enfrentar nuevos desafíos, cuando cambiamos nuestros planes con gracia en lugar de frustración, cuando abrazamos el cambio como una oportunidad de crecimiento en lugar de una amenaza a la estabilidad—estamos enseñándoles la lección más importante de todas.</p>
-                        <p style="margin-top: 15px;">Esta semana, mientras continuamos refinando nuestro horario alrededor de los exámenes AP y las evaluaciones de proyectos, estamos modelando la adaptación en tiempo real. Nuestra disposición a mantenernos flexibles, a comunicarnos claramente a través de la incertidumbre, y a mantener nuestro enfoque en lo que realmente importa—el aprendizaje y crecimiento de los estudiantes—demuestra la mentalidad que esperamos cultivar en ellos.</p>
-                        <p style="margin-top: 15px;">La adaptación no se trata de abandonar nuestros valores o bajar nuestros estándares. Se trata de encontrar nuevos caminos para alcanzar nuestras metas cuando el camino original está bloqueado. Se trata de permanecer comprometidos con la excelencia mientras permanecemos abiertos a mejores formas de lograrla.</p>
-                        <p style="margin-top: 15px;">Gracias por encarnar este espíritu de adaptabilidad y por mostrar a nuestros estudiantes lo que significa prosperar en un mundo cambiante.</p>
-                    </div>
-                    <div class="signature">
-                        <div class="english">
-                            <p>With gratitude and respect,</p>
-                            <p class="signature-name">Nicolás Rivas</p>
-                            <p class="signature-title">High School Principal</p>
-                        </div>
-                        <div class="spanish" style="margin-top: 15px;">
-                            <p>Con gratitud y respeto,</p>
-                            <p class="signature-name">Nicolás Rivas</p>
-                            <p class="signature-title">Director de High School</p>
-                        </div>
-                    </div>
+                    <p><strong>Dear DelCampo High School Family,</strong></p>
+                    
+                    <p>As we approach the end of 2025 and prepare to enter our well-deserved end of year break, I want to take a moment to express my deepest gratitude to each and every one of you.</p>
+                    
+                    <p>This year has been filled with challenges, growth, and countless moments of excellence. Your dedication, resilience, and commitment to our students and our mission have made all the difference. Together, we have fostered high standards, nurtured potential, and created a learning environment where both students and educators thrive.</p>
+                    
+                    <p>As we close this chapter and look forward to a season of rest and celebration, I wish you a <strong>Merry Christmas</strong> and <strong>Happy Holidays</strong> surrounded by the warmth and love of your families and friends. May this time bring you peace, joy, and renewal.</p>
+                    
+                    <p>Thank you for everything you do. You are truly appreciated.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>With gratitude and best wishes,</strong><br>
+                    <strong>Nicolás Rivas</strong><br>
+                    High School Principal</p>
+                </div>
+
+                <div class="message-box" style="margin-top: 20px;">
+                    <p><strong>Querida Familia de High School DelCampo,</strong></p>
+                    
+                    <p>A medida que nos acercamos al final del 2025 y nos preparamos para entrar en nuestras merecidas vacaciones de fin de año, quiero tomarme un momento para expresar mi más profunda gratitud a cada uno de ustedes.</p>
+                    
+                    <p>Este año ha estado lleno de desafíos, crecimiento e innumerables momentos de excelencia. Su dedicación, resiliencia y compromiso con nuestros estudiantes y nuestra misión han marcado toda la diferencia. Juntos, hemos fomentado altos estándares, nutrido potencial y creado un ambiente de aprendizaje donde tanto estudiantes como educadores prosperan.</p>
+                    
+                    <p>Al cerrar este capítulo y esperar una temporada de descanso y celebración, les deseo una <strong>Feliz Navidad</strong> y <strong>Felices Fiestas</strong> rodeados del calor y amor de sus familias y amigos. Que este tiempo les traiga paz, alegría y renovación.</p>
+                    
+                    <p>Gracias por todo lo que hacen. Son verdaderamente apreciados.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Con gratitud y mejores deseos,</strong><br>
+                    <strong>Nicolás Rivas</strong><br>
+                    Director de High School</p>
                 </div>
             </div>
 
             <!-- Weekly Schedule -->
             <div class="section">
-                <h2 class="section-title">Weekly Schedule | Horario Semanal</h2>
+                <h2 class="section-title">📅 Weekly Schedule | Horario Semanal</h2>
+                
                 <table class="schedule-table">
                     <thead>
                         <tr>
@@ -298,121 +196,182 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Monday | Lunes</td>
-                            <td>December 1</td>
-                            <td><span class="no-school">No School Day</span></td>
+                            <td><strong>Monday | Lunes</strong></td>
+                            <td>December 8 | 8 de diciembre</td>
+                            <td><strong>Day 2</strong> 📚</td>
                         </tr>
                         <tr>
-                            <td>Tuesday | Martes</td>
-                            <td>December 2</td>
-                            <td><span class="day-number">Day 4</span></td>
+                            <td><strong>Tuesday | Martes</strong></td>
+                            <td>December 9 | 9 de diciembre</td>
+                            <td><strong>Day 3</strong></td>
                         </tr>
                         <tr>
-                            <td>Wednesday | Miércoles</td>
-                            <td>December 3</td>
-                            <td><span class="day-number">Day 5</span></td>
+                            <td><strong>Wednesday | Miércoles</strong></td>
+                            <td>December 10 | 10 de diciembre</td>
+                            <td><strong>Day 4</strong> 📚</td>
                         </tr>
                         <tr>
-                            <td>Thursday | Jueves</td>
-                            <td>December 4</td>
-                            <td><span class="day-number">Day 6</span></td>
+                            <td><strong>Thursday | Jueves</strong></td>
+                            <td>December 11 | 11 de diciembre</td>
+                            <td><strong>Day 5</strong> 📚</td>
                         </tr>
                         <tr>
-                            <td>Friday | Viernes</td>
-                            <td>December 5</td>
-                            <td><span class="day-number">Day 1</span></td>
+                            <td><strong>Friday | Viernes</strong></td>
+                            <td>December 12 | 12 de diciembre</td>
+                            <td><strong>Day 6</strong></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- Urgent Communication -->
+            <!-- Holiday Message -->
+            <div class="holiday-box">
+                🎄 <strong>END OF YEAR BREAK BEGINS SATURDAY, DECEMBER 13TH!</strong> 🎄<br>
+                🎅 <strong>¡LAS VACACIONES DE FIN DE AÑO COMIENZAN EL SÁBADO 13 DE DICIEMBRE!</strong> 🎅
+            </div>
+
+            <!-- Exam Schedule -->
             <div class="section">
-                <h2 class="section-title">⚠️ URGENT: Stay Informed | URGENTE: Manténgase Informado ⚠️</h2>
-                <div class="urgent-box">
-                    <div class="english">
-                        <p><span class="urgent-icon">📢</span><strong>CRITICAL COMMUNICATION:</strong></p>
-                        <p><strong>Teachers, please pay close attention to our WhatsApp group, your email, and Slack for updates on how we will continue this week (virtual or regular classes).</strong></p>
-                        <p style="margin-top: 10px;">This depends on the monitoring we are conducting of different situations in the city. We need everyone to stay alert and responsive to communications. Check these channels frequently for the latest updates.</p>
-                    </div>
-                    <div class="spanish" style="margin-top: 20px;">
-                        <p><span class="urgent-icon">📢</span><strong>COMUNICACIÓN CRÍTICA:</strong></p>
-                        <p><strong>Maestros, por favor presten mucha atención a nuestro grupo de WhatsApp, su correo electrónico y Slack para recibir actualizaciones sobre cómo continuaremos esta semana (clases virtuales o regulares).</strong></p>
-                        <p style="margin-top: 10px;">Esto depende del monitoreo que estamos realizando de diferentes situaciones en la ciudad. Necesitamos que todos estén atentos y respondan a las comunicaciones. Revisen estos canales frecuentemente para las últimas actualizaciones.</p>
-                    </div>
+                <h2 class="section-title">📝 Final Exam Schedule | Horario de Exámenes Finales</h2>
+                
+                <p><strong>As established in our annual calendar, this week we have the final exams for the second quarter. High School will follow a special exam schedule for AP and some PreAP classes.</strong></p>
+                
+                <p><strong>Como está establecido en nuestro calendario anual, esta semana tenemos los exámenes finales del segundo parcial. High School seguirá un horario especial de exámenes para las clases AP y algunas PreAP.</strong></p>
+
+                <!-- Monday Exams -->
+                <div class="exam-box">
+                    <h4>📚 Monday, December 8 | Lunes, 8 de diciembre</h4>
+                    <ul class="exam-list">
+                        <li>9th Grade English Honors</li>
+                        <li>10th Grade PreAP English</li>
+                        <li>11th Grade AP Physics I</li>
+                        <li>12th Grade AP Physics II</li>
+                    </ul>
+                </div>
+
+                <!-- Wednesday Exams -->
+                <div class="exam-box">
+                    <h4>📚 Wednesday, December 10 | Miércoles, 10 de diciembre</h4>
+                    <ul class="exam-list">
+                        <li>9th Grade Math Honors</li>
+                        <li>10th Grade Math Honors</li>
+                        <li>11th Grade AP Precalculus</li>
+                        <li>12th Grade AP Calculus</li>
+                        <li>12th Grade AP Precalculus</li>
+                    </ul>
+                </div>
+
+                <!-- Thursday Exams -->
+                <div class="exam-box">
+                    <h4>📚 Thursday, December 11 | Jueves, 11 de diciembre</h4>
+                    <ul class="exam-list">
+                        <li>9th Grade Physical Science</li>
+                        <li>10th Grade AP Biology</li>
+                        <li>10th Grade Biology Section 1</li>
+                        <li>10th Grade Biology Section 2</li>
+                        <li>11th Grade PreAP Chemistry Section 1</li>
+                        <li>11th Grade PreAP Chemistry Section 2</li>
+                        <li>11th Grade PreAP Chemistry Section 3</li>
+                        <li>12th Grade AP Chemistry</li>
+                    </ul>
                 </div>
             </div>
 
             <!-- Important Reminders -->
             <div class="section">
-                <h2 class="section-title">Important Reminders | Recordatorios Importantes</h2>
-                
-                <div class="reminder-box">
-                    <strong>🎄 IMPORTANT: Project Evaluations | IMPORTANTE: Evaluaciones de Proyectos 🎄</strong>
-                    <div class="english">
-                        <p><strong>This Week (December 1-5):</strong> This is the week for evaluating <strong>minor subjects final projects</strong>.</p>
-                        <p style="margin-top: 10px;"><strong>Next Week:</strong> We will have the evaluation of the <strong>interdisciplinary projects that include major classes</strong>.</p>
-                        <p style="margin-top: 10px;"><strong>Schedule Update:</strong> We are still studying how the schedule will work <strong>next week</strong>, since we have AP classes doing exams. We will keep you posted after analyzing the situation completely. Please stay tuned for updates.</p>
-                    </div>
-                    <div class="spanish" style="margin-top: 20px;">
-                        <p><strong>Esta Semana (1-5 de diciembre):</strong> Esta es la semana para evaluar los <strong>proyectos finales de materias menores</strong>.</p>
-                        <p style="margin-top: 10px;"><strong>Próxima Semana:</strong> Tendremos la evaluación de los <strong>proyectos interdisciplinarios que incluyen las clases principales</strong>.</p>
-                        <p style="margin-top: 10px;"><strong>Actualización de Horario:</strong> Todavía estamos estudiando cómo funcionará el horario de la <strong>próxima semana</strong>, ya que tenemos clases AP haciendo exámenes. Los mantendremos informados después de analizar la situación completamente. Por favor estén atentos a las actualizaciones.</p>
-                    </div>
+                <h2 class="section-title">🔔 Important Reminders | Recordatorios Importantes</h2>
+
+                <!-- Project Deadlines -->
+                <div class="message-box">
+                    <p><span class="emoji">📋</span> <strong>Interdisciplinary Project Deadlines | Fechas de Proyectos Interdisciplinarios</strong></p>
+                    
+                    <p><strong>English:</strong></p>
+                    <ul>
+                        <li><strong>January 6-7, 2026:</strong> Final project reviews will take place</li>
+                        <li><strong>January 8, 2026:</strong> Final project submissions due</li>
+                    </ul>
+                    
+                    <p><strong>Español:</strong></p>
+                    <ul>
+                        <li><strong>6-7 de enero de 2026:</strong> Se llevarán a cabo las revisiones finales de proyectos</li>
+                        <li><strong>8 de enero de 2026:</strong> Entrega final de proyectos</li>
+                    </ul>
                 </div>
 
-                <div class="reminder-box" style="margin-top: 20px;">
-                    <strong>🎄 Christmas Rehearsal Schedule | Horario de Ensayos Navideños 🎄</strong>
-                    <div class="english">
-                        <p>This week we will continue having <strong>Christmas rehearsal schedules on Tuesday, Thursday, and Friday</strong>. Please plan accordingly and ensure your students are prepared for rehearsals on these days.</p>
-                    </div>
-                    <div class="spanish" style="margin-top: 15px;">
-                        <p>Esta semana continuaremos con los <strong>horarios de ensayos navideños los martes, jueves y viernes</strong>. Por favor planifiquen en consecuencia y asegúrense de que sus estudiantes estén preparados para los ensayos en estos días.</p>
-                    </div>
+                <!-- Working on Projects -->
+                <div class="message-box">
+                    <p><span class="emoji">⚙️</span> <strong>Project Work Time | Tiempo de Trabajo en Proyectos</strong></p>
+                    <p><strong>English:</strong> This exam schedule has been designed so that students can present their evaluations in an orderly manner and, at the same time, have adequate time to advance their interdisciplinary projects.</p>
+                    <p><strong>Español:</strong> Este horario de exámenes ha sido diseñado para que los estudiantes presenten sus evaluaciones con orden y, al mismo tiempo, dispongan de espacios adecuados para avanzar en sus proyectos interdisciplinarios.</p>
                 </div>
 
-                <div class="reminder-box" style="margin-top: 20px;">
-                    <strong>🎁 Christmas Baskets for Our Workers | Canastas Navideñas para Nuestros Trabajadores 🎁</strong>
-                    <div class="english">
-                        <p><strong>Homeroom teachers:</strong> Please remind your students to bring the selected items for the Christmas baskets. This is a beautiful campaign to recognize the hard work of our workers, so please motivate your students to keep bringing the items for the baskets. Your support in this initiative is greatly appreciated!</p>
-                    </div>
-                    <div class="spanish" style="margin-top: 15px;">
-                        <p><strong>Maestros de homeroom:</strong> Por favor recuerden a sus estudiantes traer los artículos seleccionados para las canastas navideñas. Esta es una hermosa campaña para reconocer el arduo trabajo de nuestros trabajadores, así que por favor motiven a sus estudiantes a seguir trayendo los artículos para las canastas. ¡Su apoyo en esta iniciativa es muy apreciado!</p>
-                    </div>
+                <!-- Fixed Rooms for Project Work -->
+                <div class="important-box">
+                    <p><span class="emoji">🏫</span> <strong>Fixed Rooms for Project Work | Salones Fijos para Trabajo de Proyectos</strong></p>
+                    <p><strong>English:</strong> During this week, students who will NOT be taking exams will be assigned to fixed rooms. While exam takers are working on their exams, non-exam students will have dedicated time to finish working on their interdisciplinary projects.</p>
+                    <p><strong>IMPORTANT FOR TEACHERS:</strong> Please ensure that students have either:</p>
+                    <ul>
+                        <li>A <strong>rubric to follow</strong> so they know what components they are missing, OR</li>
+                        <li>A <strong>clear description of what is expected</strong> in each product</li>
+                    </ul>
+                    <p>This will help students work independently and productively during project work sessions.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Español:</strong> Durante esta semana, los estudiantes que NO estarán tomando exámenes serán asignados a salones fijos. Mientras los estudiantes que tienen exámenes trabajan en sus evaluaciones, los estudiantes sin exámenes tendrán tiempo dedicado para terminar de trabajar en sus proyectos interdisciplinarios.</p>
+                    <p><strong>IMPORTANTE PARA MAESTROS:</strong> Por favor asegúrense de que los estudiantes tengan:</p>
+                    <ul>
+                        <li>Una <strong>rúbrica para seguir</strong> para que sepan qué componentes les faltan, O</li>
+                        <li>Una <strong>descripción clara de lo que se espera</strong> en cada producto</li>
+                    </ul>
+                    <p>Esto ayudará a los estudiantes a trabajar de manera independiente y productiva durante las sesiones de trabajo en proyectos.</p>
                 </div>
 
-                <div class="celebration-box" style="margin-top: 20px;">
-                    <div class="english">
-                        <p><span class="celebration-icon">📅</span><strong>THIS WEEK'S SCHEDULE & CHRISTMAS EVENT!</strong></p>
-                        <p><strong>Wednesday, December 4th:</strong> Normal schedule (7:25 AM to 3:00 PM)</p>
-                        <p style="margin-top: 10px;"><strong>Friday, December 5th:</strong> Short day schedule for students (7:25 AM to 12:50 PM)</p>
-                        <p style="margin-top: 15px;"><span class="celebration-icon">🎄🎉</span><strong>CHRISTMAS EVENT - December 5th at the Green Court from 1:00 PM to 4:00 PM!</strong></p>
-                        <p style="margin-top: 5px;">We will see you there! 🎅🎁</p>
-                    </div>
-                    <div class="spanish" style="margin-top: 20px;">
-                        <p><span class="celebration-icon">📅</span><strong>¡HORARIO DE ESTA SEMANA Y EVENTO NAVIDEÑO!</strong></p>
-                        <p><strong>Miércoles 4 de diciembre:</strong> Horario normal (7:25 AM a 3:00 PM)</p>
-                        <p style="margin-top: 10px;"><strong>Viernes 5 de diciembre:</strong> Horario de día corto para estudiantes (7:25 AM a 12:50 PM)</p>
-                        <p style="margin-top: 15px;"><span class="celebration-icon">🎄🎉</span><strong>¡EVENTO NAVIDEÑO - 5 de diciembre en la Cancha Verde de 1:00 PM a 4:00 PM!</strong></p>
-                        <p style="margin-top: 5px;">¡Nos vemos allí! 🎅🎁</p>
-                    </div>
+                <!-- Daily Schedule Communication -->
+                <div class="message-box">
+                    <p><span class="emoji">📧</span> <strong>Daily Schedule Updates | Actualizaciones de Horario Diarias</strong></p>
+                    <p><strong>English:</strong> Each day, the class schedule will be shared through <strong>email and the WhatsApp group</strong>. This will help keep everyone informed and make the week less confusing as we navigate exam days and project work sessions.</p>
+                    <p><strong>Please check these channels daily for updates!</strong></p>
+                    
+                    <p style="margin-top: 15px;"><strong>Español:</strong> Cada día, el horario de clases será compartido a través del <strong>correo electrónico y el grupo de WhatsApp</strong>. Esto ayudará a mantener a todos informados y hará que la semana sea menos confusa mientras navegamos los días de exámenes y las sesiones de trabajo en proyectos.</p>
+                    <p><strong>¡Por favor revisen estos canales diariamente para actualizaciones!</strong></p>
+                </div>
+
+                <!-- Christmas Rehearsal -->
+                <div class="exam-box">
+                    <p><span class="emoji">🎄</span> <strong>General Christmas Rehearsal | Ensayo General Navideño</strong></p>
+                    <p><strong>English:</strong> On <strong>Tuesday, December 9th</strong>, we will have a general Christmas rehearsal. The schedule for this rehearsal will be shared on <strong>Monday, December 8th</strong> through email and WhatsApp.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Español:</strong> El <strong>martes 9 de diciembre</strong> tendremos un ensayo general navideño. El horario para este ensayo será compartido el <strong>lunes 8 de diciembre</strong> a través de correo electrónico y WhatsApp.</p>
+                </div>
+
+                <!-- Candy Land Christmas Show -->
+                <div class="holiday-box" style="background: linear-gradient(135deg, #c41e3a 0%, #165B33 100%); color: white;">
+                    <p style="margin: 0;"><span class="emoji">🍬🎄</span> <strong>CANDY LAND CHRISTMAS SHOW - FRIDAY, DECEMBER 12TH!</strong> <span class="emoji">🎄🍬</span></p>
+                    <p style="margin: 15px 0 0 0;"><span class="emoji">🍭🎅</span> <strong>¡SHOW NAVIDEÑO CANDY LAND - VIERNES 12 DE DICIEMBRE!</strong> <span class="emoji">🎅🍭</span></p>
+                </div>
+
+                <div class="important-box">
+                    <p><span class="emoji">📋</span> <strong>Teacher Duties Reminder | Recordatorio de Responsabilidades</strong></p>
+                    <p><strong>English:</strong> Please remember to check your duties during the Candy Land Christmas Show on Friday. The duty assignments were shared in last week's message. Make sure you know your assigned responsibilities for the event!</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Español:</strong> Por favor recuerden revisar sus responsabilidades durante el Show Navideño Candy Land el viernes. Las asignaciones de responsabilidades fueron compartidas en el mensaje de la semana pasada. ¡Asegúrense de conocer sus responsabilidades asignadas para el evento!</p>
+                </div>
+
+                <!-- Last Week Reminder -->
+                <div class="holiday-box" style="background: linear-gradient(135deg, #2d5a27 0%, #FFD700 100%); color: #2d5a27;">
+                    <p style="margin: 0;"><strong>🎄 This is our last week of classes before end of year break! Let's finish strong! 🎄</strong></p>
+                    <p style="margin: 10px 0 0 0;"><strong>¡Esta es nuestra última semana de clases antes de las vacaciones de fin de año! ¡Terminemos con fuerza!</strong></p>
                 </div>
             </div>
+
         </div>
 
-        <div class="christmas-decoration">
-            🎅 ⭐ 🎁 ❄️ 🔔 ⛄ 🌟 🎄 🌟 ⛄ 🔔 ❄️ 🎁 ⭐ 🎅
-        </div>
-
-        <div class="slogan">
-            "High expectations are the key to everything | Las altas expectativas son la clave para todo"
-            <div style="margin-top: 10px; font-size: 0.95em; opacity: 0.9;">
-                🎄 Wishing you a joyful December season | Les deseamos una feliz temporada de diciembre 🎄
-            </div>
-        </div>
-
+        <!-- Footer -->
         <div class="footer">
-            <p>DelCampo High School | Email: nrivas@delcamposchool.org | Phone: +504 96505926</p>
+            <div class="christmas-icons">🎅 ⭐ 🎁 ❄️ 🔔 ⛄ 🌟 🎄 🌟 ⛄ 🔔 ❄️ 🎁 ⭐ 🎅</div>
+            <p style="margin: 10px 0;">"Empathy is seeing with the eyes of another, listening with the ears of another, and feeling with the heart of another | La empatía es ver con los ojos de otro, escuchar con los oídos de otro y sentir con el corazón de otro"</p>
+            <p style="margin: 10px 0;"><strong>🎄 Wishing you a Merry Christmas and Happy Holidays! | ¡Les deseamos Feliz Navidad y Felices Fiestas! 🎄</strong></p>
+            <p style="margin: 15px 0 5px 0;"><strong>DelCampo High School</strong></p>
+            <p style="margin: 5px 0;">Email: nrivas@delcamposchool.org | Phone: +504 96505926</p>
         </div>
     </div>
 </body>
