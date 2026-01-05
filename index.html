@@ -2,376 +2,221 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎄 DelCampo High School Weekly Bulletin - December 8-12, 2025</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f5f7f2;
         }
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            overflow: hidden;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
         }
         .header {
-            background: linear-gradient(135deg, #2d5a27 0%, #3d7a37 100%);
-            color: white;
-            padding: 30px;
             text-align: center;
-            border-bottom: 5px solid #FFD700;
+            padding: 20px;
+            background-color: #2d5a27;
+            color: white;
+            border-radius: 8px 8px 0 0;
         }
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        .subtitle {
+            font-size: 1.1em;
+            margin-top: 5px;
+            color: #fff;
         }
-        .christmas-icons {
-            font-size: 1.5em;
-            margin: 15px 0;
-            letter-spacing: 10px;
-        }
-        .week-dates {
-            font-size: 1.3em;
-            margin-top: 10px;
-            color: #FFD700;
-        }
-        .content {
-            padding: 30px;
-        }
-        .section {
-            margin-bottom: 30px;
+        .content-section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .section-title {
             color: #2d5a27;
-            font-size: 1.8em;
-            border-bottom: 3px solid #2d5a27;
+            border-bottom: 2px solid #91b48c;
             padding-bottom: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
-        .message-box {
-            background-color: #f0f8f0;
-            border-left: 5px solid #2d5a27;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        .schedule-table th {
-            background-color: #2d5a27;
-            color: white;
-            padding: 12px;
-            text-align: left;
-        }
-        .schedule-table td {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        .schedule-table tr:hover {
-            background-color: #f5f7f2;
-        }
-        .exam-box {
-            background-color: #fff9e6;
-            border: 2px solid #FFD700;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-        .exam-box h4 {
-            color: #2d5a27;
-            margin-top: 0;
-        }
-        .exam-list {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        .exam-list li {
-            margin: 5px 0;
-        }
-        .important-box {
-            background-color: #ffe6e6;
-            border-left: 5px solid #d32f2f;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        .holiday-box {
-            background: linear-gradient(135deg, #c41e3a 0%, #165B33 100%);
-            color: white;
-            padding: 25px;
-            margin: 25px 0;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 1.2em;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        .language-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
         .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #91b48c;
+            color: white;
+            border-radius: 0 0 8px 8px;
+        }
+        .date {
+            background-color: #91b48c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .signature {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            background-color: white;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .signature-name {
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .signature-title {
+            color: #2d5a27;
+        }
+        .schedule {
+            margin: 15px 0;
+        }
+        .day {
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #f5f7f2;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .event-tag {
             background-color: #2d5a27;
             color: white;
-            padding: 20px;
-            text-align: center;
+            padding: 2px 8px;
+            border-radius: 12px;
             font-size: 0.9em;
+            margin-left: 10px;
         }
-        .emoji {
-            font-size: 1.2em;
+        .event-tag.special {
+            background-color: #91b48c;
         }
-        ul {
-            line-height: 1.8;
+        .event-tag.deadline {
+            background-color: #c74440;
         }
-        strong {
+        .slogan {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
             color: #2d5a27;
+            background-color: white;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 1.1em;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
-            <h1>🎄 DelCampo High School 🎄</h1>
-            <div class="christmas-icons">🎅 ⭐ 🎁 ❄️ 🔔 ⛄ 🌟 🎄 🌟 ⛄ 🔔 ❄️ 🎁 ⭐ 🎅</div>
-            <div class="week-dates">Weekly Bulletin | December 8-12, 2025 ❄️</div>
+            <h1>✨ High Standards ✨</h1>
+            <div class="subtitle">DelCampo High School Weekly Bulletin | Boletín Semanal</div>
+            <div class="date">🎊 January 5th - 9th, 2026 🎊</div>
         </div>
 
-        <!-- Content -->
-        <div class="content">
-            
-            <!-- Principal's Message -->
-            <div class="section">
-                <h2 class="section-title">💚 Principal's Message | Mensaje del Director 💚</h2>
-                
-                <div class="message-box">
-                    <p><strong>Dear DelCampo High School Family,</strong></p>
-                    
-                    <p>As we approach the end of 2025 and prepare to enter our well-deserved end of year break, I want to take a moment to express my deepest gratitude to each and every one of you.</p>
-                    
-                    <p>This year has been filled with challenges, growth, and countless moments of excellence. Your dedication, resilience, and commitment to our students and our mission have made all the difference. Together, we have fostered high standards, nurtured potential, and created a learning environment where both students and educators thrive.</p>
-                    
-                    <p>As we close this chapter and look forward to a season of rest and celebration, I wish you a <strong>Merry Christmas</strong> and <strong>Happy Holidays</strong> surrounded by the warmth and love of your families and friends. May this time bring you peace, joy, and renewal.</p>
-                    
-                    <p>Thank you for everything you do. You are truly appreciated.</p>
-                    
-                    <p style="margin-top: 20px;"><strong>With gratitude and best wishes,</strong><br>
-                    <strong>Nicolás Rivas</strong><br>
-                    High School Principal</p>
+        <div class="content-section">
+            <h3 class="section-title">🌟 A Message from the Principal | Mensaje del Director 🌟</h3>
+            <div class="language-section">
+                <div class="english">
+                    <p>Welcome back, my High School team. I hope you were able to enjoy a restful and meaningful break with your families and loved ones.</p>
+                    <p>As we begin this new year, I invite you to approach January with renewed energy, clear purpose, and a positive mindset. This is a time for fresh starts—an opportunity to reflect, adjust, and move forward with intention and enthusiasm.</p>
+                    <p>Our students will return ready to learn, and they will look to us not only for academic guidance but for motivation, stability, and inspiration. Let's welcome them with openness, professionalism, and the genuine care that defines our High School.</p>
+                    <p>Education is a shared journey. As we teach, we continue learning; as we lead, we continue growing. This semester, let's support one another, embrace challenges as opportunities, and remain focused on creating meaningful and engaging learning experiences for every student.</p>
+                    <p>Here's to a strong and purposeful start to 2026. I'm grateful to work alongside each of you—let's make this semester an extraordinary one.</p>
                 </div>
-
-                <div class="message-box" style="margin-top: 20px;">
-                    <p><strong>Querida Familia de High School DelCampo,</strong></p>
-                    
-                    <p>A medida que nos acercamos al final del 2025 y nos preparamos para entrar en nuestras merecidas vacaciones de fin de año, quiero tomarme un momento para expresar mi más profunda gratitud a cada uno de ustedes.</p>
-                    
-                    <p>Este año ha estado lleno de desafíos, crecimiento e innumerables momentos de excelencia. Su dedicación, resiliencia y compromiso con nuestros estudiantes y nuestra misión han marcado toda la diferencia. Juntos, hemos fomentado altos estándares, nutrido potencial y creado un ambiente de aprendizaje donde tanto estudiantes como educadores prosperan.</p>
-                    
-                    <p>Al cerrar este capítulo y esperar una temporada de descanso y celebración, les deseo una <strong>Feliz Navidad</strong> y <strong>Felices Fiestas</strong> rodeados del calor y amor de sus familias y amigos. Que este tiempo les traiga paz, alegría y renovación.</p>
-                    
-                    <p>Gracias por todo lo que hacen. Son verdaderamente apreciados.</p>
-                    
-                    <p style="margin-top: 20px;"><strong>Con gratitud y mejores deseos,</strong><br>
-                    <strong>Nicolás Rivas</strong><br>
-                    Director de High School</p>
+                <div class="spanish">
+                    <p>Bienvenidos de regreso, mi equipo de High School. Espero que hayan podido disfrutar de un descanso reparador y significativo con sus familias y seres queridos.</p>
+                    <p>Al comenzar este nuevo año, les invito a abordar enero con energía renovada, propósito claro y una mentalidad positiva. Este es un tiempo para nuevos comienzos—una oportunidad para reflexionar, ajustar y avanzar con intención y entusiasmo.</p>
+                    <p>Nuestros estudiantes regresarán listos para aprender, y nos buscarán no solo para orientación académica sino para motivación, estabilidad e inspiración. Recibámoslos con apertura, profesionalismo y el cuidado genuino que define a nuestro High School.</p>
+                    <p>La educación es un viaje compartido. Mientras enseñamos, continuamos aprendiendo; mientras lideramos, continuamos creciendo. Este semestre, apoyémonos mutuamente, abracemos los desafíos como oportunidades y mantengámonos enfocados en crear experiencias de aprendizaje significativas y atractivas para cada estudiante.</p>
+                    <p>Brindemos por un comienzo fuerte y con propósito para el 2026. Estoy agradecido de trabajar junto a cada uno de ustedes—hagamos de este semestre uno extraordinario.</p>
                 </div>
             </div>
-
-            <!-- Weekly Schedule -->
-            <div class="section">
-                <h2 class="section-title">📅 Weekly Schedule | Horario Semanal</h2>
-                
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Day | Día</th>
-                            <th>Date | Fecha</th>
-                            <th>Rotation Day | Día de Rotación</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Monday | Lunes</strong></td>
-                            <td>December 8 | 8 de diciembre</td>
-                            <td><strong>Day 2</strong> 📚</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Tuesday | Martes</strong></td>
-                            <td>December 9 | 9 de diciembre</td>
-                            <td><strong>Day 3</strong></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Wednesday | Miércoles</strong></td>
-                            <td>December 10 | 10 de diciembre</td>
-                            <td><strong>Day 4</strong> 📚</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Thursday | Jueves</strong></td>
-                            <td>December 11 | 11 de diciembre</td>
-                            <td><strong>Day 5</strong> 📚</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Friday | Viernes</strong></td>
-                            <td>December 12 | 12 de diciembre</td>
-                            <td><strong>Day 6</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Holiday Message -->
-            <div class="holiday-box">
-                🎄 <strong>END OF YEAR BREAK BEGINS SATURDAY, DECEMBER 13TH!</strong> 🎄<br>
-                🎅 <strong>¡LAS VACACIONES DE FIN DE AÑO COMIENZAN EL SÁBADO 13 DE DICIEMBRE!</strong> 🎅
-            </div>
-
-            <!-- Exam Schedule -->
-            <div class="section">
-                <h2 class="section-title">📝 Final Exam Schedule | Horario de Exámenes Finales</h2>
-                
-                <p><strong>As established in our annual calendar, this week we have the final exams for the second quarter. High School will follow a special exam schedule for AP and some PreAP classes.</strong></p>
-                
-                <p><strong>Como está establecido en nuestro calendario anual, esta semana tenemos los exámenes finales del segundo parcial. High School seguirá un horario especial de exámenes para las clases AP y algunas PreAP.</strong></p>
-
-                <!-- Monday Exams -->
-                <div class="exam-box">
-                    <h4>📚 Monday, December 8 | Lunes, 8 de diciembre</h4>
-                    <ul class="exam-list">
-                        <li>9th Grade English Honors</li>
-                        <li>10th Grade PreAP English</li>
-                        <li>11th Grade AP Physics I</li>
-                        <li>12th Grade AP Physics II</li>
-                    </ul>
-                </div>
-
-                <!-- Wednesday Exams -->
-                <div class="exam-box">
-                    <h4>📚 Wednesday, December 10 | Miércoles, 10 de diciembre</h4>
-                    <ul class="exam-list">
-                        <li>9th Grade Math Honors</li>
-                        <li>10th Grade Math Honors</li>
-                        <li>11th Grade AP Precalculus</li>
-                        <li>12th Grade AP Calculus</li>
-                        <li>12th Grade AP Precalculus</li>
-                    </ul>
-                </div>
-
-                <!-- Thursday Exams -->
-                <div class="exam-box">
-                    <h4>📚 Thursday, December 11 | Jueves, 11 de diciembre</h4>
-                    <ul class="exam-list">
-                        <li>9th Grade Physical Science</li>
-                        <li>10th Grade AP Biology</li>
-                        <li>10th Grade Biology Section 1</li>
-                        <li>10th Grade Biology Section 2</li>
-                        <li>11th Grade PreAP Chemistry Section 1</li>
-                        <li>11th Grade PreAP Chemistry Section 2</li>
-                        <li>11th Grade PreAP Chemistry Section 3</li>
-                        <li>12th Grade AP Chemistry</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Important Reminders -->
-            <div class="section">
-                <h2 class="section-title">🔔 Important Reminders | Recordatorios Importantes</h2>
-
-                <!-- Project Deadlines -->
-                <div class="message-box">
-                    <p><span class="emoji">📋</span> <strong>Interdisciplinary Project Deadlines | Fechas de Proyectos Interdisciplinarios</strong></p>
-                    
-                    <p><strong>English:</strong></p>
-                    <ul>
-                        <li><strong>January 6-7, 2026:</strong> Final project reviews will take place</li>
-                        <li><strong>January 8, 2026:</strong> Final project submissions due</li>
-                    </ul>
-                    
-                    <p><strong>Español:</strong></p>
-                    <ul>
-                        <li><strong>6-7 de enero de 2026:</strong> Se llevarán a cabo las revisiones finales de proyectos</li>
-                        <li><strong>8 de enero de 2026:</strong> Entrega final de proyectos</li>
-                    </ul>
-                </div>
-
-                <!-- Working on Projects -->
-                <div class="message-box">
-                    <p><span class="emoji">⚙️</span> <strong>Project Work Time | Tiempo de Trabajo en Proyectos</strong></p>
-                    <p><strong>English:</strong> This exam schedule has been designed so that students can present their evaluations in an orderly manner and, at the same time, have adequate time to advance their interdisciplinary projects.</p>
-                    <p><strong>Español:</strong> Este horario de exámenes ha sido diseñado para que los estudiantes presenten sus evaluaciones con orden y, al mismo tiempo, dispongan de espacios adecuados para avanzar en sus proyectos interdisciplinarios.</p>
-                </div>
-
-                <!-- Fixed Rooms for Project Work -->
-                <div class="important-box">
-                    <p><span class="emoji">🏫</span> <strong>Fixed Rooms for Project Work | Salones Fijos para Trabajo de Proyectos</strong></p>
-                    <p><strong>English:</strong> During this week, students who will NOT be taking exams will be assigned to fixed rooms. While exam takers are working on their exams, non-exam students will have dedicated time to finish working on their interdisciplinary projects.</p>
-                    <p><strong>IMPORTANT FOR TEACHERS:</strong> Please ensure that students have either:</p>
-                    <ul>
-                        <li>A <strong>rubric to follow</strong> so they know what components they are missing, OR</li>
-                        <li>A <strong>clear description of what is expected</strong> in each product</li>
-                    </ul>
-                    <p>This will help students work independently and productively during project work sessions.</p>
-                    
-                    <p style="margin-top: 20px;"><strong>Español:</strong> Durante esta semana, los estudiantes que NO estarán tomando exámenes serán asignados a salones fijos. Mientras los estudiantes que tienen exámenes trabajan en sus evaluaciones, los estudiantes sin exámenes tendrán tiempo dedicado para terminar de trabajar en sus proyectos interdisciplinarios.</p>
-                    <p><strong>IMPORTANTE PARA MAESTROS:</strong> Por favor asegúrense de que los estudiantes tengan:</p>
-                    <ul>
-                        <li>Una <strong>rúbrica para seguir</strong> para que sepan qué componentes les faltan, O</li>
-                        <li>Una <strong>descripción clara de lo que se espera</strong> en cada producto</li>
-                    </ul>
-                    <p>Esto ayudará a los estudiantes a trabajar de manera independiente y productiva durante las sesiones de trabajo en proyectos.</p>
-                </div>
-
-                <!-- Daily Schedule Communication -->
-                <div class="message-box">
-                    <p><span class="emoji">📧</span> <strong>Daily Schedule Updates | Actualizaciones de Horario Diarias</strong></p>
-                    <p><strong>English:</strong> Each day, the class schedule will be shared through <strong>email and the WhatsApp group</strong>. This will help keep everyone informed and make the week less confusing as we navigate exam days and project work sessions.</p>
-                    <p><strong>Please check these channels daily for updates!</strong></p>
-                    
-                    <p style="margin-top: 15px;"><strong>Español:</strong> Cada día, el horario de clases será compartido a través del <strong>correo electrónico y el grupo de WhatsApp</strong>. Esto ayudará a mantener a todos informados y hará que la semana sea menos confusa mientras navegamos los días de exámenes y las sesiones de trabajo en proyectos.</p>
-                    <p><strong>¡Por favor revisen estos canales diariamente para actualizaciones!</strong></p>
-                </div>
-
-                <!-- Christmas Rehearsal -->
-                <div class="exam-box">
-                    <p><span class="emoji">🎄</span> <strong>General Christmas Rehearsal | Ensayo General Navideño</strong></p>
-                    <p><strong>English:</strong> On <strong>Tuesday, December 9th</strong>, we will have a general Christmas rehearsal. The schedule for this rehearsal will be shared on <strong>Monday, December 8th</strong> through email and WhatsApp.</p>
-                    
-                    <p style="margin-top: 15px;"><strong>Español:</strong> El <strong>martes 9 de diciembre</strong> tendremos un ensayo general navideño. El horario para este ensayo será compartido el <strong>lunes 8 de diciembre</strong> a través de correo electrónico y WhatsApp.</p>
-                </div>
-
-                <!-- Candy Land Christmas Show -->
-                <div class="holiday-box" style="background: linear-gradient(135deg, #c41e3a 0%, #165B33 100%); color: white;">
-                    <p style="margin: 0;"><span class="emoji">🍬🎄</span> <strong>CANDY LAND CHRISTMAS SHOW - FRIDAY, DECEMBER 12TH!</strong> <span class="emoji">🎄🍬</span></p>
-                    <p style="margin: 15px 0 0 0;"><span class="emoji">🍭🎅</span> <strong>¡SHOW NAVIDEÑO CANDY LAND - VIERNES 12 DE DICIEMBRE!</strong> <span class="emoji">🎅🍭</span></p>
-                </div>
-
-                <div class="important-box">
-                    <p><span class="emoji">📋</span> <strong>Teacher Duties Reminder | Recordatorio de Responsabilidades</strong></p>
-                    <p><strong>English:</strong> Please remember to check your duties during the Candy Land Christmas Show on Friday. The duty assignments were shared in last week's message. Make sure you know your assigned responsibilities for the event!</p>
-                    
-                    <p style="margin-top: 15px;"><strong>Español:</strong> Por favor recuerden revisar sus responsabilidades durante el Show Navideño Candy Land el viernes. Las asignaciones de responsabilidades fueron compartidas en el mensaje de la semana pasada. ¡Asegúrense de conocer sus responsabilidades asignadas para el evento!</p>
-                </div>
-
-                <!-- Last Week Reminder -->
-                <div class="holiday-box" style="background: linear-gradient(135deg, #2d5a27 0%, #FFD700 100%); color: #2d5a27;">
-                    <p style="margin: 0;"><strong>🎄 This is our last week of classes before end of year break! Let's finish strong! 🎄</strong></p>
-                    <p style="margin: 10px 0 0 0;"><strong>¡Esta es nuestra última semana de clases antes de las vacaciones de fin de año! ¡Terminemos con fuerza!</strong></p>
-                </div>
-            </div>
-
         </div>
 
-        <!-- Footer -->
+        <div class="content-section">
+            <h3 class="section-title">Weekly Schedule | Horario Semanal</h3>
+            <div class="schedule">
+                <div class="day">
+                    <span>Monday, January 5th | Lunes, 5 de enero</span>
+                    <span class="event-tag special">Teacher Preparation Day (No Students)</span>
+                </div>
+                <div class="day">
+                    <span>Tuesday, January 6th (Day 1) | Martes, 6 de enero (Día 1)</span>
+                    <span class="event-tag">Regular Schedule</span>
+                </div>
+                <div class="day">
+                    <span>Wednesday, January 7th (Day 2) | Miércoles, 7 de enero (Día 2)</span>
+                    <span class="event-tag">Regular Schedule</span>
+                </div>
+                <div class="day">
+                    <span>Thursday, January 8th (Day 3) | Jueves, 8 de enero (Día 3)</span>
+                    <span class="event-tag deadline">Q2 Projects Deadline</span>
+                </div>
+                <div class="day">
+                    <span>Friday, January 9th (Day 4) | Viernes, 9 de enero (Día 4)</span>
+                    <span class="event-tag">Regular Schedule</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">Reminders | Recordatorios</h3>
+            <div class="language-section">
+                <div class="english">
+                    <ul>
+                        <li><strong>Monday, January 5th</strong> — Teacher Preparation Day. No students. Use this day to prepare for the return of students and the remainder of the school year.</li>
+                        <li><strong>Principal's Absence This Week</strong> — I will not be in school this week due to family matters in Colombia. During my absence, I need everyone to be very persistent with discipline in your classes, during duties, and in all areas. Remember that dealing with disciplinary issues is part of our job as teachers and administrators. Mrs. Allison, our counselor, is our support for conversations with students on many situations, but she cannot be the one administering disciplinary consequences. Mrs. Elba in the office is there to help us with calling parents when needed or when students are sent home sick, but she should not be administering disciplinary consequences either. That responsibility is ours and mine. Let's speak the same language and support each other, especially with the rigor we want to give the uniform policy these days.</li>
+                        <li><strong>Third Quarter Begins Tuesday</strong> — Even though the third quarter officially begins on Tuesday, January 6th, we are still working on and reviewing second-quarter projects due to the last-minute change of dates last December.</li>
+                        <li><strong>January 6th & 7th: Final Project Review Days</strong> — These are the last two days for teachers to review second-quarter projects with students and answer any questions or clarifications. Please make yourself available to support students.</li>
+                        <li><strong>Thursday, January 8th: Q2 Projects Deadline</strong> — All second-quarter projects are due. Our students are aware of this deadline, but please remind them as needed.</li>
+                        <li><strong>Students Return</strong> — Students return to classes on Tuesday, January 6th. Welcome them back with warmth and enthusiasm!</li>
+                        <li><strong>Uniform Policy Enforcement</strong> — Starting this January, we are strengthening uniform compliance. Please review the complete uniform policy message sent to all parents, students, and teachers. When you see a student not meeting the policy, please guide them to the administrative office. Key points: skorts/skirts must be no more than 2 inches above the knee, PE shorts must reach at least midway down the thigh, and khaki pants are available as alternatives. Students not in proper uniform will contact parents to bring appropriate clothing or will be sent home. Our uniform reflects our identity and values—let's uphold it with pride.</li>
+                    </ul>
+                </div>
+                <div class="spanish">
+                    <ul>
+                        <li><strong>Lunes 5 de enero</strong> — Día de Preparación Docente. Sin estudiantes. Usen este día para prepararse para el regreso de los estudiantes y el resto del año escolar.</li>
+                        <li><strong>Ausencia del Director Esta Semana</strong> — No estaré en la escuela esta semana debido a asuntos familiares en Colombia. Durante mi ausencia, necesito que todos sean muy persistentes con la disciplina en sus clases, durante los turnos y en todas las áreas. Recuerden que lidiar con los problemas disciplinarios es parte de nuestro trabajo como maestros y administradores. La Sra. Allison, nuestra consejera, es nuestro apoyo para tener conversaciones con estudiantes en muchas situaciones, pero ella no puede ser quien administre las consecuencias disciplinarias. La Sra. Elba en la oficina está ahí para ayudarnos con las llamadas a los padres cuando sea necesario o cuando los estudiantes sean enviados a casa enfermos, pero ella tampoco debería estar administrando consecuencias disciplinarias. Esa responsabilidad es nuestra y mía. Hablemos todos el mismo idioma y apoyémonos mutuamente, especialmente con el rigor que queremos darle a la política de uniformes estos días.</li>
+                        <li><strong>Tercer Trimestre Comienza el Martes</strong> — Aunque el tercer trimestre comienza oficialmente el martes 6 de enero, todavía estamos trabajando y revisando los proyectos del segundo trimestre debido al cambio de fechas de último momento en diciembre pasado.</li>
+                        <li><strong>6 y 7 de enero: Días Finales de Revisión de Proyectos</strong> — Estos son los últimos dos días para que los maestros revisen los proyectos del segundo trimestre con los estudiantes y respondan cualquier pregunta o aclaración. Por favor estén disponibles para apoyar a los estudiantes.</li>
+                        <li><strong>Jueves 8 de enero: Fecha Límite de Proyectos Q2</strong> — Todos los proyectos del segundo trimestre deben entregarse. Nuestros estudiantes están al tanto de esta fecha límite, pero por favor recuérdenselos según sea necesario.</li>
+                        <li><strong>Regreso de Estudiantes</strong> — Los estudiantes regresan a clases el martes 6 de enero. ¡Recíbanlos con calidez y entusiasmo!</li>
+                        <li><strong>Aplicación de la Política de Uniformes</strong> — A partir de este enero, estamos fortaleciendo el cumplimiento del uniforme. Por favor revisen el mensaje completo sobre la política de uniformes enviado a todos los padres, estudiantes y maestros. Cuando vean a un estudiante que no cumple con la política, por favor guíenlo a la oficina administrativa. Puntos clave: las faldas/skorts no deben estar más de 2 pulgadas arriba de la rodilla, los shorts de PE deben llegar al menos hasta la mitad del muslo, y los pantalones caqui están disponibles como alternativas. Los estudiantes que no estén con el uniforme apropiado contactarán a sus padres para traer ropa apropiada o serán enviados a casa. Nuestro uniforme refleja nuestra identidad y valores—mantengámoslo con orgullo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="signature">
+            <div class="language-section">
+                <div class="english">
+                    <p>I'm available for any questions or comments. Have a great week,</p>
+                    <p class="signature-name">Nicolás Rivas</p>
+                    <p class="signature-title">High School Principal</p>
+                </div>
+                <div class="spanish">
+                    <p>Quedo atento a cualquier duda o comentario y feliz semana,</p>
+                    <p class="signature-name">Nicolás Rivas</p>
+                    <p class="signature-title">Director de High School</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slogan">
+            🌅 "The beginning is the most important part of the work." - Plato 🌅<br><br>
+            "El comienzo es la parte más importante del trabajo." - Plato
+        </div>
+
         <div class="footer">
-            <div class="christmas-icons">🎅 ⭐ 🎁 ❄️ 🔔 ⛄ 🌟 🎄 🌟 ⛄ 🔔 ❄️ 🎁 ⭐ 🎅</div>
-            <p style="margin: 10px 0;">"Empathy is seeing with the eyes of another, listening with the ears of another, and feeling with the heart of another | La empatía es ver con los ojos de otro, escuchar con los oídos de otro y sentir con el corazón de otro"</p>
-            <p style="margin: 10px 0;"><strong>🎄 Wishing you a Merry Christmas and Happy Holidays! | ¡Les deseamos Feliz Navidad y Felices Fiestas! 🎄</strong></p>
-            <p style="margin: 15px 0 5px 0;"><strong>DelCampo High School</strong></p>
-            <p style="margin: 5px 0;">Email: nrivas@delcamposchool.org | Phone: +504 96505926</p>
+            <p>DelCampo High School | Email: nrivas@delcamposchool.org | Phone: +504 96505926</p>
         </div>
     </div>
 </body>
