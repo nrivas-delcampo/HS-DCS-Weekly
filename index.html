@@ -2,226 +2,304 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Standards. DCS High School - Weekly Bulletin</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f5f7f2;
+            box-sizing: border-box;
         }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
+        
         .header {
-            text-align: center;
-            padding: 20px;
-            background-color: #2d5a27;
+            background: linear-gradient(135deg, #2d5a27 0%, #1a3a17 100%);
             color: white;
-            border-radius: 8px 8px 0 0;
+            padding: 40px 30px;
+            text-align: center;
         }
-        .subtitle {
-            font-size: 1.1em;
-            margin-top: 5px;
-            color: #fff;
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        .content-section {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
         }
-        .section-title {
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
             color: #2d5a27;
-            border-bottom: 2px solid #91b48c;
+            border-bottom: 3px solid #2d5a27;
             padding-bottom: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
         }
-        .language-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        .footer {
-            text-align: center;
+        
+        .quote-box {
+            background: linear-gradient(135deg, #f0f4f0 0%, #e8efe8 100%);
+            border-left: 5px solid #2d5a27;
             padding: 20px;
-            background-color: #91b48c;
-            color: white;
-            border-radius: 0 0 8px 8px;
-        }
-        .date {
-            background-color: #91b48c;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        .signature {
-            text-align: center;
-            padding: 20px;
-            font-style: italic;
-            background-color: white;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-        .signature-name {
-            font-weight: bold;
-            margin: 5px 0;
-        }
-        .signature-title {
-            color: #2d5a27;
-        }
-        .schedule {
-            margin: 15px 0;
-        }
-        .day {
-            padding: 8px;
-            margin: 5px 0;
-            background-color: #f5f7f2;
-            border-radius: 4px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .event-tag {
-            background-color: #2d5a27;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.9em;
-            margin-left: 10px;
-        }
-        .event-tag.special {
-            background-color: #c74440;
-        }
-        .slogan {
-            text-align: center;
-            padding: 20px;
-            font-style: italic;
-            color: #2d5a27;
-            background-color: white;
             margin: 20px 0;
-            border-radius: 8px;
+            font-style: italic;
+            border-radius: 5px;
+            text-align: center;
             font-size: 1.1em;
+            color: #1a3a17;
+        }
+        
+        .language-section {
+            margin: 25px 0;
+        }
+        
+        .english, .spanish {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .english {
+            background: #f8fdf8;
+        }
+        
+        .spanish {
+            background: #f0f7ff;
+        }
+        
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .day-box {
+            background: linear-gradient(135deg, #2d5a27 0%, #1a3a17 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .day-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .day-box .day {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .day-box .rotation {
+            font-size: 1.3em;
+            color: #90ee90;
+        }
+        
+        .reminder-box {
+            background: #fff9e6;
+            border-left: 5px solid #ffa500;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .reminder-box strong {
+            color: #cc6600;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        
+        .slogan {
+            background: linear-gradient(135deg, #2d5a27 0%, #1a3a17 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1em;
+            margin-top: 30px;
+        }
+        
+        .contact {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+        }
+        
+        .contact a {
+            color: #2d5a27;
+            text-decoration: none;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>High Standards</h1>
-            <div class="subtitle">DelCampo High School Weekly Bulletin | Boletín Semanal</div>
-            <div class="date">January 26th - 30th, 2026</div>
+            <h1>🎓 High Standards. DCS High School</h1>
+            <p>Weekly Bulletin / Boletín Semanal</p>
+            <p style="font-size: 1em; margin-top: 10px;">Semana del 9 al 13 de febrero, 2026 / Week of February 9-13, 2026</p>
         </div>
-
-        <div class="content-section">
-            <h3 class="section-title">A Message from the Principal | Mensaje del Director</h3>
-            <div class="language-section">
-                <div class="english">
-                    <p>Dear colleagues, this week I want to address something fundamental to our work: effective communication and professional boundaries with our students.</p>
-                    <p>We have discussed how important it is to build close, trusting relationships with our students so that learning can flow naturally. When students feel seen, heard, and respected, they engage more deeply with their education. However, we must remember a crucial distinction: we are not their friends—we are their teachers, mentors, and guides.</p>
-                    <p>This means maintaining professionalism at all times. We must avoid out-of-tone or improper jokes, comments, or interactions that blur the line between educator and peer. We are the adults in the room, and our students need us to act like it. They need our patience, our consistency, and our clear boundaries.</p>
-                    <p>There will be moments when students test those boundaries or behave disrespectfully. In those situations, please report the incident immediately and assign the appropriate consequence—whether a yellow ticket or an incident report—so we can follow through from the office. Consistency in our response reinforces the standards we uphold together.</p>
-                    <p>Let's continue building strong, respectful relationships with our students while modeling the professionalism and integrity they deserve to see in us every day.</p>
+        
+        <div class="content">
+            <!-- Weekly Schedule -->
+            <div class="section">
+                <h2>📅 🗓️ Esta Semana / This Week</h2>
+                <div class="schedule-grid">
+                    <div class="day-box">
+                        <div class="day">Lunes / Monday<br>Feb 9</div>
+                        <div class="rotation">Day 5</div>
+                    </div>
+                    <div class="day-box">
+                        <div class="day">Martes / Tuesday<br>Feb 10</div>
+                        <div class="rotation">Day 6</div>
+                    </div>
+                    <div class="day-box">
+                        <div class="day">Miércoles / Wednesday<br>Feb 11</div>
+                        <div class="rotation">Day 1</div>
+                    </div>
+                    <div class="day-box">
+                        <div class="day">Jueves / Thursday<br>Feb 12</div>
+                        <div class="rotation">Day 2</div>
+                    </div>
+                    <div class="day-box">
+                        <div class="day">Viernes / Friday<br>Feb 13</div>
+                        <div class="rotation">Day 3</div>
+                    </div>
                 </div>
-                <div class="spanish">
-                    <p>Queridos colegas, esta semana quiero abordar algo fundamental para nuestro trabajo: la comunicación efectiva y los límites profesionales con nuestros estudiantes.</p>
-                    <p>Hemos discutido cuán importante es construir relaciones cercanas y de confianza con nuestros estudiantes para que el aprendizaje fluya naturalmente. Cuando los estudiantes se sienten vistos, escuchados y respetados, se involucran más profundamente con su educación. Sin embargo, debemos recordar una distinción crucial: no somos sus amigos—somos sus maestros, mentores y guías.</p>
-                    <p>Esto significa mantener el profesionalismo en todo momento. Debemos evitar bromas, comentarios o interacciones fuera de tono o inapropiadas que difuminen la línea entre educador y compañero. Somos los adultos en el salón, y nuestros estudiantes necesitan que actuemos como tal. Necesitan nuestra paciencia, nuestra consistencia y nuestros límites claros.</p>
-                    <p>Habrá momentos en que los estudiantes prueben esos límites o se comporten irrespetuosamente. En esas situaciones, por favor reporten el incidente inmediatamente y asignen la consecuencia apropiada—ya sea un yellow ticket o un reporte de incidente—para que podamos dar seguimiento desde la oficina. La consistencia en nuestra respuesta refuerza los estándares que mantenemos juntos.</p>
-                    <p>Continuemos construyendo relaciones sólidas y respetuosas con nuestros estudiantes mientras modelamos el profesionalismo y la integridad que merecen ver en nosotros cada día.</p>
+            </div>
+
+            <!-- Principal's Message -->
+            <div class="section">
+                <h2>✉️ 📝 Message from the Principal / Mensaje del Director</h2>
+                
+                <div class="quote-box">
+                    "A good teacher can inspire hope, ignite the imagination, and instill a love of learning." – Brad Henry
+                </div>
+
+                <div class="language-section">
+                    <div class="english">
+                        <p>As we navigate an era of unprecedented technological advancement, our role as educators extends far beyond teaching students which buttons to press or which apps to use. While digital literacy is undoubtedly important, our greater responsibility lies in teaching our students <strong>how to be</strong> in a world saturated with instant information, constant connectivity, and endless choices.</p>
+                        
+                        <p style="margin-top: 15px;">Every day, we model what it means to be a thoughtful, respectful human being. When a student speaks disrespectfully, our response teaches more than any lesson plan about respect ever could. When we encounter a student making a poor choice, the tone we use and the words we select demonstrate what grace, firmness, and dignity look like in practice. Our students are watching—not just what we teach, but <strong>who we are</strong> when things don't go as planned.</p>
+                        
+                        <p style="margin-top: 15px;">Technology gives our students powerful tools, but <strong>we</strong> give them the compass to use those tools wisely. We show them how to respond when frustrated, how to communicate when upset, how to persist when challenged. This is the education that will serve them long after they've forgotten which app was trending in 2025.</p>
+                        
+                        <p style="margin-top: 15px;"><strong>Do not forget that technology is providing us the tools for students to be used in their daily lives, but the interactions, reactions, and behaviours need to be modeled by us the adults.</strong></p>
+                        
+                        <p style="margin-top: 15px;">Let us remember: we don't just teach subjects; we teach students. And in teaching students, we teach humanity.</p>
+                        
+                        <p style="margin-top: 20px;">Warmly,<br><strong>Nicolás Rivas Peláez</strong><br>High School Principal</p>
+                    </div>
+                    
+                    <div class="spanish">
+                        <p>Mientras navegamos una era de avances tecnológicos sin precedentes, nuestro papel como educadores se extiende mucho más allá de enseñar a los estudiantes qué botones presionar o qué aplicaciones usar. Aunque la alfabetización digital es sin duda importante, nuestra mayor responsabilidad radica en enseñar a nuestros estudiantes <strong>cómo ser</strong> en un mundo saturado de información instantánea, conectividad constante y opciones infinitas.</p>
+                        
+                        <p style="margin-top: 15px;">Cada día, modelamos lo que significa ser un ser humano reflexivo y respetuoso. Cuando un estudiante habla irrespetuosamente, nuestra respuesta enseña más que cualquier plan de lección sobre el respeto. Cuando encontramos a un estudiante tomando una mala decisión, el tono que usamos y las palabras que seleccionamos demuestran cómo se ven la gracia, la firmeza y la dignidad en la práctica. Nuestros estudiantes están observando—no solo lo que enseñamos, sino <strong>quiénes somos</strong> cuando las cosas no salen según lo planeado.</p>
+                        
+                        <p style="margin-top: 15px;">La tecnología les da a nuestros estudiantes herramientas poderosas, pero <strong>nosotros</strong> les damos la brújula para usar esas herramientas sabiamente. Les mostramos cómo responder cuando están frustrados, cómo comunicarse cuando están molestos, cómo persistir cuando enfrentan desafíos. Esta es la educación que les servirá mucho después de que hayan olvidado qué aplicación era tendencia en 2025.</p>
+                        
+                        <p style="margin-top: 15px;"><strong>No olvidemos que la tecnología nos proporciona las herramientas para que los estudiantes las usen en su vida diaria, pero las interacciones, reacciones y comportamientos deben ser modelados por nosotros los adultos.</strong></p>
+                        
+                        <p style="margin-top: 15px;">Recordemos: no solo enseñamos materias; enseñamos estudiantes. Y al enseñar estudiantes, enseñamos humanidad.</p>
+                        
+                        <p style="margin-top: 20px;">Con aprecio,<br><strong>Nicolás Rivas Peláez</strong><br>Director de High School</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reminders -->
+            <div class="section">
+                <h2>🔔 📌 Recordatorios / Reminders</h2>
+                
+                <!-- Chinese Embassy Visit -->
+                <div class="reminder-box">
+                    <p><span class="emoji">🇨🇳 🏛️</span> <strong>Lunes 9 de febrero / Monday, February 9: Visita de la Embajada China / Chinese Embassy Visit</strong></p>
+                    <p><strong>Español:</strong> Un grupo de estudiantes participará en una actividad con representantes de la embajada. La lista de participantes se compartirá próximamente.</p>
+                    <p style="margin-top: 10px;"><strong>English:</strong> A group of students will participate in an activity with embassy representatives. Participant list will be shared soon.</p>
+                </div>
+
+                <!-- MAP Test Makeups -->
+                <div class="reminder-box">
+                    <p><span class="emoji">📊 📋</span> <strong>Esta Semana / This Week: Evaluaciones MAP de Recuperación / MAP Test Makeups</strong></p>
+                    <p><strong>Español:</strong> Se administrarán evaluaciones de recuperación para estudiantes que necesitan completarlas. Se distribuirá la lista de estudiantes.</p>
+                    <p style="margin-top: 10px;"><strong>English:</strong> Makeup assessments will be administered for students who need to complete them. Student list will be distributed.</p>
+                </div>
+
+                <!-- Knowledge Bowl Tournament -->
+                <div class="reminder-box">
+                    <p><span class="emoji">🏆 🧠</span> <strong>Viernes 13 y Sábado 14 de febrero / Friday, February 13 & Saturday, February 14: Torneo de Knowledge Bowl / Knowledge Bowl Tournament</strong></p>
+                    <p><strong>Español:</strong> Nuestro equipo de Knowledge Bowl participará en un torneo en Academia Los Pinares este viernes y sábado. ¡Les deseamos mucho éxito a nuestros estudiantes!</p>
+                    <p style="margin-top: 10px;"><strong>English:</strong> Our Knowledge Bowl team will participate in a tournament at Academia Los Pinares this Friday and Saturday. We wish our students great success!</p>
+                </div>
+
+                <!-- Valentine's Day -->
+                <div class="reminder-box">
+                    <p><span class="emoji">🌹 💝</span> <strong>Viernes 13 de febrero / Friday, February 13: Celebración de San Valentín / Valentine's Day Celebration</strong></p>
+                    <p><strong>Español:</strong> Actividades especiales organizadas por Student Council.</p>
+                    <p style="margin-top: 10px;"><strong>English:</strong> Special activities organized by Student Council.</p>
+                </div>
+
+                <!-- French Embassy Visit -->
+                <div class="reminder-box">
+                    <p><span class="emoji">🇫🇷 🏛️</span> <strong>Viernes 13 de febrero / Friday, February 13: Segunda Visita de la Embajada Francesa / French Embassy Visit #2</strong></p>
+                    <p><strong>Español:</strong> Estudiantes de 11° grado participarán en este evento. Lista de participantes se compartirá.</p>
+                    <p style="margin-top: 10px;"><strong>English:</strong> 11th grade students will participate in this event. Participant list will be shared.</p>
                 </div>
             </div>
         </div>
 
-        <div class="content-section">
-            <h3 class="section-title">Weekly Schedule | Horario Semanal</h3>
-            <div class="schedule">
-                <div class="day">
-                    <span>Monday, January 26th (Day 2) | Lunes, 26 de enero (Día 2)</span>
-                    <span class="event-tag">CCC's Day</span>
-                </div>
-                <div class="day">
-                    <span>Tuesday, January 27th (Day 3) | Martes, 27 de enero (Día 3)</span>
-                    <span class="event-tag">Regular Schedule</span>
-                </div>
-                <div class="day">
-                    <span>Wednesday, January 28th | Miércoles, 28 de enero</span>
-                    <span class="event-tag special">Report Cards Day - No Classes</span>
-                </div>
-                <div class="day">
-                    <span>Thursday, January 29th (Day 4) | Jueves, 29 de enero (Día 4)</span>
-                    <span class="event-tag">Regular Schedule</span>
-                </div>
-                <div class="day">
-                    <span>Friday, January 30th (Day 5) | Viernes, 30 de enero (Día 5)</span>
-                    <span class="event-tag">CCC's Day</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h3 class="section-title">⚠️ 🚨 IMPORTANT: Homeroom Teachers | IMPORTANTE: Maestros de Homeroom ⚠️ 🚨</h3>
-            <div class="language-section">
-                <div class="english">
-                    <p style="background-color: #fff3cd; padding: 15px; border-left: 4px solid #c74440; border-radius: 4px;">
-                        <strong>⏰ URGENT - Monday & Tuesday Deadline ⏰</strong><br><br>
-                        Every homeroom teacher must issue a <strong>yellow ticket</strong> to any student who has missed <strong>10 or more absences to homeroom</strong>. This must be completed between <strong>Monday and Tuesday</strong> so that the ticket is taken home and returned during Report Cards Day on Wednesday. This is an important conversation to have with parents when they come to get the report card and before they move on to speak to other teachers.
-                    </p>
-                </div>
-                <div class="spanish">
-                    <p style="background-color: #fff3cd; padding: 15px; border-left: 4px solid #c74440; border-radius: 4px;">
-                        <strong>⏰ URGENTE - Fecha Límite Lunes y Martes ⏰</strong><br><br>
-                        Cada maestro de homeroom debe emitir un <strong>yellow ticket</strong> a cualquier estudiante que haya tenido <strong>10 o más ausencias a homeroom</strong>. Esto debe completarse entre el <strong>lunes y el martes</strong> para que el ticket sea llevado a casa y devuelto durante el Día de Entrega de Calificaciones el miércoles. Esta es una conversación importante para tener con los padres cuando vengan a recoger el report card y antes de que pasen a hablar con otros maestros.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h3 class="section-title">Reminders | Recordatorios</h3>
-            <div class="language-section">
-                <div class="english">
-                    <ul>
-                        <li><strong>Wednesday, January 28th: Report Cards Day</strong> — No classes. Parent conferences will be held from 7:30 a.m. to 4:00 p.m. There will be a lunch break for staff from 11:00 a.m. to 11:45 a.m. Please come properly dressed: men must wear a tie and women should dress professionally. Parent attendance is mandatory, and each conference has a maximum duration of 15 minutes.</li>
-                        <li><strong>CCC's Days</strong> — Monday (Day 2) and Friday (Day 5) are CoCurricular Clubs days.</li>
-                    </ul>
-                </div>
-                <div class="spanish">
-                    <ul>
-                        <li><strong>Miércoles 28 de enero: Día de Entrega de Calificaciones</strong> — No hay clases. Las conferencias con padres se llevarán a cabo de 7:30 a.m. a 4:00 p.m. Habrá una pausa para almuerzo del personal de 11:00 a.m. a 11:45 a.m. Por favor vengan vestidos apropiadamente: los hombres deben usar corbata y las mujeres deben vestir profesionalmente. La asistencia de los padres es obligatoria, y cada conferencia tiene una duración máxima de 15 minutos.</li>
-                        <li><strong>Días de CCC's</strong> — Lunes (Día 2) y viernes (Día 5) son días de Clubes CoCurriculares.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="signature">
-            <div class="language-section">
-                <div class="english">
-                    <p>I'm available for any questions or comments. Have a great week,</p>
-                    <p class="signature-name">Nicolás Rivas</p>
-                    <p class="signature-title">High School Principal</p>
-                </div>
-                <div class="spanish">
-                    <p>Quedo atento a cualquier duda o comentario y feliz semana,</p>
-                    <p class="signature-name">Nicolás Rivas</p>
-                    <p class="signature-title">Director de High School</p>
-                </div>
-            </div>
-        </div>
-
+        <!-- Quote/Slogan -->
         <div class="slogan">
-            "Respect for ourselves guides our morals; respect for others guides our manners." - Laurence Sterne<br><br>
-            "El respeto por nosotros mismos guía nuestra moral; el respeto por los demás guía nuestros modales." - Laurence Sterne
+            <div class="language-section">
+                <div style="color: white; margin-bottom: 15px;">
+                    "What the teacher is, is more important than what he teaches." — Karl Menninger
+                </div>
+                <div style="color: white;">
+                    "Lo que el maestro es, es más importante que lo que enseña." — Karl Menninger
+                </div>
+            </div>
         </div>
 
-        <div class="footer">
-            <p>DelCampo High School | Email: nrivas@delcamposchool.org | Phone: +504 96505926</p>
+        <!-- Contact Information -->
+        <div class="contact">
+            <p><strong>Nicolás Rivas Peláez</strong> | High School Principal / Director de High School</p>
+            <p>📧 <a href="mailto:nrivas@delcampo.edu.hn">nrivas@delcampo.edu.hn</a> | 📞 Contact: DCS High School Office</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">DCS High School - Foster Students' Highest Potential</p>
         </div>
     </div>
 </body>
