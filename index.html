@@ -2,304 +2,236 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High Standards. DCS High School - Weekly Bulletin</title>
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f5f7f2;
         }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 20px;
-        }
-        
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #2d5a27 0%, #1a3a17 100%);
-            color: white;
-            padding: 40px 30px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.95;
-        }
-        
-        .content {
-            padding: 30px;
-        }
-        
-        .section {
-            margin-bottom: 35px;
-        }
-        
-        .section h2 {
-            color: #2d5a27;
-            border-bottom: 3px solid #2d5a27;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
-        
-        .quote-box {
-            background: linear-gradient(135deg, #f0f4f0 0%, #e8efe8 100%);
-            border-left: 5px solid #2d5a27;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
-            margin: 20px 0;
-            font-style: italic;
-            border-radius: 5px;
+        }
+        .header {
             text-align: center;
+            padding: 20px;
+            background-color: #2d5a27;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+        .subtitle {
             font-size: 1.1em;
-            color: #1a3a17;
+            margin-top: 5px;
+            color: #fff;
         }
-        
-        .language-section {
-            margin: 25px 0;
-        }
-        
-        .english, .spanish {
+        .content-section {
+            background-color: white;
+            padding: 20px;
             margin-bottom: 20px;
-            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            color: #2d5a27;
+            border-bottom: 2px solid #91b48c;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .language-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #91b48c;
+            color: white;
+            border-radius: 0 0 8px 8px;
+        }
+        .date {
+            background-color: #91b48c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .signature {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            background-color: white;
+            margin-top: 20px;
             border-radius: 8px;
         }
-        
-        .english {
-            background: #f8fdf8;
-        }
-        
-        .spanish {
-            background: #f0f7ff;
-        }
-        
-        .schedule-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .day-box {
-            background: linear-gradient(135deg, #2d5a27 0%, #1a3a17 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .day-box:hover {
-            transform: translateY(-5px);
-        }
-        
-        .day-box .day {
-            font-size: 1.1em;
+        .signature-name {
             font-weight: bold;
-            margin-bottom: 5px;
+            margin: 5px 0;
         }
-        
-        .day-box .rotation {
-            font-size: 1.3em;
-            color: #90ee90;
-        }
-        
-        .reminder-box {
-            background: #fff9e6;
-            border-left: 5px solid #ffa500;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-        
-        .reminder-box strong {
-            color: #cc6600;
-        }
-        
-        .emoji {
-            font-size: 1.2em;
-            margin-right: 5px;
-        }
-        
-        .slogan {
-            background: linear-gradient(135deg, #2d5a27 0%, #1a3a17 100%);
-            color: white;
-            padding: 30px;
-            text-align: center;
-            font-style: italic;
-            font-size: 1.1em;
-            margin-top: 30px;
-        }
-        
-        .contact {
-            background: #f5f5f5;
-            padding: 20px;
-            text-align: center;
-            color: #666;
-        }
-        
-        .contact a {
+        .signature-title {
             color: #2d5a27;
-            text-decoration: none;
         }
-        
-        .contact a:hover {
-            text-decoration: underline;
+        .schedule {
+            margin: 15px 0;
+        }
+        .day {
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #f5f7f2;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .event-tag {
+            background-color: #2d5a27;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        .event-tag.special {
+            background-color: #c74440;
+        }
+        .slogan {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            color: #2d5a27;
+            background-color: white;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 1.1em;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎓 High Standards. DCS High School</h1>
-            <p>Weekly Bulletin / Boletín Semanal</p>
-            <p style="font-size: 1em; margin-top: 10px;">Semana del 9 al 13 de febrero, 2026 / Week of February 9-13, 2026</p>
-        </div>
-        
-        <div class="content">
-            <!-- Weekly Schedule -->
-            <div class="section">
-                <h2>📅 🗓️ Esta Semana / This Week</h2>
-                <div class="schedule-grid">
-                    <div class="day-box">
-                        <div class="day">Lunes / Monday<br>Feb 9</div>
-                        <div class="rotation">Day 5</div>
-                    </div>
-                    <div class="day-box">
-                        <div class="day">Martes / Tuesday<br>Feb 10</div>
-                        <div class="rotation">Day 6</div>
-                    </div>
-                    <div class="day-box">
-                        <div class="day">Miércoles / Wednesday<br>Feb 11</div>
-                        <div class="rotation">Day 1</div>
-                    </div>
-                    <div class="day-box">
-                        <div class="day">Jueves / Thursday<br>Feb 12</div>
-                        <div class="rotation">Day 2</div>
-                    </div>
-                    <div class="day-box">
-                        <div class="day">Viernes / Friday<br>Feb 13</div>
-                        <div class="rotation">Day 3</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Principal's Message -->
-            <div class="section">
-                <h2>✉️ 📝 Message from the Principal / Mensaje del Director</h2>
-                
-                <div class="quote-box">
-                    "A good teacher can inspire hope, ignite the imagination, and instill a love of learning." – Brad Henry
-                </div>
-
-                <div class="language-section">
-                    <div class="english">
-                        <p>As we navigate an era of unprecedented technological advancement, our role as educators extends far beyond teaching students which buttons to press or which apps to use. While digital literacy is undoubtedly important, our greater responsibility lies in teaching our students <strong>how to be</strong> in a world saturated with instant information, constant connectivity, and endless choices.</p>
-                        
-                        <p style="margin-top: 15px;">Every day, we model what it means to be a thoughtful, respectful human being. When a student speaks disrespectfully, our response teaches more than any lesson plan about respect ever could. When we encounter a student making a poor choice, the tone we use and the words we select demonstrate what grace, firmness, and dignity look like in practice. Our students are watching—not just what we teach, but <strong>who we are</strong> when things don't go as planned.</p>
-                        
-                        <p style="margin-top: 15px;">Technology gives our students powerful tools, but <strong>we</strong> give them the compass to use those tools wisely. We show them how to respond when frustrated, how to communicate when upset, how to persist when challenged. This is the education that will serve them long after they've forgotten which app was trending in 2025.</p>
-                        
-                        <p style="margin-top: 15px;"><strong>Do not forget that technology is providing us the tools for students to be used in their daily lives, but the interactions, reactions, and behaviours need to be modeled by us the adults.</strong></p>
-                        
-                        <p style="margin-top: 15px;">Let us remember: we don't just teach subjects; we teach students. And in teaching students, we teach humanity.</p>
-                        
-                        <p style="margin-top: 20px;">Warmly,<br><strong>Nicolás Rivas Peláez</strong><br>High School Principal</p>
-                    </div>
-                    
-                    <div class="spanish">
-                        <p>Mientras navegamos una era de avances tecnológicos sin precedentes, nuestro papel como educadores se extiende mucho más allá de enseñar a los estudiantes qué botones presionar o qué aplicaciones usar. Aunque la alfabetización digital es sin duda importante, nuestra mayor responsabilidad radica en enseñar a nuestros estudiantes <strong>cómo ser</strong> en un mundo saturado de información instantánea, conectividad constante y opciones infinitas.</p>
-                        
-                        <p style="margin-top: 15px;">Cada día, modelamos lo que significa ser un ser humano reflexivo y respetuoso. Cuando un estudiante habla irrespetuosamente, nuestra respuesta enseña más que cualquier plan de lección sobre el respeto. Cuando encontramos a un estudiante tomando una mala decisión, el tono que usamos y las palabras que seleccionamos demuestran cómo se ven la gracia, la firmeza y la dignidad en la práctica. Nuestros estudiantes están observando—no solo lo que enseñamos, sino <strong>quiénes somos</strong> cuando las cosas no salen según lo planeado.</p>
-                        
-                        <p style="margin-top: 15px;">La tecnología les da a nuestros estudiantes herramientas poderosas, pero <strong>nosotros</strong> les damos la brújula para usar esas herramientas sabiamente. Les mostramos cómo responder cuando están frustrados, cómo comunicarse cuando están molestos, cómo persistir cuando enfrentan desafíos. Esta es la educación que les servirá mucho después de que hayan olvidado qué aplicación era tendencia en 2025.</p>
-                        
-                        <p style="margin-top: 15px;"><strong>No olvidemos que la tecnología nos proporciona las herramientas para que los estudiantes las usen en su vida diaria, pero las interacciones, reacciones y comportamientos deben ser modelados por nosotros los adultos.</strong></p>
-                        
-                        <p style="margin-top: 15px;">Recordemos: no solo enseñamos materias; enseñamos estudiantes. Y al enseñar estudiantes, enseñamos humanidad.</p>
-                        
-                        <p style="margin-top: 20px;">Con aprecio,<br><strong>Nicolás Rivas Peláez</strong><br>Director de High School</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reminders -->
-            <div class="section">
-                <h2>🔔 📌 Recordatorios / Reminders</h2>
-                
-                <!-- Chinese Embassy Visit -->
-                <div class="reminder-box">
-                    <p><span class="emoji">🇨🇳 🏛️</span> <strong>Lunes 9 de febrero / Monday, February 9: Visita de la Embajada China / Chinese Embassy Visit</strong></p>
-                    <p><strong>Español:</strong> Un grupo de estudiantes participará en una actividad con representantes de la embajada. La lista de participantes se compartirá próximamente.</p>
-                    <p style="margin-top: 10px;"><strong>English:</strong> A group of students will participate in an activity with embassy representatives. Participant list will be shared soon.</p>
-                </div>
-
-                <!-- MAP Test Makeups -->
-                <div class="reminder-box">
-                    <p><span class="emoji">📊 📋</span> <strong>Esta Semana / This Week: Evaluaciones MAP de Recuperación / MAP Test Makeups</strong></p>
-                    <p><strong>Español:</strong> Se administrarán evaluaciones de recuperación para estudiantes que necesitan completarlas. Se distribuirá la lista de estudiantes.</p>
-                    <p style="margin-top: 10px;"><strong>English:</strong> Makeup assessments will be administered for students who need to complete them. Student list will be distributed.</p>
-                </div>
-
-                <!-- Knowledge Bowl Tournament -->
-                <div class="reminder-box">
-                    <p><span class="emoji">🏆 🧠</span> <strong>Viernes 13 y Sábado 14 de febrero / Friday, February 13 & Saturday, February 14: Torneo de Knowledge Bowl / Knowledge Bowl Tournament</strong></p>
-                    <p><strong>Español:</strong> Nuestro equipo de Knowledge Bowl participará en un torneo en Academia Los Pinares este viernes y sábado. ¡Les deseamos mucho éxito a nuestros estudiantes!</p>
-                    <p style="margin-top: 10px;"><strong>English:</strong> Our Knowledge Bowl team will participate in a tournament at Academia Los Pinares this Friday and Saturday. We wish our students great success!</p>
-                </div>
-
-                <!-- Valentine's Day -->
-                <div class="reminder-box">
-                    <p><span class="emoji">🌹 💝</span> <strong>Viernes 13 de febrero / Friday, February 13: Celebración de San Valentín / Valentine's Day Celebration</strong></p>
-                    <p><strong>Español:</strong> Actividades especiales organizadas por Student Council.</p>
-                    <p style="margin-top: 10px;"><strong>English:</strong> Special activities organized by Student Council.</p>
-                </div>
-
-                <!-- French Embassy Visit -->
-                <div class="reminder-box">
-                    <p><span class="emoji">🇫🇷 🏛️</span> <strong>Viernes 13 de febrero / Friday, February 13: Segunda Visita de la Embajada Francesa / French Embassy Visit #2</strong></p>
-                    <p><strong>Español:</strong> Estudiantes de 11° grado participarán en este evento. Lista de participantes se compartirá.</p>
-                    <p style="margin-top: 10px;"><strong>English:</strong> 11th grade students will participate in this event. Participant list will be shared.</p>
-                </div>
-            </div>
+            <h1>High Standards</h1>
+            <div class="subtitle">DelCampo High School Weekly Bulletin | Boletín Semanal</div>
+            <div class="date">February 16th - 20th, 2026</div>
         </div>
 
-        <!-- Quote/Slogan -->
-        <div class="slogan">
+        <div class="content-section">
+            <h3 class="section-title">A Message from the Principal | Mensaje del Director</h3>
             <div class="language-section">
-                <div style="color: white; margin-bottom: 15px;">
-                    "What the teacher is, is more important than what he teaches." — Karl Menninger
+                <div class="english">
+                    <p>Dear colleagues, this Wednesday, February 18th, our third quarter progress reports go home to families. This is a significant moment—not just for our students and their parents, but for us as educators as well.</p>
+                    <p>Progress reports offer a valuable opportunity for students and families to reflect on the academic journey that has unfolded not only during this third quarter, but throughout the entire academic year. For some of our students, this moment carries additional weight. They may find themselves in a challenging academic position, facing the mathematics of what it will take to achieve a 70% for the year. This is real, and it requires our honesty, our support, and our guidance.</p>
+                    <p>But this is also an opportunity for us to reflect. Let us ask ourselves: Have we provided sufficient opportunities for learning and growth in our classrooms? Have we maintained the rigor necessary to prepare our students for success? Have we created a learning process that truly equips them with the skills, knowledge, and resilience they will need as they move forward—not just to the next quarter, but to the next academic year and beyond?</p>
+                    <p>Reflection is not about self-criticism; it is about growth. It is about examining our practice with curiosity and a commitment to continuous improvement. Our students' progress reports are also a mirror for us—a chance to consider how we can better support, challenge, and inspire them.</p>
+                    <p>Let us use this week to engage meaningfully with our students about their progress, to communicate clearly with families, and to recommit ourselves to the high standards that define our work.</p>
                 </div>
-                <div style="color: white;">
-                    "Lo que el maestro es, es más importante que lo que enseña." — Karl Menninger
+                <div class="spanish">
+                    <p>Queridos colegas, este miércoles 18 de febrero, nuestros reportes de progreso del tercer trimestre llegan a las familias. Este es un momento significativo—no solo para nuestros estudiantes y sus padres, sino también para nosotros como educadores.</p>
+                    <p>Los reportes de progreso ofrecen una valiosa oportunidad para que los estudiantes y las familias reflexionen sobre el viaje académico que se ha desarrollado no solo durante este tercer trimestre, sino durante todo el año académico. Para algunos de nuestros estudiantes, este momento tiene un peso adicional. Pueden encontrarse en una posición académica desafiante, enfrentando las matemáticas de lo que se necesitará para lograr un 70% para el año. Esto es real, y requiere nuestra honestidad, nuestro apoyo y nuestra guía.</p>
+                    <p>Pero esta es también una oportunidad para que nosotros reflexionemos. Preguntémonos: ¿Hemos proporcionado suficientes oportunidades para el aprendizaje y el crecimiento en nuestras aulas? ¿Hemos mantenido el rigor necesario para preparar a nuestros estudiantes para el éxito? ¿Hemos creado un proceso de aprendizaje que realmente los equipe con las habilidades, el conocimiento y la resiliencia que necesitarán al avanzar—no solo al próximo trimestre, sino al próximo año académico y más allá?</p>
+                    <p>La reflexión no se trata de autocrítica; se trata de crecimiento. Se trata de examinar nuestra práctica con curiosidad y un compromiso con la mejora continua. Los reportes de progreso de nuestros estudiantes son también un espejo para nosotros—una oportunidad de considerar cómo podemos apoyar, desafiar e inspirar mejor.</p>
+                    <p>Usemos esta semana para involucrarnos significativamente con nuestros estudiantes sobre su progreso, para comunicarnos claramente con las familias, y para recomprometernos con los altos estándares que definen nuestro trabajo.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Contact Information -->
-        <div class="contact">
-            <p><strong>Nicolás Rivas Peláez</strong> | High School Principal / Director de High School</p>
-            <p>📧 <a href="mailto:nrivas@delcampo.edu.hn">nrivas@delcampo.edu.hn</a> | 📞 Contact: DCS High School Office</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">DCS High School - Foster Students' Highest Potential</p>
+        <div class="content-section">
+            <h3 class="section-title">Weekly Schedule | Horario Semanal</h3>
+            <div class="schedule">
+                <div class="day">
+                    <span>Monday, February 16th (Day 4) | Lunes, 16 de febrero (Día 4)</span>
+                    <span class="event-tag">Regular Schedule</span>
+                </div>
+                <div class="day">
+                    <span>Tuesday, February 17th (Day 5) | Martes, 17 de febrero (Día 5)</span>
+                    <span class="event-tag">CCC's Day</span>
+                </div>
+                <div class="day">
+                    <span>Wednesday, February 18th (Day 6) | Miércoles, 18 de febrero (Día 6)</span>
+                    <span class="event-tag special">Q3 Progress Reports Go Home</span>
+                </div>
+                <div class="day">
+                    <span>Thursday, February 19th (Day 1) | Jueves, 19 de febrero (Día 1)</span>
+                    <span class="event-tag">Regular Schedule</span>
+                </div>
+                <div class="day">
+                    <span>Friday, February 20th (Day 2) | Viernes, 20 de febrero (Día 2)</span>
+                    <span class="event-tag">CCC's Day</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">🎓 College Counseling Events - 11th Grade | Eventos de Orientación Universitaria - 11mo Grado 🎓</h3>
+            <div class="language-section">
+                <div class="english">
+                    <p style="background-color: #e8f5e9; padding: 15px; border-left: 4px solid #2d5a27; border-radius: 4px;">
+                        <strong>Monday, February 16th - 7:40 AM - Blue Room</strong><br>
+                        Universidad ANAHUAC visit with 11th graders.<br><br>
+                        <strong>Thursday, February 19th - 11:15 AM - Blue Room</strong><br>
+                        Cambrian College (Canada) visit with 11th graders.<br><br>
+                        <em>Teachers who have classes with 11th graders at these times must accompany them to help with discipline.</em>
+                    </p>
+                </div>
+                <div class="spanish">
+                    <p style="background-color: #e8f5e9; padding: 15px; border-left: 4px solid #2d5a27; border-radius: 4px;">
+                        <strong>Lunes 16 de febrero - 7:40 AM - Blue Room</strong><br>
+                        Visita de la Universidad ANAHUAC con estudiantes de 11mo grado.<br><br>
+                        <strong>Jueves 19 de febrero - 11:15 AM - Blue Room</strong><br>
+                        Visita de Cambrian College (Canadá) con estudiantes de 11mo grado.<br><br>
+                        <em>Los maestros que tengan clases con estudiantes de 11mo grado a estas horas deben acompañarlos para ayudar con la disciplina.</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">Reminders | Recordatorios</h3>
+            <div class="language-section">
+                <div class="english">
+                    <ul>
+                        <li><strong>Wednesday, February 18th: Q3 Progress Reports</strong> — Third quarter progress reports go home. This is an opportunity for students and parents to reflect on academic progress during this quarter and the entire academic year.</li>
+                        <li><strong>Academic Conversations</strong> — Please engage meaningfully with students this week about their progress, especially those facing academic challenges. Clear communication with families is essential.</li>
+                        <li><strong>11th Grade College Visits</strong> — Monday (7:40 AM) and Thursday (11:15 AM) in the Blue Room. Teachers with 11th graders at these times must accompany students.</li>
+                        <li><strong>CCC's Days</strong> — Tuesday (Day 5) and Friday (Day 2) are CoCurricular Clubs days.</li>
+                    </ul>
+                </div>
+                <div class="spanish">
+                    <ul>
+                        <li><strong>Miércoles 18 de febrero: Reportes de Progreso Q3</strong> — Los reportes de progreso del tercer trimestre van a casa. Esta es una oportunidad para que estudiantes y padres reflexionen sobre el progreso académico durante este trimestre y todo el año académico.</li>
+                        <li><strong>Conversaciones Académicas</strong> — Por favor involúcrense significativamente con los estudiantes esta semana sobre su progreso, especialmente aquellos enfrentando desafíos académicos. La comunicación clara con las familias es esencial.</li>
+                        <li><strong>Visitas Universitarias 11mo Grado</strong> — Lunes (7:40 AM) y jueves (11:15 AM) en el Blue Room. Maestros con estudiantes de 11mo grado a estas horas deben acompañar a los estudiantes.</li>
+                        <li><strong>Días de CCC's</strong> — Martes (Día 5) y viernes (Día 2) son días de Clubes CoCurriculares.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="signature">
+            <div class="language-section">
+                <div class="english">
+                    <p>I'm available for any questions or comments. Have a great week,</p>
+                    <p class="signature-name">Nicolás Rivas</p>
+                    <p class="signature-title">High School Principal</p>
+                </div>
+                <div class="spanish">
+                    <p>Quedo atento a cualquier duda o comentario y feliz semana,</p>
+                    <p class="signature-name">Nicolás Rivas</p>
+                    <p class="signature-title">Director de High School</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slogan">
+            "Excellence is not a skill. It is an attitude." - Ralph Marston<br><br>
+            "La excelencia no es una habilidad. Es una actitud." - Ralph Marston
+        </div>
+
+        <div class="footer">
+            <p>DelCampo High School | Email: nrivas@delcamposchool.org | Phone: +504 96505926</p>
         </div>
     </div>
 </body>
