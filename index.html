@@ -95,7 +95,7 @@
             font-size: 0.9em;
             margin-left: 10px;
         }
-        .event-tag.special {
+        .event-tag.exam {
             background-color: #c74440;
         }
         .slogan {
@@ -108,28 +108,45 @@
             border-radius: 8px;
             font-size: 1.1em;
         }
-        .supervision-grid {
+        .exam-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            margin: 15px 0;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
-        .supervision-item {
+        .grade-card {
             background-color: #f5f7f2;
-            padding: 10px;
-            border-radius: 4px;
-            border-left: 3px solid #2d5a27;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2d5a27;
         }
-        .grade-label {
+        .grade-title {
+            font-weight: bold;
+            color: #2d5a27;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .exam-day {
+            margin: 8px 0;
+            padding: 5px 0;
+            font-size: 0.95em;
+        }
+        .exam-date {
             font-weight: bold;
             color: #2d5a27;
         }
-        .science-fair-box {
-            background-color: #e8f5e9;
+        .exam-section {
+            background-color: #f5f7f2;
             padding: 15px;
-            border-left: 4px solid #2d5a27;
-            border-radius: 4px;
             margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #c74440;
+        }
+        .exam-section-title {
+            font-weight: bold;
+            color: #c74440;
+            margin-bottom: 10px;
+            font-size: 1.1em;
         }
     </style>
 </head>
@@ -138,25 +155,27 @@
         <div class="header">
             <h1>High Standards</h1>
             <div class="subtitle">DelCampo High School Weekly Bulletin | Boletín Semanal</div>
-            <div class="date">March 2nd - 6th, 2026</div>
+            <div class="date">March 9th - 13th, 2026</div>
         </div>
 
         <div class="content-section">
             <h3 class="section-title">A Message from the Principal | Mensaje del Director</h3>
             <div class="language-section">
                 <div class="english">
-                    <p>Dear colleagues, as we enter this week, we stand at the threshold of something significant: next week begins our third quarter exams, marking the end of this academic period and bringing us ever closer to the conclusion of the school year.</p>
-                    <p>This week, as you prepare your exams, I ask you to approach this task with both rigor and empathy. Our exams should challenge our students appropriately, assess what we have taught, and reflect the learning objectives we set at the beginning of the quarter. But they should also be fair, clear, and thoughtfully constructed. Remember that an exam is not just a measure of student learning—it is also a reflection of our teaching and our commitment to their success.</p>
-                    <p>Next week, many of you will be proctoring exams—some in your own classes, others in the classes of your colleagues. This is a responsibility we must take seriously. When we proctor an exam, we honor the hard work of our fellow teachers who have carefully designed these assessments. We honor the preparation our students have put in. And we uphold the integrity of our academic standards.</p>
-                    <p>Active proctoring means being present—walking the room, maintaining vigilance, and ensuring the best possible test-taking conditions. It is not a time to grade papers, check emails, or attend to other work. It is a time to be fully engaged in supporting a fair and respectful assessment environment. Our students deserve this, and our colleagues deserve this.</p>
-                    <p>Let us approach both the creation and administration of exams with the professionalism and care that define our work. Thank you for your diligence, your fairness, and your unwavering commitment to excellence.</p>
+                    <p>Dear colleagues, this is exam week—one of the most significant moments in our academic calendar. As we administer our third quarter exams, I want to speak directly about professionalism in exam proctoring.</p>
+                    <p>When you proctor an exam, you are not simply supervising a room. You are upholding the integrity of our academic standards. You are honoring the careful work your colleagues have invested in designing fair and meaningful assessments. And you are ensuring that every student has an equal opportunity to demonstrate their learning in a secure and respectful environment.</p>
+                    <p>Active supervision is essential. This means walking around the room regularly, remaining vigilant, and being fully present. Check that students do not have unauthorized technology—phones, smartwatches, AirPods, or any other devices that could provide an unfair advantage. These precautions are not about distrust; they are about fairness and maintaining the value of our assessments.</p>
+                    <p>You represent authority in the testing room. The way you configure the rules, the way you enforce discipline, and the way you manage the exam environment sets an important standard. Your presence matters. Your attentiveness matters. Your professionalism matters.</p>
+                    <p>Please be respectful of the material your colleagues have prepared. They have designed these exams thoughtfully to evaluate student learning in a fair and productive way. When we proctor with care and diligence, we honor their work and we support the credibility of our entire evaluation process.</p>
+                    <p>Thank you for approaching this week with the seriousness and professionalism it deserves. Our students, our colleagues, and our institution depend on it.</p>
                 </div>
                 <div class="spanish">
-                    <p>Queridos colegas, al entrar en esta semana, nos encontramos en el umbral de algo significativo: la próxima semana comienzan nuestros exámenes del tercer trimestre, marcando el final de este período académico y acercándonos cada vez más a la conclusión del año escolar.</p>
-                    <p>Esta semana, mientras preparan sus exámenes, les pido que aborden esta tarea con rigor y empatía. Nuestros exámenes deben desafiar apropiadamente a nuestros estudiantes, evaluar lo que hemos enseñado y reflejar los objetivos de aprendizaje que establecimos al comienzo del trimestre. Pero también deben ser justos, claros y cuidadosamente construidos. Recuerden que un examen no es solo una medida del aprendizaje del estudiante—también es un reflejo de nuestra enseñanza y nuestro compromiso con su éxito.</p>
-                    <p>La próxima semana, muchos de ustedes estarán supervisando exámenes—algunos en sus propias clases, otros en las clases de sus colegas. Esta es una responsabilidad que debemos tomar en serio. Cuando supervisamos un examen, honramos el arduo trabajo de nuestros compañeros maestros que han diseñado cuidadosamente estas evaluaciones. Honramos la preparación que nuestros estudiantes han invertido. Y mantenemos la integridad de nuestros estándares académicos.</p>
-                    <p>La supervisión activa significa estar presente—caminando por el salón, manteniendo vigilancia y asegurando las mejores condiciones posibles para tomar el examen. No es un momento para calificar trabajos, revisar correos o atender otro trabajo. Es un momento para estar completamente comprometidos en apoyar un ambiente de evaluación justo y respetuoso. Nuestros estudiantes merecen esto, y nuestros colegas merecen esto.</p>
-                    <p>Abordemos tanto la creación como la administración de exámenes con el profesionalismo y cuidado que definen nuestro trabajo. Gracias por su diligencia, su equidad y su compromiso inquebrantable con la excelencia.</p>
+                    <p>Queridos colegas, esta es la semana de exámenes—uno de los momentos más significativos de nuestro calendario académico. Al administrar nuestros exámenes del tercer trimestre, quiero hablar directamente sobre el profesionalismo en la supervisión de exámenes.</p>
+                    <p>Cuando supervisan un examen, no están simplemente vigilando un salón. Están manteniendo la integridad de nuestros estándares académicos. Están honrando el cuidadoso trabajo que sus colegas han invertido en diseñar evaluaciones justas y significativas. Y están asegurando que cada estudiante tenga una oportunidad igual de demostrar su aprendizaje en un ambiente seguro y respetuoso.</p>
+                    <p>La supervisión activa es esencial. Esto significa caminar por el salón regularmente, permanecer vigilantes y estar completamente presentes. Verifiquen que los estudiantes no tengan tecnología no autorizada—teléfonos, relojes inteligentes, AirPods o cualquier otro dispositivo que pueda proporcionar una ventaja injusta. Estas precauciones no se tratan de desconfianza; se tratan de equidad y de mantener el valor de nuestras evaluaciones.</p>
+                    <p>Ustedes representan la autoridad en el salón de exámenes. La forma en que configuran las reglas, la forma en que hacen cumplir la disciplina y la forma en que manejan el ambiente de examen establece un estándar importante. Su presencia importa. Su atención importa. Su profesionalismo importa.</p>
+                    <p>Por favor sean respetuosos del material que sus colegas han preparado. Han diseñado estos exámenes cuidadosamente para evaluar el aprendizaje de los estudiantes de manera justa y productiva. Cuando supervisamos con cuidado y diligencia, honramos su trabajo y apoyamos la credibilidad de todo nuestro proceso de evaluación.</p>
+                    <p>Gracias por abordar esta semana con la seriedad y el profesionalismo que merece. Nuestros estudiantes, nuestros colegas y nuestra institución dependen de ello.</p>
                 </div>
             </div>
         </div>
@@ -165,207 +184,145 @@
             <h3 class="section-title">Weekly Schedule | Horario Semanal</h3>
             <div class="schedule">
                 <div class="day">
-                    <span>Monday, March 2nd (Day 2) | Lunes, 2 de marzo (Día 2)</span>
-                    <span class="event-tag">CCC's Day</span>
+                    <span>Monday, March 9th (Day 1) | Lunes, 9 de marzo (Día 1)</span>
+                    <span class="event-tag">Regular Classes</span>
                 </div>
                 <div class="day">
-                    <span>Tuesday, March 3rd (Day 3) | Martes, 3 de marzo (Día 3)</span>
-                    <span class="event-tag">Regular Schedule</span>
+                    <span>Tuesday, March 10th (Day 2) | Martes, 10 de marzo (Día 2)</span>
+                    <span class="event-tag exam">Third Quarter Exams | Last CCC's Day Q3</span>
                 </div>
                 <div class="day">
-                    <span>Wednesday, March 4th (Day 4) | Miércoles, 4 de marzo (Día 4)</span>
-                    <span class="event-tag">Regular Schedule</span>
+                    <span>Wednesday, March 11th (Day 3) | Miércoles, 11 de marzo (Día 3)</span>
+                    <span class="event-tag exam">Third Quarter Exams</span>
                 </div>
                 <div class="day">
-                    <span>Thursday, March 5th (Day 5) | Jueves, 5 de marzo (Día 5)</span>
-                    <span class="event-tag">CCC's Day</span>
+                    <span>Thursday, March 12th (Day 4) | Jueves, 12 de marzo (Día 4)</span>
+                    <span class="event-tag exam">Third Quarter Exams</span>
                 </div>
                 <div class="day">
-                    <span>Friday, March 6th (Day 6) | Viernes, 6 de marzo (Día 6)</span>
-                    <span class="event-tag special">Science Fair</span>
+                    <span>Friday, March 13th (Day 5) 👻💀 | Viernes, 13 de marzo (Día 5) 👻💀</span>
+                    <span class="event-tag">End of Q3 Soccer Tournament</span>
                 </div>
             </div>
         </div>
 
         <div class="content-section">
-            <h3 class="section-title">🔬 Science Fair - Friday, March 6th | Feria de Ciencias - Viernes 6 de marzo 🔬</h3>
-            <div class="language-section">
-                <div class="english">
-                    <div class="science-fair-box">
-                        <p><strong>Location:</strong> Green Court (High School projects)</p>
-                        <p><strong>We will have 26 judges from different schools visiting us. Let's make them feel more than welcome!</strong></p>
+            <h3 class="section-title">Third Quarter Exam Schedule | Horario de Exámenes del Tercer Trimestre</h3>
+            
+            <div class="exam-section">
+                <div class="exam-section-title">📅 Tuesday, March 10th | Martes, 10 de marzo</div>
+                
+                <div class="exam-grid">
+                    <div class="grade-card">
+                        <div class="grade-title">📘 9th Grade</div>
+                        <div class="exam-day">Español</div>
+                        <div class="exam-day">Physical Science</div>
                     </div>
 
-                    <h4 style="color: #2d5a27;">Schedule:</h4>
-                    <ul>
-                        <li><strong>Period 1:</strong> HS students setup at Green Court</li>
-                        <li><strong>Periods 2, 3, 4:</strong> Projects evaluation (teacher supervision according to assigned grades)</li>
-                        <li><strong>Period 5:</strong> Clean up</li>
-                        <li><strong>Period 6:</strong> Awards ceremony at Green Court</li>
-                    </ul>
-
-                    <h4 style="color: #2d5a27; margin-top: 20px;">Teacher Supervision Responsibilities:</h4>
-                    <p>Each assigned teacher is responsible for:</p>
-                    <ol>
-                        <li>Monitoring student behavior</li>
-                        <li>Supporting order during presentations</li>
-                        <li>Guiding visitors and participants</li>
-                        <li>Assisting with evaluation and event logistics</li>
-                    </ol>
-
-                    <h4 style="color: #2d5a27; margin-top: 20px;">Grade-Level Supervision Assignments:</h4>
-                    <div class="supervision-grid">
-                        <div class="supervision-item">
-                            <div class="grade-label">9A</div>
-                            Mr. Ariel Turcios
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">9B</div>
-                            Mr. Mario Alvarez
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">9C</div>
-                            Ms. Maria Fuentes
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">10A</div>
-                            Mrs. Elba Quiñonez
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">10B</div>
-                            Mr. Juan Sebastian Lainez
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">10C</div>
-                            Mr. Sergio Andino
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">11A</div>
-                            Mrs. Ana Lucia García
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">11B</div>
-                            Mr. Omar Gonzales
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">11C</div>
-                            Mr. Oscar Reyes
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">12A</div>
-                            Mr. Eduardo Reina
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">12B</div>
-                            Mr. Jose Moises Arias
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">12C</div>
-                            Mrs. Daysi Hernandez
-                        </div>
+                    <div class="grade-card">
+                        <div class="grade-title">📗 10th Grade</div>
+                        <div class="exam-day">Español</div>
+                        <div class="exam-day">Biology</div>
                     </div>
 
-                    <p style="margin-top: 15px;"><strong>Complete Science Fair Information:</strong> <a href="https://drive.google.com/file/d/1T3bgvXmOhrChaKRWrmsdw76mqWfcxXxF/view?usp=sharing" target="_blank" style="color: #2d5a27; text-decoration: underline;">Access Document</a></p>
+                    <div class="grade-card">
+                        <div class="grade-title">📙 11th Grade</div>
+                        <div class="exam-day">Español</div>
+                        <div class="exam-day">Chemistry</div>
+                    </div>
+
+                    <div class="grade-card">
+                        <div class="grade-title">📒 12th Grade</div>
+                        <div class="exam-day">Español</div>
+                        <div class="exam-day">Chemistry</div>
+                    </div>
                 </div>
-                <div class="spanish">
-                    <div class="science-fair-box">
-                        <p><strong>Ubicación:</strong> Green Court (proyectos de High School)</p>
-                        <p><strong>¡Tendremos 26 jueces de diferentes escuelas visitándonos. Hagámoslos sentir más que bienvenidos!</strong></p>
+            </div>
+
+            <div class="exam-section">
+                <div class="exam-section-title">📅 Wednesday, March 11th | Miércoles, 11 de marzo</div>
+                
+                <div class="exam-grid">
+                    <div class="grade-card">
+                        <div class="grade-title">📘 9th Grade</div>
+                        <div class="exam-day">Civics</div>
+                        <div class="exam-day">English</div>
                     </div>
 
-                    <h4 style="color: #2d5a27;">Horario:</h4>
-                    <ul>
-                        <li><strong>Período 1:</strong> Estudiantes de HS instalan en Green Court</li>
-                        <li><strong>Períodos 2, 3, 4:</strong> Evaluación de proyectos (supervisión de maestros según grados asignados)</li>
-                        <li><strong>Período 5:</strong> Limpieza</li>
-                        <li><strong>Período 6:</strong> Ceremonia de premiación en Green Court</li>
-                    </ul>
-
-                    <h4 style="color: #2d5a27; margin-top: 20px;">Responsabilidades de Supervisión de Maestros:</h4>
-                    <p>Cada maestro asignado es responsable de:</p>
-                    <ol>
-                        <li>Monitorear el comportamiento de los estudiantes</li>
-                        <li>Apoyar el orden durante las presentaciones</li>
-                        <li>Guiar a visitantes y participantes</li>
-                        <li>Asistir con la evaluación y logística del evento</li>
-                    </ol>
-
-                    <h4 style="color: #2d5a27; margin-top: 20px;">Asignaciones de Supervisión por Grado:</h4>
-                    <div class="supervision-grid">
-                        <div class="supervision-item">
-                            <div class="grade-label">9A</div>
-                            Sr. Ariel Turcios
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">9B</div>
-                            Sr. Mario Alvarez
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">9C</div>
-                            Sra. Maria Fuentes
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">10A</div>
-                            Sra. Elba Quiñonez
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">10B</div>
-                            Sr. Juan Sebastian Lainez
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">10C</div>
-                            Sr. Sergio Andino
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">11A</div>
-                            Sra. Ana Lucia García
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">11B</div>
-                            Sr. Omar Gonzales
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">11C</div>
-                            Sr. Oscar Reyes
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">12A</div>
-                            Sr. Eduardo Reina
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">12B</div>
-                            Sr. Jose Moises Arias
-                        </div>
-                        <div class="supervision-item">
-                            <div class="grade-label">12C</div>
-                            Sra. Daysi Hernandez
-                        </div>
+                    <div class="grade-card">
+                        <div class="grade-title">📗 10th Grade</div>
+                        <div class="exam-day">Historia de Honduras</div>
+                        <div class="exam-day">English</div>
                     </div>
 
-                    <p style="margin-top: 15px;"><strong>Información Completa de Feria de Ciencias:</strong> <a href="https://drive.google.com/file/d/1T3bgvXmOhrChaKRWrmsdw76mqWfcxXxF/view?usp=sharing" target="_blank" style="color: #2d5a27; text-decoration: underline;">Acceder al Documento</a></p>
+                    <div class="grade-card">
+                        <div class="grade-title">📙 11th Grade</div>
+                        <div class="exam-day">Physics</div>
+                        <div class="exam-day">English</div>
+                    </div>
+
+                    <div class="grade-card">
+                        <div class="grade-title">📒 12th Grade</div>
+                        <div class="exam-day">Physics</div>
+                        <div class="exam-day">English</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-section">
+                <div class="exam-section-title">📅 Thursday, March 12th | Jueves, 12 de marzo</div>
+                
+                <div class="exam-grid">
+                    <div class="grade-card">
+                        <div class="grade-title">📘 9th Grade</div>
+                        <div class="exam-day">Global History</div>
+                        <div class="exam-day">Math</div>
+                    </div>
+
+                    <div class="grade-card">
+                        <div class="grade-title">📗 10th Grade</div>
+                        <div class="exam-day">U.S. History</div>
+                        <div class="exam-day">Math</div>
+                    </div>
+
+                    <div class="grade-card">
+                        <div class="grade-title">📙 11th Grade</div>
+                        <div class="exam-day">Contemporary History</div>
+                        <div class="exam-day">Math</div>
+                    </div>
+
+                    <div class="grade-card">
+                        <div class="grade-title">📒 12th Grade</div>
+                        <div class="exam-day">Economics</div>
+                        <div class="exam-day">Math</div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="content-section">
-            <h3 class="section-title">Reminders | Recordatorios</h3>
+            <h3 class="section-title">⚠️ Important Exam Week Reminders | Recordatorios Importantes de Semana de Exámenes ⚠️</h3>
             <div class="language-section">
                 <div class="english">
                     <ul>
-                        <li><strong>⚠️ URGENT: Post Your Exam Outcomes by Tuesday, March 3rd</strong> — All teachers must post their exam outcomes (list of topics/resources for students to prepare) in the Outcomes folder. A message will be sent to parents and students on Tuesday, so make sure your outcomes are ready. <a href="https://drive.google.com/drive/folders/1PiiytTYmahPvK1tNOpR3TvDAkAxPk2Ha?usp=sharing" target="_blank" style="color: #2d5a27; text-decoration: underline;">Access Outcomes Folder</a></li>
-                        <li><strong>Minor Subjects Assessment Week</strong> — This week is dedicated to minor subjects assessments.</li>
-                        <li><strong>Next Week: Third Quarter Exams</strong> — Prepare your exams with empathy and rigor. Remember the importance of active proctoring to honor your colleagues' work and support student success.</li>
-                        <li><strong>Friday: Science Fair</strong> — All assigned teachers must supervise their designated grade levels. Let's welcome our 26 visiting judges with DelCampo hospitality!</li>
-                        <li><strong>CCC's Days</strong> — Monday (Day 2) and Thursday (Day 5) are CoCurricular Clubs days.</li>
+                        <li><strong>NO HOMEWORK DURING EXAM WEEK</strong> — Students' only assignment should be to prepare for their exams. Please do not assign additional homework this week.</li>
+                        <li><strong>Tuesday: Last CoCurricular Clubs Day of Q3</strong> — March 10th is the final CCC's day of the third quarter.</li>
+                        <li><strong>Exam Times, Rooms & Proctors</strong> — A separate message with detailed exam schedules, room assignments, and proctor assignments will be sent on Monday to all parents, students, and teachers.</li>
+                        <li><strong>Active Supervision Required</strong> — Walk around the room regularly. Check for unauthorized technology (phones, smartwatches, AirPods, etc.). You represent the authority in the testing room.</li>
+                        <li><strong>Tuesday Early Departure</strong> — Students may leave after finishing their exam on Tuesday if they have sent permission to the office. We will keep you posted on which students have permission.</li>
+                        <li><strong>Friday: End of Q3 Soccer Tournament 👻💀</strong> — Organized by the P.E. department. Last day of the third quarter. Friday the 13th!</li>
+                        <li><strong>Grading Deadline Approaching</strong> — Friday is the last day of the third quarter. Please start concluding your grading process soon.</li>
                     </ul>
                 </div>
                 <div class="spanish">
                     <ul>
-                        <li><strong>⚠️ URGENTE: Publiquen sus Outcomes de Examen para el Martes 3 de Marzo</strong> — Todos los maestros deben publicar sus outcomes de examen (lista de temas/recursos para que los estudiantes se preparen) en la carpeta de Outcomes. Se enviará un mensaje a padres y estudiantes el martes, así que asegúrense de tener sus outcomes listos. <a href="https://drive.google.com/drive/folders/1PiiytTYmahPvK1tNOpR3TvDAkAxPk2Ha?usp=sharing" target="_blank" style="color: #2d5a27; text-decoration: underline;">Acceder a la Carpeta de Outcomes</a></li>
-                        <li><strong>Semana de Evaluación de Materias Menores</strong> — Esta semana está dedicada a las evaluaciones de materias menores.</li>
-                        <li><strong>Próxima Semana: Exámenes del Tercer Trimestre</strong> — Preparen sus exámenes con empatía y rigor. Recuerden la importancia de la supervisión activa para honrar el trabajo de sus colegas y apoyar el éxito de los estudiantes.</li>
-                        <li><strong>Viernes: Feria de Ciencias</strong> — Todos los maestros asignados deben supervisar sus niveles de grado designados. ¡Recibamos a nuestros 26 jueces visitantes con la hospitalidad de DelCampo!</li>
-                        <li><strong>Días de CCC's</strong> — Lunes (Día 2) y jueves (Día 5) son días de Clubes CoCurriculares.</li>
+                        <li><strong>NO HAY TAREAS DURANTE LA SEMANA DE EXÁMENES</strong> — La única asignación de los estudiantes debería ser prepararse para sus exámenes. Por favor no asignen tareas adicionales esta semana.</li>
+                        <li><strong>Martes: Último Día de Clubes CoCurriculares de Q3</strong> — El 10 de marzo es el último día de CCC's del tercer trimestre.</li>
+                        <li><strong>Horarios, Salones y Supervisores de Exámenes</strong> — Se enviará un mensaje separado con los horarios detallados de exámenes, asignaciones de salones y asignaciones de supervisores el lunes a todos los padres, estudiantes y maestros.</li>
+                        <li><strong>Supervisión Activa Requerida</strong> — Caminen por el salón regularmente. Verifiquen tecnología no autorizada (teléfonos, relojes inteligentes, AirPods, etc.). Ustedes representan la autoridad en el salón de exámenes.</li>
+                        <li><strong>Salida Temprana el Martes</strong> — Los estudiantes pueden retirarse después de terminar su examen el martes si han enviado permiso a la oficina. Les mantendremos informados sobre qué estudiantes tienen permiso.</li>
+                        <li><strong>Viernes: Torneo de Fútbol de Fin de Q3 👻💀</strong> — Organizado por el departamento de P.E. Último día del tercer trimestre. ¡Viernes 13!</li>
+                        <li><strong>Fecha Límite de Calificaciones Aproximándose</strong> — El viernes es el último día del tercer trimestre. Por favor comiencen a concluir su proceso de calificación pronto.</li>
                     </ul>
                 </div>
             </div>
@@ -387,8 +344,8 @@
         </div>
 
         <div class="slogan">
-            "Assessment is not about you as a teacher; it is about your students. The more you know about them, the better you can teach them." - Dylan Wiliam<br><br>
-            "La evaluación no se trata de ti como maestro; se trata de tus estudiantes. Cuanto más sepas sobre ellos, mejor podrás enseñarles." - Dylan Wiliam
+            "Fairness does not mean everyone gets the same thing. Fairness means everyone gets what they need." - Rick Lavoie<br><br>
+            "La equidad no significa que todos reciban lo mismo. La equidad significa que todos reciban lo que necesitan." - Rick Lavoie
         </div>
 
         <div class="footer">
