@@ -1,356 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f7f2;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        .header {
-            text-align: center;
-            padding: 20px;
-            background-color: #2d5a27;
-            color: white;
-            border-radius: 8px 8px 0 0;
-        }
-        .subtitle {
-            font-size: 1.1em;
-            margin-top: 5px;
-            color: #fff;
-        }
-        .content-section {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .section-title {
-            color: #2d5a27;
-            border-bottom: 2px solid #91b48c;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-        .language-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #91b48c;
-            color: white;
-            border-radius: 0 0 8px 8px;
-        }
-        .date {
-            background-color: #91b48c;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        .signature {
-            text-align: center;
-            padding: 20px;
-            font-style: italic;
-            background-color: white;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-        .signature-name {
-            font-weight: bold;
-            margin: 5px 0;
-        }
-        .signature-title {
-            color: #2d5a27;
-        }
-        .schedule {
-            margin: 15px 0;
-        }
-        .day {
-            padding: 8px;
-            margin: 5px 0;
-            background-color: #f5f7f2;
-            border-radius: 4px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .event-tag {
-            background-color: #2d5a27;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.9em;
-            margin-left: 10px;
-        }
-        .event-tag.exam {
-            background-color: #c74440;
-        }
-        .slogan {
-            text-align: center;
-            padding: 20px;
-            font-style: italic;
-            color: #2d5a27;
-            background-color: white;
-            margin: 20px 0;
-            border-radius: 8px;
-            font-size: 1.1em;
-        }
-        .exam-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .grade-card {
-            background-color: #f5f7f2;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #2d5a27;
-        }
-        .grade-title {
-            font-weight: bold;
-            color: #2d5a27;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-        .exam-day {
-            margin: 8px 0;
-            padding: 5px 0;
-            font-size: 0.95em;
-        }
-        .exam-date {
-            font-weight: bold;
-            color: #2d5a27;
-        }
-        .exam-section {
-            background-color: #f5f7f2;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            border-left: 4px solid #c74440;
-        }
-        .exam-section-title {
-            font-weight: bold;
-            color: #c74440;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High Standards — Weekly Bulletin | Week of March 16–20, 2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f0f0; padding: 24px 16px; }
+    .bw { max-width: 860px; margin: 0 auto; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    .bh { background: #1B5631; color: #fff; padding: 24px 28px 18px; }
+    .bh .sn { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #C9A84C; margin: 0 0 4px; }
+    .bh h1 { font-size: 22px; font-weight: 700; margin: 0 0 4px; color: #fff; }
+    .bh .wl { font-size: 13px; color: #d4e8d0; margin: 0; }
+    .gb { height: 4px; background: #C9A84C; }
+    .sec { padding: 20px 28px; border-bottom: 1px solid #e8e8e8; }
+    .st { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #1B5631; margin: 0 0 14px; padding-bottom: 6px; border-bottom: 2px solid #C9A84C; display: inline-block; }
+    .bi { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .ll { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #888; margin: 0 0 8px; }
+    .bi p { font-size: 13.5px; line-height: 1.75; color: #2c2c2c; margin: 0 0 10px; }
+    .bi p:last-child { margin-bottom: 0; }
+    .vp { display: inline-block; font-size: 10.5px; font-weight: 700; padding: 2px 9px; border-radius: 12px; margin: 2px 3px 2px 0; background: #eaf3de; color: #27500A; border: 1px solid #C9A84C; }
+    .sg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .dr { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 6px; background: #f6fbf4; border-left: 3px solid #1B5631; }
+    .dr.ccc { background: #fffbee; border-left-color: #C9A84C; }
+    .dn { font-size: 12px; font-weight: 700; color: #1B5631; min-width: 80px; }
+    .dr.ccc .dn { color: #8a6a00; }
+    .dnum { font-size: 11px; color: #555; }
+    .cb { font-size: 10px; font-weight: 700; background: #C9A84C; color: #fff; padding: 2px 7px; border-radius: 10px; margin-left: auto; white-space: nowrap; }
+    .ri { margin-bottom: 14px; }
+    .ri:last-child { margin-bottom: 0; }
+    .ri .rt { font-size: 12px; font-weight: 700; color: #1B5631; margin: 0 0 3px; }
+    .ri p { font-size: 13px; line-height: 1.65; color: #333; margin: 0; }
+    .rf { background: #f0f7ee; border-left: 3px solid #1B5631; padding: 8px 12px; margin-top: 6px; border-radius: 0 4px 4px 0; font-size: 12.5px; color: #333; line-height: 1.7; }
+    .alert-box { background: #fffbee; border-left: 3px solid #C9A84C; padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 6px; font-size: 13px; color: #5a4200; line-height: 1.65; }
+    .thank-box { background: #eaf3de; border-left: 3px solid #1B5631; padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 8px; font-size: 13px; color: #1B5631; line-height: 1.65; }
+    .travel-box { background: #f0f7ee; border: 1.5px solid #C9A84C; border-radius: 7px; padding: 14px 16px; margin-top: 8px; }
+    .travel-box .travel-title { font-size: 12px; font-weight: 700; color: #8a6a00; margin: 0 0 5px; letter-spacing: 0.5px; }
+    .travel-box p { font-size: 13px; line-height: 1.65; color: #2c2c2c; margin: 0; }
+    .ccc-launch { background: #1B5631; border-radius: 7px; padding: 14px 16px; margin-top: 8px; }
+    .ccc-launch p { font-size: 13px; line-height: 1.65; color: #e8f4e4; margin: 0; }
+    .ccc-launch .ccc-title { font-size: 12px; font-weight: 700; color: #C9A84C; margin: 0 0 5px; letter-spacing: 0.5px; }
+    .exam-section { padding: 20px 28px; border-bottom: 1px solid #e8e8e8; }
+    .exam-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+    .exam-intro p { font-size: 13px; line-height: 1.65; color: #333; margin: 0; }
+    .grade-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .grade-card { border: 1px solid #ddd; border-radius: 7px; overflow: hidden; }
+    .grade-header { padding: 8px 12px; font-size: 12px; font-weight: 700; text-align: center; }
+    .g9 .grade-header { background: #1B5631; color: #fff; }
+    .g10 .grade-header { background: #27500A; color: #fff; }
+    .g11 .grade-header { background: #C9A84C; color: #fff; }
+    .g12 .grade-header { background: #8a6a00; color: #fff; }
+    .exam-day { padding: 7px 10px; border-bottom: 1px solid #eee; }
+    .exam-day:last-child { border-bottom: none; }
+    .exam-date { font-size: 10px; font-weight: 700; color: #1B5631; margin: 0 0 2px; }
+    .exam-subjects { font-size: 11.5px; color: #333; margin: 0; line-height: 1.5; }
+    .qs { background: #1B5631; padding: 22px 28px; }
+    .qt { font-size: 15px; font-style: italic; color: #e8f4e4; line-height: 1.7; margin: 0 0 8px; }
+    .qt::before { content: '\201C'; font-size: 28px; color: #C9A84C; line-height: 0; vertical-align: -8px; margin-right: 2px; }
+    .qt::after { content: '\201D'; font-size: 28px; color: #C9A84C; line-height: 0; vertical-align: -8px; margin-left: 2px; }
+    .qa { font-size: 12px; font-weight: 700; color: #C9A84C; letter-spacing: 1px; margin: 0 0 6px; }
+    .q-author { font-size: 11.5px; color: #d4e8d0; margin: 0; }
+    .foot { background: #f5f5f5; padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; }
+    .fn { font-size: 12px; font-weight: 700; color: #1B5631; }
+    .ft { font-size: 11px; color: #777; margin-top: 2px; }
+    .contact-info { font-size: 11px; color: #555; margin-top: 3px; }
+    .contact-info span { margin-right: 12px; }
+    @media (max-width: 640px) {
+      .bi, .sg, .exam-intro { grid-template-columns: 1fr; }
+      .grade-tabs { grid-template-columns: 1fr 1fr; }
+      .foot { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>High Standards</h1>
-            <div class="subtitle">DelCampo High School Weekly Bulletin | Boletín Semanal</div>
-            <div class="date">March 9th - 13th, 2026</div>
-        </div>
+<div class="bw">
 
-        <div class="content-section">
-            <h3 class="section-title">A Message from the Principal | Mensaje del Director</h3>
-            <div class="language-section">
-                <div class="english">
-                    <p>Dear colleagues, this is exam week—one of the most significant moments in our academic calendar. As we administer our third quarter exams, I want to speak directly about professionalism in exam proctoring.</p>
-                    <p>When you proctor an exam, you are not simply supervising a room. You are upholding the integrity of our academic standards. You are honoring the careful work your colleagues have invested in designing fair and meaningful assessments. And you are ensuring that every student has an equal opportunity to demonstrate their learning in a secure and respectful environment.</p>
-                    <p>Active supervision is essential. This means walking around the room regularly, remaining vigilant, and being fully present. Check that students do not have unauthorized technology—phones, smartwatches, AirPods, or any other devices that could provide an unfair advantage. These precautions are not about distrust; they are about fairness and maintaining the value of our assessments.</p>
-                    <p>You represent authority in the testing room. The way you configure the rules, the way you enforce discipline, and the way you manage the exam environment sets an important standard. Your presence matters. Your attentiveness matters. Your professionalism matters.</p>
-                    <p>Please be respectful of the material your colleagues have prepared. They have designed these exams thoughtfully to evaluate student learning in a fair and productive way. When we proctor with care and diligence, we honor their work and we support the credibility of our entire evaluation process.</p>
-                    <p>Thank you for approaching this week with the seriousness and professionalism it deserves. Our students, our colleagues, and our institution depend on it.</p>
-                </div>
-                <div class="spanish">
-                    <p>Queridos colegas, esta es la semana de exámenes—uno de los momentos más significativos de nuestro calendario académico. Al administrar nuestros exámenes del tercer trimestre, quiero hablar directamente sobre el profesionalismo en la supervisión de exámenes.</p>
-                    <p>Cuando supervisan un examen, no están simplemente vigilando un salón. Están manteniendo la integridad de nuestros estándares académicos. Están honrando el cuidadoso trabajo que sus colegas han invertido en diseñar evaluaciones justas y significativas. Y están asegurando que cada estudiante tenga una oportunidad igual de demostrar su aprendizaje en un ambiente seguro y respetuoso.</p>
-                    <p>La supervisión activa es esencial. Esto significa caminar por el salón regularmente, permanecer vigilantes y estar completamente presentes. Verifiquen que los estudiantes no tengan tecnología no autorizada—teléfonos, relojes inteligentes, AirPods o cualquier otro dispositivo que pueda proporcionar una ventaja injusta. Estas precauciones no se tratan de desconfianza; se tratan de equidad y de mantener el valor de nuestras evaluaciones.</p>
-                    <p>Ustedes representan la autoridad en el salón de exámenes. La forma en que configuran las reglas, la forma en que hacen cumplir la disciplina y la forma en que manejan el ambiente de examen establece un estándar importante. Su presencia importa. Su atención importa. Su profesionalismo importa.</p>
-                    <p>Por favor sean respetuosos del material que sus colegas han preparado. Han diseñado estos exámenes cuidadosamente para evaluar el aprendizaje de los estudiantes de manera justa y productiva. Cuando supervisamos con cuidado y diligencia, honramos su trabajo y apoyamos la credibilidad de todo nuestro proceso de evaluación.</p>
-                    <p>Gracias por abordar esta semana con la seriedad y el profesionalismo que merece. Nuestros estudiantes, nuestros colegas y nuestra institución dependen de ello.</p>
-                </div>
-            </div>
-        </div>
+  <div class="bh">
+    <p class="sn">DelCampo High School · DCS High School</p>
+    <h1>High Standards — Weekly Bulletin</h1>
+    <p class="wl">Week of March 16–20, 2026 &nbsp;·&nbsp; Semana del 16 al 20 de marzo de 2026</p>
+  </div>
+  <div class="gb"></div>
 
-        <div class="content-section">
-            <h3 class="section-title">Weekly Schedule | Horario Semanal</h3>
-            <div class="schedule">
-                <div class="day">
-                    <span>Monday, March 9th (Day 1) | Lunes, 9 de marzo (Día 1)</span>
-                    <span class="event-tag">Regular Classes</span>
-                </div>
-                <div class="day">
-                    <span>Tuesday, March 10th (Day 2) | Martes, 10 de marzo (Día 2)</span>
-                    <span class="event-tag exam">Third Quarter Exams | Last CCC's Day Q3</span>
-                </div>
-                <div class="day">
-                    <span>Wednesday, March 11th (Day 3) | Miércoles, 11 de marzo (Día 3)</span>
-                    <span class="event-tag exam">Third Quarter Exams</span>
-                </div>
-                <div class="day">
-                    <span>Thursday, March 12th (Day 4) | Jueves, 12 de marzo (Día 4)</span>
-                    <span class="event-tag exam">Third Quarter Exams</span>
-                </div>
-                <div class="day">
-                    <span>Friday, March 13th (Day 5) 👻💀 | Viernes, 13 de marzo (Día 5) 👻💀</span>
-                    <span class="event-tag">End of Q3 Soccer Tournament</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h3 class="section-title">Third Quarter Exam Schedule | Horario de Exámenes del Tercer Trimestre</h3>
-            
-            <div class="exam-section">
-                <div class="exam-section-title">📅 Tuesday, March 10th | Martes, 10 de marzo</div>
-                
-                <div class="exam-grid">
-                    <div class="grade-card">
-                        <div class="grade-title">📘 9th Grade</div>
-                        <div class="exam-day">Español</div>
-                        <div class="exam-day">Physical Science</div>
-                    </div>
-
-                    <div class="grade-card">
-                        <div class="grade-title">📗 10th Grade</div>
-                        <div class="exam-day">Español</div>
-                        <div class="exam-day">Biology</div>
-                    </div>
-
-                    <div class="grade-card">
-                        <div class="grade-title">📙 11th Grade</div>
-                        <div class="exam-day">Español</div>
-                        <div class="exam-day">Chemistry</div>
-                    </div>
-
-                    <div class="grade-card">
-                        <div class="grade-title">📒 12th Grade</div>
-                        <div class="exam-day">Español</div>
-                        <div class="exam-day">Chemistry</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="exam-section">
-                <div class="exam-section-title">📅 Wednesday, March 11th | Miércoles, 11 de marzo</div>
-                
-                <div class="exam-grid">
-                    <div class="grade-card">
-                        <div class="grade-title">📘 9th Grade</div>
-                        <div class="exam-day">Civics</div>
-                        <div class="exam-day">English</div>
-                    </div>
-
-                    <div class="grade-card">
-                        <div class="grade-title">📗 10th Grade</div>
-                        <div class="exam-day">Historia de Honduras</div>
-                        <div class="exam-day">English</div>
-                    </div>
-
-                    <div class="grade-card">
-                        <div class="grade-title">📙 11th Grade</div>
-                        <div class="exam-day">Physics</div>
-                        <div class="exam-day">English</div>
-                    </div>
-
-                    <div class="grade-card">
-                        <div class="grade-title">📒 12th Grade</div>
-                        <div class="exam-day">Physics</div>
-                        <div class="exam-day">English</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="exam-section">
-                <div class="exam-section-title">📅 Thursday, March 12th | Jueves, 12 de marzo</div>
-                
-                <div class="exam-grid">
-                    <div class="grade-card">
-                        <div class="grade-title">📘 9th Grade</div>
-                        <div class="exam-day">Global History</div>
-                        <div class="exam-day">Math</div>
-                    </div>
-
-                    <div class="grade-card">
-                        <div class="grade-title">📗 10th Grade</div>
-                        <div class="exam-day">U.S. History</div>
-                        <div class="exam-day">Math</div>
-                    </div>
-
-                    <div class="grade-card">
-                        <div class="grade-title">📙 11th Grade</div>
-                        <div class="exam-day">Contemporary History</div>
-                        <div class="exam-day">Math</div>
-                    </div>
-
-                    <div class="grade-card">
-                        <div class="grade-title">📒 12th Grade</div>
-                        <div class="exam-day">Economics</div>
-                        <div class="exam-day">Math</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h3 class="section-title">⚠️ Important Exam Week Reminders | Recordatorios Importantes de Semana de Exámenes ⚠️</h3>
-            <div class="language-section">
-                <div class="english">
-                    <ul>
-                        <li><strong>NO HOMEWORK DURING EXAM WEEK</strong> — Students' only assignment should be to prepare for their exams. Please do not assign additional homework this week.</li>
-                        <li><strong>Tuesday: Last CoCurricular Clubs Day of Q3</strong> — March 10th is the final CCC's day of the third quarter.</li>
-                        <li><strong>Exam Times, Rooms & Proctors</strong> — A separate message with detailed exam schedules, room assignments, and proctor assignments will be sent on Monday to all parents, students, and teachers.</li>
-                        <li><strong>Active Supervision Required</strong> — Walk around the room regularly. Check for unauthorized technology (phones, smartwatches, AirPods, etc.). You represent the authority in the testing room.</li>
-                        <li><strong>Tuesday Early Departure</strong> — Students may leave after finishing their exam on Tuesday if they have sent permission to the office. We will keep you posted on which students have permission.</li>
-                        <li><strong>Friday: End of Q3 Soccer Tournament 👻💀</strong> — Organized by the P.E. department. Last day of the third quarter. Friday the 13th!</li>
-                        <li><strong>Grading Deadline Approaching</strong> — Friday is the last day of the third quarter. Please start concluding your grading process soon.</li>
-                    </ul>
-                </div>
-                <div class="spanish">
-                    <ul>
-                        <li><strong>NO HAY TAREAS DURANTE LA SEMANA DE EXÁMENES</strong> — La única asignación de los estudiantes debería ser prepararse para sus exámenes. Por favor no asignen tareas adicionales esta semana.</li>
-                        <li><strong>Martes: Último Día de Clubes CoCurriculares de Q3</strong> — El 10 de marzo es el último día de CCC's del tercer trimestre.</li>
-                        <li><strong>Horarios, Salones y Supervisores de Exámenes</strong> — Se enviará un mensaje separado con los horarios detallados de exámenes, asignaciones de salones y asignaciones de supervisores el lunes a todos los padres, estudiantes y maestros.</li>
-                        <li><strong>Supervisión Activa Requerida</strong> — Caminen por el salón regularmente. Verifiquen tecnología no autorizada (teléfonos, relojes inteligentes, AirPods, etc.). Ustedes representan la autoridad en el salón de exámenes.</li>
-                        <li><strong>Salida Temprana el Martes</strong> — Los estudiantes pueden retirarse después de terminar su examen el martes si han enviado permiso a la oficina. Les mantendremos informados sobre qué estudiantes tienen permiso.</li>
-                        <li><strong>Viernes: Torneo de Fútbol de Fin de Q3 👻💀</strong> — Organizado por el departamento de P.E. Último día del tercer trimestre. ¡Viernes 13!</li>
-                        <li><strong>Fecha Límite de Calificaciones Aproximándose</strong> — El viernes es el último día del tercer trimestre. Por favor comiencen a concluir su proceso de calificación pronto.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="signature">
-            <div class="language-section">
-                <div class="english">
-                    <p>I'm available for any questions or comments. Have a great week,</p>
-                    <p class="signature-name">Nicolás Rivas</p>
-                    <p class="signature-title">High School Principal</p>
-                </div>
-                <div class="spanish">
-                    <p>Quedo atento a cualquier duda o comentario y feliz semana,</p>
-                    <p class="signature-name">Nicolás Rivas</p>
-                    <p class="signature-title">Director de High School</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="slogan">
-            "Fairness does not mean everyone gets the same thing. Fairness means everyone gets what they need." - Rick Lavoie<br><br>
-            "La equidad no significa que todos reciban lo mismo. La equidad significa que todos reciban lo que necesitan." - Rick Lavoie
-        </div>
-
-        <div class="footer">
-            <p>DelCampo High School | Email: nrivas@delcamposchool.org | Phone: +504 96505926</p>
-        </div>
+  <div class="sec">
+    <div class="st">This Week's Schedule · Horario de la Semana</div>
+    <div class="sg">
+      <div class="dr"><span class="dn">Monday · Lunes</span><span class="dnum">Mar 16 &nbsp;·&nbsp; Day 6</span></div>
+      <div class="dr"><span class="dn">Tuesday · Martes</span><span class="dnum">Mar 17 &nbsp;·&nbsp; Day 1</span></div>
+      <div class="dr ccc"><span class="dn">Wednesday · Miér.</span><span class="dnum">Mar 18 &nbsp;·&nbsp; Day 2</span><span class="cb">CCC Day — Q4 Kickoff!</span></div>
+      <div class="dr"><span class="dn">Thursday · Jueves</span><span class="dnum">Mar 19 &nbsp;·&nbsp; Day 3</span></div>
+      <div class="dr"><span class="dn">Friday · Viernes</span><span class="dnum">Mar 20 &nbsp;·&nbsp; Day 4</span></div>
     </div>
+  </div>
+
+  <div class="sec">
+    <div class="st">Principal's Message · Mensaje del Director</div>
+    <div class="bi">
+      <div>
+        <p class="ll">English</p>
+        <p>Last Friday's MS &amp; HS Soccer Tournament reminded us of something we sometimes forget in the daily rhythm of school life: community is not built in classrooms alone — it is built in the moments we share, the spaces we create together, and the values we live out loud.</p>
+        <p>The P.E. department organized a remarkable event. Students felt safe, staff showed up with purpose, and our school houses became rallying points of identity and belonging. And then something truly special happened: two teacher teams took the field. Students who spend every day sitting in our classes got to stand on the sidelines and cheer for us — their teachers. I had the privilege of being one of those players, and I can tell you firsthand: hearing your students roar from the stands is one of those moments you don't forget. It was a cool reminder that we are not just educators — we are people, and our students see that, and it matters.</p>
+        <p>Sportsmanship was present throughout the tournament. The great majority of students accepted a loss with grace — and those who found it harder discovered a genuine learning opportunity in <strong>resilience</strong>. In those moments, we also saw <strong>empathy</strong> between teammates, <strong>respect</strong> for opponents and referees, <strong>integrity</strong> in how the game was played, and <strong>passion</strong> in every corner of that field. Our school values were not on a poster last Friday — they were in motion.</p>
+        <p>Let us carry that spirit into this week. Community is a practice, not an event. Every interaction, every hallway greeting, every class transition is an opportunity to build it. Thank you for being people our students want to cheer for.</p>
+        <p>Warmly,<br><strong>Mr. Nicolás Rivas</strong></p>
+        <div style="margin-top:10px;">
+          <span class="vp">Resilience</span><span class="vp">Empathy</span><span class="vp">Respect</span><span class="vp">Integrity</span><span class="vp">Passion</span>
+        </div>
+      </div>
+      <div>
+        <p class="ll">Español</p>
+        <p>El torneo de fútbol de MS y HS del viernes pasado nos recordó algo que a veces perdemos de vista en la rutina diaria: la comunidad no se construye únicamente en las aulas, sino en los momentos que compartimos, los espacios que creamos juntos y los valores que vivimos en voz alta.</p>
+        <p>El departamento de Educación Física organizó un evento extraordinario. Los estudiantes se sintieron seguros, el equipo docente respondió con energía y compromiso, y las casas escolares se convirtieron en puntos de encuentro e identidad. Y entonces ocurrió algo verdaderamente especial: dos equipos de profesores salieron a la cancha. Los estudiantes que cada día se sientan en nuestras clases tuvieron la oportunidad de pararse a un lado y apoyarnos — a nosotros, sus maestros. Tuve el privilegio de ser uno de esos jugadores, y puedo decirles de primera mano: escuchar a tus estudiantes animando desde las gradas es uno de esos momentos que no se olvidan. Fue un recordatorio poderoso de que no somos solo educadores — somos personas, y nuestros estudiantes lo ven, y eso importa.</p>
+        <p>El espíritu deportivo estuvo presente a lo largo del torneo. La gran mayoría aceptó una derrota con madurez — y quienes lo encontraron más difícil tuvieron frente a sí una genuina oportunidad de aprendizaje en la <strong>resiliencia</strong>. En esos momentos también vimos <strong>empatía</strong> entre compañeros, <strong>respeto</strong> hacia rivales y árbitros, <strong>integridad</strong> en la forma de jugar, y <strong>pasión</strong> en cada rincón de esa cancha. El viernes pasado, nuestros valores no estaban en un cartel — estaban en movimiento.</p>
+        <p>Llevemos ese espíritu a esta semana. La comunidad es una práctica, no un evento. Cada interacción, cada saludo en el pasillo, cada transición entre clases es una oportunidad para construirla. Gracias por ser personas a quienes nuestros estudiantes quieren animar.</p>
+        <p>Con aprecio,<br><strong>Mr. Nicolás Rivas</strong></p>
+        <div style="margin-top:10px;">
+          <span class="vp">Resiliencia</span><span class="vp">Empatía</span><span class="vp">Respeto</span><span class="vp">Integridad</span><span class="vp">Pasión</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exam-section">
+    <div class="st">Makeup Exam Schedule · Horario de Exámenes de Reposición</div>
+    <div class="exam-intro">
+      <p>Makeup exams run <strong>Tuesday through Thursday</strong> (March 17–19). These are scheduled for students who were <strong>absent with an excused absence</strong> during last week's exams. Only students who have been <strong>officially excused by the office</strong> are eligible to sit for their makeup exam. Please support them in attending their assigned session on time.</p>
+      <p>Los exámenes de reposición se realizan del <strong>martes al jueves</strong> (17–19 de marzo). Están programados para estudiantes que estuvieron <strong>ausentes con excusa justificada</strong> durante los exámenes de la semana pasada. Solo los estudiantes que hayan sido <strong>excusados oficialmente por la oficina</strong> tienen derecho a presentar su examen de reposición. Por favor apóyenlos para que asistan puntualmente.</p>
+    </div>
+    <div class="grade-tabs">
+      <div class="grade-card g9">
+        <div class="grade-header">9th Grade · 9° Grado</div>
+        <div class="exam-day"><p class="exam-date">Mar 17</p><p class="exam-subjects">Español · Physical Science</p></div>
+        <div class="exam-day"><p class="exam-date">Mar 18</p><p class="exam-subjects">Civics · English</p></div>
+        <div class="exam-day"><p class="exam-date">Mar 19</p><p class="exam-subjects">Global History · Math</p></div>
+      </div>
+      <div class="grade-card g10">
+        <div class="grade-header">10th Grade · 10° Grado</div>
+        <div class="exam-day"><p class="exam-date">Mar 17</p><p class="exam-subjects">Español · Biology</p></div>
+        <div class="exam-day"><p class="exam-date">Mar 18</p><p class="exam-subjects">Hist. de Honduras · English</p></div>
+        <div class="exam-day"><p class="exam-date">Mar 19</p><p class="exam-subjects">U.S. History · Math</p></div>
+      </div>
+      <div class="grade-card g11">
+        <div class="grade-header">11th Grade · 11° Grado</div>
+        <div class="exam-day"><p class="exam-date">Mar 17</p><p class="exam-subjects">Español · Chemistry</p></div>
+        <div class="exam-day"><p class="exam-date">Mar 18</p><p class="exam-subjects">Physics · English</p></div>
+        <div class="exam-day"><p class="exam-date">Mar 19</p><p class="exam-subjects">Contemporary History · Math</p></div>
+      </div>
+      <div class="grade-card g12">
+        <div class="grade-header">12th Grade · 12° Grado</div>
+        <div class="exam-day"><p class="exam-date">Mar 17</p><p class="exam-subjects">Español · Chemistry</p></div>
+        <div class="exam-day"><p class="exam-date">Mar 18</p><p class="exam-subjects">Physics · English</p></div>
+        <div class="exam-day"><p class="exam-date">Mar 19</p><p class="exam-subjects">Economics · Math</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="st">Reminders · Recordatorios</div>
+    <div class="bi">
+      <div>
+        <p class="ll">English</p>
+        <div class="ri">
+          <p class="rt">🏐 Principal Traveling — Wednesday, March 18 through Sunday, March 22</p>
+          <p>Starting this Wednesday, I will be traveling to Nicaragua with our school's volleyball delegation to compete in the <strong>AASCA Tournament</strong> — and I could not be more proud to represent DelCampo alongside our athletes. I will be away through Sunday, March 22. I have full confidence in our team to keep things running with the same high standards we always hold. Please continue to lead your classrooms, support our students, and keep the High School boat afloat while I'm gone — I'll be cheering for DelCampo from both sidelines! 🏐🇳🇮</p>
+          <div class="travel-box">
+            <p class="travel-title">While the principal is away...</p>
+            <p>Please reach out to the designated point of contact for any urgent matters. Continue with routines, expectations, and the same professional standard we carry every day. You've got this.</p>
+          </div>
+        </div>
+        <div class="ri" style="margin-top:14px;">
+          <p class="rt">Q4 CCC Season Kickoff — Wednesday, March 18</p>
+          <p>This Wednesday marks the first session of our <strong>Q4 co-curricular clubs</strong> — the last and final CCC season of this school year. This is a moment worth celebrating! Please welcome your students with energy and enthusiasm. Remind them that this is their last opportunity this year to grow, connect, and make memories through this powerful initiative. Let's make it an unforgettable closing season.</p>
+          <div class="ccc-launch">
+            <p class="ccc-title">Last season of the year — make it count!</p>
+            <p>Welcome students warmly, set the tone with excitement, and remind them why clubs matter. This is their final chapter of CCC for 2025–2026.</p>
+          </div>
+        </div>
+        <div class="ri" style="margin-top:14px;">
+          <p class="rt">CCC Attendance Form — Action Required</p>
+          <p>The Q3 CCC attendance format is ready and available. Please complete it as soon as possible — we are approaching the end of the third quarter and grades need to be finalized promptly. Do not leave this for the last minute.</p>
+          <div class="alert-box">⚠️ Q3 grade closing is approaching — CCC attendance must be submitted on time.</div>
+        </div>
+        <div class="ri" style="margin-top:14px;">
+          <p class="rt">Afternoon Reflection Session — Wednesday, March 18</p>
+          <p>This Wednesday afternoon we will hold an in-school reflection session for <strong>26 students</strong> who have had discipline incidents in recent weeks. This session was intentionally scheduled for Wednesday to avoid any interference with makeup exam dates. Thank you all for maintaining a disciplined atmosphere and upholding clear behavioral expectations in our classrooms and throughout our school.</p>
+          <div class="thank-box">🙏 Your consistency in holding the standard makes a real difference — thank you.</div>
+        </div>
+        <div class="ri" style="margin-top:14px;">
+          <p class="rt">PowerSchool Q&amp;A Session — Wednesday, March 18</p>
+          <p>Teacher leaders and department heads: please gather your team's questions beforehand and bring them in the following format:</p>
+          <div class="rf">
+            📌 <strong>Question:</strong> (required)<br>
+            📝 <strong>Context:</strong> (optional, but helpful)<br>
+            🖼 <strong>Screenshot</strong> (if applicable)
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="ll">Español</p>
+        <div class="ri">
+          <p class="rt">🏐 Director de Viaje — Miércoles 18 al Domingo 22 de marzo</p>
+          <p>A partir de este miércoles estaré viajando a Nicaragua junto con la delegación de voleibol de nuestro colegio para participar en el <strong>Torneo AASCA</strong> — y no podría estar más orgulloso de representar a DelCampo junto a nuestros deportistas. Estaré fuera hasta el domingo 22 de marzo. Tengo plena confianza en nuestro equipo para mantener todo funcionando con los mismos altos estándares que siempre nos caracterizan. Por favor continúen liderando sus salones, apoyando a nuestros estudiantes y manteniendo el barco del High School a flote mientras estoy fuera — ¡los estaré animando desde ambas canchas! 🏐🇳🇮</p>
+          <div class="travel-box">
+            <p class="travel-title">Mientras el director está de viaje...</p>
+            <p>Por favor comuníquense con el punto de contacto designado para cualquier asunto urgente. Continúen con las rutinas, las expectativas y el mismo estándar profesional que llevamos cada día. ¡Ustedes pueden con esto!</p>
+          </div>
+        </div>
+        <div class="ri" style="margin-top:14px;">
+          <p class="rt">Inicio de la Temporada Q4 de Clubes — Miércoles 18 de marzo</p>
+          <p>Este miércoles arranca la primera sesión de los <strong>clubes co-curriculares del 4° parcial</strong> — la última temporada de CCC de este año escolar. ¡Es un momento que vale la pena celebrar! Por favor reciban a sus estudiantes con energía y entusiasmo. Recuérdenles que esta es su última oportunidad en el año para crecer, conectar y crear recuerdos a través de esta poderosa iniciativa. Hagamos de esta una temporada de cierre inolvidable.</p>
+          <div class="ccc-launch">
+            <p class="ccc-title">¡Última temporada del año — que cuente!</p>
+            <p>Reciban a los estudiantes con calidez, marquen el tono con entusiasmo y recuérdenles por qué los clubes importan. Este es su último capítulo de CCC en 2025–2026.</p>
+          </div>
+        </div>
+        <div class="ri" style="margin-top:14px;">
+          <p class="rt">Formato de Asistencia a Clubes — Acción Requerida</p>
+          <p>El formato de asistencia a los clubes CCC del 3er parcial ya está listo y disponible. Por favor complételo a la brevedad posible — estamos cerca del cierre del tercer parcial y las calificaciones deben ser finalizadas con prontitud. No lo dejen para el último momento.</p>
+          <div class="alert-box">⚠️ El cierre de notas del 3er parcial se aproxima — la asistencia a clubes debe entregarse a tiempo.</div>
+        </div>
+        <div class="ri" style="margin-top:14px;">
+          <p class="rt">Sesión de Reflexión en la Tarde — Miércoles 18 de marzo</p>
+          <p>Este miércoles en la tarde realizaremos una sesión de reflexión en el colegio para <strong>26 estudiantes</strong> que han tenido incidentes de disciplina en las últimas semanas. Esta sesión fue programada intencionalmente para el miércoles con el fin de no interferir con las fechas de los exámenes de reposición. Gracias a todos por mantener un ambiente disciplinado y por sostener con claridad las expectativas de comportamiento dentro de nuestras aulas y en todo el colegio.</p>
+          <div class="thank-box">🙏 Su consistencia en mantener el estándar hace una diferencia real — gracias.</div>
+        </div>
+        <div class="ri" style="margin-top:14px;">
+          <p class="rt">Sesión de P&amp;R sobre PowerSchool — Miércoles 18 de marzo</p>
+          <p>Líderes de equipo y jefes de departamento: por favor recopilen las preguntas de su equipo con anticipación y tráiganlas en el siguiente formato:</p>
+          <div class="rf">
+            📌 <strong>Pregunta:</strong> (requerida)<br>
+            📝 <strong>Contexto:</strong> (opcional, pero útil)<br>
+            🖼 <strong>Captura de pantalla</strong> (si aplica)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="qs">
+    <p class="qt">Sport has the power to change the world. It has the power to inspire. It has the power to unite people in a way that little else does.</p>
+    <p class="qa">— Nelson Mandela</p>
+    <p class="q-author">Shared by Mr. Nicolás Rivas · High School Principal</p>
+  </div>
+
+  <div class="foot">
+    <div>
+      <div class="fn">Nicolás Rivas Peláez</div>
+      <div class="ft">High School Principal · DelCampo School, Tegucigalpa</div>
+      <div class="contact-info">
+        <span>✉ nrivas@delcamposchool.org</span>
+        <span>📞 +504 9650 5926</span>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#aaa;">Week 3 · Q3 · 2026</div>
+  </div>
+
+</div>
 </body>
 </html>
