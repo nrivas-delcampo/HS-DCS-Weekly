@@ -1,260 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>High Standards — Weekly Bulletin | Week of March 16–20, 2026</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f0f0; padding: 24px 16px; }
-    .bw { max-width: 860px; margin: 0 auto; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
-    .bh { background: #1B5631; color: #fff; padding: 24px 28px 18px; }
-    .bh .sn { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #C9A84C; margin: 0 0 4px; }
-    .bh h1 { font-size: 22px; font-weight: 700; margin: 0 0 4px; color: #fff; }
-    .bh .wl { font-size: 13px; color: #d4e8d0; margin: 0; }
-    .gb { height: 4px; background: #C9A84C; }
-    .sec { padding: 20px 28px; border-bottom: 1px solid #e8e8e8; }
-    .st { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #1B5631; margin: 0 0 14px; padding-bottom: 6px; border-bottom: 2px solid #C9A84C; display: inline-block; }
-    .bi { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .ll { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #888; margin: 0 0 8px; }
-    .bi p { font-size: 13.5px; line-height: 1.75; color: #2c2c2c; margin: 0 0 10px; }
-    .bi p:last-child { margin-bottom: 0; }
-    .vp { display: inline-block; font-size: 10.5px; font-weight: 700; padding: 2px 9px; border-radius: 12px; margin: 2px 3px 2px 0; background: #eaf3de; color: #27500A; border: 1px solid #C9A84C; }
-    .sg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .dr { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 6px; background: #f6fbf4; border-left: 3px solid #1B5631; }
-    .dr.ccc { background: #fffbee; border-left-color: #C9A84C; }
-    .dn { font-size: 12px; font-weight: 700; color: #1B5631; min-width: 80px; }
-    .dr.ccc .dn { color: #8a6a00; }
-    .dnum { font-size: 11px; color: #555; }
-    .cb { font-size: 10px; font-weight: 700; background: #C9A84C; color: #fff; padding: 2px 7px; border-radius: 10px; margin-left: auto; white-space: nowrap; }
-    .ri { margin-bottom: 14px; }
-    .ri:last-child { margin-bottom: 0; }
-    .ri .rt { font-size: 12px; font-weight: 700; color: #1B5631; margin: 0 0 3px; }
-    .ri p { font-size: 13px; line-height: 1.65; color: #333; margin: 0; }
-    .rf { background: #f0f7ee; border-left: 3px solid #1B5631; padding: 8px 12px; margin-top: 6px; border-radius: 0 4px 4px 0; font-size: 12.5px; color: #333; line-height: 1.7; }
-    .alert-box { background: #fffbee; border-left: 3px solid #C9A84C; padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 6px; font-size: 13px; color: #5a4200; line-height: 1.65; }
-    .thank-box { background: #eaf3de; border-left: 3px solid #1B5631; padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 8px; font-size: 13px; color: #1B5631; line-height: 1.65; }
-    .travel-box { background: #f0f7ee; border: 1.5px solid #C9A84C; border-radius: 7px; padding: 14px 16px; margin-top: 8px; }
-    .travel-box .travel-title { font-size: 12px; font-weight: 700; color: #8a6a00; margin: 0 0 5px; letter-spacing: 0.5px; }
-    .travel-box p { font-size: 13px; line-height: 1.65; color: #2c2c2c; margin: 0; }
-    .ccc-launch { background: #1B5631; border-radius: 7px; padding: 14px 16px; margin-top: 8px; }
-    .ccc-launch p { font-size: 13px; line-height: 1.65; color: #e8f4e4; margin: 0; }
-    .ccc-launch .ccc-title { font-size: 12px; font-weight: 700; color: #C9A84C; margin: 0 0 5px; letter-spacing: 0.5px; }
-    .exam-section { padding: 20px 28px; border-bottom: 1px solid #e8e8e8; }
-    .exam-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
-    .exam-intro p { font-size: 13px; line-height: 1.65; color: #333; margin: 0; }
-    .grade-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-    .grade-card { border: 1px solid #ddd; border-radius: 7px; overflow: hidden; }
-    .grade-header { padding: 8px 12px; font-size: 12px; font-weight: 700; text-align: center; }
-    .g9 .grade-header { background: #1B5631; color: #fff; }
-    .g10 .grade-header { background: #27500A; color: #fff; }
-    .g11 .grade-header { background: #C9A84C; color: #fff; }
-    .g12 .grade-header { background: #8a6a00; color: #fff; }
-    .exam-day { padding: 7px 10px; border-bottom: 1px solid #eee; }
-    .exam-day:last-child { border-bottom: none; }
-    .exam-date { font-size: 10px; font-weight: 700; color: #1B5631; margin: 0 0 2px; }
-    .exam-subjects { font-size: 11.5px; color: #333; margin: 0; line-height: 1.5; }
-    .qs { background: #1B5631; padding: 22px 28px; }
-    .qt { font-size: 15px; font-style: italic; color: #e8f4e4; line-height: 1.7; margin: 0 0 8px; }
-    .qt::before { content: '\201C'; font-size: 28px; color: #C9A84C; line-height: 0; vertical-align: -8px; margin-right: 2px; }
-    .qt::after { content: '\201D'; font-size: 28px; color: #C9A84C; line-height: 0; vertical-align: -8px; margin-left: 2px; }
-    .qa { font-size: 12px; font-weight: 700; color: #C9A84C; letter-spacing: 1px; margin: 0 0 6px; }
-    .q-author { font-size: 11.5px; color: #d4e8d0; margin: 0; }
-    .foot { background: #f5f5f5; padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; }
-    .fn { font-size: 12px; font-weight: 700; color: #1B5631; }
-    .ft { font-size: 11px; color: #777; margin-top: 2px; }
-    .contact-info { font-size: 11px; color: #555; margin-top: 3px; }
-    .contact-info span { margin-right: 12px; }
-    @media (max-width: 640px) {
-      .bi, .sg, .exam-intro { grid-template-columns: 1fr; }
-      .grade-tabs { grid-template-columns: 1fr 1fr; }
-      .foot { flex-direction: column; align-items: flex-start; gap: 8px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d5a27;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+        .subtitle {
+            font-size: 1.1em;
+            margin-top: 5px;
+            color: #fff;
+        }
+        .content-section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            color: #2d5a27;
+            border-bottom: 2px solid #91b48c;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .language-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #91b48c;
+            color: white;
+            border-radius: 0 0 8px 8px;
+        }
+        .date {
+            background-color: #91b48c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .signature {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            background-color: white;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .signature-name {
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .signature-title {
+            color: #2d5a27;
+        }
+        .schedule {
+            margin: 15px 0;
+        }
+        .day {
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #f5f7f2;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .event-tag {
+            background-color: #2d5a27;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        .event-tag.special {
+            background-color: #c74440;
+        }
+        .slogan {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            color: #2d5a27;
+            background-color: white;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 1.1em;
+        }
+        .highlight-box {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #c74440;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+    </style>
 </head>
 <body>
-<div class="bw">
+    <div class="container">
+        <div class="header">
+            <h1>High Standards</h1>
+            <div class="subtitle">DelCampo High School Weekly Bulletin | Boletín Semanal</div>
+            <div class="date">April 13th - 17th, 2026</div>
+        </div>
 
-  <div class="bh">
-    <p class="sn">DelCampo High School · DCS High School</p>
-    <h1>High Standards — Weekly Bulletin</h1>
-    <p class="wl">Week of March 16–20, 2026 &nbsp;·&nbsp; Semana del 16 al 20 de marzo de 2026</p>
-  </div>
-  <div class="gb"></div>
+        <div class="content-section">
+            <h3 class="section-title">A Message from the Principal | Mensaje del Director</h3>
+            <div class="language-section">
+                <div class="english">
+                    <p>Welcome back, my High School team! I hope the vacation provided you with rest, renewal, and quality time with the people who matter most. As we return this week, we step into the final stretch of the school year—and what a meaningful stretch it is.</p>
+                    <p>This Wednesday, we will hold our Student-Led Conferences. These conferences are powerful moments where students take ownership of their learning journey, share their progress with their families, and reflect on their growth and goals. Please prepare your students thoughtfully for these conversations. Guide them in presenting their work, celebrating their achievements, and discussing areas for continued growth. These conferences matter deeply.</p>
+                    <p>As we move forward into this fourth quarter, I want to remind us all of the importance of maintaining our high standards in grading and evaluation practices right through to the end of the year. It is easy to lose focus as the finish line approaches, but our students deserve consistency, fairness, and rigor all the way through. This is especially critical as we think strategically about our seniors.</p>
+                    <p>Our 12th graders will be in school only until May 5th. Their exams are scheduled for May 6th, 7th, and 8th. This means we have a very short window to evaluate them effectively and ensure they are prepared for those final assessments. We need to be intentional, focused, and strategic in how we use the remaining time with them. Every assignment, every class session, every piece of feedback counts.</p>
+                    <p>Let's finish this year strong—not because we have to, but because our students deserve nothing less. Thank you for your professionalism, your care, and your unwavering commitment to excellence.</p>
+                </div>
+                <div class="spanish">
+                    <p>¡Bienvenidos de regreso, mi equipo de High School! Espero que las vacaciones les hayan brindado descanso, renovación y tiempo de calidad con las personas que más importan. Al regresar esta semana, entramos en la recta final del año escolar—y qué recta tan significativa es.</p>
+                    <p>Este miércoles tendremos nuestras Conferencias Dirigidas por Estudiantes. Estas conferencias son momentos poderosos donde los estudiantes toman propiedad de su viaje de aprendizaje, comparten su progreso con sus familias y reflexionan sobre su crecimiento y metas. Por favor preparen a sus estudiantes cuidadosamente para estas conversaciones. Guíenlos en presentar su trabajo, celebrar sus logros y discutir áreas de crecimiento continuo. Estas conferencias importan profundamente.</p>
+                    <p>Al avanzar hacia este cuarto trimestre, quiero recordarnos a todos la importancia de mantener nuestros altos estándares en las prácticas de calificación y evaluación hasta el final del año. Es fácil perder el enfoque cuando la meta se acerca, pero nuestros estudiantes merecen consistencia, equidad y rigor hasta el final. Esto es especialmente crítico cuando pensamos estratégicamente en nuestros seniors.</p>
+                    <p>Nuestros estudiantes de 12mo grado estarán en la escuela solo hasta el 5 de mayo. Sus exámenes están programados para el 6, 7 y 8 de mayo. Esto significa que tenemos una ventana muy corta para evaluarlos efectivamente y asegurar que estén preparados para esas evaluaciones finales. Necesitamos ser intencionales, enfocados y estratégicos en cómo usamos el tiempo restante con ellos. Cada tarea, cada sesión de clase, cada retroalimentación cuenta.</p>
+                    <p>Terminemos este año con fuerza—no porque tengamos que hacerlo, sino porque nuestros estudiantes no merecen nada menos. Gracias por su profesionalismo, su cuidado y su compromiso inquebrantable con la excelencia.</p>
+                </div>
+            </div>
+        </div>
 
-  <div class="sec">
-    <div class="st">This Week's Schedule · Horario de la Semana</div>
-    <div class="sg">
-      <div class="dr"><span class="dn">Monday · Lunes</span><span class="dnum">Mar 16 &nbsp;·&nbsp; Day 6</span></div>
-      <div class="dr"><span class="dn">Tuesday · Martes</span><span class="dnum">Mar 17 &nbsp;·&nbsp; Day 1</span></div>
-      <div class="dr ccc"><span class="dn">Wednesday · Miér.</span><span class="dnum">Mar 18 &nbsp;·&nbsp; Day 2</span><span class="cb">CCC Day — Q4 Kickoff!</span></div>
-      <div class="dr"><span class="dn">Thursday · Jueves</span><span class="dnum">Mar 19 &nbsp;·&nbsp; Day 3</span></div>
-      <div class="dr"><span class="dn">Friday · Viernes</span><span class="dnum">Mar 20 &nbsp;·&nbsp; Day 4</span></div>
+        <div class="content-section">
+            <h3 class="section-title">Weekly Schedule | Horario Semanal</h3>
+            <div class="schedule">
+                <div class="day">
+                    <span>Monday, April 13th (Day 4) | Lunes, 13 de abril (Día 4)</span>
+                    <span class="event-tag">Regular Classes</span>
+                </div>
+                <div class="day">
+                    <span>Tuesday, April 14th (Day 5) | Martes, 14 de abril (Día 5)</span>
+                    <span class="event-tag">CCC's Day</span>
+                </div>
+                <div class="day">
+                    <span>Wednesday, April 15th | Miércoles, 15 de abril</span>
+                    <span class="event-tag special">Student-Led Conferences - No Classes</span>
+                </div>
+                <div class="day">
+                    <span>Thursday, April 16th (Day 6) | Jueves, 16 de abril (Día 6)</span>
+                    <span class="event-tag">Regular Classes</span>
+                </div>
+                <div class="day">
+                    <span>Friday, April 17th (Day 1) | Viernes, 17 de abril (Día 1)</span>
+                    <span class="event-tag">Regular Classes</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">📋 Student-Led Conferences - Wednesday, April 15th | Conferencias Dirigidas por Estudiantes - Miércoles 15 de abril 📋</h3>
+            <div class="language-section">
+                <div class="english">
+                    <div class="highlight-box">
+                        <p><strong>Time:</strong> 7:30 a.m. to 4:00 p.m.</p>
+                        <p><strong>Lunch Break:</strong> 11:00 a.m. to 11:45 a.m.</p>
+                        <p><strong>Location:</strong> Green Court</p>
+                        <p><strong>Important:</strong> Both the High School and Middle School Principals (Mr. Rivas and Mrs. Nydia Lopez) will not be present as we will be traveling to the AASCA Principals Meeting.</p>
+                    </div>
+
+                    <h4 style="color: #2d5a27;">Dress Code:</h4>
+                    <ul>
+                        <li><strong>Men:</strong> Must wear a tie</li>
+                        <li><strong>Women:</strong> Professional and appropriate attire for the occasion</li>
+                    </ul>
+
+                    <h4 style="color: #2d5a27; margin-top: 20px;">Student Preparation:</h4>
+                    <p>Please prepare your students thoughtfully for their conferences. Guide them in presenting their work, reflecting on their growth, celebrating their achievements, and discussing areas for continued improvement. These are powerful moments where students take ownership of their learning journey and share their progress with their families.</p>
+
+                    <p style="margin-top: 15px;">Thank you in advance for the professionalism, empathy, and support you bring to these student-led moments. Our students will shine, and our team will once again uphold the DelCampo name with excellence.</p>
+                </div>
+                <div class="spanish">
+                    <div class="highlight-box">
+                        <p><strong>Horario:</strong> 7:30 a.m. a 4:00 p.m.</p>
+                        <p><strong>Pausa para Almuerzo:</strong> 11:00 a.m. a 11:45 a.m.</p>
+                        <p><strong>Ubicación:</strong> Green Court</p>
+                        <p><strong>Importante:</strong> Tanto el Director de High School como la Directora de Middle School (Mr. Rivas y Mrs. Nydia Lopez) no estaremos presentes ya que estaremos viajando a la Reunión de Directores de AASCA.</p>
+                    </div>
+
+                    <h4 style="color: #2d5a27;">Código de Vestimenta:</h4>
+                    <ul>
+                        <li><strong>Caballeros:</strong> Deben usar corbata</li>
+                        <li><strong>Damas:</strong> Vestimenta profesional y apropiada para la ocasión</li>
+                    </ul>
+
+                    <h4 style="color: #2d5a27; margin-top: 20px;">Preparación de Estudiantes:</h4>
+                    <p>Por favor preparen a sus estudiantes cuidadosamente para sus conferencias. Guíenlos en presentar su trabajo, reflexionar sobre su crecimiento, celebrar sus logros y discutir áreas de mejora continua. Estos son momentos poderosos donde los estudiantes toman propiedad de su viaje de aprendizaje y comparten su progreso con sus familias.</p>
+
+                    <p style="margin-top: 15px;">Gracias de antemano por el profesionalismo, la empatía y el apoyo que traen a estos momentos dirigidos por estudiantes. Nuestros estudiantes brillarán, y nuestro equipo volverá a dejar en alto el nombre de DelCampo con excelencia.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">✈️ Principals Traveling - AASCA Meeting | Directores de Viaje - Reunión AASCA ✈️</h3>
+            <div class="language-section">
+                <div class="english">
+                    <div class="highlight-box">
+                        <p><strong>Traveling:</strong> Tuesday, April 14th through Saturday, April 18th</p>
+                        <p><strong>Destination:</strong> San Salvador, El Salvador</p>
+                        <p><strong>Event:</strong> Annual AASCA Middle School & High School Principals Meeting</p>
+                        <p><strong>Travelers:</strong> Mr. Nicolás Rivas (HS Principal) & Mrs. Nydia Lopez (MS Principal)</p>
+                    </div>
+
+                    <p>This Tuesday, Mrs. Nydia Lopez and I will be traveling to San Salvador for the annual AASCA Middle School and High School Principals Meeting, which runs through Saturday. We will both be absent Wednesday, Thursday, and Friday—which means we will not be present for Wednesday's Student-Led Conferences.</p>
+
+                    <p>This meeting is critically important for all schools that belong to AASCA. It is the time when we gather to:</p>
+                    <ul>
+                        <li>Review and discuss all the sports and academic events that took place during this school year</li>
+                        <li>Plan and coordinate events for the upcoming school year</li>
+                        <li>Strengthen our strategic alliances with all AASCA member schools</li>
+                    </ul>
+
+                    <p>We have full confidence in our team to maintain our high standards and continue leading with excellence during our absence. Please reach out to the designated point of contact for any urgent matters. You've got this!</p>
+                </div>
+                <div class="spanish">
+                    <div class="highlight-box">
+                        <p><strong>Viajando:</strong> Martes 14 de abril hasta sábado 18 de abril</p>
+                        <p><strong>Destino:</strong> San Salvador, El Salvador</p>
+                        <p><strong>Evento:</strong> Reunión Anual de Directores de Middle School y High School de AASCA</p>
+                        <p><strong>Viajeros:</strong> Mr. Nicolás Rivas (Director HS) & Mrs. Nydia Lopez (Directora MS)</p>
+                    </div>
+
+                    <p>Este martes, la Sra. Nydia Lopez y yo estaremos viajando a San Salvador para la reunión anual de Directores de Middle School y High School de AASCA, que se extiende hasta el sábado. Ambos estaremos ausentes el miércoles, jueves y viernes—lo que significa que no estaremos presentes para las Conferencias Dirigidas por Estudiantes del miércoles.</p>
+
+                    <p>Esta reunión es críticamente importante para todas las escuelas que pertenecen a AASCA. Es el momento en que nos reunimos para:</p>
+                    <ul>
+                        <li>Revisar y discutir todos los eventos deportivos y académicos que tuvieron lugar durante este año escolar</li>
+                        <li>Planificar y coordinar eventos para el próximo año escolar</li>
+                        <li>Fortalecer nuestras alianzas estratégicas con todas las escuelas miembro de AASCA</li>
+                    </ul>
+
+                    <p>Tenemos plena confianza en nuestro equipo para mantener nuestros altos estándares y continuar liderando con excelencia durante nuestra ausencia. Por favor comuníquense con el punto de contacto designado para cualquier asunto urgente. ¡Ustedes pueden con esto!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">⚠️ Important Reminders | Recordatorios Importantes ⚠️</h3>
+            <div class="language-section">
+                <div class="english">
+                    <ul>
+                        <li><strong>Principals Absent Wed-Fri</strong> — Mr. Rivas and Mrs. Nydia Lopez will be traveling to San Salvador for the AASCA Principals Meeting from Tuesday through Saturday. We will not be present for Wednesday's Student-Led Conferences. Please reach out to the designated point of contact for urgent matters.</li>
+                        <li><strong>Wednesday: Student-Led Conferences</strong> — No classes for students. Student-Led Conferences from 7:30 a.m. to 4:00 p.m. at Green Court. Remember dress code: men wear ties, women wear professional attire. Prepare students to present their work and reflect on their growth.</li>
+                        <li><strong>Senior Timeline - Strategic Planning Required</strong> — Seniors will be in school only until May 5th. Senior exams are May 6th, 7th, and 8th. We must be very strategic in evaluating them during this short window.</li>
+                        <li><strong>Maintain High Standards Through Year End</strong> — Continue with rigorous and fair grading and evaluation practices right through to the end of the year. Our students deserve consistency.</li>
+                        <li><strong>Tuesday CCC's Day</strong> — Tuesday (Day 5) is CoCurricular Clubs day.</li>
+                    </ul>
+                </div>
+                <div class="spanish">
+                    <ul>
+                        <li><strong>Directores Ausentes Mié-Vie</strong> — Mr. Rivas y la Sra. Nydia Lopez estaremos viajando a San Salvador para la Reunión de Directores de AASCA desde el martes hasta el sábado. No estaremos presentes para las Conferencias Dirigidas por Estudiantes del miércoles. Por favor comuníquense con el punto de contacto designado para asuntos urgentes.</li>
+                        <li><strong>Miércoles: Conferencias Dirigidas por Estudiantes</strong> — No hay clases para estudiantes. Conferencias Dirigidas por Estudiantes de 7:30 a.m. a 4:00 p.m. en Green Court. Recuerden código de vestimenta: caballeros usan corbata, damas visten apropiadamente. Preparen a los estudiantes para presentar su trabajo y reflexionar sobre su crecimiento.</li>
+                        <li><strong>Cronograma de Seniors - Planificación Estratégica Requerida</strong> — Los seniors estarán en la escuela solo hasta el 5 de mayo. Los exámenes de seniors son el 6, 7 y 8 de mayo. Debemos ser muy estratégicos al evaluarlos durante esta corta ventana.</li>
+                        <li><strong>Mantengan Altos Estándares Hasta el Final del Año</strong> — Continúen con prácticas rigurosas y justas de calificación y evaluación hasta el final del año. Nuestros estudiantes merecen consistencia.</li>
+                        <li><strong>Martes Día de CCC's</strong> — Martes (Día 5) es día de Clubes CoCurriculares.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="signature">
+            <div class="language-section">
+                <div class="english">
+                    <p>I'm available for any questions or comments. Have a great week,</p>
+                    <p class="signature-name">Nicolás Rivas</p>
+                    <p class="signature-title">High School Principal</p>
+                </div>
+                <div class="spanish">
+                    <p>Quedo atento a cualquier duda o comentario y feliz semana,</p>
+                    <p class="signature-name">Nicolás Rivas</p>
+                    <p class="signature-title">Director de High School</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slogan">
+            "It's not how you start. It's how you finish." - Meb Keflezighi<br><br>
+            "No importa cómo empiezas. Importa cómo terminas." - Meb Keflezighi
+        </div>
+
+        <div class="footer">
+            <p>DelCampo High School | Email: nrivas@delcamposchool.org | Phone: +504 96505926</p>
+        </div>
     </div>
-  </div>
-
-  <div class="sec">
-    <div class="st">Principal's Message · Mensaje del Director</div>
-    <div class="bi">
-      <div>
-        <p class="ll">English</p>
-        <p>Last Friday's MS &amp; HS Soccer Tournament reminded us of something we sometimes forget in the daily rhythm of school life: community is not built in classrooms alone — it is built in the moments we share, the spaces we create together, and the values we live out loud.</p>
-        <p>The P.E. department organized a remarkable event. Students felt safe, staff showed up with purpose, and our school houses became rallying points of identity and belonging. And then something truly special happened: two teacher teams took the field. Students who spend every day sitting in our classes got to stand on the sidelines and cheer for us — their teachers. I had the privilege of being one of those players, and I can tell you firsthand: hearing your students roar from the stands is one of those moments you don't forget. It was a cool reminder that we are not just educators — we are people, and our students see that, and it matters.</p>
-        <p>Sportsmanship was present throughout the tournament. The great majority of students accepted a loss with grace — and those who found it harder discovered a genuine learning opportunity in <strong>resilience</strong>. In those moments, we also saw <strong>empathy</strong> between teammates, <strong>respect</strong> for opponents and referees, <strong>integrity</strong> in how the game was played, and <strong>passion</strong> in every corner of that field. Our school values were not on a poster last Friday — they were in motion.</p>
-        <p>Let us carry that spirit into this week. Community is a practice, not an event. Every interaction, every hallway greeting, every class transition is an opportunity to build it. Thank you for being people our students want to cheer for.</p>
-        <p>Warmly,<br><strong>Mr. Nicolás Rivas</strong></p>
-        <div style="margin-top:10px;">
-          <span class="vp">Resilience</span><span class="vp">Empathy</span><span class="vp">Respect</span><span class="vp">Integrity</span><span class="vp">Passion</span>
-        </div>
-      </div>
-      <div>
-        <p class="ll">Español</p>
-        <p>El torneo de fútbol de MS y HS del viernes pasado nos recordó algo que a veces perdemos de vista en la rutina diaria: la comunidad no se construye únicamente en las aulas, sino en los momentos que compartimos, los espacios que creamos juntos y los valores que vivimos en voz alta.</p>
-        <p>El departamento de Educación Física organizó un evento extraordinario. Los estudiantes se sintieron seguros, el equipo docente respondió con energía y compromiso, y las casas escolares se convirtieron en puntos de encuentro e identidad. Y entonces ocurrió algo verdaderamente especial: dos equipos de profesores salieron a la cancha. Los estudiantes que cada día se sientan en nuestras clases tuvieron la oportunidad de pararse a un lado y apoyarnos — a nosotros, sus maestros. Tuve el privilegio de ser uno de esos jugadores, y puedo decirles de primera mano: escuchar a tus estudiantes animando desde las gradas es uno de esos momentos que no se olvidan. Fue un recordatorio poderoso de que no somos solo educadores — somos personas, y nuestros estudiantes lo ven, y eso importa.</p>
-        <p>El espíritu deportivo estuvo presente a lo largo del torneo. La gran mayoría aceptó una derrota con madurez — y quienes lo encontraron más difícil tuvieron frente a sí una genuina oportunidad de aprendizaje en la <strong>resiliencia</strong>. En esos momentos también vimos <strong>empatía</strong> entre compañeros, <strong>respeto</strong> hacia rivales y árbitros, <strong>integridad</strong> en la forma de jugar, y <strong>pasión</strong> en cada rincón de esa cancha. El viernes pasado, nuestros valores no estaban en un cartel — estaban en movimiento.</p>
-        <p>Llevemos ese espíritu a esta semana. La comunidad es una práctica, no un evento. Cada interacción, cada saludo en el pasillo, cada transición entre clases es una oportunidad para construirla. Gracias por ser personas a quienes nuestros estudiantes quieren animar.</p>
-        <p>Con aprecio,<br><strong>Mr. Nicolás Rivas</strong></p>
-        <div style="margin-top:10px;">
-          <span class="vp">Resiliencia</span><span class="vp">Empatía</span><span class="vp">Respeto</span><span class="vp">Integridad</span><span class="vp">Pasión</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="exam-section">
-    <div class="st">Makeup Exam Schedule · Horario de Exámenes de Reposición</div>
-    <div class="exam-intro">
-      <p>Makeup exams run <strong>Tuesday through Thursday</strong> (March 17–19). These are scheduled for students who were <strong>absent with an excused absence</strong> during last week's exams. Only students who have been <strong>officially excused by the office</strong> are eligible to sit for their makeup exam. Please support them in attending their assigned session on time.</p>
-      <p>Los exámenes de reposición se realizan del <strong>martes al jueves</strong> (17–19 de marzo). Están programados para estudiantes que estuvieron <strong>ausentes con excusa justificada</strong> durante los exámenes de la semana pasada. Solo los estudiantes que hayan sido <strong>excusados oficialmente por la oficina</strong> tienen derecho a presentar su examen de reposición. Por favor apóyenlos para que asistan puntualmente.</p>
-    </div>
-    <div class="grade-tabs">
-      <div class="grade-card g9">
-        <div class="grade-header">9th Grade · 9° Grado</div>
-        <div class="exam-day"><p class="exam-date">Mar 17</p><p class="exam-subjects">Español · Physical Science</p></div>
-        <div class="exam-day"><p class="exam-date">Mar 18</p><p class="exam-subjects">Civics · English</p></div>
-        <div class="exam-day"><p class="exam-date">Mar 19</p><p class="exam-subjects">Global History · Math</p></div>
-      </div>
-      <div class="grade-card g10">
-        <div class="grade-header">10th Grade · 10° Grado</div>
-        <div class="exam-day"><p class="exam-date">Mar 17</p><p class="exam-subjects">Español · Biology</p></div>
-        <div class="exam-day"><p class="exam-date">Mar 18</p><p class="exam-subjects">Hist. de Honduras · English</p></div>
-        <div class="exam-day"><p class="exam-date">Mar 19</p><p class="exam-subjects">U.S. History · Math</p></div>
-      </div>
-      <div class="grade-card g11">
-        <div class="grade-header">11th Grade · 11° Grado</div>
-        <div class="exam-day"><p class="exam-date">Mar 17</p><p class="exam-subjects">Español · Chemistry</p></div>
-        <div class="exam-day"><p class="exam-date">Mar 18</p><p class="exam-subjects">Physics · English</p></div>
-        <div class="exam-day"><p class="exam-date">Mar 19</p><p class="exam-subjects">Contemporary History · Math</p></div>
-      </div>
-      <div class="grade-card g12">
-        <div class="grade-header">12th Grade · 12° Grado</div>
-        <div class="exam-day"><p class="exam-date">Mar 17</p><p class="exam-subjects">Español · Chemistry</p></div>
-        <div class="exam-day"><p class="exam-date">Mar 18</p><p class="exam-subjects">Physics · English</p></div>
-        <div class="exam-day"><p class="exam-date">Mar 19</p><p class="exam-subjects">Economics · Math</p></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sec">
-    <div class="st">Reminders · Recordatorios</div>
-    <div class="bi">
-      <div>
-        <p class="ll">English</p>
-        <div class="ri">
-          <p class="rt">🏐 Principal Traveling — Wednesday, March 18 through Sunday, March 22</p>
-          <p>Starting this Wednesday, I will be traveling to Nicaragua with our school's volleyball delegation to compete in the <strong>AASCA Tournament</strong> — and I could not be more proud to represent DelCampo alongside our athletes. I will be away through Sunday, March 22. I have full confidence in our team to keep things running with the same high standards we always hold. Please continue to lead your classrooms, support our students, and keep the High School boat afloat while I'm gone — I'll be cheering for DelCampo from both sidelines! 🏐🇳🇮</p>
-          <div class="travel-box">
-            <p class="travel-title">While the principal is away...</p>
-            <p>Please reach out to the designated point of contact for any urgent matters. Continue with routines, expectations, and the same professional standard we carry every day. You've got this.</p>
-          </div>
-        </div>
-        <div class="ri" style="margin-top:14px;">
-          <p class="rt">Q4 CCC Season Kickoff — Wednesday, March 18</p>
-          <p>This Wednesday marks the first session of our <strong>Q4 co-curricular clubs</strong> — the last and final CCC season of this school year. This is a moment worth celebrating! Please welcome your students with energy and enthusiasm. Remind them that this is their last opportunity this year to grow, connect, and make memories through this powerful initiative. Let's make it an unforgettable closing season.</p>
-          <div class="ccc-launch">
-            <p class="ccc-title">Last season of the year — make it count!</p>
-            <p>Welcome students warmly, set the tone with excitement, and remind them why clubs matter. This is their final chapter of CCC for 2025–2026.</p>
-          </div>
-        </div>
-        <div class="ri" style="margin-top:14px;">
-          <p class="rt">CCC Attendance Form — Action Required</p>
-          <p>The Q3 CCC attendance format is ready and available. Please complete it as soon as possible — we are approaching the end of the third quarter and grades need to be finalized promptly. Do not leave this for the last minute.</p>
-          <div class="alert-box">⚠️ Q3 grade closing is approaching — CCC attendance must be submitted on time.</div>
-        </div>
-        <div class="ri" style="margin-top:14px;">
-          <p class="rt">Afternoon Reflection Session — Wednesday, March 18</p>
-          <p>This Wednesday afternoon we will hold an in-school reflection session for <strong>26 students</strong> who have had discipline incidents in recent weeks. This session was intentionally scheduled for Wednesday to avoid any interference with makeup exam dates. Thank you all for maintaining a disciplined atmosphere and upholding clear behavioral expectations in our classrooms and throughout our school.</p>
-          <div class="thank-box">🙏 Your consistency in holding the standard makes a real difference — thank you.</div>
-        </div>
-        <div class="ri" style="margin-top:14px;">
-          <p class="rt">PowerSchool Q&amp;A Session — Wednesday, March 18</p>
-          <p>Teacher leaders and department heads: please gather your team's questions beforehand and bring them in the following format:</p>
-          <div class="rf">
-            📌 <strong>Question:</strong> (required)<br>
-            📝 <strong>Context:</strong> (optional, but helpful)<br>
-            🖼 <strong>Screenshot</strong> (if applicable)
-          </div>
-        </div>
-      </div>
-      <div>
-        <p class="ll">Español</p>
-        <div class="ri">
-          <p class="rt">🏐 Director de Viaje — Miércoles 18 al Domingo 22 de marzo</p>
-          <p>A partir de este miércoles estaré viajando a Nicaragua junto con la delegación de voleibol de nuestro colegio para participar en el <strong>Torneo AASCA</strong> — y no podría estar más orgulloso de representar a DelCampo junto a nuestros deportistas. Estaré fuera hasta el domingo 22 de marzo. Tengo plena confianza en nuestro equipo para mantener todo funcionando con los mismos altos estándares que siempre nos caracterizan. Por favor continúen liderando sus salones, apoyando a nuestros estudiantes y manteniendo el barco del High School a flote mientras estoy fuera — ¡los estaré animando desde ambas canchas! 🏐🇳🇮</p>
-          <div class="travel-box">
-            <p class="travel-title">Mientras el director está de viaje...</p>
-            <p>Por favor comuníquense con el punto de contacto designado para cualquier asunto urgente. Continúen con las rutinas, las expectativas y el mismo estándar profesional que llevamos cada día. ¡Ustedes pueden con esto!</p>
-          </div>
-        </div>
-        <div class="ri" style="margin-top:14px;">
-          <p class="rt">Inicio de la Temporada Q4 de Clubes — Miércoles 18 de marzo</p>
-          <p>Este miércoles arranca la primera sesión de los <strong>clubes co-curriculares del 4° parcial</strong> — la última temporada de CCC de este año escolar. ¡Es un momento que vale la pena celebrar! Por favor reciban a sus estudiantes con energía y entusiasmo. Recuérdenles que esta es su última oportunidad en el año para crecer, conectar y crear recuerdos a través de esta poderosa iniciativa. Hagamos de esta una temporada de cierre inolvidable.</p>
-          <div class="ccc-launch">
-            <p class="ccc-title">¡Última temporada del año — que cuente!</p>
-            <p>Reciban a los estudiantes con calidez, marquen el tono con entusiasmo y recuérdenles por qué los clubes importan. Este es su último capítulo de CCC en 2025–2026.</p>
-          </div>
-        </div>
-        <div class="ri" style="margin-top:14px;">
-          <p class="rt">Formato de Asistencia a Clubes — Acción Requerida</p>
-          <p>El formato de asistencia a los clubes CCC del 3er parcial ya está listo y disponible. Por favor complételo a la brevedad posible — estamos cerca del cierre del tercer parcial y las calificaciones deben ser finalizadas con prontitud. No lo dejen para el último momento.</p>
-          <div class="alert-box">⚠️ El cierre de notas del 3er parcial se aproxima — la asistencia a clubes debe entregarse a tiempo.</div>
-        </div>
-        <div class="ri" style="margin-top:14px;">
-          <p class="rt">Sesión de Reflexión en la Tarde — Miércoles 18 de marzo</p>
-          <p>Este miércoles en la tarde realizaremos una sesión de reflexión en el colegio para <strong>26 estudiantes</strong> que han tenido incidentes de disciplina en las últimas semanas. Esta sesión fue programada intencionalmente para el miércoles con el fin de no interferir con las fechas de los exámenes de reposición. Gracias a todos por mantener un ambiente disciplinado y por sostener con claridad las expectativas de comportamiento dentro de nuestras aulas y en todo el colegio.</p>
-          <div class="thank-box">🙏 Su consistencia en mantener el estándar hace una diferencia real — gracias.</div>
-        </div>
-        <div class="ri" style="margin-top:14px;">
-          <p class="rt">Sesión de P&amp;R sobre PowerSchool — Miércoles 18 de marzo</p>
-          <p>Líderes de equipo y jefes de departamento: por favor recopilen las preguntas de su equipo con anticipación y tráiganlas en el siguiente formato:</p>
-          <div class="rf">
-            📌 <strong>Pregunta:</strong> (requerida)<br>
-            📝 <strong>Contexto:</strong> (opcional, pero útil)<br>
-            🖼 <strong>Captura de pantalla</strong> (si aplica)
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="qs">
-    <p class="qt">Sport has the power to change the world. It has the power to inspire. It has the power to unite people in a way that little else does.</p>
-    <p class="qa">— Nelson Mandela</p>
-    <p class="q-author">Shared by Mr. Nicolás Rivas · High School Principal</p>
-  </div>
-
-  <div class="foot">
-    <div>
-      <div class="fn">Nicolás Rivas Peláez</div>
-      <div class="ft">High School Principal · DelCampo School, Tegucigalpa</div>
-      <div class="contact-info">
-        <span>✉ nrivas@delcamposchool.org</span>
-        <span>📞 +504 9650 5926</span>
-      </div>
-    </div>
-    <div style="font-size:11px;color:#aaa;">Week 3 · Q3 · 2026</div>
-  </div>
-
-</div>
 </body>
 </html>
