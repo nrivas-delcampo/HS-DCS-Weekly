@@ -1,502 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f7f2;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        .header {
-            text-align: center;
-            padding: 20px;
-            background-color: #2d5a27;
-            color: white;
-            border-radius: 8px 8px 0 0;
-        }
-        .subtitle {
-            font-size: 1.1em;
-            margin-top: 5px;
-            color: #fff;
-        }
-        .content-section {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .section-title {
-            color: #2d5a27;
-            border-bottom: 2px solid #91b48c;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-        .language-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #91b48c;
-            color: white;
-            border-radius: 0 0 8px 8px;
-        }
-        .date {
-            background-color: #91b48c;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        .signature {
-            text-align: center;
-            padding: 20px;
-            font-style: italic;
-            background-color: white;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-        .signature-name {
-            font-weight: bold;
-            margin: 5px 0;
-        }
-        .signature-title {
-            color: #2d5a27;
-        }
-        .schedule {
-            margin: 15px 0;
-        }
-        .day {
-            padding: 8px;
-            margin: 5px 0;
-            background-color: #f5f7f2;
-            border-radius: 4px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .event-tag {
-            background-color: #2d5a27;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.9em;
-            margin-left: 10px;
-        }
-        .event-tag.special {
-            background-color: #c74440;
-        }
-        .event-tag.exam {
-            background-color: #ff6b6b;
-        }
-        .slogan {
-            text-align: center;
-            padding: 20px;
-            font-style: italic;
-            color: #2d5a27;
-            background-color: white;
-            margin: 20px 0;
-            border-radius: 8px;
-            font-size: 1.1em;
-        }
-        .highlight-box {
-            background-color: #fff3cd;
-            padding: 15px;
-            border-left: 4px solid #c74440;
-            border-radius: 4px;
-            margin: 15px 0;
-        }
-        .critical-box {
-            background-color: #ffe0e0;
-            padding: 20px;
-            border: 3px solid #c74440;
-            border-radius: 8px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        .schedule-table td {
-            padding: 8px;
-            border: 1px solid #ddd;
-        }
-        .schedule-table .time {
-            font-weight: bold;
-            background-color: #f5f7f2;
-            width: 40%;
-        }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+  :root {
+    --green: #1B5631;
+    --green-dark: #133f24;
+    --green-light: #e8f5ee;
+    --gold: #C9A84C;
+    --gold-light: #fdf6e3;
+    --white: #ffffff;
+    --gray: #f4f4f2;
+    --text: #222222;
+    --text-light: #555;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: #eaeae6;
+    color: var(--text);
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 18px auto;
+    background: var(--white);
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+  }
+
+  .header {
+    background: var(--green);
+    color: white;
+    padding: 18px 28px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .header-logo { font-family: 'Merriweather', serif; line-height: 1.15; }
+  .header-logo .title { font-size: 22px; font-weight: 700; letter-spacing: 0.5px; }
+  .header-logo .subtitle { font-size: 11.5px; color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+  .header-meta { text-align: right; font-size: 11.5px; color: rgba(255,255,255,0.85); line-height: 1.5; }
+  .header-meta strong { color: var(--gold); font-size: 13px; }
+
+  .gold-bar { background: var(--gold); height: 5px; }
+
+  .section-header {
+    background: var(--green);
+    color: white;
+    padding: 7px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .bilingual > div { padding: 18px 20px; }
+  .bilingual > div:first-child { border-right: 2px solid var(--green-light); }
+
+  .lang-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
+  }
+  .lang-label::after { content: ''; flex: 1; height: 1px; background: var(--gold); opacity: 0.35; }
+
+  .message-body { font-size: 13px; color: var(--text); line-height: 1.68; }
+  .message-body p { margin-bottom: 9px; }
+  .message-body p:last-child { margin-bottom: 0; }
+
+  .schedule-wrap { padding: 16px 20px; background: var(--gray); }
+  .schedule-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .schedule-table th {
+    background: var(--green); color: white; padding: 7px 10px;
+    text-align: left; font-weight: 700; font-size: 11px; letter-spacing: 0.5px;
+  }
+  .schedule-table td { padding: 7px 10px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  .schedule-table tr:nth-child(even) td { background: #f9f9f7; }
+  .schedule-table tr:nth-child(odd) td { background: white; }
+
+  .day-num {
+    display: inline-block; background: var(--green); color: white; border-radius: 50%;
+    width: 20px; height: 20px; text-align: center; line-height: 20px;
+    font-size: 11px; font-weight: 700; margin-right: 4px;
+  }
+  .ccc-badge {
+    display: inline-block; background: var(--gold); color: white; font-size: 9.5px;
+    font-weight: 700; letter-spacing: 0.5px; padding: 1px 6px; border-radius: 3px; margin-left: 5px;
+  }
+  .event-list { list-style: none; padding: 0; margin: 0; }
+  .event-list li { padding: 1px 0; font-size: 12px; color: var(--text); }
+  .event-list li span { margin-right: 4px; }
+  .event-reinforcement { color: #b94040; font-weight: 600; }
+
+  .reminders-wrap { padding: 16px 20px; }
+  .reminder-card {
+    border-left: 4px solid var(--green);
+    background: var(--green-light);
+    padding: 11px 15px;
+    margin-bottom: 10px;
+    border-radius: 0 5px 5px 0;
+  }
+  .reminder-card:last-child { margin-bottom: 0; }
+  .reminder-card.gold { border-left-color: var(--gold); background: var(--gold-light); }
+  .reminder-title { font-weight: 700; font-size: 12.5px; color: var(--green-dark); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+  .reminder-card.gold .reminder-title { color: #7a5a00; }
+  .reminder-body { font-size: 12px; color: var(--text-light); line-height: 1.55; }
+  .reminder-body ul { margin: 5px 0 0 16px; }
+  .reminder-body li { margin-bottom: 3px; }
+  .reminder-body a { color: var(--green); font-weight: 600; word-break: break-all; }
+
+  .quote-wrap { background: var(--green); color: white; padding: 18px 28px; text-align: center; }
+  .quote-text { font-family: 'Merriweather', serif; font-style: italic; font-size: 13.5px; line-height: 1.7; margin-bottom: 6px; color: rgba(255,255,255,0.92); }
+  .quote-author { font-size: 11px; color: var(--gold); letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
+
+  .signature-wrap {
+    padding: 14px 20px; border-top: 2px solid var(--green-light);
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
+    font-size: 12px; color: var(--text-light);
+  }
+  .sig-name { font-weight: 700; color: var(--green); font-size: 13px; }
+  .sig-title { font-size: 11.5px; color: #777; }
+  .sig-contact { text-align: right; font-size: 11.5px; }
+  .sig-contact a { color: var(--green); text-decoration: none; }
+
+  .footer {
+    background: var(--green-dark); color: rgba(255,255,255,0.55);
+    text-align: center; padding: 8px; font-size: 10px; letter-spacing: 0.5px;
+  }
+
+  @media print {
+    body { background: white; font-size: 12px; }
+    .page { box-shadow: none; border: none; margin: 0; max-width: 100%; }
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>High Standards</h1>
-            <div class="subtitle">DelCampo High School Weekly Bulletin | Boletín Semanal</div>
-            <div class="date">May 4th - 8th, 2026</div>
-        </div>
+<div class="page">
 
-        <div class="content-section">
-            <h3 class="section-title">A Message from the Principal | Mensaje del Director</h3>
-            <div class="language-section">
-                <div class="english">
-                    <p>Dear colleagues, as we enter the month of May, we step into one of the most dynamic and demanding periods of our school year. This month, we have an extraordinary amount happening: senior exams, MAP tests, AP exams, minor subject deadlines, preparation for fourth quarter exams, the Accounting Fair, the senior clap out, and so much more. It is a lot—for our students, and for us.</p>
-                    <p>This is why I want to talk with you about adaptation. The ability to adapt to changing circumstances, to adjust our plans when necessary, and to remain flexible in the face of complexity is not just a professional skill—it is one of the most important soft skills we can model for our students.</p>
-                    <p>When students see us accommodate different situations with grace and understanding, they are learning something profound. They are learning empathy—the ability to understand and respond to the needs of others. They are learning adaptability—the capacity to adjust to new demands without losing sight of our goals. And they are learning resilience—the strength to navigate challenges without becoming overwhelmed.</p>
-                    <p>Research consistently shows that soft skills like these—empathy, adaptability, resilience, communication, and collaboration—are among the most valued competencies in higher education and the workforce. Universities and employers are not just looking for students with strong academic abilities; they are looking for young people who can work well with others, navigate uncertainty, solve problems creatively, and respond thoughtfully to change. These are the skills that will define their success far beyond our classrooms.</p>
-                    <p>So this month, as we navigate a complex calendar and support our students through a busy season, let us remember that we are teaching them more than content. We are teaching them how to handle pressure, how to prioritize, how to stay focused, and how to adapt. Your understanding, your flexibility, and your resilience are powerful lessons in themselves.</p>
-                    <p>Thank you for your patience, your adaptability, and your unwavering commitment to modeling the very best for our students.</p>
-                </div>
-                <div class="spanish">
-                    <p>Queridos colegas, al entrar en el mes de mayo, entramos en uno de los períodos más dinámicos y exigentes de nuestro año escolar. Este mes, tenemos una cantidad extraordinaria de eventos: exámenes de seniors, pruebas MAP, exámenes AP, fechas límite de materias menores, preparación para exámenes del cuarto trimestre, la Feria de Contabilidad, el clap out de seniors, y mucho más. Es mucho—para nuestros estudiantes y para nosotros.</p>
-                    <p>Por eso quiero hablarles sobre la adaptación. La capacidad de adaptarse a circunstancias cambiantes, de ajustar nuestros planes cuando sea necesario y de permanecer flexibles ante la complejidad no es solo una habilidad profesional—es una de las habilidades blandas más importantes que podemos modelar para nuestros estudiantes.</p>
-                    <p>Cuando los estudiantes nos ven acomodar diferentes situaciones con gracia y comprensión, están aprendiendo algo profundo. Están aprendiendo empatía—la capacidad de entender y responder a las necesidades de otros. Están aprendiendo adaptabilidad—la capacidad de ajustarse a nuevas demandas sin perder de vista nuestras metas. Y están aprendiendo resiliencia—la fuerza para navegar desafíos sin abrumarse.</p>
-                    <p>La investigación muestra consistentemente que habilidades blandas como estas—empatía, adaptabilidad, resiliencia, comunicación y colaboración—son algunas de las competencias más valoradas en la educación superior y el mundo laboral. Las universidades y empleadores no solo buscan estudiantes con fuertes habilidades académicas; buscan jóvenes que puedan trabajar bien con otros, navegar la incertidumbre, resolver problemas creativamente y responder reflexivamente al cambio. Estas son las habilidades que definirán su éxito mucho más allá de nuestras aulas.</p>
-                    <p>Así que este mes, mientras navegamos un calendario complejo y apoyamos a nuestros estudiantes a través de una temporada ocupada, recordemos que estamos enseñándoles más que contenido. Les estamos enseñando cómo manejar la presión, cómo priorizar, cómo mantenerse enfocados y cómo adaptarse. Su comprensión, su flexibilidad y su resiliencia son lecciones poderosas en sí mismas.</p>
-                    <p>Gracias por su paciencia, su adaptabilidad y su compromiso inquebrantable de modelar lo mejor para nuestros estudiantes.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h3 class="section-title">Weekly Schedule | Horario Semanal</h3>
-            <div class="schedule">
-                <div class="day">
-                    <span>Monday, May 4th (Day 4) ⭐ | Lunes, 4 de mayo (Día 4) ⭐</span>
-                    <span class="event-tag special">Star Wars Day + PEP Rally Schedule</span>
-                </div>
-                <div class="day">
-                    <span>Tuesday, May 5th (Day 5) | Martes, 5 de mayo (Día 5)</span>
-                    <span class="event-tag special">CCC's Day | Seniors' Last Class Day 🎓</span>
-                </div>
-                <div class="day">
-                    <span>Wednesday, May 6th (Day 6) | Miércoles, 6 de mayo (Día 6)</span>
-                    <span class="event-tag exam">Senior Exams: Philosophy & Math</span>
-                </div>
-                <div class="day">
-                    <span>Thursday, May 7th (Day 1) | Jueves, 7 de mayo (Día 1)</span>
-                    <span class="event-tag exam">Senior Exams: Physics & Spanish | MAP: Math</span>
-                </div>
-                <div class="day">
-                    <span>Friday, May 8th (Day 2) | Viernes, 8 de mayo (Día 2)</span>
-                    <span class="event-tag exam">CCC's | Senior Exams: English & Chemistry | Accounting Fair 🎉 | Clap Out 👏</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h3 class="section-title">🚨 SUPER IMPORTANT ANNOUNCEMENT | ANUNCIO SÚPER IMPORTANTE 🚨</h3>
-            <div class="critical-box">
-                <h2 style="color: #c74440; margin-top: 0;">❌ NO HOMEWORK IN MAY ❌</h2>
-                <h3 style="color: #c74440;">FOR ALL HIGH SCHOOL STUDENTS (GRADES 9-12)</h3>
-                <div class="language-section" style="text-align: left; margin-top: 20px;">
-                    <div class="english">
-                        <p><strong>IT IS FORBIDDEN TO ASSIGN HOMEWORK DURING THE MONTH OF MAY</strong></p>
-                        <p>All work must be completed inside classes.</p>
-                        <p><strong>Why?</strong> May is filled with exams, projects, and end-of-year activities. Students need time to focus on quality work without additional homework burden.</p>
-                    </div>
-                    <div class="spanish">
-                        <p><strong>ESTÁ PROHIBIDO ASIGNAR TAREAS DURANTE EL MES DE MAYO</strong></p>
-                        <p>Todo el trabajo debe completarse dentro de las clases.</p>
-                        <p><strong>¿Por qué?</strong> Mayo está lleno de exámenes, proyectos y actividades de fin de año. Los estudiantes necesitan tiempo para enfocarse en trabajo de calidad sin la carga adicional de tareas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h3 class="section-title">⭐ Monday, May 4th - Star Wars Day | Lunes 4 de mayo - Día de Star Wars ⭐</h3>
-            <div class="language-section">
-                <div class="english">
-                    <h4 style="color: #2d5a27; text-align: center;">🌟 "May the Fourth Be With You!" 🌟</h4>
-                    
-                    <div class="highlight-box">
-                        <h4 style="margin-top: 0;">PEP Rally Schedule:</h4>
-                        <table class="schedule-table">
-                            <tr>
-                                <td class="time">Morning Meeting</td>
-                                <td>7:25 - 7:35</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Period 1</td>
-                                <td>7:40 - 8:30</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Break</td>
-                                <td>8:30 - 8:55</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Period 2</td>
-                                <td>8:55 - 9:45</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Period 3</td>
-                                <td>9:50 - 10:40</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Period 4</td>
-                                <td>10:45 - 11:35</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Lunch</td>
-                                <td>11:35 - 12:15</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Period 5</td>
-                                <td>12:15 - 1:10</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Period 6</td>
-                                <td>1:15 - 2:00</td>
-                            </tr>
-                            <tr style="background-color: #e3f2fd;">
-                                <td class="time" style="background-color: #2196f3; color: white;">PEP Rally</td>
-                                <td style="font-weight: bold;">2:00 - 3:00</td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <h4 style="color: #2d5a27; margin-top: 20px;">🎓 Period 5 - Graduation Cap Exchange (12:15-1:10 PM):</h4>
-                    <ul>
-                        <li>All <strong>seniors and juniors</strong> go to regular classes for attendance first</li>
-                        <li>Then proceed to <strong>Court A</strong> for the Graduation Cap Exchange traditional act</li>
-                        <li><strong>Teachers with seniors/juniors during Period 5 must accompany them</strong></li>
-                    </ul>
-
-                    <h4 style="color: #2d5a27; margin-top: 20px;">🎉 2:00 PM - PEP Rally:</h4>
-                    <p><strong>All teachers bring their students to Green Court for the PEP Rally.</strong></p>
-                </div>
-                <div class="spanish">
-                    <h4 style="color: #2d5a27; text-align: center;">🌟 "¡Que el Cuatro de Mayo Te Acompañe!" 🌟</h4>
-                    
-                    <div class="highlight-box">
-                        <h4 style="margin-top: 0;">Horario PEP Rally:</h4>
-                        <table class="schedule-table">
-                            <tr>
-                                <td class="time">Morning Meeting</td>
-                                <td>7:25 - 7:35</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Período 1</td>
-                                <td>7:40 - 8:30</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Receso</td>
-                                <td>8:30 - 8:55</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Período 2</td>
-                                <td>8:55 - 9:45</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Período 3</td>
-                                <td>9:50 - 10:40</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Período 4</td>
-                                <td>10:45 - 11:35</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Almuerzo</td>
-                                <td>11:35 - 12:15</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Período 5</td>
-                                <td>12:15 - 1:10</td>
-                            </tr>
-                            <tr>
-                                <td class="time">Período 6</td>
-                                <td>1:15 - 2:00</td>
-                            </tr>
-                            <tr style="background-color: #e3f2fd;">
-                                <td class="time" style="background-color: #2196f3; color: white;">PEP Rally</td>
-                                <td style="font-weight: bold;">2:00 - 3:00</td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <h4 style="color: #2d5a27; margin-top: 20px;">🎓 Período 5 - Intercambio de Birrete (12:15-1:10 PM):</h4>
-                    <ul>
-                        <li>Todos los <strong>seniors y juniors</strong> van a clases regulares para asistencia primero</li>
-                        <li>Luego proceden a <strong>Court A</strong> para el acto tradicional de Intercambio de Birrete</li>
-                        <li><strong>Maestros con seniors/juniors durante Período 5 deben acompañarlos</strong></li>
-                    </ul>
-
-                    <h4 style="color: #2d5a27; margin-top: 20px;">🎉 2:00 PM - PEP Rally:</h4>
-                    <p><strong>Todos los maestros traen a sus estudiantes al Green Court para el PEP Rally.</strong></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h3 class="section-title">🎓 Senior Week Events | Eventos de la Semana Senior 🎓</h3>
-            <div class="language-section">
-                <div class="english">
-                    <h4 style="color: #2d5a27;">Tuesday, May 5th - Seniors' Last Class Day:</h4>
-                    <p>Special activity being planned by the Board of Parents and the school. <strong>More information coming tomorrow about the schedule for seniors that day.</strong></p>
-
-                    <h4 style="color: #2d5a27; margin-top: 20px;">Senior Exams Schedule:</h4>
-                    <ul>
-                        <li><strong>Wednesday, May 6th:</strong> Philosophy and Math</li>
-                        <li><strong>Thursday, May 7th:</strong> Physics and Spanish</li>
-                        <li><strong>Friday, May 8th:</strong> English and Chemistry</li>
-                    </ul>
-                    <p><strong>Exam rooms and times will be provided in a separate detailed message.</strong></p>
-
-                    <h4 style="color: #2d5a27; margin-top: 20px;">Friday, May 8th - Seniors Clap Out 👏:</h4>
-                    <p>Traditional celebration where all school students form a corridor to say goodbye to our seniors as they leave the school one last time. <strong>More information will be provided.</strong></p>
-                </div>
-                <div class="spanish">
-                    <h4 style="color: #2d5a27;">Martes 5 de mayo - Último Día de Clases de Seniors:</h4>
-                    <p>Actividad especial siendo planeada por la Junta de Padres y la escuela. <strong>Más información mañana sobre el horario para seniors ese día.</strong></p>
-
-                    <h4 style="color: #2d5a27; margin-top: 20px;">Horario de Exámenes de Seniors:</h4>
-                    <ul>
-                        <li><strong>Miércoles 6 de mayo:</strong> Filosofía y Matemáticas</li>
-                        <li><strong>Jueves 7 de mayo:</strong> Física y Español</li>
-                        <li><strong>Viernes 8 de mayo:</strong> Inglés y Química</li>
-                    </ul>
-                    <p><strong>Los salones y horarios de exámenes se proporcionarán en un mensaje detallado separado.</strong></p>
-
-                    <h4 style="color: #2d5a27; margin-top: 20px;">Viernes 8 de mayo - Clap Out de Seniors 👏:</h4>
-                    <p>Celebración tradicional donde todos los estudiantes de la escuela forman un corredor para despedir a nuestros seniors mientras dejan la escuela por última vez. <strong>Se proporcionará más información.</strong></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h3 class="section-title">📚 AP Exams Schedule This Week | Horario de Exámenes AP Esta Semana 📚</h3>
-            <div class="language-section">
-                <div class="english">
-                    <div class="highlight-box">
-                        <p><strong>All AP Exams in Mrs. Maly's Room</strong></p>
-                        <p><strong>Important:</strong> Some teachers will be required to proctor or substitute one or two classes so we can all support our students in these important examinations.</p>
-                    </div>
-
-                    <h4 style="color: #2d5a27;">Monday, May 4th:</h4>
-                    <ul>
-                        <li><strong>7:30 AM - 12:00 PM:</strong> AP Biology (10th graders)</li>
-                        <li><strong>12:00 PM - 4:00 PM:</strong> AP Human Geography (11th graders)</li>
-                    </ul>
-
-                    <h4 style="color: #2d5a27;">Tuesday, May 5th:</h4>
-                    <ul>
-                        <li><strong>7:30 AM - 12:00 PM:</strong> AP Chemistry (12th graders) & AP Human Geography</li>
-                    </ul>
-
-                    <h4 style="color: #2d5a27;">Wednesday, May 6th:</h4>
-                    <ul>
-                        <li><strong>12:00 PM - 4:00 PM:</strong> AP Physics I (11th graders)</li>
-                    </ul>
-
-                    <h4 style="color: #2d5a27;">Thursday, May 7th:</h4>
-                    <ul>
-                        <li><strong>7:30 AM - 12:00 PM:</strong> AP Physics II (12th graders)</li>
-                    </ul>
-
-                    <h4 style="color: #2d5a27;">Friday, May 8th:</h4>
-                    <ul>
-                        <li><strong>12:00 PM - 4:00 PM:</strong> AP Macroeconomics (11th graders)</li>
-                    </ul>
-                </div>
-                <div class="spanish">
-                    <div class="highlight-box">
-                        <p><strong>Todos los Exámenes AP en el Salón de la Sra. Maly</strong></p>
-                        <p><strong>Importante:</strong> Algunos maestros serán requeridos para supervisar o sustituir una o dos clases para que todos podamos apoyar a nuestros estudiantes en estos importantes exámenes.</p>
-                    </div>
-
-                    <h4 style="color: #2d5a27;">Lunes 4 de mayo:</h4>
-                    <ul>
-                        <li><strong>7:30 AM - 12:00 PM:</strong> AP Biología (estudiantes de 10mo grado)</li>
-                        <li><strong>12:00 PM - 4:00 PM:</strong> AP Geografía Humana (estudiantes de 11mo grado)</li>
-                    </ul>
-
-                    <h4 style="color: #2d5a27;">Martes 5 de mayo:</h4>
-                    <ul>
-                        <li><strong>7:30 AM - 12:00 PM:</strong> AP Química (estudiantes de 12mo grado) & AP Geografía Humana</li>
-                    </ul>
-
-                    <h4 style="color: #2d5a27;">Miércoles 6 de mayo:</h4>
-                    <ul>
-                        <li><strong>12:00 PM - 4:00 PM:</strong> AP Física I (estudiantes de 11mo grado)</li>
-                    </ul>
-
-                    <h4 style="color: #2d5a27;">Jueves 7 de mayo:</h4>
-                    <ul>
-                        <li><strong>7:30 AM - 12:00 PM:</strong> AP Física II (estudiantes de 12mo grado)</li>
-                    </ul>
-
-                    <h4 style="color: #2d5a27;">Viernes 8 de mayo:</h4>
-                    <ul>
-                        <li><strong>12:00 PM - 4:00 PM:</strong> AP Macroeconomía (estudiantes de 11mo grado)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h3 class="section-title">⚠️ Important Reminders | Recordatorios Importantes ⚠️</h3>
-            <div class="language-section">
-                <div class="english">
-                    <ul>
-                        <li><strong>NO HOMEWORK IN MAY</strong> — Forbidden for all grades 9-12. All work must be done in class.</li>
-                        <li><strong>AP Exams All Week</strong> — AP exams scheduled Monday through Friday in Mrs. Maly's room. Some teachers will be required to proctor or substitute classes. See detailed AP exam schedule above.</li>
-                        <li><strong>MAP Exams in May</strong> — First MAP exam: Thursday, May 7th - MATH. Specific schedule and times will be provided in a separate message. Two additional MAP exam dates to be announced.</li>
-                        <li><strong>Friday, May 8th: Accounting Fair in the Plaza 🎉</strong> — Junior class event with multiple food and drink options. Encourage your students to bring money and support our juniors! This activity has become better every year!</li>
-                        <li><strong>Senior Events All Week</strong> — Cap exchange Monday, last class day Tuesday, exams Wed-Fri, clap out Friday. Support our seniors!</li>
-                        <li><strong>Adaptation and Flexibility</strong> — This month requires our understanding and adaptability. Remember we are modeling important soft skills for our students.</li>
-                    </ul>
-                </div>
-                <div class="spanish">
-                    <ul>
-                        <li><strong>NO HAY TAREAS EN MAYO</strong> — Prohibido para todos los grados 9-12. Todo el trabajo debe hacerse en clase.</li>
-                        <li><strong>Exámenes AP Toda la Semana</strong> — Exámenes AP programados de lunes a viernes en el salón de la Sra. Maly. Algunos maestros serán requeridos para supervisar o sustituir clases. Ver horario detallado de exámenes AP arriba.</li>
-                        <li><strong>Exámenes MAP en Mayo</strong> — Primer examen MAP: Jueves 7 de mayo - MATEMÁTICAS. El horario específico y los tiempos se proporcionarán en un mensaje separado. Se anunciarán dos fechas adicionales de exámenes MAP.</li>
-                        <li><strong>Viernes 8 de mayo: Feria de Contabilidad en la Plaza 🎉</strong> — Evento de la clase junior con múltiples opciones de comida y bebida. ¡Animen a sus estudiantes a traer dinero y apoyar a nuestros juniors! ¡Esta actividad se ha vuelto mejor cada año!</li>
-                        <li><strong>Eventos de Seniors Toda la Semana</strong> — Intercambio de birrete lunes, último día de clases martes, exámenes mié-vie, clap out viernes. ¡Apoyen a nuestros seniors!</li>
-                        <li><strong>Adaptación y Flexibilidad</strong> — Este mes requiere nuestra comprensión y adaptabilidad. Recuerden que estamos modelando habilidades blandas importantes para nuestros estudiantes.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="signature">
-            <div class="language-section">
-                <div class="english">
-                    <p>I'm available for any questions or comments. Have a great week,</p>
-                    <p class="signature-name">Nicolás Rivas</p>
-                    <p class="signature-title">High School Principal</p>
-                </div>
-                <div class="spanish">
-                    <p>Quedo atento a cualquier duda o comentario y feliz semana,</p>
-                    <p class="signature-name">Nicolás Rivas</p>
-                    <p class="signature-title">Director de High School</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="slogan">
-            "The soft skills are the hard skills." - Seth Godin<br><br>
-            "Las habilidades blandas son las habilidades difíciles." - Seth Godin
-        </div>
-
-        <div class="footer">
-            <p>DelCampo High School | Email: nrivas@delcamposchool.org | Phone: +504 96505926</p>
-        </div>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-logo">
+      <div class="title">⭐ High Standards</div>
+      <div class="subtitle">DCS High School · Weekly Bulletin</div>
     </div>
+    <div class="header-meta">
+      <strong>Week of May 11–15, 2026</strong><br/>
+      Volume 2026 · Week 36<br/>
+      Mr. Nicolás Rivas, Principal
+    </div>
+  </div>
+  <div class="gold-bar"></div>
+
+  <!-- PRINCIPAL'S MESSAGE -->
+  <div class="section-header">📝 Principal's Message / Mensaje del Director</div>
+  <div class="bilingual">
+    <div>
+      <div class="lang-label">🇺🇸 English</div>
+      <div class="message-body">
+        <p>Dear High School Team,</p>
+        <p>This week I want to invite us all to reflect on what teaching truly means at a professional level. Showing up to class and sharing time with students is, of course, the foundation — but our responsibility goes far beyond that.</p>
+        <p>It means planning ahead with intention. It means designing lessons that balance direct instruction with opportunities for students to discover, collaborate, and construct their own understanding. It means assigning homework that is appropriate in both content and length — not as a routine, but as a deliberate tool to measure learning in the way <em>we</em> want to measure it, and not as a test of how well students can use AI tools to produce a polished assignment that tells us very little about what they actually know.</p>
+        <p>Over the past weeks, I have been carefully triangulating data alongside <strong>Mrs. Allison Arguijo, our HS Counselor</strong>, and <strong>Mrs. Elba Valladares, our Administrative Assistant</strong>: MAP scores, quarterly grades, Honor Roll and High Honor Roll lists, and certain behavioral and emotional situations we have observed together. In some cases, the picture that emerges reveals significant discrepancies. My reflection for this week is a call to adjust — both in how we teach and in how we evaluate — so that we arrive at a more honest and accurate view of where our students truly are.</p>
+        <p>This may not be the most comfortable story, and it may not match the narrative some of us have been telling. But it will be the <strong>right</strong> perspective — the one that allows us to plan effectively for the remainder of this year and to have better, more informed conversations as we begin preparing for next school year. Those conversations will shape decisions about courses, curricula, sections, and the resources we need as a school.</p>
+        <p>Let us take this moment to reflect — honestly, professionally, and with purpose. Our students deserve to make us proud. <strong>Authentically proud.</strong></p>
+        <p>With high standards,<br/><strong>Mr. Rivas</strong></p>
+      </div>
+    </div>
+    <div>
+      <div class="lang-label">🇪🇸 Español</div>
+      <div class="message-body">
+        <p>Estimado Equipo de High School,</p>
+        <p>Esta semana quiero invitarnos a reflexionar sobre lo que significa enseñar a nivel profesional. Presentarse a clase y compartir el tiempo con los estudiantes es, por supuesto, la base — pero nuestra responsabilidad va mucho más allá de eso.</p>
+        <p>Significa planificar con intención. Significa diseñar clases que equilibren la instrucción directa con momentos en que los estudiantes descubran, colaboren y construyan su propio aprendizaje. Significa asignar tareas apropiadas en contenido y extensión — no por rutina, sino como una herramienta deliberada para medir el aprendizaje de la manera en que <em>nosotros</em> queremos medirlo, y no como una prueba de qué tan bien los estudiantes pueden usar herramientas de IA para entregarnos un trabajo impecable que nos dice muy poco sobre lo que realmente saben.</p>
+        <p>Durante las últimas semanas, he estado triangulando información junto con <strong>Mrs. Allison Arguijo, nuestra Consejera de High School</strong>, y <strong>Mrs. Elba Valladares, nuestra Asistente Administrativa</strong>: puntajes MAP, calificaciones de cada trimestre, listas de Honor Roll y High Honor Roll, y algunas situaciones conductuales y emocionales que hemos observado juntos. En algunos casos, el panorama que surge revela discrepancias significativas. Mi reflexión de esta semana es un llamado a ajustar — tanto en cómo enseñamos como en cómo evaluamos — para tener una visión más honesta y precisa de dónde están realmente nuestros estudiantes.</p>
+        <p>Puede que no sea la historia más cómoda, y puede que no coincida con la narrativa que algunos hemos estado construyendo. Pero será la perspectiva <strong>correcta</strong> — la que nos permitirá planificar eficazmente lo que resta del año y tener conversaciones más informadas y significativas al comenzar a preparar el próximo ciclo escolar. Esas conversaciones darán forma a decisiones sobre materias, currículos, secciones y los recursos que necesitamos como institución.</p>
+        <p>Tomemos este momento para reflexionar — con honestidad, profesionalismo y propósito. Nuestros estudiantes merecen que estemos orgullosos de ellos. <strong>Auténticamente orgullosos.</strong></p>
+        <p>Con altos estándares,<br/><strong>Mr. Rivas</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE -->
+  <div class="section-header">🗓 Weekly Schedule / Horario Semanal</div>
+  <div class="schedule-wrap">
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th style="width:130px">Day / Día</th>
+          <th style="width:80px">Rotation</th>
+          <th>Events / Actividades</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Monday / Lunes</strong><br/>May 11</td>
+          <td><span class="day-num">3</span> Day 3</td>
+          <td>
+            <ul class="event-list">
+              <li><span>🎓</span> AP Calculus <em>(Seniors)</em></li>
+              <li><span class="event-reinforcement">🎓</span> <span class="event-reinforcement">Seniors Reinforcement Begins / Inicia Reforzamiento Seniors</span></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Tuesday / Martes</strong><br/>May 12</td>
+          <td><span class="day-num">4</span> Day 4</td>
+          <td>
+            <ul class="event-list">
+              <li><span>🎓</span> AP Precalculus <em>(11th–12th)</em></li>
+              <li><span class="event-reinforcement">🎓</span> <span class="event-reinforcement">Seniors Reinforcement / Reforzamiento Seniors</span></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Wednesday / Miércoles</strong><br/>May 13</td>
+          <td><span class="day-num">5</span> Day 5 <span class="ccc-badge">CCC</span></td>
+          <td>
+            <ul class="event-list">
+              <li><span>🎓</span> AP English <em>(10th)</em></li>
+              <li><span>🎵</span> Examen del Himno — 9th grade, 2:00–4:00 pm</li>
+              <li><span class="event-reinforcement">🎓</span> <span class="event-reinforcement">Seniors Reinforcement / Reforzamiento Seniors</span></li>
+              <li style="font-size:11px;color:#888;margin-top:3px;">⏰ Early dismissal 12:55 pm (regular students) / Salida 12:55 pm</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Thursday / Jueves</strong><br/>May 14</td>
+          <td><span class="day-num">6</span> Day 6</td>
+          <td>
+            <ul class="event-list">
+              <li><span>📖</span> MAP Math <em>(9th–11th)</em></li>
+              <li><span class="event-reinforcement">🎓</span> <span class="event-reinforcement">Seniors Reinforcement Ends / Finaliza Reforzamiento Seniors</span></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Friday / Viernes</strong><br/>May 15</td>
+          <td><span class="day-num">1</span> Day 1</td>
+          <td>
+            <ul class="event-list">
+              <li><span>🎨🎵</span> Art &amp; Music Festival — <em>More information coming soon / Más información próximamente</em></li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- REMINDERS -->
+  <div class="section-header">📌 Announcements & Reminders / Avisos e Recordatorios</div>
+  <div class="reminders-wrap">
+
+    <div class="reminder-card gold">
+      <div class="reminder-title">⚠️ SENIORS: No Regular Classes — Reinforcement Schedule Only / Sin clases regulares — Solo reforzamiento</div>
+      <div class="reminder-body">
+        <p><strong>Starting this week, seniors no longer attend regular classes.</strong> Only students assigned to the annual reinforcement and leveling process will be on campus.</p>
+        <ul>
+          <li><strong>May 11–14:</strong> Reinforcement students report in regular schedule — <strong>7:25 am to 3:00 pm</strong> (Wednesday: 7:25 am – 12:55 pm) in full uniform.</li>
+          <li>Students follow their regular class schedule. <strong>Each teacher must remain in the classroom</strong> and available for them to complete leveling work.</li>
+          <li>Grading: Leveling/nivelación work = <strong>70%</strong> · Final exam = <strong>30%</strong></li>
+          <li>Reinforcement exams are scheduled for <strong>May 19, 20 &amp; 21.</strong></li>
+          <li>📧 <strong>Teachers must email parents</strong> of any failing senior notifying them of the situation and the reinforcement process.</li>
+        </ul>
+        <br/>
+        <p><strong>A partir de esta semana, los seniors ya no asisten a clases regulares.</strong> Solo los estudiantes asignados al proceso de reforzamiento y nivelación estarán en el campus.</p>
+        <ul>
+          <li><strong>11–14 de mayo:</strong> Los alumnos en reforzamiento se presentan en horario regular — <strong>7:25 am a 3:00 pm</strong> (miércoles: 7:25 am – 12:55 pm) con uniforme completo.</li>
+          <li>Los alumnos siguen su horario normal de clases. <strong>Cada maestro debe permanecer en el aula</strong> esperándolos para que realicen los trabajos de nivelación.</li>
+          <li>Calificación: Trabajo de nivelación = <strong>70%</strong> · Examen = <strong>30%</strong></li>
+          <li>Los exámenes de reforzamiento están programados para el <strong>19, 20 y 21 de mayo.</strong></li>
+          <li>📧 <strong>Los maestros deben enviar correo a los padres</strong> de los seniors reprobados notificando la situación y el proceso de nivelación.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reminder-card">
+      <div class="reminder-title">📊 Action Required: Complete the Senior Reinforcement Tracking File / Completar el archivo de seguimiento</div>
+      <div class="reminder-body">
+        <p>Please record the names of all seniors undergoing the reinforcement process in the shared tracking spreadsheet. This document also serves as the official <strong>attendance log</strong> for the reinforcement period.</p>
+        <p>Por favor registren los nombres de todos los seniors en proceso de reforzamiento en la hoja compartida. Este documento también sirve como el <strong>registro oficial de asistencia</strong> del período de reforzamiento.</p>
+        <p style="margin-top:8px;">👉 <a href="https://docs.google.com/spreadsheets/d/1kKxdPTUF_1FpSELa1mJRLMzBRtSbV6QzxufqHQgtwpY/edit?usp=sharing" target="_blank">Access the Senior Reinforcement Tracking File / Acceder al archivo de seguimiento</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-wrap">
+    <div class="quote-text">"It is not what we teach, but what our students learn, that matters. And that begins with the clarity of our intention."</div>
+    <div class="quote-author">— Adapted from Grant Wiggins</div>
+  </div>
+
+  <!-- SIGNATURE -->
+  <div class="signature-wrap">
+    <div>
+      <div class="sig-name">Mr. Nicolás Rivas Peláez</div>
+      <div class="sig-title">High School Principal · DelCampo School</div>
+      <div class="sig-title">Principal de High School · DelCampo School</div>
+    </div>
+    <div class="sig-contact">
+      📧 <a href="mailto:nrivas@delcamposchool.org">nrivas@delcamposchool.org</a><br/>
+      📞 +504 9650 5926<br/>
+      <em>Please don't hesitate to reach out with any questions.<br/>No dude en contactarme ante cualquier duda.</em>
+    </div>
+  </div>
+
+  <div class="footer">
+    High Standards · DCS High School Weekly Bulletin · Week of May 11–15, 2026 · Foster Students' Highest Potential
+  </div>
+
+</div>
 </body>
 </html>
