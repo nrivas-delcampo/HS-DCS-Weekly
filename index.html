@@ -1,324 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High Standards Bulletin — Week of May 18, 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #1B5631;
+      --green-mid: #2d7a47;
+      --green-light: #e8f2ec;
+      --gold: #C9A84C;
+      --gold-light: #f5edd8;
+      --white: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #555;
+      --border: #d4e6da;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background-color: #f2f5f3;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.65;
+    }
 
-  :root {
-    --green: #1B5631;
-    --green-dark: #133f24;
-    --green-light: #e8f5ee;
-    --gold: #C9A84C;
-    --gold-light: #fdf6e3;
-    --white: #ffffff;
-    --gray: #f4f4f2;
-    --text: #222222;
-    --text-light: #555;
-  }
+    .page {
+      max-width: 1100px;
+      margin: 30px auto;
+      background: var(--white);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+    /* HEADER */
+    .header {
+      background-color: var(--green);
+      color: var(--white);
+      padding: 28px 36px 20px;
+      text-align: center;
+      border-bottom: 5px solid var(--gold);
+    }
+    .header-label {
+      font-weight: 300;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      font-weight: 700;
+    }
+    .header-sub {
+      font-size: 12.5px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.80);
+      margin-top: 5px;
+    }
+    .header-divider { width: 50px; height: 2px; background: var(--gold); margin: 12px auto 0; }
 
-  body {
-    font-family: 'Source Sans 3', sans-serif;
-    background: #eaeae6;
-    color: var(--text);
-    font-size: 13.5px;
-    line-height: 1.55;
-  }
+    /* TWO COLUMNS */
+    .columns { display: grid; grid-template-columns: 1fr 1fr; align-items: start; }
+    .col { border-right: 2px solid var(--border); }
+    .col:last-child { border-right: none; }
 
-  .page {
-    max-width: 860px;
-    margin: 18px auto;
-    background: var(--white);
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
-  }
+    .col-banner {
+      padding: 8px 0;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .col-banner.en { background: var(--gold-light); color: #8a6a1e; border-bottom: 1px solid #e3cc97; }
+    .col-banner.es { background: var(--green-light); color: var(--green); border-bottom: 1px solid var(--border); }
 
-  .header {
-    background: var(--green);
-    color: white;
-    padding: 18px 28px 14px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-  }
-  .header-logo { font-family: 'Merriweather', serif; line-height: 1.15; }
-  .header-logo .title { font-size: 22px; font-weight: 700; letter-spacing: 0.5px; }
-  .header-logo .subtitle { font-size: 11.5px; color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
-  .header-meta { text-align: right; font-size: 11.5px; color: rgba(255,255,255,0.85); line-height: 1.5; }
-  .header-meta strong { color: var(--gold); font-size: 13px; }
+    .col-section { border-bottom: 1px solid var(--border); }
+    .col-section:last-child { border-bottom: none; }
 
-  .gold-bar { background: var(--gold); height: 5px; }
+    .col-section-title {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--green); color: var(--white);
+      padding: 8px 18px;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.88em; font-weight: 600;
+    }
 
-  .section-header {
-    background: var(--green);
-    color: white;
-    padding: 7px 20px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+    .col-body { padding: 16px 18px; }
+    .col-body p { font-size: 13px; margin-bottom: 9px; }
+    .col-body p:last-child { margin-bottom: 0; }
 
-  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
-  .bilingual > div { padding: 18px 20px; }
-  .bilingual > div:first-child { border-right: 2px solid var(--green-light); }
+    /* SCHEDULE */
+    .sched-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .sched-table th {
+      background: var(--green-light); color: var(--green);
+      font-size: 9.5px; font-weight: 700; letter-spacing: 0.8px;
+      text-transform: uppercase; padding: 7px 8px;
+      border-bottom: 2px solid var(--border); text-align: left;
+    }
+    .sched-table td { padding: 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .sched-table tr:last-child td { border-bottom: none; }
+    .sched-table tr:nth-child(even) td { background: #fafcfb; }
+    .day-cell { font-weight: 700; color: var(--green); font-size: 11.5px; }
+    .day-tag {
+      display: inline-block; background: var(--gold); color: var(--white);
+      font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 2px; margin-left: 2px;
+    }
+    .ccc-tag {
+      display: inline-block; background: var(--green-light); color: var(--green);
+      font-size: 9px; font-weight: 600; padding: 1px 5px; border-radius: 2px;
+      margin-left: 2px; border: 1px solid var(--border);
+    }
+    .ev { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
+    .ev-dot { color: var(--gold); font-weight: 900; margin-right: 3px; }
+    .ev-red { color: #c0392b; font-weight: 600; }
+    .ev-bday { color: #b5470e; font-weight: 700; }
+    .ev-pending { color: #888; font-style: italic; }
+    .sched-note { font-size: 10.5px; color: #999; margin-top: 8px; font-style: italic; }
 
-  .lang-label {
-    font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
-  }
-  .lang-label::after { content: ''; flex: 1; height: 1px; background: var(--gold); opacity: 0.35; }
+    /* REMINDERS */
+    .reminder { display: flex; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); }
+    .reminder:last-child { border-bottom: none; }
+    .r-icon { font-size: 1.05em; min-width: 22px; text-align: center; padding-top: 1px; }
+    .r-title { font-weight: 700; color: var(--green); font-size: 12.5px; margin-bottom: 3px; }
+    .r-body { font-size: 12.5px; color: var(--text); }
 
-  .message-body { font-size: 13px; color: var(--text); line-height: 1.68; }
-  .message-body p { margin-bottom: 9px; }
-  .message-body p:last-child { margin-bottom: 0; }
+    /* SIGNATURE */
+    .col-sig { background: var(--green-light); padding: 16px 18px; border-top: 2px solid var(--border); }
+    .sig-name { font-family: 'Playfair Display', serif; font-size: 1em; color: var(--green); font-weight: 700; }
+    .sig-line { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
+    .sig-mission { margin-top: 10px; }
+    .sig-mission-label { font-size: 10px; color: var(--text-muted); font-style: italic; }
+    .sig-mission-text { font-size: 11.5px; color: var(--green); font-weight: 600; }
 
-  .schedule-wrap { padding: 16px 20px; background: var(--gray); }
-  .schedule-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
-  .schedule-table th {
-    background: var(--green); color: white; padding: 7px 10px;
-    text-align: left; font-weight: 700; font-size: 11px; letter-spacing: 0.5px;
-  }
-  .schedule-table td { padding: 7px 10px; border-bottom: 1px solid #ddd; vertical-align: top; }
-  .schedule-table tr:nth-child(even) td { background: #f9f9f7; }
-  .schedule-table tr:nth-child(odd) td { background: white; }
+    /* QUOTE */
+    .quote-block { background: var(--green); padding: 26px 40px; text-align: center; }
+    .quote-mark { font-family: 'Playfair Display', serif; font-size: 3em; color: var(--gold); line-height: 0.5; display: block; margin-bottom: 10px; }
+    .quote-text { font-family: 'Playfair Display', serif; font-size: 1em; color: var(--white); font-style: italic; line-height: 1.6; max-width: 600px; margin: 0 auto 6px; }
+    .quote-author { font-size: 11px; color: var(--gold); letter-spacing: 1px; text-transform: uppercase; font-weight: 600; }
 
-  .day-num {
-    display: inline-block; background: var(--green); color: white; border-radius: 50%;
-    width: 20px; height: 20px; text-align: center; line-height: 20px;
-    font-size: 11px; font-weight: 700; margin-right: 4px;
-  }
-  .ccc-badge {
-    display: inline-block; background: var(--gold); color: white; font-size: 9.5px;
-    font-weight: 700; letter-spacing: 0.5px; padding: 1px 6px; border-radius: 3px; margin-left: 5px;
-  }
-  .event-list { list-style: none; padding: 0; margin: 0; }
-  .event-list li { padding: 1px 0; font-size: 12px; color: var(--text); }
-  .event-list li span { margin-right: 4px; }
-  .event-reinforcement { color: #b94040; font-weight: 600; }
+    /* FOOTER */
+    .footer { background: #111f15; padding: 10px 28px; text-align: center; font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 0.5px; }
 
-  .reminders-wrap { padding: 16px 20px; }
-  .reminder-card {
-    border-left: 4px solid var(--green);
-    background: var(--green-light);
-    padding: 11px 15px;
-    margin-bottom: 10px;
-    border-radius: 0 5px 5px 0;
-  }
-  .reminder-card:last-child { margin-bottom: 0; }
-  .reminder-card.gold { border-left-color: var(--gold); background: var(--gold-light); }
-  .reminder-title { font-weight: 700; font-size: 12.5px; color: var(--green-dark); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
-  .reminder-card.gold .reminder-title { color: #7a5a00; }
-  .reminder-body { font-size: 12px; color: var(--text-light); line-height: 1.55; }
-  .reminder-body ul { margin: 5px 0 0 16px; }
-  .reminder-body li { margin-bottom: 3px; }
-  .reminder-body a { color: var(--green); font-weight: 600; word-break: break-all; }
-
-  .quote-wrap { background: var(--green); color: white; padding: 18px 28px; text-align: center; }
-  .quote-text { font-family: 'Merriweather', serif; font-style: italic; font-size: 13.5px; line-height: 1.7; margin-bottom: 6px; color: rgba(255,255,255,0.92); }
-  .quote-author { font-size: 11px; color: var(--gold); letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
-
-  .signature-wrap {
-    padding: 14px 20px; border-top: 2px solid var(--green-light);
-    display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
-    font-size: 12px; color: var(--text-light);
-  }
-  .sig-name { font-weight: 700; color: var(--green); font-size: 13px; }
-  .sig-title { font-size: 11.5px; color: #777; }
-  .sig-contact { text-align: right; font-size: 11.5px; }
-  .sig-contact a { color: var(--green); text-decoration: none; }
-
-  .footer {
-    background: var(--green-dark); color: rgba(255,255,255,0.55);
-    text-align: center; padding: 8px; font-size: 10px; letter-spacing: 0.5px;
-  }
-
-  @media print {
-    body { background: white; font-size: 12px; }
-    .page { box-shadow: none; border: none; margin: 0; max-width: 100%; }
-  }
-</style>
+    @media (max-width: 700px) {
+      .columns { grid-template-columns: 1fr; }
+      .col { border-right: none; border-bottom: 3px solid var(--border); }
+    }
+  </style>
 </head>
 <body>
 <div class="page">
 
   <!-- HEADER -->
   <div class="header">
-    <div class="header-logo">
-      <div class="title">⭐ High Standards</div>
-      <div class="subtitle">DCS High School · Weekly Bulletin</div>
-    </div>
-    <div class="header-meta">
-      <strong>Week of May 11–15, 2026</strong><br/>
-      Volume 2026 · Week 36<br/>
-      Mr. Nicolás Rivas, Principal
-    </div>
-  </div>
-  <div class="gold-bar"></div>
-
-  <!-- PRINCIPAL'S MESSAGE -->
-  <div class="section-header">📝 Principal's Message / Mensaje del Director</div>
-  <div class="bilingual">
-    <div>
-      <div class="lang-label">🇺🇸 English</div>
-      <div class="message-body">
-        <p>Dear High School Team,</p>
-        <p>This week I want to invite us all to reflect on what teaching truly means at a professional level. Showing up to class and sharing time with students is, of course, the foundation — but our responsibility goes far beyond that.</p>
-        <p>It means planning ahead with intention. It means designing lessons that balance direct instruction with opportunities for students to discover, collaborate, and construct their own understanding. It means assigning homework that is appropriate in both content and length — not as a routine, but as a deliberate tool to measure learning in the way <em>we</em> want to measure it, and not as a test of how well students can use AI tools to produce a polished assignment that tells us very little about what they actually know.</p>
-        <p>Over the past weeks, I have been carefully triangulating data alongside <strong>Mrs. Allison Arguijo, our HS Counselor</strong>, and <strong>Mrs. Elba Valladares, our Administrative Assistant</strong>: MAP scores, quarterly grades, Honor Roll and High Honor Roll lists, and certain behavioral and emotional situations we have observed together. In some cases, the picture that emerges reveals significant discrepancies. My reflection for this week is a call to adjust — both in how we teach and in how we evaluate — so that we arrive at a more honest and accurate view of where our students truly are.</p>
-        <p>This may not be the most comfortable story, and it may not match the narrative some of us have been telling. But it will be the <strong>right</strong> perspective — the one that allows us to plan effectively for the remainder of this year and to have better, more informed conversations as we begin preparing for next school year. Those conversations will shape decisions about courses, curricula, sections, and the resources we need as a school.</p>
-        <p>Let us take this moment to reflect — honestly, professionally, and with purpose. Our students deserve to make us proud. <strong>Authentically proud.</strong></p>
-        <p>With high standards,<br/><strong>Mr. Nicolás Rivas</strong></p>
-      </div>
-    </div>
-    <div>
-      <div class="lang-label">🇪🇸 Español</div>
-      <div class="message-body">
-        <p>Estimado Equipo de High School,</p>
-        <p>Esta semana quiero compartir algunas reflexiones, para que a partir de esta semana reflexionemos juntos sobre lo que significa enseñar a nivel profesional. Presentarse a clase y compartir el tiempo con los estudiantes es, por supuesto, la base — pero nuestra responsabilidad va mucho más allá de eso.</p>
-        <p>Significa planificar con intención, diseñar clases que equilibren la instrucción directa con momentos en que los estudiantes descubran, colaboren y construyan su propio aprendizaje, asignar tareas apropiadas en contenido y extensión — no por rutina, sino como una herramienta deliberada para medir el aprendizaje de la manera que queremos hacerlo, y no como una prueba de qué tan bien los estudiantes pueden usar herramientas de IA para entregarnos un trabajo impecable que nos dice muy poco sobre lo que realmente saben.</p>
-        <p>Durante las últimas semanas, he estado triangulando información junto con <strong>Mrs. Allison Arguijo, nuestra Consejera de High School</strong>, y <strong>Mrs. Elba Valladares, nuestra Asistente Administrativa</strong>: puntajes MAP, calificaciones de cada trimestre, listas de Honor Roll y High Honor Roll, y algunas situaciones conductuales y emocionales que hemos observado juntos. En algunos casos, el panorama que surge revela discrepancias significativas. Mi reflexión de esta semana es un llamado a ajustar — tanto en cómo enseñamos como en cómo evaluamos — para tener una visión más honesta y precisa de dónde están realmente nuestros estudiantes.</p>
-        <p>Puede que no sea la historia más cómoda, y a lo mejor no coincida con la narrativa que hemos estado construyendo. Pero será la perspectiva <strong>correcta</strong> — la que nos permitirá planificar eficazmente lo que resta del año y tener conversaciones más informadas y significativas al comenzar a preparar el próximo ciclo escolar. Esas conversaciones darán forma para poder tomar decisiones.</p>
-        <p>Tomemos este momento para reflexionar — con honestidad, profesionalismo y propósito. Nuestros estudiantes merecen que estemos orgullosos de ellos. <strong>Auténticamente orgullosos.</strong></p>
-        <p>Con altos estándares,<br/><strong>Mr. Nicolás Rivas</strong></p>
-      </div>
-    </div>
+    <div class="header-label">DelCampo School · High School</div>
+    <h1>High Standards</h1>
+    <div class="header-sub">Week of May 18–22, 2026 &nbsp;·&nbsp; Semana del 18 al 22 de mayo de 2026</div>
+    <div class="header-divider"></div>
   </div>
 
-  <!-- SCHEDULE -->
-  <div class="section-header">🗓 Weekly Schedule / Horario Semanal</div>
-  <div class="schedule-wrap">
-    <table class="schedule-table">
-      <thead>
-        <tr>
-          <th style="width:130px">Day / Día</th>
-          <th style="width:80px">Rotation</th>
-          <th>Events / Actividades</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Monday / Lunes</strong><br/>May 11</td>
-          <td><span class="day-num">3</span> Day 3</td>
-          <td>
-            <ul class="event-list">
-              <li><span>🎓</span> AP Calculus <em>(Seniors)</em></li>
-              <li><span class="event-reinforcement">🎓</span> <span class="event-reinforcement">Seniors Reinforcement Begins / Inicia Reforzamiento Seniors</span></li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Tuesday / Martes</strong><br/>May 12</td>
-          <td><span class="day-num">4</span> Day 4</td>
-          <td>
-            <ul class="event-list">
-              <li><span>🎓</span> AP Precalculus <em>(11th–12th)</em></li>
-              <li><span class="event-reinforcement">🎓</span> <span class="event-reinforcement">Seniors Reinforcement / Reforzamiento Seniors</span></li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Wednesday / Miércoles</strong><br/>May 13</td>
-          <td><span class="day-num">5</span> Day 5 <span class="ccc-badge">CCC</span></td>
-          <td>
-            <ul class="event-list">
-              <li><span>🎓</span> AP English <em>(10th)</em></li>
-              <li><span>🎵</span> Examen del Himno — 9th grade, 2:00–4:00 pm</li>
-              <li><span class="event-reinforcement">🎓</span> <span class="event-reinforcement">Seniors Reinforcement / Reforzamiento Seniors</span></li>
-              <li style="font-size:11px;color:#888;margin-top:3px;">⏰ Early dismissal 12:55 pm (regular students) / Salida 12:55 pm</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Thursday / Jueves</strong><br/>May 14</td>
-          <td><span class="day-num">6</span> Day 6</td>
-          <td>
-            <ul class="event-list">
-              <li><span>📖</span> MAP Math <em>(9th–11th)</em></li>
-              <li><span class="event-reinforcement">🎓</span> <span class="event-reinforcement">Seniors Reinforcement Ends / Finaliza Reforzamiento Seniors</span></li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Friday / Viernes</strong><br/>May 15</td>
-          <td><span class="day-num">1</span> Day 1</td>
-          <td>
-            <ul class="event-list">
-              <li><span>🎨🎵</span> Art &amp; Music Festival — <em>More information coming soon / Más información próximamente</em></li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <div class="columns">
 
-  <!-- REMINDERS -->
-  <div class="section-header">📌 Announcements & Reminders / Avisos e Recordatorios</div>
-  <div class="reminders-wrap">
+    <!-- ═══════ ENGLISH COLUMN ═══════ -->
+    <div class="col">
+      <div class="col-banner en">🇺🇸 &nbsp; English</div>
 
-    <div class="reminder-card gold">
-      <div class="reminder-title">⚠️ SENIORS: No Regular Classes — Reinforcement Schedule Only / Sin clases regulares — Solo reforzamiento</div>
-      <div class="reminder-body">
-        <p><strong>Starting this week, seniors no longer attend regular classes.</strong> Only students assigned to the annual reinforcement and leveling process will be on campus.</p>
-        <ul>
-          <li><strong>May 11–14:</strong> Reinforcement students report in regular schedule — <strong>7:25 am to 3:00 pm</strong> (Wednesday: 7:25 am – 12:55 pm) in full uniform.</li>
-          <li>Students follow their regular class schedule. <strong>Each teacher must remain in the classroom</strong> and available for them to complete leveling work.</li>
-          <li>Grading: Leveling/nivelación work = <strong>70%</strong> · Final exam = <strong>30%</strong></li>
-          <li>Reinforcement exams are scheduled for <strong>May 19, 20 &amp; 21.</strong></li>
-          <li>📧 <strong>Teachers must email parents</strong> of any failing senior notifying them of the situation and the reinforcement process.</li>
-        </ul>
-        <br/>
-        <p><strong>A partir de esta semana, los seniors ya no asisten a clases regulares.</strong> Solo los estudiantes asignados al proceso de reforzamiento y nivelación estarán en el campus.</p>
-        <ul>
-          <li><strong>11–14 de mayo:</strong> Los alumnos en reforzamiento se presentan en horario regular — <strong>7:25 am a 3:00 pm</strong> (miércoles: 7:25 am – 12:55 pm) con uniforme completo.</li>
-          <li>Los alumnos siguen su horario normal de clases. <strong>Cada maestro debe permanecer en el aula</strong> esperándolos para que realicen los trabajos de nivelación.</li>
-          <li>Calificación: Trabajo de nivelación = <strong>70%</strong> · Examen = <strong>30%</strong></li>
-          <li>Los exámenes de reforzamiento están programados para el <strong>19, 20 y 21 de mayo.</strong></li>
-          <li>📧 <strong>Los maestros deben enviar correo a los padres</strong> de los seniors reprobados notificando la situación y el proceso de nivelación.</li>
-        </ul>
+      <div class="col-section">
+        <div class="col-section-title"><span>✉️</span> Principal's Message</div>
+        <div class="col-body">
+          <p>Dear High School Team,</p>
+          <p>Last Friday, our community witnessed something truly special: our Arts &amp; Music Festival. Although I was not able to be at school that day, the flood of comments, photos, and the live stream made it impossible not to feel the energy and joy of the event. I could see it clearly: it was a remarkable celebration of creativity, talent, and expression.</p>
+          <p>I had the privilege of watching Sarita enjoy her ceramics workshop — and through the photos and videos shared, I could see the same excitement and pride on the faces of students across every discipline. That image stayed with me. That is exactly what we are here for.</p>
+          <p>At DelCampo, our mission is to <strong>Foster Students' Highest Potential</strong>. That potential is not measured solely by test scores — it lives in every note played with passion, every brushstroke laid with intention, every verse delivered with conviction. Our vision calls us to <em>Inspire and be Inspired by High-quality Education</em>, and last Friday, that inspiration was unmistakable.</p>
+          <p>Our Student Profile asks us to develop young people who are <strong>Well-Rounded, Emotionally Intelligent, Collaborative, Growth-Minded, and Life-Long Learners</strong>. The Arts &amp; Music Festival was a living demonstration of every one of these qualities. It takes courage to perform publicly. It takes collaboration to rehearse as an ensemble. It takes emotional intelligence to move an audience. And it takes a true growth mindset to step up and give your very best.</p>
+          <p>This is the kind of education that stays with a person for life — forming citizens of the world who are not only academically strong, but sensitive to beauty, open to expression, and connected to their own humanity.</p>
+          <p>To every student who performed or participated: you made us incredibly proud. To every teacher and staff member who supported, directed, or showed up to cheer: thank you. <strong>This is DelCampo at its very best.</strong></p>
+          <p>Let's carry that spirit into this final stretch of the year. Have a wonderful week.</p>
+        </div>
+      </div>
+
+      <div class="col-section">
+        <div class="col-section-title"><span>📅</span> Weekly Schedule</div>
+        <div class="col-body" style="padding:12px 18px;">
+          <table class="sched-table">
+            <thead><tr><th>Day</th><th>Rotation</th><th>Events</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><div class="day-cell">Mon, May 18</div></td>
+                <td><span class="day-tag">Day 2</span><span class="ccc-tag">CCC</span></td>
+                <td>
+                  <div class="ev"><span class="ev-dot">·</span>Minor Subjects (9th–11th)</div>
+                  <div class="ev"><span class="ev-dot">·</span><span class="ev-bday">🎂 Happy Birthday, Sarita Rivas!</span></div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="day-cell">Tue, May 19</div></td>
+                <td><span class="day-tag">Day 3</span></td>
+                <td>
+                  <div class="ev"><span class="ev-dot">·</span>Minor Subjects (9th–11th)</div>
+                  <div class="ev"><span class="ev-dot">·</span><span class="ev-pending">MAP Language — pending confirmation*</span></div>
+                  <div class="ev"><span class="ev-dot">·</span><span class="ev-red">Seniors Recup: Economics &amp; Math</span></div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="day-cell">Wed, May 20</div></td>
+                <td><span class="day-tag">Day 4</span></td>
+                <td>
+                  <div class="ev"><span class="ev-dot">·</span>Minor Subjects (9th–11th)</div>
+                  <div class="ev"><span class="ev-dot">·</span><span class="ev-red">Seniors Recup: Physics &amp; Español</span></div>
+                  <div class="ev"><span class="ev-dot">·</span>🇺🇸 U.S. Embassy Visit — 10th Grade <span class="ev-pending">(more info soon)</span></div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="day-cell">Thu, May 21</div></td>
+                <td><span class="day-tag">Day 5</span><span class="ccc-tag">CCC</span></td>
+                <td>
+                  <div class="ev"><span class="ev-dot">·</span>Minor Subjects (9th–11th)</div>
+                  <div class="ev"><span class="ev-dot">·</span><span class="ev-red">Seniors Recup: English &amp; Chemistry</span></div>
+                  <div class="ev"><span class="ev-dot">·</span>🇺🇸 U.S. Embassy Visit — 10th Grade <span class="ev-pending">(more info soon)</span></div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="day-cell">Fri, May 22</div></td>
+                <td><span class="day-tag">Day 6</span></td>
+                <td>
+                  <div class="ev"><span class="ev-dot">·</span>Minor Subjects (9th–11th)</div>
+                  <div class="ev"><span class="ev-dot">·</span><span class="ev-red">TES Defense (Seniors)</span></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="sched-note">* MAP Language is pending confirmation due to technical issues with NWEA. Updates to follow.</p>
+        </div>
+      </div>
+
+      <div class="col-section">
+        <div class="col-section-title"><span>🔔</span> Reminders &amp; Announcements</div>
+        <div class="col-body">
+
+          <div class="reminder">
+            <div class="r-icon">📋</div>
+            <div>
+              <div class="r-title">Minor Subjects Week — All Week (9th–11th)</div>
+              <div class="r-body">Minor Subject assessments run all week. Please ensure students are prepared and aware of their specific dates and classrooms.</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">📖</div>
+            <div>
+              <div class="r-title">MAP Language — Pending Confirmation (9th–11th)</div>
+              <div class="r-body">We are experiencing technical issues with NWEA and are awaiting their resolution before rescheduling. We will keep you informed as soon as we receive the green light.</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">🎓</div>
+            <div>
+              <div class="r-title">Senior Recovery Exams — Tue–Thu (May 19–21)</div>
+              <div class="r-body">Economics &amp; Math (Tue), Physics &amp; Español (Wed), English &amp; Chemistry (Thu). Essential for graduation clearance — please support seniors in staying focused.</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">⭐</div>
+            <div>
+              <div class="r-title">CCC's Last Day — Tuesday, May 26</div>
+              <div class="r-body">The last Co-Curricular Club day of the year will be on Tuesday, May 26. Let's celebrate students' participation and the dedication of all club sponsors this year.</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">🇺🇸</div>
+            <div>
+              <div class="r-title">U.S. Embassy Visit — Wed &amp; Thu, May 20–21 (10th Grade)</div>
+              <div class="r-body">10th grade students will be visiting the United States Embassy on Wednesday and Thursday. Further details will be shared soon. Stay tuned for more information.</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">📝</div>
+            <div>
+              <div class="r-title">TES Defense — Friday, May 22 (Seniors)</div>
+              <div class="r-body">A significant milestone for our graduating class. Let's create a supportive and professional environment for students as they present their work.</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">🏛️</div>
+            <div>
+              <div class="r-title">Congratulations — Social Studies Dept. | National Anthem Exam (9th)</div>
+              <div class="r-body">A heartfelt congratulations for the outstanding logistics and organization of last week's National Anthem exam. Smooth, professional, and a true reflection of our high standards. Well done!</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">📆</div>
+            <div>
+              <div class="r-title">Class Visit Invitations — Action Required</div>
+              <div class="r-body">If you have not yet done so, please invite me to your class and add the visit to my calendar. I want to visit every classroom before the year ends. Thank you!</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-sig">
+        <div class="sig-name">Mr. Nicolás Rivas</div>
+        <div class="sig-line">High School Principal · DelCampo School</div>
+        <div class="sig-line">nrivas@delcamposchool.org &nbsp;·&nbsp; +504 9650 5926</div>
+        <div class="sig-mission">
+          <div class="sig-mission-label">Mission</div>
+          <div class="sig-mission-text">Foster Students' Highest Potential</div>
+          <div class="sig-mission-label" style="margin-top:4px;">Vision</div>
+          <div class="sig-mission-text">Inspire and be Inspired by High-quality Education</div>
+        </div>
       </div>
     </div>
 
-    <div class="reminder-card">
-      <div class="reminder-title">📊 Action Required: Complete the Senior Reinforcement Tracking File / Completar el archivo de seguimiento</div>
-      <div class="reminder-body">
-        <p>Please record the names of all seniors undergoing the reinforcement process in the shared tracking spreadsheet. This document also serves as the official <strong>attendance log</strong> for the reinforcement period.</p>
-        <p>Por favor registren los nombres de todos los seniors en proceso de reforzamiento en la hoja compartida. Este documento también sirve como el <strong>registro oficial de asistencia</strong> del período de reforzamiento.</p>
-        <p style="margin-top:8px;">👉 <a href="https://docs.google.com/spreadsheets/d/1kKxdPTUF_1FpSELa1mJRLMzBRtSbV6QzxufqHQgtwpY/edit?usp=sharing" target="_blank">Access the Senior Reinforcement Tracking File / Acceder al archivo de seguimiento</a></p>
+    <!-- ═══════ SPANISH COLUMN ═══════ -->
+    <div class="col">
+      <div class="col-banner es">🇭🇳 &nbsp; Español</div>
+
+      <div class="col-section">
+        <div class="col-section-title"><span>✉️</span> Mensaje del Director</div>
+        <div class="col-body">
+          <p>Estimado equipo del High School,</p>
+          <p>El viernes pasado, nuestra comunidad fue testigo de algo verdaderamente especial: nuestro Festival de Artes y Música. Aunque no pude estar en la escuela ese día, la avalancha de comentarios, fotos y la transmisión en vivo hicieron imposible no sentir la energía y la alegría del evento. Pude verlo con claridad: fue una celebración extraordinaria de creatividad, talento y expresión.</p>
+          <p>Tuve el privilegio de ver a Sarita disfrutar de su taller de cerámica — y a través de las fotos y videos compartidos, pude ver esa misma emoción y orgullo en los rostros de estudiantes de todas las disciplinas. Esa imagen me quedó grabada. Para eso estamos aquí.</p>
+          <p>En DelCampo, nuestra misión es <strong>Potenciar al Máximo el Potencial de Nuestros Estudiantes</strong>. Ese potencial no se mide únicamente con calificaciones — vive en cada nota interpretada con pasión, en cada trazo trazado con intención, en cada verso declamado con convicción. Nuestra visión nos llama a <em>Inspirar y ser Inspirados por una Educación de Alta Calidad</em>, y el viernes pasado, esa inspiración fue innegable.</p>
+          <p>Nuestro Perfil del Estudiante nos invita a formar jóvenes que sean <strong>Versátiles, Emocionalmente Inteligentes, Colaborativos, con Mentalidad de Crecimiento y Aprendices de por Vida</strong>. El Festival de Artes y Música fue una demostración viva de cada una de estas cualidades. Se necesita valentía para actuar en público. Se necesita colaboración para ensayar como conjunto. Se necesita inteligencia emocional para conmover a una audiencia. Y se necesita una verdadera mentalidad de crecimiento para dar lo mejor de uno mismo.</p>
+          <p>Este es el tipo de educación que acompaña a una persona toda la vida — formando ciudadanos del mundo que no solo son fuertes académicamente, sino también sensibles a la belleza, abiertos a la expresión y conectados con su propia humanidad.</p>
+          <p>A cada estudiante que actuó o participó: nos llenaron de un orgullo enorme. A cada maestro y miembro del personal que apoyó, dirigió o estuvo ahí para animar: gracias. <strong>Esto es DelCampo en su mejor versión.</strong></p>
+          <p>Llevemos ese espíritu a esta recta final del año. Que tengan una excelente semana.</p>
+        </div>
+      </div>
+
+      <div class="col-section">
+        <div class="col-section-title"><span>📅</span> Horario Semanal</div>
+        <div class="col-body" style="padding:12px 18px;">
+          <table class="sched-table">
+            <thead><tr><th>Día</th><th>Rotación</th><th>Eventos</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><div class="day-cell">Lun, 18 mayo</div></td>
+                <td><span class="day-tag">Día 2</span><span class="ccc-tag">CCC</span></td>
+                <td>
+                  <div class="ev"><span class="ev-dot">·</span>Materias Menores (9°–11°)</div>
+                  <div class="ev"><span class="ev-dot">·</span><span class="ev-bday">🎂 ¡Feliz Cumpleaños, Sarita Rivas!</span></div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="day-cell">Mar, 19 mayo</div></td>
+                <td><span class="day-tag">Día 3</span></td>
+                <td>
+                  <div class="ev"><span class="ev-dot">·</span>Materias Menores (9°–11°)</div>
+                  <div class="ev"><span class="ev-dot">·</span><span class="ev-pending">MAP Lenguaje — pendiente confirmación*</span></div>
+                  <div class="ev"><span class="ev-dot">·</span><span class="ev-red">Recup. Seniors: Economía y Matemáticas</span></div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="day-cell">Mié, 20 mayo</div></td>
+                <td><span class="day-tag">Día 4</span></td>
+                <td>
+                  <div class="ev"><span class="ev-dot">·</span>Materias Menores (9°–11°)</div>
+                  <div class="ev"><span class="ev-dot">·</span><span class="ev-red">Recup. Seniors: Física y Español</span></div>
+                  <div class="ev"><span class="ev-dot">·</span>🇺🇸 Visita Embajada EE.UU. — 10° <span class="ev-pending">(más info pronto)</span></div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="day-cell">Jue, 21 mayo</div></td>
+                <td><span class="day-tag">Día 5</span><span class="ccc-tag">CCC</span></td>
+                <td>
+                  <div class="ev"><span class="ev-dot">·</span>Materias Menores (9°–11°)</div>
+                  <div class="ev"><span class="ev-dot">·</span><span class="ev-red">Recup. Seniors: Inglés y Química</span></div>
+                  <div class="ev"><span class="ev-dot">·</span>🇺🇸 Visita Embajada EE.UU. — 10° <span class="ev-pending">(más info pronto)</span></div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="day-cell">Vie, 22 mayo</div></td>
+                <td><span class="day-tag">Día 6</span></td>
+                <td>
+                  <div class="ev"><span class="ev-dot">·</span>Materias Menores (9°–11°)</div>
+                  <div class="ev"><span class="ev-dot">·</span><span class="ev-red">Defensa del TES (Seniors)</span></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="sched-note">* MAP Lenguaje está pendiente de confirmación por inconvenientes técnicos con NWEA. Los mantendremos al tanto.</p>
+        </div>
+      </div>
+
+      <div class="col-section">
+        <div class="col-section-title"><span>🔔</span> Recordatorios y Anuncios</div>
+        <div class="col-body">
+
+          <div class="reminder">
+            <div class="r-icon">📋</div>
+            <div>
+              <div class="r-title">Semana de Materias Menores — Toda la semana (9°–11°)</div>
+              <div class="r-body">Las evaluaciones de Materias Menores se realizarán toda la semana. Asegúrese de que los estudiantes estén preparados y conozcan sus fechas y salones.</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">📖</div>
+            <div>
+              <div class="r-title">MAP Lenguaje — Pendiente de Confirmación (9°–11°)</div>
+              <div class="r-body">Estamos experimentando inconvenientes técnicos con NWEA y estamos a la espera de que los resuelvan para retomar. Los mantendremos al tanto en cuanto tengamos luz verde.</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">🎓</div>
+            <div>
+              <div class="r-title">Exámenes de Recuperación — Seniors (Mar–Jue, 19–21 mayo)</div>
+              <div class="r-body">Economía y Matemáticas (mar), Física y Español (mié), Inglés y Química (jue). Esenciales para la autorización de graduación — apoyemos a los seniors a mantenerse enfocados.</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">⭐</div>
+            <div>
+              <div class="r-title">Último Día de CCC — Martes 26 de mayo</div>
+              <div class="r-body">El último día de Clubes Co-Curriculares del año será el martes 26 de mayo. Celebremos la participación de los estudiantes y la dedicación de los patrocinadores a lo largo del año.</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">🇺🇸</div>
+            <div>
+              <div class="r-title">Visita a la Embajada de EE.UU. — Mié y Jue, 20–21 mayo (10°)</div>
+              <div class="r-body">Los estudiantes de 10° grado visitarán la Embajada de los Estados Unidos el miércoles y el jueves. Más detalles se compartirán próximamente. Estaremos al tanto.</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">📝</div>
+            <div>
+              <div class="r-title">Defensa del TES — Viernes 22 de mayo (Seniors)</div>
+              <div class="r-body">Un hito académico significativo para nuestra clase graduanda. Creemos un ambiente de apoyo y profesionalismo para que los estudiantes presenten su trabajo.</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">🏛️</div>
+            <div>
+              <div class="r-title">Felicitaciones — Depto. Estudios Sociales | Examen del Himno (9°)</div>
+              <div class="r-body">Una sincera felicitación por la excelente organización y logística del examen del Himno Nacional de la semana pasada. Fluido, profesional y un verdadero reflejo de nuestros altos estándares. ¡Excelente trabajo!</div>
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="r-icon">📆</div>
+            <div>
+              <div class="r-title">Invitaciones para Visita de Clase — Acción Requerida</div>
+              <div class="r-body">Si aún no lo ha hecho, por favor invíteme a su clase y agréguelo a mi calendario. Quiero visitar cada aula antes de que termine el año. ¡Gracias de antemano!</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-sig">
+        <div class="sig-name">Mr. Nicolás Rivas</div>
+        <div class="sig-line">Director del High School · DelCampo School</div>
+        <div class="sig-line">nrivas@delcamposchool.org &nbsp;·&nbsp; +504 9650 5926</div>
+        <div class="sig-mission">
+          <div class="sig-mission-label">Misión</div>
+          <div class="sig-mission-text">Potenciar al Máximo el Potencial de Nuestros Estudiantes</div>
+          <div class="sig-mission-label" style="margin-top:4px;">Visión</div>
+          <div class="sig-mission-text">Inspirar y ser Inspirados por una Educación de Alta Calidad</div>
+        </div>
       </div>
     </div>
 
-  </div>
+  </div><!-- end columns -->
 
   <!-- QUOTE -->
-  <div class="quote-wrap">
-    <div class="quote-text">"It is not what we teach, but what our students learn, that matters. And that begins with the clarity of our intention."</div>
-    <div class="quote-author">— Adapted from Grant Wiggins</div>
-  </div>
-
-  <!-- SIGNATURE -->
-  <div class="signature-wrap">
-    <div>
-      <div class="sig-name">Mr. Nicolás Rivas Peláez</div>
-      <div class="sig-title">High School Principal · DelCampo School</div>
-      <div class="sig-title">Principal de High School · DelCampo School</div>
-    </div>
-    <div class="sig-contact">
-      📧 <a href="mailto:nrivas@delcamposchool.org">nrivas@delcamposchool.org</a><br/>
-      📞 +504 9650 5926<br/>
-      <em>Please don't hesitate to reach out with any questions.<br/>No dude en contactarme ante cualquier duda.</em>
-    </div>
+  <div class="quote-block">
+    <span class="quote-mark">"</span>
+    <div class="quote-text">The purpose of art is washing the dust of daily life off our souls.</div>
+    <div class="quote-author">— Pablo Picasso</div>
   </div>
 
   <div class="footer">
-    High Standards · DCS High School Weekly Bulletin · Week of May 11–15, 2026 · Foster Students' Highest Potential
+    High Standards Bulletin · DelCampo School High School · Week of May 18–22, 2026
   </div>
 
 </div>
