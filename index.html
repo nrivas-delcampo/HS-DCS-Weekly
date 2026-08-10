@@ -1,373 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>High Standards Bulletin · Week of June 1, 2026</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
-
-  :root {
-    --green: #1B5631;
-    --green-dark: #123d22;
-    --gold: #C9A84C;
-    --gold-light: #e8c96a;
-    --cream: #fdfaf4;
-    --text: #1a1a1a;
-    --text-muted: #5a5a5a;
-    --border: #d4c89a;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Source Sans 3', sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; }
-
-  .bulletin { max-width: 860px; margin: 0 auto; background: white; box-shadow: 0 4px 40px rgba(0,0,0,0.12); }
-
-  .header { background: var(--green); padding: 0; position: relative; overflow: hidden; }
-  .header::before { content: ''; position: absolute; top: -40px; right: -40px; width: 220px; height: 220px; border-radius: 50%; background: rgba(201,168,76,0.15); }
-  .header::after { content: ''; position: absolute; bottom: -60px; left: 30%; width: 300px; height: 300px; border-radius: 50%; background: rgba(201,168,76,0.08); }
-  .header-inner { padding: 36px 48px 28px; position: relative; z-index: 1; }
-  .school-name { font-family: 'Source Sans 3', sans-serif; font-weight: 300; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 6px; }
-  .bulletin-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 42px; color: white; line-height: 1; letter-spacing: -1px; }
-  .bulletin-title span { color: var(--gold); }
-  .bulletin-subtitle { font-family: 'Playfair Display', serif; font-style: italic; font-size: 16px; color: rgba(255,255,255,0.65); margin-top: 4px; }
-  .header-meta { margin-top: 20px; }
-  .header-date { font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 600; letter-spacing: 1px; }
-  .gold-line { height: 3px; background: linear-gradient(90deg, var(--gold), transparent); width: 100%; }
-
-  .body { padding: 0 48px 48px; }
-  .section { margin-top: 36px; }
-  .section-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--green); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
-  .schedule-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .schedule-table thead tr { background: var(--green); color: white; }
-  .schedule-table thead th { padding: 10px 12px; text-align: left; font-weight: 600; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; }
-  .schedule-table tbody tr { border-bottom: 1px solid #eee; }
-  .schedule-table tbody tr:hover { background: #f9f6ee; }
-  .schedule-table tbody td { padding: 11px 12px; vertical-align: top; }
-  .day-name { font-weight: 700; color: var(--green-dark); }
-  .day-num { font-size: 11px; color: var(--text-muted); }
-  .day-badge { display: inline-block; background: var(--green); color: white; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; letter-spacing: 0.5px; }
-  .event-tag { display: inline-block; background: var(--gold); color: var(--green-dark); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-top: 4px; letter-spacing: 0.3px; }
-  .saturday-row { background: #f5f5f5; color: var(--text-muted); }
-
-  .message-box { background: var(--green); border-radius: 4px; padding: 32px 36px; position: relative; overflow: hidden; }
-  .message-box::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 120px; color: rgba(201,168,76,0.2); position: absolute; top: -10px; left: 20px; line-height: 1; }
-  .message-lang { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
-  .message-text { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.92); position: relative; z-index: 1; }
-  .message-text + .message-text { margin-top: 16px; }
-  .message-divider { border: none; border-top: 1px solid rgba(201,168,76,0.35); margin: 22px 0; }
-
-  .cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .card { border: 1px solid var(--border); border-radius: 4px; padding: 20px 22px; position: relative; }
-  .card.full-width { grid-column: 1 / -1; }
-  .card-accent { position: absolute; top: 0; left: 0; width: 4px; height: 100%; border-radius: 4px 0 0 4px; background: var(--green); }
-  .card.gold-accent .card-accent { background: var(--gold); }
-  .card.alert-accent .card-accent { background: #c0392b; }
-  .card-icon { font-size: 18px; margin-bottom: 8px; }
-  .card-title { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
-  .card.gold-accent .card-title { color: #8a6d1a; }
-  .card-body { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
-  .card-body strong { color: var(--text); }
-  .card-body em { font-style: italic; }
-
-  .activos-box { background: #f0f7ff; border: 1px solid #aed6f1; border-radius: 4px; padding: 24px 28px; position: relative; }
-  .activos-box .left-bar { position: absolute; top: 0; left: 0; width: 4px; height: 100%; border-radius: 4px 0 0 4px; background: #2471a3; }
-  .activos-title { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: #1a4f72; margin-bottom: 6px; }
-  .activos-intro { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px; }
-  .activos-intro strong { color: var(--text); }
-
-  .activos-steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 18px; }
-  .activos-step { background: white; border: 1px solid #aed6f1; border-radius: 4px; padding: 16px; text-align: center; }
-  .step-num { width: 28px; height: 28px; background: var(--green); color: white; border-radius: 50%; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; }
-  .step-title { font-size: 12px; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
-  .step-body { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
-
-  .helper-box { background: white; border: 1px solid #aed6f1; border-radius: 4px; padding: 20px 22px; margin-bottom: 16px; }
-  .helper-title { font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 700; color: #1a4f72; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-  .helper-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .helper-item { background: #f8fcff; border-left: 3px solid #2471a3; border-radius: 0 4px 4px 0; padding: 10px 12px; font-size: 12px; color: var(--text-muted); line-height: 1.5; }
-  .helper-item strong { color: var(--text); display: block; margin-bottom: 2px; }
-  .helper-item.warning { border-left-color: #e67e22; background: #fef9f0; }
-  .helper-item.positive { border-left-color: var(--green); background: #f0f7f3; }
-
-  .activos-cta { background: var(--green); color: white; border-radius: 4px; padding: 12px 18px; font-size: 13px; display: flex; align-items: center; gap: 10px; }
-  .activos-cta strong { color: var(--gold-light); }
-
-  .ahead-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
-  .ahead-item { background: #f9f6ee; border: 1px solid var(--border); border-radius: 4px; padding: 14px 12px; text-align: center; }
-  .ahead-date { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--green); margin-bottom: 4px; }
-  .ahead-day { font-size: 20px; font-weight: 900; color: var(--green-dark); font-family: 'Playfair Display', serif; margin-bottom: 6px; }
-  .ahead-event { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
-  .ahead-item.highlight { background: var(--green); border-color: var(--green); }
-  .ahead-item.highlight .ahead-date, .ahead-item.highlight .ahead-day, .ahead-item.highlight .ahead-event { color: white; }
-  .ahead-item.highlight .ahead-day { color: var(--gold); }
-
-  .quote-box { border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); padding: 24px 0; text-align: center; margin-top: 36px; }
-  .quote-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 17px; color: var(--green-dark); line-height: 1.6; }
-  .quote-attr { font-size: 12px; color: var(--text-muted); margin-top: 8px; letter-spacing: 1px; }
-
-  .signature { margin-top: 32px; }
-  .sig-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--green-dark); }
-  .sig-role { color: var(--text-muted); font-size: 13px; margin-top: 2px; }
-  .sig-contact { margin-top: 10px; display: flex; flex-direction: column; gap: 3px; }
-  .sig-contact a { font-size: 13px; color: var(--green); text-decoration: none; font-weight: 600; }
-  .sig-contact a:hover { text-decoration: underline; }
-  .sig-mission { margin-top: 10px; font-size: 11px; color: #aaa; font-style: italic; }
-
-  .footer { background: var(--green-dark); padding: 16px 48px; display: flex; justify-content: space-between; align-items: center; margin-top: 36px; }
-  .footer-text { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.5px; }
-  .footer-mission { font-size: 11px; color: var(--gold); font-style: italic; letter-spacing: 0.5px; }
-</style>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d5a27;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+        .subtitle {
+            font-size: 1.1em;
+            margin-top: 5px;
+            color: #fff;
+        }
+        .content-section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            color: #2d5a27;
+            border-bottom: 2px solid #91b48c;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .language-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #91b48c;
+            color: white;
+            border-radius: 0 0 8px 8px;
+        }
+        .date {
+            background-color: #91b48c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .signature {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            background-color: white;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .signature-name {
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .signature-title {
+            color: #2d5a27;
+        }
+        .schedule {
+            margin: 15px 0;
+        }
+        .day {
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #f5f7f2;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .event-tag {
+            background-color: #2d5a27;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        .event-tag.special {
+            background-color: #c74440;
+        }
+        .slogan {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            color: #2d5a27;
+            background-color: white;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 1.1em;
+        }
+        .highlight-box {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #c74440;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        .checklist-box {
+            background-color: #f5f7f2;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2d5a27;
+            margin: 10px 0;
+        }
+        .checklist-title {
+            font-weight: bold;
+            color: #2d5a27;
+            margin-bottom: 8px;
+        }
+        .info-box {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2196f3;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+    </style>
 </head>
 <body>
-<div class="bulletin">
-
-  <div class="header">
-    <div class="header-inner">
-      <div class="school-name">DelCampo School · High School Division</div>
-      <div class="bulletin-title">High <span>Standards</span></div>
-      <div class="bulletin-subtitle">Weekly Staff Bulletin · Boletín Semanal del Personal</div>
-      <div class="header-meta">
-        <div class="header-date">Week of June 1–6, 2026 &nbsp;·&nbsp; Volume end of year</div>
-      </div>
-    </div>
-    <div class="gold-line"></div>
-  </div>
-
-  <div class="body">
-
-    <div class="section">
-      <div class="section-label">Weekly Schedule · Horario Semanal</div>
-      <table class="schedule-table">
-        <thead>
-          <tr><th>Day / Día</th><th>Date / Fecha</th><th>Rotation / Rotación</th><th>Events / Eventos</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="day-name">Monday</span><br><span class="day-num">Lunes</span></td>
-            <td>June 1</td><td><span class="day-badge">Day 6</span></td>
-            <td>Recuperación 1–11mo begins</td>
-          </tr>
-          <tr>
-            <td><span class="day-name">Tuesday</span><br><span class="day-num">Martes</span></td>
-            <td>June 2</td><td><span class="day-badge">Day 1</span></td>
-            <td>Recuperación 1–11mo</td>
-          </tr>
-          <tr>
-            <td><span class="day-name">Wednesday</span><br><span class="day-num">Miércoles</span></td>
-            <td>June 3</td><td><span class="day-badge">Day 2</span></td>
-            <td>Recuperación 1–11mo</td>
-          </tr>
-          <tr>
-            <td><span class="day-name">Thursday</span><br><span class="day-num">Jueves</span></td>
-            <td>June 4</td><td><span class="day-badge">Day 3</span></td>
-            <td>Recuperación 1–11mo · Hojas de verificación<br><span class="event-tag">🏠 Houses Closure Event</span></td>
-          </tr>
-          <tr>
-            <td><span class="day-name">Friday</span><br><span class="day-num">Viernes</span></td>
-            <td>June 5</td><td><span class="day-badge">Day 4</span></td>
-            <td>Generar Report Cards · Recuperación 1–11mo</td>
-          </tr>
-          <tr class="saturday-row">
-            <td><span class="day-name">Saturday</span><br><span class="day-num">Sábado</span></td>
-            <td>June 6</td><td><span class="day-badge">Day 5</span></td>
-            <td>—</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="section">
-      <div class="section-label">Principal's Message · Mensaje del Director</div>
-      <div class="message-box">
-        <div class="message-lang">🇺🇸 English</div>
-        <div class="message-text">Every school year is a series of cycles — some that close quietly, others that demand our full attention until the very last moment. We are in that moment now. As we enter this final stretch, I ask each of you to reflect on the academic journeys still in progress: there are students who have not yet reached the goals we set for them, and this week is a real opportunity to help them get there.</div>
-        <div class="message-text">I also want to address something directly: I know I communicated earlier in the year that the third quarter conference would be our last. That has changed. We will hold a final Parent-Teacher Conference on <strong style="color:var(--gold);">Wednesday, June 10th</strong>. Please prepare to close this year's conversations with families with the same professionalism and care you have shown all year. Let's finish well.</div>
-        <hr class="message-divider"/>
-        <div class="message-lang">🇪🇸 Español</div>
-        <div class="message-text">Cada año escolar es una serie de ciclos — algunos que se cierran en silencio, otros que exigen toda nuestra atención hasta el último momento. Estamos en ese momento. Al entrar en esta recta final, les pido que reflexionen sobre los procesos académicos aún en marcha: hay estudiantes que todavía no han alcanzado las metas propuestas, y esta semana es una oportunidad real para acompañarlos a lograrlo.</div>
-        <div class="message-text">Quiero también aclarar algo directamente: sé que comuniqué anteriormente que la conferencia del tercer trimestre sería la última. Eso ha cambiado. Tendremos una Conferencia de Padres y Maestros final el <strong style="color:var(--gold);">miércoles 10 de junio</strong>. Por favor, prepárense para cerrar las conversaciones con las familias con el mismo profesionalismo y dedicación que han mostrado todo el año. Terminemos bien.</div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-label">Announcements · Avisos</div>
-      <div class="cards-grid">
-
-        <div class="card full-width alert-accent">
-          <div class="card-accent"></div>
-          <div class="card-icon">🚨</div>
-          <div class="card-title">ACTION REQUIRED — Monday, June 1st / ACCIÓN REQUERIDA — Lunes 1 de junio</div>
-          <div class="card-body">
-            <strong>All teachers must send an individual email on Monday to every student who failed their class for the 2025–2026 academic year.</strong> Please copy Mr. Nicolás Rivas (<strong>nrivas@delcamposchool.org</strong>) on each email. The message should inform students that their <strong>attendance this week is mandatory</strong>, as they will be working on activities and evaluations designed to help them <em>reach the academic goals that were not met during the class for the year.</em>
-            <br><br>
-            <strong>Todos los docentes deben enviar el lunes un correo individual a cada estudiante que haya reprobado su clase durante el año escolar 2025–2026.</strong> Por favor, copien al señor Nicolás Rivas (<strong>nrivas@delcamposchool.org</strong>) en cada correo. El mensaje debe informar al estudiante que su <strong>asistencia esta semana es obligatoria</strong>, ya que trabajarán en actividades y evaluaciones para <em>alcanzar los objetivos académicos que no fueron logrados durante el año en esa clase.</em>
-          </div>
+    <div class="container">
+        <div class="header">
+            <h1>High Standards</h1>
+            <div class="subtitle">DelCampo High School Weekly Bulletin | Boletín Semanal</div>
+            <div class="date">August 10th - 14th, 2026</div>
         </div>
 
-        <div class="card">
-          <div class="card-accent"></div>
-          <div class="card-icon">📋</div>
-          <div class="card-title">Recuperación 1–11mo · Wed–Fri</div>
-          <div class="card-body">
-            Recuperación week runs <strong>Wednesday through Friday</strong> this week. Teachers are expected to have a <strong>clear and planned recuperation program</strong> ready for students who failed the academic year. Inform your students, define the activities, and be prepared. / La semana de recuperación corre de <strong>miércoles a viernes</strong>. Los docentes deben tener un <strong>programa de recuperación definido y planificado</strong>. Informen, organicen y estén listos.
-          </div>
-        </div>
-
-        <div class="card gold-accent">
-          <div class="card-accent"></div>
-          <div class="card-icon">🏠</div>
-          <div class="card-title">Houses Closure Event · Thursday, June 4</div>
-          <div class="card-body">
-            On Thursday we celebrate the <strong>Houses Closure Event</strong>! Teachers and students are encouraged to wear their <strong>house color</strong> — whether the official t-shirt from the <strong>SUPPLEO store</strong> or any shirt in their house color. Let's close the year with community spirit! / El jueves celebramos el <strong>cierre de Houses</strong>. Se invita a todos a usar los colores de su house — la camiseta oficial de <strong>SUPPLEO</strong> o cualquier camisa de su color de house. ¡Cerremos el año con espíritu de comunidad!
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-accent"></div>
-          <div class="card-icon">✅</div>
-          <div class="card-title">Hojas de Verificación · Thursday, June 4</div>
-          <div class="card-body">
-            <strong>Verification sheets are due Thursday, June 4th.</strong> Please ensure all records are in order and ready for review. / <strong>Las hojas de verificación deben entregarse el jueves 4 de junio.</strong> Asegúrense de que todos sus registros estén en orden.
-          </div>
-        </div>
-
-        <div class="card full-width">
-          <div class="card-accent"></div>
-          <div class="card-icon">📊</div>
-          <div class="card-title">Generate Report Cards · Friday, June 5 / Generar Report Cards · Viernes 5 de junio</div>
-          <div class="card-body">
-            Report Cards are to be <strong>generated on Friday, June 5th</strong>. Please ensure all grades and observations are finalized and entered by then. / Los Report Cards deben ser <strong>generados el viernes 5 de junio</strong>. Asegúrense de que todas las calificaciones y observaciones estén ingresadas antes de esa fecha.
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-label">Inventory Process · Proceso de Activos (June 1–12)</div>
-      <div class="activos-box">
-        <div class="left-bar"></div>
-        <div class="card-icon">🗂️</div>
-        <div class="activos-title">Activos Review & Mr. Helmer Sign-Up / Revisión de Activos y Cita con Mr. Helmer</div>
-        <div class="activos-intro">
-          Mrs. Helena will share the <strong>materials and furniture list (Activos)</strong> with Mrs. Elba Valladares. On <strong>Monday and Tuesday</strong>, selected students will be assigned to assist teachers with the inventory review. Mr. Nicolás Rivas will <strong>begin Monday morning with a brief meeting with the assigned students</strong> to orient them on where to go and what to do before they report to their assigned teacher.
-          <br><br>
-          La señora Helena compartirá la <strong>lista de materiales y mobiliario (Activos)</strong> con la señora Elba Valladares. Los días <strong>lunes y martes</strong>, estudiantes seleccionados serán asignados para apoyar a los docentes en la revisión del inventario. El señor Nicolás Rivas <strong>comenzará el lunes por la mañana con una breve reunión con los estudiantes asignados</strong> para indicarles a dónde deben ir y qué deben hacer antes de presentarse con su docente asignado.
-        </div>
-
-        <div class="activos-steps">
-          <div class="activos-step">
-            <div class="step-num">1</div>
-            <div class="step-title">Pick Up Your List / Recoge tu Lista</div>
-            <div class="step-body">Visit <strong>Mrs. Elba Valladares</strong> to receive your Activos list from Mrs. Helena. / Visita a la <strong>señora Elba Valladares</strong> para recibir tu lista de Activos.</div>
-          </div>
-          <div class="activos-step">
-            <div class="step-num">2</div>
-            <div class="step-title">Review with Student / Revisión con Estudiante</div>
-            <div class="step-body">Mon–Tue: your <strong>assigned student</strong> will help you check off all materials and furniture. They may coordinate with nearby classrooms or other student helpers if items are missing. / Lun–Mar: tu <strong>estudiante asignado</strong> te ayudará a verificar todos los activos. Puede coordinar con aulas cercanas si falta algún ítem.</div>
-          </div>
-          <div class="activos-step">
-            <div class="step-num">3</div>
-            <div class="step-title">Schedule with Mr. Helmer / Agenda con Mr. Helmer</div>
-            <div class="step-body">Visit <strong>Mrs. Elba's office</strong> to sign up for a 40-min slot (June 7–12, 8:00 am–5:00 pm, 2 teachers per period). / Visita la <strong>oficina de la señora Elba</strong> para reservar tu espacio de 40 min con Mr. Helmer (7–12 de junio).</div>
-          </div>
-        </div>
-
-        <div class="helper-box">
-          <div class="helper-title">📌 Guidelines for Working with Your Assigned Student / Pautas para trabajar con tu estudiante asignado</div>
-          <div class="helper-grid">
-            <div class="helper-item positive">
-              <strong>⏰ Schedule / Horario</strong>
-              Students begin at <strong>7:25 am</strong> with a brief meeting with Mr. Rivas and are released at <strong>3:00 pm</strong> when you return their phone and thank them for their help. / Los estudiantes inician a las <strong>7:25 am</strong> con el Sr. Rivas y terminan a las <strong>3:00 pm</strong>, cuando les devuelven el celular.
+        <div class="content-section">
+            <h3 class="section-title">A Message from the Principal | Mensaje del Director</h3>
+            <div class="language-section">
+                <div class="english">
+                    <p>Dear colleagues, welcome to the 2026-2027 school year! There is something powerful about new beginnings—the energy, the possibility, the fresh page waiting to be written. This week, we open that page together.</p>
+                    <p>This year brings meaningful changes: updates to our curriculum, new teaching strategies designed to bring out the best in our students, new classes, and a brand-new Thursday Homeroom space. I know that any change takes time to settle into—for us and for our students. There will be an adjustment period, and that is completely normal. Growth rarely happens without some discomfort along the way.</p>
+                    <p>But every one of these changes has been thoughtfully designed with one purpose in mind: to help us live out our mission of fostering our students' highest potential, and to fulfill our vision of inspiring and being inspired by high-quality education. These are not changes for the sake of change—they are intentional steps toward becoming better educators and building a stronger learning community.</p>
+                    <p>As you prepare your classrooms, your curriculum, and yourselves this week, know that preparation is an act of care. Every learning target you post, every system you set up, every welcome message you send to families—these are the foundations upon which this entire year will be built.</p>
+                    <p>Thank you for your dedication, your adaptability, and your commitment to excellence as we begin this new journey together. Let's make 2026-2027 an extraordinary year!</p>
+                </div>
+                <div class="spanish">
+                    <p>Queridos colegas, ¡bienvenidos al año escolar 2026-2027! Hay algo poderoso en los nuevos comienzos—la energía, la posibilidad, la página en blanco esperando ser escrita. Esta semana, abrimos esa página juntos.</p>
+                    <p>Este año trae cambios significativos: actualizaciones a nuestro currículo, nuevas estrategias de enseñanza diseñadas para sacar lo mejor de nuestros estudiantes, nuevas clases, y un nuevo espacio de Homeroom los jueves. Sé que cualquier cambio toma tiempo para asentarse—para nosotros y para nuestros estudiantes. Habrá un período de ajuste, y eso es completamente normal. El crecimiento rara vez ocurre sin algo de incomodidad en el camino.</p>
+                    <p>Pero cada uno de estos cambios ha sido diseñado cuidadosamente con un propósito en mente: ayudarnos a vivir nuestra misión de fomentar el máximo potencial de nuestros estudiantes, y cumplir nuestra visión de inspirar y ser inspirados por educación de alta calidad. Estos no son cambios por el simple hecho de cambiar—son pasos intencionales hacia convertirnos en mejores educadores y construir una comunidad de aprendizaje más fuerte.</p>
+                    <p>Mientras preparan sus aulas, su currículo y a ustedes mismos esta semana, sepan que la preparación es un acto de cuidado. Cada objetivo de aprendizaje que publican, cada sistema que configuran, cada mensaje de bienvenida que envían a las familias—estos son los cimientos sobre los cuales se construirá todo este año.</p>
+                    <p>Gracias por su dedicación, su adaptabilidad y su compromiso con la excelencia mientras comenzamos este nuevo viaje juntos. ¡Hagamos del 2026-2027 un año extraordinario!</p>
+                </div>
             </div>
-            <div class="helper-item">
-              <strong>📵 Cell Phones / Celulares</strong>
-              When the student arrives, <strong>ask them to hand over their cell phone</strong>, which you will keep safely until 3:00 pm. Then assign them immediately to the Activos review. / Al llegar el estudiante, <strong>solicítenle su celular</strong>, que guardarán hasta las 3:00 pm. Luego asígnenle de inmediato la revisión de activos.
-            </div>
-            <div class="helper-item">
-              <strong>🔍 Missing Items / Ítems faltantes</strong>
-              If a desk, chair, or any item is missing, you may <strong>authorize the student to look in nearby classrooms</strong> or coordinate with other student helpers working for other teachers. / Si falta algún ítem, pueden <strong>autorizar al estudiante a buscar en aulas cercanas</strong> o coordinar con otros estudiantes que estén haciendo lo mismo para otros docentes.
-            </div>
-            <div class="helper-item positive">
-              <strong>🍽️ Breaks / Descansos</strong>
-              Students have their regular <strong>snack and lunch breaks</strong>. Please respect these times. / Los estudiantes tienen sus <strong>recesos de snack y almuerzo</strong> normales. Por favor, respeten estos tiempos.
-            </div>
-            <div class="helper-item warning">
-              <strong>🚫 Important Boundaries / Límites importantes</strong>
-              Students are <strong>not to run personal errands</strong> such as buying your lunch or similar tasks. They are here as academic helpers — treat them well and make the most of the support they offer. / Los estudiantes <strong>no deben realizar mandados personales</strong> como ir a comprar el almuerzo u otras tareas similares. Son ayudantes académicos — trátenlos bien y aprovechen su apoyo.
-            </div>
-            <div class="helper-item">
-              <strong>🤝 Closing / Cierre</strong>
-              At <strong>3:00 pm</strong>, return the student's phone, thank them genuinely for their work, and formally release them from their duties. / A las <strong>3:00 pm</strong>, devuelvan el celular al estudiante, agradézcanle sinceramente su trabajo y despídanlo formalmente de su labor.
-            </div>
-          </div>
         </div>
 
-        <div class="activos-cta">
-          📌 <span>To receive your Activos list and book your slot with Mr. Helmer, visit / Para recibir tu lista y reservar tu espacio con Mr. Helmer, visita: <strong>Mrs. Elba Valladares — HS Administrative Assistant</strong></span>
+        <div class="content-section">
+            <h3 class="section-title">Weekly Schedule | Horario Semanal</h3>
+            <div class="schedule">
+                <div class="day">
+                    <span>Monday, August 10th | Lunes, 10 de agosto</span>
+                    <span class="event-tag special">Teacher Prep Day - Semi-Formal Attire</span>
+                </div>
+                <div class="day">
+                    <span>Tuesday, August 11th | Martes, 11 de agosto</span>
+                    <span class="event-tag">Teacher Prep Day</span>
+                </div>
+                <div class="day">
+                    <span>Wednesday, August 12th (Day 1) | Miércoles, 12 de agosto (Día 1)</span>
+                    <span class="event-tag special">PreK-2nd Grade First Day | Open House 2:30-4:30 PM</span>
+                </div>
+                <div class="day">
+                    <span>Thursday, August 13th (Day 2) | Jueves, 13 de agosto (Día 2)</span>
+                    <span class="event-tag special">3rd-11th Grade First Day | Homeroom</span>
+                </div>
+                <div class="day">
+                    <span>Friday, August 14th (Day 3) | Viernes, 14 de agosto (Día 3)</span>
+                    <span class="event-tag special">Seniors Entrance - Class of 2027 🎓</span>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="content-section">
+            <h3 class="section-title">📋 Monday, August 10th - Teacher Readiness Day | Lunes 10 de agosto - Día de Preparación Docente 📋</h3>
+            <div class="language-section">
+                <div class="english">
+                    <div class="highlight-box">
+                        <p><strong>Dress Code:</strong> Semi-formal (no jeans, tie not required)</p>
+                        <p><strong>Focus:</strong> Each teacher will be in their room finishing decoration and setting up the classroom.</p>
+                    </div>
+
+                    <h4 style="color: #2d5a27;">Teacher Readiness Checklist:</h4>
+                    <p><em>Every item must be complete before students arrive on Wednesday, August 12th (for PreK-2nd) or Thursday, August 13th (for 3rd-11th).</em></p>
+
+                    <div class="checklist-box">
+                        <div class="checklist-title">🏫 Classroom & Environment</div>
+                        <ul style="margin: 5px 0;">
+                            <li>Learning targets display ready</li>
+                            <li>Word wall started</li>
+                            <li>Homeroom plan confirmed</li>
+                            <li>Student supplies organized</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-box">
+                        <div class="checklist-title">💻 Canvas LMS</div>
+                        <ul style="margin: 5px 0;">
+                            <li>Course published & visible to students</li>
+                            <li>Syllabus/welcome page live according to School Requirements</li>
+                            <li>First week assignments/diagnostics created</li>
+                            <li>Grading scheme confirmed</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-box">
+                        <div class="checklist-title">📊 PowerSchool</div>
+                        <ul style="margin: 5px 0;">
+                            <li>Attendance setup confirmed</li>
+                            <li>Gradebook categories configured</li>
+                            <li>Student profiles reviewed</li>
+                            <li>PS T&L: first unit entered</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-box">
+                        <div class="checklist-title">💬 Parent Communication</div>
+                        <ul style="margin: 5px 0;">
+                            <li>Welcome letter sent</li>
+                            <li>Back-to-School Open House invite out</li>
+                            <li>Communication expectations set</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="spanish">
+                    <div class="highlight-box">
+                        <p><strong>Código de Vestimenta:</strong> Semi-formal (sin jeans, corbata no requerida)</p>
+                        <p><strong>Enfoque:</strong> Cada maestro estará en su salón terminando la decoración y preparando el aula.</p>
+                    </div>
+
+                    <h4 style="color: #2d5a27;">Lista de Preparación Docente:</h4>
+                    <p><em>Cada elemento debe estar completo antes de que los estudiantes lleguen el miércoles 12 de agosto (para PreK-2do) o el jueves 13 de agosto (para 3ro-11mo).</em></p>
+
+                    <div class="checklist-box">
+                        <div class="checklist-title">🏫 Aula y Ambiente</div>
+                        <ul style="margin: 5px 0;">
+                            <li>Display de objetivos de aprendizaje listo</li>
+                            <li>Word wall iniciado</li>
+                            <li>Plan de homeroom confirmado</li>
+                            <li>Suministros de estudiantes organizados</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-box">
+                        <div class="checklist-title">💻 Canvas LMS</div>
+                        <ul style="margin: 5px 0;">
+                            <li>Curso publicado y visible para estudiantes</li>
+                            <li>Sílabo/página de bienvenida activa según Requisitos Escolares</li>
+                            <li>Asignaciones/diagnósticos de primera semana creados</li>
+                            <li>Esquema de calificación confirmado</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-box">
+                        <div class="checklist-title">📊 PowerSchool</div>
+                        <ul style="margin: 5px 0;">
+                            <li>Configuración de asistencia confirmada</li>
+                            <li>Categorías de gradebook configuradas</li>
+                            <li>Perfiles de estudiantes revisados</li>
+                            <li>PS T&L: primera unidad ingresada</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-box">
+                        <div class="checklist-title">💬 Comunicación con Padres</div>
+                        <ul style="margin: 5px 0;">
+                            <li>Carta de bienvenida enviada</li>
+                            <li>Invitación a Open House enviada</li>
+                            <li>Expectativas de comunicación establecidas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">🎉 Wednesday, August 12th - MS & HS Open House | Miércoles 12 de agosto - Open House 🎉</h3>
+            <div class="language-section">
+                <div class="english">
+                    <div class="highlight-box">
+                        <p><strong>Time:</strong> 2:30 PM - 4:30 PM</p>
+                        <p><strong>Dress Code:</strong> Formal attire required. Men with a tie, women with formal attire, to receive our parents.</p>
+                        <p><strong>Purpose:</strong> Parents will meet their children's teachers and Homeroom Teachers and become familiar with our spaces and High School team.</p>
+                    </div>
+                    <p>Additional logistics information will be shared in a separate communication.</p>
+                </div>
+                <div class="spanish">
+                    <div class="highlight-box">
+                        <p><strong>Horario:</strong> 2:30 PM - 4:30 PM</p>
+                        <p><strong>Código de Vestimenta:</strong> Vestimenta formal requerida. Caballeros con corbata, damas con vestimenta formal, para recibir a nuestros padres.</p>
+                        <p><strong>Propósito:</strong> Los padres conocerán a los maestros de sus hijos y a los Maestros de Homeroom, y se familiarizarán con nuestros espacios y equipo de High School.</p>
+                    </div>
+                    <p>Información adicional sobre la logística se compartirá en una comunicación separada.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">🗓️ Thursday, August 13th - First Homeroom | Jueves 13 de agosto - Primer Homeroom 🗓️</h3>
+            <div class="language-section">
+                <div class="english">
+                    <div class="info-box">
+                        <p>This Thursday marks our first Homeroom activity of the new school year. <strong>More instructions will be provided in a message during this week.</strong></p>
+                    </div>
+                </div>
+                <div class="spanish">
+                    <div class="info-box">
+                        <p>Este jueves marca nuestra primera actividad de Homeroom del nuevo año escolar. <strong>Se proporcionarán más instrucciones en un mensaje durante esta semana.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">⚠️ Important Reminders | Recordatorios Importantes ⚠️</h3>
+            <div class="language-section">
+                <div class="english">
+                    <ul>
+                        <li><strong>Monday: Teacher Prep Day</strong> — Semi-formal attire. Complete the Teacher Readiness Checklist before students arrive.</li>
+                        <li><strong>Wednesday: Open House</strong> — Formal attire required (men: tie, women: formal attire). 2:30-4:30 PM.</li>
+                        <li><strong>Thursday: First Day for 3rd-11th Grade</strong> — Also our first Homeroom day. More details coming this week.</li>
+                        <li><strong>Friday: Seniors Entrance</strong> — Traditional welcome for the Class of 2027!</li>
+                        <li><strong>HS Sections</strong> — Families receive assigned sections next week. No section changes during the school year.</li>
+                        <li><strong>New Curriculum & Strategies</strong> — This year brings updates to curriculum, teaching strategies, and new classes. Give yourselves grace during this adjustment period.</li>
+                    </ul>
+                </div>
+                <div class="spanish">
+                    <ul>
+                        <li><strong>Lunes: Día de Preparación Docente</strong> — Vestimenta semi-formal. Completen la Lista de Preparación Docente antes de que lleguen los estudiantes.</li>
+                        <li><strong>Miércoles: Open House</strong> — Vestimenta formal requerida (caballeros: corbata, damas: vestimenta formal). 2:30-4:30 PM.</li>
+                        <li><strong>Jueves: Primer Día para 3ro-11mo Grado</strong> — También nuestro primer día de Homeroom. Más detalles próximamente esta semana.</li>
+                        <li><strong>Viernes: Entrada de Seniors</strong> — ¡Bienvenida tradicional para la Clase de 2027!</li>
+                        <li><strong>Secciones de HS</strong> — Las familias reciben las secciones asignadas la próxima semana. No habrá cambios de sección durante el año escolar.</li>
+                        <li><strong>Nuevo Currículo y Estrategias</strong> — Este año trae actualizaciones al currículo, estrategias de enseñanza y nuevas clases. Sean pacientes consigo mismos durante este período de ajuste.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="signature">
+            <div class="language-section">
+                <div class="english">
+                    <p>I'm available for any questions or comments. Have a great week,</p>
+                    <p class="signature-name">Nicolás Rivas</p>
+                    <p class="signature-title">High School Principal</p>
+                </div>
+                <div class="spanish">
+                    <p>Quedo atento a cualquier duda o comentario y feliz semana,</p>
+                    <p class="signature-name">Nicolás Rivas</p>
+                    <p class="signature-title">Director de High School</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slogan">
+            "Growth and comfort do not coexist." - Ginni Rometty<br><br>
+            "El crecimiento y la comodidad no coexisten." - Ginni Rometty
+        </div>
+
+        <div class="footer">
+            <p>DelCampo High School | Email: nrivas@delcamposchool.org | Phone: +504 96505926</p>
+        </div>
     </div>
-
-    <div class="section">
-      <div class="section-label">Looking Ahead · La Semana Próxima (June 8–12)</div>
-      <div class="ahead-grid">
-        <div class="ahead-item">
-          <div class="ahead-date">Mon · Jun 8</div>
-          <div class="ahead-day">8</div>
-          <div class="ahead-event">Imprimir Report Cards</div>
-        </div>
-        <div class="ahead-item">
-          <div class="ahead-date">Tue · Jun 9</div>
-          <div class="ahead-day">9</div>
-          <div class="ahead-event">Imprimir Report Cards</div>
-        </div>
-        <div class="ahead-item highlight">
-          <div class="ahead-date">Wed · Jun 10</div>
-          <div class="ahead-day">10</div>
-          <div class="ahead-event">Schoolwide PTC<br>Conf. de Padres y Maestros</div>
-        </div>
-        <div class="ahead-item">
-          <div class="ahead-date">Thu · Jun 11</div>
-          <div class="ahead-day">11</div>
-          <div class="ahead-event">Graduación Kinder · Clausura 9th · Graduación 12mo</div>
-        </div>
-        <div class="ahead-item">
-          <div class="ahead-date">Fri · Jun 12</div>
-          <div class="ahead-day">12</div>
-          <div class="ahead-event">Last Day for Teachers · Último día docentes</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="quote-box">
-      <div class="quote-text">"The secret of getting ahead is getting started."</div>
-      <div class="quote-attr">— Mark Twain</div>
-      <div style="margin-top:12px;">
-        <div class="quote-text" style="font-size:15px; color:#5a5a5a;">"El secreto para avanzar es comenzar."</div>
-      </div>
-    </div>
-
-    <div class="signature">
-      <div class="sig-name">Mr. Nicolás Rivas</div>
-      <div class="sig-role">High School Principal · DelCampo School</div>
-      <div class="sig-contact">
-        <a href="mailto:nrivas@delcamposchool.org">📧 nrivas@delcamposchool.org</a>
-        <a href="tel:+50496505926">📱 +504 9650 5926</a>
-      </div>
-      <div class="sig-mission">"Foster Students' Highest Potential"</div>
-    </div>
-
-  </div>
-
-  <div class="footer">
-    <div class="footer-text">High Standards Bulletin · Week of June 1, 2026</div>
-    <div class="footer-mission">Foster Students' Highest Potential</div>
-  </div>
-
-</div>
 </body>
 </html>
