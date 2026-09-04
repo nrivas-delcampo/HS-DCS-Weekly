@@ -249,31 +249,38 @@
 
   .footer { text-align: center; padding: 20px; margin-top: 22px; font-size: 0.85rem; color: var(--ink-soft); }
 
-  /* ---- Special Event Spotlight (new, reusable) ---- */
-  .icon-banner { display: flex; justify-content: center; gap: 14px; margin: -2px 0 24px; flex-wrap: wrap; }
-  .icon-badge {
-    width: 50px; height: 50px; border-radius: 50%; background: var(--tint-event);
-    display: flex; align-items: center; justify-content: center; color: var(--gold); flex: 0 0 auto;
-  }
-  .icon-badge svg { width: 24px; height: 24px; }
-
+  /* ---- Mini headings / callouts reused ---- */
   .mini-heading {
     font-family: 'Karla', sans-serif; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.09em;
     text-transform: uppercase; color: var(--gold); margin: 26px 0 10px;
   }
   .mini-heading:first-of-type { margin-top: 4px; }
 
-  .station-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 10px; }
-  .station-card { background: var(--tint-event); border-radius: 8px; padding: 14px 12px; text-align: center; }
-  .station-grade { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.02rem; color: var(--ink); }
-  .station-time { font-size: 0.82rem; color: var(--ink-soft); margin-top: 4px; font-variant-numeric: tabular-nums; }
-  .station-loc { font-size: 0.78rem; color: var(--gold); font-weight: 600; margin-top: 6px; letter-spacing: 0.02em; }
+  /* ---- Period / test schedule table (MAP days, Independence Day agenda) ---- */
+  .test-table { margin-top: 10px; border-radius: 8px; overflow: hidden; border: 1px solid var(--divider); }
+  .test-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 10px 16px; border-bottom: 1px solid var(--divider); align-items: center; background: var(--card); }
+  .test-row:last-child { border-bottom: none; }
+  .test-row .t-label { font-weight: 600; font-size: 0.92rem; }
+  .test-row .t-label .es { display: block; font-weight: 400; color: var(--ink-soft); font-size: 0.85em; margin-top: 1px; }
+  .test-row .t-time { font-variant-numeric: tabular-nums; color: var(--ink-soft); font-size: 0.85rem; white-space: nowrap; }
+  .test-row.break-row { background: var(--tint-standard); }
+  .test-row.break-row .t-time { color: var(--forest); }
+  .test-row.map-row { background: var(--tint-event); }
+  .test-row.map-row .t-label { color: var(--ink); font-weight: 700; }
+  .test-row.highlight-row { background: var(--tint-urgent); }
+  .test-row.highlight-row .t-label { font-weight: 700; }
 
+  /* ---- Proctor / room reference table ---- */
+  .proc-table { display: grid; grid-template-columns: 1.3fr 1.7fr 0.7fr; margin-top: 12px; border: 1px solid var(--divider); border-radius: 8px; overflow: hidden; }
+  .proc-head { background: var(--forest); color: var(--chip-forest-text); font-family: 'Karla', sans-serif; font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 9px 12px; }
+  .proc-cell { padding: 9px 12px; border-top: 1px solid var(--divider); font-size: 0.86rem; background: var(--card); }
+  .proc-cell.section { font-weight: 700; }
   @media (max-width: 640px) {
-    .station-grid { grid-template-columns: 1fr; }
+    .proc-table { grid-template-columns: 1fr 1.3fr 0.6fr; }
+    .proc-head, .proc-cell { font-size: 0.72rem; padding: 7px 8px; }
   }
 
-  /* ---- The Herd Report (new, reusable weekly status grid) ---- */
+  /* ---- The Herd Report (recurring weekly status grid) ---- */
   .herd-table { display: grid; grid-template-columns: minmax(150px, 1.3fr) 1fr 1fr; column-gap: 10px; margin-top: 20px; }
   .herd-head {
     font-family: 'Karla', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
@@ -305,7 +312,7 @@
   <div class="masthead">
     <h1>High Standards</h1>
     <div class="subtitle">DelCampo High School Weekly Bulletin&nbsp; · &nbsp;Boletín Semanal</div>
-    <div class="date-pill">August 31 – September 4, 2026</div>
+    <div class="date-pill">September 7 – 11, 2026</div>
   </div>
 
   <div class="card">
@@ -314,185 +321,125 @@
     <div class="bi-grid">
       <div class="bi-col en">
         <span class="lang-tag">English</span>
-        <p>This year, our focus is collaboration — coming together as a team to truly shine. We have exceptional professionals in our high school, but at times, different factors have kept us from shining as brightly as we could. This is our year to make the adjustments needed to reach our full potential, together.</p>
-        <p>I recently noticed a sign in one of our classrooms that read: <em>"Diamonds are made under pressure."</em> That's exactly where we are right now. We'll keep adjusting a few things so that, as a team, we can do what we set out to do with our students and reach our highest potential.</p>
-        <p>It won't be easy at first — there's a lot we're working to improve. But I have complete faith in this incredible team, and I know we will get there.</p>
-        <p>I believe in you. I trust you. And I know we share the responsibility of making our high school — and ourselves — shine in everything we do.</p>
+        <p>If students come to school only for information... then we do have a problem. Today, anyone can access millions of data points in seconds. AI can answer questions. The internet can explain concepts. A video can teach a procedure. So... what makes a teacher irreplaceable? It's not accumulating information. It's helping distinguish what matters from what's superficial. It's teaching students to think before they opine. It's asking questions that make people uncomfortable, broaden their view, and transform how they understand the world. School was never meant to compete with the sheer amount of information out there. Its real value has always been in what we do with it. Maybe the arrival of AI isn't putting education in crisis — it's exposing a model that has been asking to be rethought for a long time.</p>
+        <p>I'm sharing this reflection now, at a meaningful moment: on September 15th we celebrate Teachers' Day, and it feels like the perfect time to share something that describes exactly what I see happening in our school every day. You are having the courage to try new things, to question what's always been done a certain way, and to trust a process of change that isn't always comfortable. That's no small thing. As administrators, our job is to be a useful resource in this moment education needs to rethink itself, and we will keep supporting you every step of the way. Thank you for daring to change — and happy teachers' month.</p>
       </div>
       <div class="bi-col es">
         <span class="lang-tag">Español</span>
-        <p>Este año nuestro enfoque es la colaboración: unirnos como equipo para brillar de verdad. Contamos con profesionales excepcionales en nuestro high school, pero a veces distintos factores no nos han dejado brillar tanto como podríamos. Este es nuestro año para hacer los ajustes necesarios y alcanzar nuestro máximo potencial, juntos.</p>
-        <p>Hace poco vi un letrero en uno de nuestros salones que decía: <em>"Los diamantes se forman bajo presión."</em> Así es exactamente como estamos ahora. Vamos a seguir ajustando algunas cosas para que, como equipo, podamos lograr con nuestros estudiantes lo que nos hemos propuesto y alcanzar nuestro mayor potencial.</p>
-        <p>No será fácil al principio — hay mucho en lo que estamos trabajando para mejorar. Pero tengo total confianza en este equipo increíble, y sé que lo lograremos.</p>
-        <p>Creo en ustedes. Confío en ustedes. Y sé que compartimos la responsabilidad de hacer que nuestro high school — y nosotros mismos — brillemos en todo lo que hacemos.</p>
+        <p>Si los estudiantes vienen a la escuela solo por información... entonces sí tenemos un problema. Hoy cualquier persona puede acceder a millones de datos en segundos. La IA puede responder preguntas. Internet puede explicar conceptos. Un video puede enseñar un procedimiento. Entonces... ¿qué hace irremplazable a un docente? No es acumular información. Es ayudar a distinguir lo importante de lo superficial. Es enseñar a pensar antes de opinar. Es hacer preguntas que incomodan, amplían la mirada y transforman la forma de comprender el mundo. La escuela nunca debió competir con la cantidad de información. Su verdadero valor siempre ha estado en lo que hacemos con ella. Quizá la llegada de la IA no está poniendo en crisis a la educación. Está poniendo en evidencia un modelo que llevaba mucho tiempo pidiendo ser repensado.</p>
+        <p>Comparto esta reflexión ahora, en un momento especial: el 15 de septiembre celebramos el Día del Maestro, y me parece el momento perfecto para compartir con ustedes algo que describe exactamente lo que veo suceder en nuestra escuela cada día. Ustedes están teniendo el valor de intentar cosas nuevas, de cuestionar lo que siempre se hizo de una manera, y de confiar en un proceso de cambio que no siempre es cómodo. Eso no es poca cosa. Como administradores, nuestro trabajo es ser un recurso útil en este momento que la educación necesita repensarse, y seguiremos apoyándolos en cada paso. Gracias por atreverse — y feliz mes del maestro.</p>
       </div>
     </div>
   </div>
 
-  <!-- ===== Special Event Spotlight — Financial Education Week ===== -->
+  <!-- ===== Special Event Spotlight — MAP Testing ===== -->
   <div class="card rail-event">
     <span class="eyebrow event">Special Event</span>
-    <h3>💰 Financial Education Week <em>Semana de Educación Financiera</em></h3>
-
-    <div class="icon-banner">
-      <span class="icon-badge" title="Savings">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9c0-3.31-3.13-6-7-6-3.5 0-6.4 2.2-6.92 5.06C3.6 8.36 2 9.86 2 12c0 1.5 1 2 1 2h1"/><path d="M5 14v2.5A1.5 1.5 0 0 0 6.5 18H7v2h3v-2h4v2h3v-2.17c1.83-.86 3-2.68 3-4.83 0-1-.3-1.9-.8-2.68"/><circle cx="15.5" cy="9.5" r=".75" fill="currentColor" stroke="none"/><path d="M9 6.5c1-.7 2.2-1 3.5-.9"/></svg>
-      </span>
-      <span class="icon-badge" title="Fraud prevention">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="m9.5 12 1.8 1.8L14.5 10"/></svg>
-      </span>
-      <span class="icon-badge" title="Insurance">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11c0-4 3.5-7 8-8 4.5 1 8 4 8 8-3 1-6 .5-8-1.5-2 2-5 2.5-8 1.5z"/><path d="M12 3v16"/><path d="M6 20h12"/></svg>
-      </span>
-      <span class="icon-badge" title="Certificate">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 4 2 10l10 6 10-6z"/><path d="M6 12.5V17c0 1.1 2.7 3 6 3s6-1.9 6-3v-4.5"/></svg>
-      </span>
-    </div>
+    <h3>📊 MAP Testing Week <em>Semana de Pruebas MAP</em></h3>
 
     <div class="bi-grid">
       <div class="bi-col en">
         <span class="lang-tag">English</span>
-        <p><strong>Seniors</strong> attend a series of financial literacy workshops <strong>Monday–Thursday</strong> in the <strong>Blue Room</strong>. On <strong>Friday</strong>, all grade levels rotate through a station circuit on the <strong>Green Court</strong>.</p>
+        <p>Grades <strong>9th, 10th, and 11th</strong> will take the NWEA MAP Test <strong>Monday through Wednesday, September 7–9</strong>, with a special bell schedule each of those days. <strong>Seniors do not take MAP</strong> — instead, they'll remain in <strong>fixed rooms</strong> for all three days and receive their regular classes there without rotating.</p>
       </div>
       <div class="bi-col es">
         <span class="lang-tag">Español</span>
-        <p>Los <strong>seniors</strong> asistirán a una serie de talleres de educación financiera de <strong>lunes a jueves</strong> en el <strong>Blue Room</strong>. El <strong>viernes</strong>, todos los niveles rotarán por un circuito de estaciones en la <strong>cancha verde</strong>.</p>
+        <p>Los grados <strong>9°, 10° y 11°</strong> realizarán la Prueba NWEA MAP de <strong>lunes a miércoles, 7 al 9 de septiembre</strong>, con un horario especial de campana cada uno de esos días. <strong>Los seniors no toman el MAP</strong> — en su lugar, permanecerán en <strong>salones fijos</strong> los tres días y recibirán sus clases regulares ahí, sin rotar.</p>
       </div>
     </div>
 
-    <div class="mini-heading">Mon–Thu Workshops · Blue Room — Seniors Only</div>
-    <div class="schedule">
-      <div class="sched-row">
-        <span class="day-badge event">M</span>
-        <span class="sched-label">Build Your Financial Health — Bresly Escoto
-          <span class="es">Construye tu Salud Financiera</span>
-          <span class="meta">11:00 AM – 12:00 PM · Blue Room</span>
-        </span>
-        <span class="sched-tags"><span class="tag event">Seniors</span></span>
-      </div>
-      <div class="sched-row">
-        <span class="day-badge event">T</span>
-        <span class="sched-label">Cybersecurity &amp; Fraud Prevention — Karla Lagos
-          <span class="es">Ciberseguridad y prevención de fraudes financieros</span>
-          <span class="meta">9:00 – 10:00 AM · Blue Room</span>
-        </span>
-        <span class="sched-tags"><span class="tag event">Seniors</span></span>
-      </div>
-      <div class="sched-row">
-        <span class="day-badge event">W</span>
-        <span class="sched-label">Beyond Savings — Jonathan Fugon
-          <span class="es">Más allá del ahorro (seguros)</span>
-          <span class="meta">10:00 – 11:00 AM · Blue Room</span>
-        </span>
-        <span class="sched-tags"><span class="tag event">Seniors</span></span>
-      </div>
-      <div class="sched-row">
-        <span class="day-badge event">Th</span>
-        <span class="sched-label">The Financial Superpower of Young People — Michelle Zuniga
-          <span class="es">El superpoder financiero de los jóvenes</span>
-          <span class="meta">11:00 AM – 12:00 PM · Blue Room</span>
-        </span>
-        <span class="sched-tags"><span class="tag event">Seniors</span></span>
-      </div>
+    <div class="mini-heading">Day #1 · Monday, September 7 — Reading MAP Test <span style="text-transform:none; font-weight:400; opacity:0.85;">/ Prueba MAP de Lectura</span></div>
+    <div class="test-table">
+      <div class="test-row"><span class="t-label">Period 1 <span class="es">Periodo 1</span></span><span class="t-time">7:25 – 8:25 AM</span></div>
+      <div class="test-row"><span class="t-label">Period 2 <span class="es">Periodo 2</span></span><span class="t-time">8:30 – 9:30 AM</span></div>
+      <div class="test-row break-row"><span class="t-label">Break <span class="es">Descanso</span></span><span class="t-time">9:30 – 10:00 AM</span></div>
+      <div class="test-row map-row"><span class="t-label">Reading MAP Test <span class="es">Prueba MAP de Lectura</span></span><span class="t-time">10:05 – 11:05 AM</span></div>
+      <div class="test-row"><span class="t-label">Mini Break <span class="es">Mini Descanso</span></span><span class="t-time">11:05 – 11:15 AM</span></div>
+      <div class="test-row map-row"><span class="t-label">Reading MAP Test Continues <span class="es">Continúa Prueba de Lectura</span></span><span class="t-time">11:15 AM – 12:10 PM</span></div>
+      <div class="test-row"><span class="t-label">Period 5 — Regular Class Schedule <span class="es">Periodo 5 — Horario Regular</span></span><span class="t-time">12:10 – 1:10 PM</span></div>
+      <div class="test-row break-row"><span class="t-label">Lunch <span class="es">Almuerzo</span></span><span class="t-time">1:10 – 1:55 PM</span></div>
+      <div class="test-row"><span class="t-label">Period 6 <span class="es">Periodo 6</span></span><span class="t-time">2:00 – 3:00 PM</span></div>
     </div>
 
-    <div class="mini-heading">Fri, Sep 4 — Financial Education Circuit · Green Court</div>
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <p>4 rotating stations on the Green Court, one hour per grade level. Certificates of participation will be awarded.</p>
-      </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <p>4 estaciones rotativas en la cancha verde, una hora por nivel. Se entregará diploma de participación.</p>
-      </div>
-    </div>
-    <div class="station-grid">
-      <div class="station-card">
-        <div class="station-grade">10th Grade</div>
-        <div class="station-time">8:00 – 9:00 AM</div>
-        <div class="station-loc">Green Court</div>
-      </div>
-      <div class="station-card">
-        <div class="station-grade">11th Grade</div>
-        <div class="station-time">9:00 – 10:00 AM</div>
-        <div class="station-loc">Green Court</div>
-      </div>
-      <div class="station-card">
-        <div class="station-grade">Seniors</div>
-        <div class="station-time">10:00 AM – 12:00 PM</div>
-        <div class="station-loc">Green Court</div>
-      </div>
+    <div class="mini-heading">Day #2 · Tuesday, September 8 — Language MAP Test <span style="text-transform:none; font-weight:400; opacity:0.85;">/ Prueba MAP de Lenguaje</span></div>
+    <div class="test-table">
+      <div class="test-row"><span class="t-label">Period 1 <span class="es">Periodo 1</span></span><span class="t-time">7:25 – 8:25 AM</span></div>
+      <div class="test-row"><span class="t-label">Period 2 <span class="es">Periodo 2</span></span><span class="t-time">8:30 – 9:30 AM</span></div>
+      <div class="test-row break-row"><span class="t-label">Break <span class="es">Descanso</span></span><span class="t-time">9:30 – 10:00 AM</span></div>
+      <div class="test-row map-row"><span class="t-label">Language MAP Test <span class="es">Prueba MAP de Lenguaje</span></span><span class="t-time">10:05 – 11:05 AM</span></div>
+      <div class="test-row"><span class="t-label">Mini Break <span class="es">Mini Descanso</span></span><span class="t-time">11:05 – 11:15 AM</span></div>
+      <div class="test-row map-row"><span class="t-label">Language MAP Test Continues <span class="es">Continúa Prueba de Lenguaje</span></span><span class="t-time">11:15 AM – 12:10 PM</span></div>
+      <div class="test-row"><span class="t-label">Period 5 — Regular Class Schedule <span class="es">Periodo 5 — Horario Regular</span></span><span class="t-time">12:10 – 1:10 PM</span></div>
+      <div class="test-row break-row"><span class="t-label">Lunch <span class="es">Almuerzo</span></span><span class="t-time">1:10 – 1:55 PM</span></div>
+      <div class="test-row"><span class="t-label">Period 6 <span class="es">Periodo 6</span></span><span class="t-time">2:00 – 3:00 PM</span></div>
     </div>
 
-    <div class="callout event" style="margin-top: 22px;">
-      <div class="bi-grid">
-        <div class="bi-col en">
-          <span class="lang-tag">English</span>
-          <p>Teachers: whoever has class with a group during these times accompanies that group to wherever the activity is happening — the Blue Room with the seniors, or the Green Court with another grade level.</p>
-        </div>
-        <div class="bi-col es">
-          <span class="lang-tag">Español</span>
-          <p>Maestros: quien tenga clase con un grupo durante estos horarios debe acompañarlo al lugar donde se realice la actividad — ya sea el Blue Room con los seniors, o la cancha verde con otro nivel.</p>
-        </div>
-      </div>
+    <div class="mini-heading">Day #3 · Wednesday, September 9 — Math MAP Test <span style="text-transform:none; font-weight:400; opacity:0.85;">/ Prueba MAP de Matemáticas</span></div>
+    <div class="test-table">
+      <div class="test-row"><span class="t-label">Period 1 <span class="es">Periodo 1</span></span><span class="t-time">7:25 – 8:10 AM</span></div>
+      <div class="test-row"><span class="t-label">Period 2 <span class="es">Periodo 2</span></span><span class="t-time">8:10 – 8:55 AM</span></div>
+      <div class="test-row"><span class="t-label">Period 3 <span class="es">Periodo 3</span></span><span class="t-time">9:00 – 9:45 AM</span></div>
+      <div class="test-row break-row"><span class="t-label">Break <span class="es">Descanso</span></span><span class="t-time">9:45 – 10:15 AM</span></div>
+      <div class="test-row map-row"><span class="t-label">Math MAP Test <span class="es">Prueba MAP de Matemáticas</span></span><span class="t-time">10:20 – 11:20 AM</span></div>
+      <div class="test-row"><span class="t-label">Mini Break <span class="es">Mini Descanso</span></span><span class="t-time">11:20 – 11:30 AM</span></div>
+      <div class="test-row map-row"><span class="t-label">Math MAP Test Continues <span class="es">Continúa Prueba de Matemáticas</span></span><span class="t-time">11:30 AM – 12:50 PM</span></div>
+      <div class="test-row highlight-row"><span class="t-label">Dismissal <span class="es">Salida de Estudiantes</span></span><span class="t-time">12:50 PM</span></div>
+    </div>
+
+    <div class="mini-heading">Proctors &amp; Rooms <span style="text-transform:none; font-weight:400; opacity:0.85;">/ Proctores y Salones</span></div>
+    <div class="proc-table">
+      <div class="proc-head">Section</div><div class="proc-head">Proctor</div><div class="proc-head">Room</div>
+      <div class="proc-cell section">9th A</div><div class="proc-cell">Juan Sebastian Lainez</div><div class="proc-cell">4206</div>
+      <div class="proc-cell section">9th B</div><div class="proc-cell">Sergio Andino / Ariel Turcios</div><div class="proc-cell">4402</div>
+      <div class="proc-cell section">9th C</div><div class="proc-cell">Ana Lucia Garcia / Celeste Amador</div><div class="proc-cell">4207</div>
+      <div class="proc-cell section">10th A</div><div class="proc-cell">Alejandro Manzanares</div><div class="proc-cell">4208</div>
+      <div class="proc-cell section">10th B</div><div class="proc-cell">Omar Gonzalez</div><div class="proc-cell">4405</div>
+      <div class="proc-cell section">10th C</div><div class="proc-cell">Helder Perez</div><div class="proc-cell">4406</div>
+      <div class="proc-cell section">11th Honors/AP</div><div class="proc-cell">Jimmy Bodden / Fernando Chajtur</div><div class="proc-cell">4203</div>
+      <div class="proc-cell section">11th Section 1</div><div class="proc-cell">Elha Quiñonez</div><div class="proc-cell">4204</div>
+      <div class="proc-cell section">11th Section 2</div><div class="proc-cell">Emilio Vasquez</div><div class="proc-cell">4205</div>
+    </div>
+
+    <div class="mini-heading">Senior Fixed Rooms <span style="text-transform:none; font-weight:400; opacity:0.85;">/ Salones Fijos de Seniors</span></div>
+    <div class="proc-table" style="grid-template-columns: 1.3fr 0.7fr;">
+      <div class="proc-head">Section</div><div class="proc-head">Room</div>
+      <div class="proc-cell section">12th A</div><div class="proc-cell">4303</div>
+      <div class="proc-cell section">12th B</div><div class="proc-cell">4301</div>
+      <div class="proc-cell section">12th C</div><div class="proc-cell">4302</div>
     </div>
   </div>
-  <!-- ===== end Special Event Spotlight ===== -->
+  <!-- ===== end MAP Testing ===== -->
 
-  <!-- ===== Independence Month — General Assembly ===== -->
+  <!-- ===== Special Event Spotlight — Independence Day ===== -->
   <div class="card rail-event">
-    <span class="eyebrow event">Independence Month</span>
-    <h3>🇭🇳 General Assembly <em>Asamblea General</em></h3>
+    <span class="eyebrow event">Special Event</span>
+    <h3>🇭🇳 Independence Day <em>Día de la Independencia</em></h3>
+
     <div class="bi-grid">
       <div class="bi-col en">
         <span class="lang-tag">English</span>
-        <p>September is Independence Month! To celebrate, we'll hold a general assembly on <strong>Tuesday, September 1</strong> on the <strong>Green Court</strong>.</p>
+        <p>This <strong>Friday, September 11</strong>, we celebrate Independence Day with a full day of activities, including the Regional Stands each section has prepared, the civic ceremony, and traditional games. Full agenda below.</p>
       </div>
       <div class="bi-col es">
         <span class="lang-tag">Español</span>
-        <p>¡Septiembre es el Mes de la Independencia! Para celebrarlo, tendremos una asamblea general el <strong>martes 1 de septiembre</strong> en el <strong>Green Court</strong>.</p>
+        <p>Este <strong>viernes 11 de septiembre</strong> celebramos el Día de la Independencia con un día lleno de actividades, incluyendo los Stands Regionales que cada sección ha preparado, el acto cívico y los juegos tradicionales. Agenda completa a continuación.</p>
       </div>
     </div>
 
-    <div class="mini-heading">Tuesday, September 1 · Green Court</div>
-    <div class="schedule">
-      <div class="sched-row">
-        <span class="day-badge event">1</span>
-        <span class="sched-label">Move to Green Court <span class="es">Desplazamiento al Green Court</span>
-          <span class="meta">7:25 – 7:35 AM</span>
-        </span>
-      </div>
-      <div class="sched-row">
-        <span class="day-badge event">2</span>
-        <span class="sched-label">Assembly Program <span class="es">Programa de la Asamblea</span>
-          <span class="meta">7:40 – 8:15 AM</span>
-        </span>
-      </div>
-    </div>
-
-    <div class="bi-grid" style="margin-top: 18px;">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <ul>
-          <li>Student Color Guard</li>
-          <li>Pledge to the Flag — Ms. Nydia</li>
-          <li>Poem by a Senior</li>
-          <li>Closing</li>
-        </ul>
-      </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <ul>
-          <li>Pelotón Estudiantil</li>
-          <li>Juramento a la Bandera — Ms. Nydia</li>
-          <li>Poema por Senior</li>
-          <li>Despedida</li>
-        </ul>
-      </div>
+    <div class="mini-heading">Friday, September 11 — Full Agenda <span style="text-transform:none; font-weight:400; opacity:0.85;">/ Viernes 11 de septiembre — Agenda Completa</span></div>
+    <div class="test-table">
+      <div class="test-row"><span class="t-label">Regional Stands set-up <span class="es">Montaje de Stands Regionales</span></span><span class="t-time">7:30 – 9:00 AM</span></div>
+      <div class="test-row"><span class="t-label">Snack — Elementary <span class="es">SNACK Primaria</span></span><span class="t-time">7:30 – 8:00 AM</span></div>
+      <div class="test-row"><span class="t-label">Traditional games — Elementary (synthetic court) <span class="es">Juegos tradicionales Primaria (cancha sintética)</span></span><span class="t-time">8:00 – 9:00 AM</span></div>
+      <div class="test-row"><span class="t-label">Snack — Middle &amp; High School <span class="es">SNACK Middle School y High School</span></span><span class="t-time">9:00 – 9:30 AM</span></div>
+      <div class="test-row map-row"><span class="t-label">Civic Ceremony — move to Green Court at 9:30 AM <span class="es">Acto Cívico — desplazamiento al Green Court: 9:30 am</span></span><span class="t-time">9:30 – 11:00 AM</span></div>
+      <div class="test-row map-row"><span class="t-label">"Honduras nos Une" Regional Stands — Plaza &amp; Plaza Viviente <span class="es">Stands Regionales "Honduras nos Une" — Plaza y Plaza Viviente</span></span><span class="t-time">11:00 AM – 12:00 PM</span></div>
+      <div class="test-row break-row"><span class="t-label">Catracho-style lunch in Homeroom <span class="es">Almuerzo estilo Catracho en Homeroom</span></span><span class="t-time">12:00 – 1:00 PM</span></div>
+      <div class="test-row highlight-row"><span class="t-label">Traditional games — Middle School (High School takes down their Regional Stands). All teachers participate and supervise. <span class="es">Juegos tradicionales Middle School (High School desarma sus Stands Regionales). Todos los maestros participan y supervisan.</span></span><span class="t-time">1:00 – 2:00 PM</span></div>
+      <div class="test-row highlight-row"><span class="t-label">Traditional games — High School (Middle School takes down their Regional Stands). All teachers participate and supervise. <span class="es">Juegos tradicionales High School (Middle School desarma sus Stands Regionales). Todos los maestros participan y supervisan.</span></span><span class="t-time">2:00 – 2:50 PM</span></div>
     </div>
   </div>
-  <!-- ===== end Independence Month — General Assembly ===== -->
+  <!-- ===== end Independence Day ===== -->
 
   <div class="card">
     <span class="eyebrow">This Week</span>
@@ -500,66 +447,63 @@
     <div class="bi-grid" style="margin-bottom: 18px;">
       <div class="bi-col en">
         <span class="lang-tag">English</span>
-        <p>📝 Reminder: Homeroom happens every Thursday. This week we'll be working on MAP Testing prep.</p>
+        <p>📝 Reminder: this Thursday's homeroom time will be used for two things — most sections will finish preparing their Regional Stand for Friday, and 11th graders will use the time to practice their dance performance for Independence Day.</p>
       </div>
       <div class="bi-col es">
         <span class="lang-tag">Español</span>
-        <p>📝 Recordatorio: El homeroom es todos los jueves. Esta semana trabajaremos en la preparación para MAP Testing.</p>
+        <p>📝 Recordatorio: el homeroom de este jueves se usará para dos cosas — la mayoría de las secciones terminarán de preparar su Stand Regional para el viernes, y los estudiantes de 11° usarán el tiempo para practicar su baile para el Día de la Independencia.</p>
       </div>
     </div>
     <div class="schedule">
-      <!-- Repeat one .sched-row per weekday. day-badge = day-cycle number.
-           tag classes: plain = regular event, "tag urgent" = mandatory/critical (clay),
-           "tag event" = celebration/fundraiser (gold). Leave sched-tags empty for a day with nothing special. -->
+      <div class="sched-row">
+        <span class="day-badge">1</span>
+        <span class="sched-label">Monday, September 7 <span class="es">Lunes, 7 de septiembre</span></span>
+        <span class="sched-tags"><span class="tag event">📊 MAP: Reading</span></span>
+      </div>
       <div class="sched-row">
         <span class="day-badge">2</span>
-        <span class="sched-label">Monday, August 31 <span class="es">Lunes, 31 de agosto</span></span>
-        <span class="sched-tags"><span class="tag event">Financial Ed. Week</span><span class="tag">🇭🇳 Class Stands</span></span>
+        <span class="sched-label">Tuesday, September 8 <span class="es">Martes, 8 de septiembre</span></span>
+        <span class="sched-tags"><span class="tag event">📊 MAP: Language</span><span class="tag">🎟️ CCC Sign-Up</span></span>
       </div>
       <div class="sched-row">
         <span class="day-badge">3</span>
-        <span class="sched-label">Tuesday, September 1 <span class="es">Martes, 1 de septiembre</span></span>
-        <span class="sched-tags"><span class="tag event">Financial Ed. Week</span><span class="tag event">🇭🇳 Assembly</span></span>
+        <span class="sched-label">Wednesday, September 9 <span class="es">Miércoles, 9 de septiembre</span></span>
+        <span class="sched-tags"><span class="tag event">📊 MAP: Math</span></span>
       </div>
       <div class="sched-row">
         <span class="day-badge">4</span>
-        <span class="sched-label">Wednesday, September 2 <span class="es">Miércoles, 2 de septiembre</span></span>
-        <span class="sched-tags"><span class="tag event">Financial Ed. Week</span></span>
+        <span class="sched-label">Thursday, September 10 <span class="es">Jueves, 10 de septiembre</span></span>
+        <span class="sched-tags"><span class="tag">🏠 Homeroom: Stand Prep</span><span class="tag">💃 11th Dance Practice</span></span>
       </div>
       <div class="sched-row">
-        <span class="day-badge">5</span>
-        <span class="sched-label">Thursday, September 3 <span class="es">Jueves, 3 de septiembre</span></span>
-        <span class="sched-tags"><span class="tag event">Financial Ed. Week</span><span class="tag">🇭🇳 Class Stands</span><span class="tag">📝 Homeroom: MAP Prep</span></span>
-      </div>
-      <div class="sched-row">
-        <span class="day-badge">6</span>
-        <span class="sched-label">Friday, September 4 <span class="es">Viernes, 4 de septiembre</span></span>
-        <span class="sched-tags"><span class="tag event">Financial Ed. Circuit</span></span>
+        <span class="day-badge event">5</span>
+        <span class="sched-label">Friday, September 11 <span class="es">Viernes, 11 de septiembre</span></span>
+        <span class="sched-tags"><span class="tag event">🇭🇳 Independence Day</span><span class="tag event">🎪 Regional Stands</span></span>
       </div>
     </div>
   </div>
 
-  <!-- ===== The Herd Report — new weekly feature ===== -->
+  <!-- ===== The Herd Report ===== -->
   <div class="card">
-    <span class="eyebrow">New Weekly Feature</span>
+    <span class="eyebrow">Weekly Feature</span>
     <h3>🐾 The Herd Report <em>Reporte de la Manada</em></h3>
     <div class="bi-grid">
       <div class="bi-col en">
         <span class="lang-tag">English</span>
-        <p>Starting this week, we're introducing <strong>The Herd Report</strong> — a fun, at-a-glance way to celebrate how we're moving together on two habits that keep our classrooms running smoothly: <strong>taking attendance</strong> and <strong>turning in lesson plans on time</strong>. Each teacher is represented by an animal to keep things light and anonymous — no names, just vibes!</p>
-        <p>This week our herd is strong on attendance (<strong>14 of 17 complete</strong>) — let's bring that same energy to lesson planning (<strong>5 of 17 complete</strong>) by next Friday. You've got this! 💪</p>
+        <p>This week our herd showed real progress on attendance — <strong>15 of 17 complete</strong>, up from 14 last week. That's the direction we want to keep moving, but we're not at 100% yet, and that's the goal. Quick reminder: for homeroom, attendance only needs to be checked on <strong>Thursdays</strong> — no need to do it any other day.</p>
+        <p>Lesson planning is where we need real, immediate attention: only <strong>8 of 17 are complete</strong> this week. Both taking attendance and submitting lesson plans on time are basic professional responsibilities, not optional extras — they matter for our students and for the smooth running of our school. I want to keep supporting each of you to meet these expectations without needing to involve other instances, so please prioritize getting current on planning as soon as possible. I know you can do it, and I'm here to help if something is getting in the way.</p>
       </div>
       <div class="bi-col es">
         <span class="lang-tag">Español</span>
-        <p>A partir de esta semana presentamos <strong>El Reporte de la Manada</strong> — una forma divertida y rápida de celebrar cómo avanzamos juntos como equipo en dos hábitos que mantienen nuestras aulas funcionando bien: <strong>tomar asistencia</strong> y <strong>entregar la planificación a tiempo</strong>. Cada maestro está representado por un animal para mantenerlo ligero y anónimo — ¡nada de nombres, solo buena vibra!</p>
-        <p>Esta semana nuestra manada está fuerte en asistencia (<strong>14 de 17 completo</strong>) — llevemos esa misma energía a la planificación (<strong>5 de 17 completo</strong>) antes del próximo viernes. ¡Ustedes pueden! 💪</p>
+        <p>Esta semana nuestra manada mostró un progreso real en asistencia — <strong>15 de 17 completos</strong>, subiendo desde 14 la semana pasada. Esa es la dirección en la que queremos seguir avanzando, pero aún no llegamos al 100%, y esa es la meta. Recordatorio rápido: para el homeroom, la asistencia solo debe revisarse los <strong>jueves</strong> — no es necesario hacerlo ningún otro día.</p>
+        <p>La planificación de lecciones es donde necesitamos atención real e inmediata: solo <strong>8 de 17 están completas</strong> esta semana. Tanto tomar asistencia como entregar la planificación a tiempo son responsabilidades profesionales básicas, no opcionales, y son importantes para nuestros estudiantes y para el buen funcionamiento de nuestra escuela. Me gustaría seguir apoyando a cada uno de ustedes para cumplir con estas expectativas sin tener que recurrir a otras instancias — así que, por favor, prioricen ponerse al día con la planificación lo antes posible. Sé que pueden lograrlo, y estoy aquí para ayudar si algo se los está impidiendo.</p>
       </div>
     </div>
 
     <div class="herd-table" role="table" aria-label="Herd Report — attendance and planning status">
       <div class="herd-head">Teacher <span class="herd-head-sub">Maestro</span></div>
-      <div class="herd-head status">Attendance <span class="herd-head-sub">Aug 28</span></div>
-      <div class="herd-head status">Planning <span class="herd-head-sub">Aug 24–28</span></div>
+      <div class="herd-head status">Attendance <span class="herd-head-sub">Aug 31–Sep 4</span></div>
+      <div class="herd-head status">Planning <span class="herd-head-sub">Aug 31–Sep 4</span></div>
 
       <div class="herd-name"><span class="herd-animal">🐬</span>Dolphin</div>
       <div class="herd-cell"><span class="tag">Complete</span></div>
@@ -571,10 +515,10 @@
 
       <div class="herd-name"><span class="herd-animal">🐧</span>Penguin</div>
       <div class="herd-cell"><span class="tag">Complete</span></div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
+      <div class="herd-cell"><span class="tag">Complete</span></div>
 
       <div class="herd-name"><span class="herd-animal">🦊</span>Fox</div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
+      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
       <div class="herd-cell"><span class="tag">Complete</span></div>
 
       <div class="herd-name"><span class="herd-animal">🐨</span>Koala</div>
@@ -594,19 +538,19 @@
       <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
 
       <div class="herd-name"><span class="herd-animal">🐳</span>Whale</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
+      <div class="herd-cell"><span class="tag">Complete</span></div>
+      <div class="herd-cell"><span class="tag">Complete</span></div>
 
       <div class="herd-name"><span class="herd-animal">🦋</span>Butterfly</div>
       <div class="herd-cell"><span class="tag">Complete</span></div>
       <div class="herd-cell"><span class="tag">Complete</span></div>
 
       <div class="herd-name"><span class="herd-animal">🐙</span>Octopus</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
+      <div class="herd-cell"><span class="tag">Complete</span></div>
       <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
 
       <div class="herd-name"><span class="herd-animal">🐘</span>Elephant</div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
+      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
       <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
 
       <div class="herd-name"><span class="herd-animal">🦜</span>Parrot</div>
@@ -615,10 +559,10 @@
 
       <div class="herd-name"><span class="herd-animal">🐺</span>Wolf</div>
       <div class="herd-cell"><span class="tag">Complete</span></div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
+      <div class="herd-cell"><span class="tag">Complete</span></div>
 
       <div class="herd-name"><span class="herd-animal">🐢</span>Sea Turtle</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
+      <div class="herd-cell"><span class="tag">Complete</span></div>
       <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
 
       <div class="herd-name"><span class="herd-animal">🦭</span>Seal</div>
@@ -639,29 +583,13 @@
       <div class="bi-col en">
         <span class="lang-tag">English</span>
         <ul>
-          <li>🇭🇳 <strong>CCCS Time (Days 2 &amp; 5):</strong> This week, CCCS time on Monday and Thursday will be used to work on the "Class Stands" for Independence Month. The Social Studies department will share more details soon.</li>
-          <li>📝 <strong>Homeroom — MAP Testing Prep:</strong> This week's homeroom will focus on a presentation to help students understand and remember what to expect for MAP Testing, taking place the week of September 7. Teachers have viewer access and can make their own copy:
-            <ul>
-              <li><a href="https://docs.google.com/presentation/d/1PDIfo5pXBfXzsjL5bUX6Rf-AaEGvaJv7pHJooRe5a7A/edit?slide=id.p1#slide=id.p1" target="_blank" rel="noopener">English Presentation</a></li>
-              <li><a href="https://docs.google.com/presentation/d/1SFLZBBsOiwevyWSZykrOZxOc3Z8k35AFqqf05EPesGk/edit?usp=sharing" target="_blank" rel="noopener">Spanish Presentation</a></li>
-              <li><a href="https://docs.google.com/document/d/1Bm20gT_9QEyTnSd84Lf81TbLuJNyGNdTA6zJzOCacYk/edit?usp=sharing" target="_blank" rel="noopener">Teacher Guide</a> — please jot down each student's goal on your student list; you'll need it for the later goal-tracking session.</li>
-              <li><a href="https://docs.google.com/document/d/1T7reFY3vRS56cO4zlJJXIFU2vAZ2ZivjBJ9qU9b2wno/edit?tab=t.0" target="_blank" rel="noopener">NWEA MAP Letter for Parents</a></li>
-            </ul>
-          </li>
+          <li>🎟️ <strong>CCC Sign-Up (Tuesday, Sept 8):</strong> The co-curricular clubs (CCC) sign-up link and catalog will be sent to students. They are required to choose a club during CCC time that day — remind them to have 2–3 options ready, since some clubs fill up quickly.</li>
         </ul>
       </div>
       <div class="bi-col es">
         <span class="lang-tag">Español</span>
         <ul>
-          <li>🇭🇳 <strong>Tiempo de CCCS (Días 2 y 5):</strong> Esta semana, el tiempo de CCCS del lunes y jueves se usará para trabajar en los "Class Stands" del Mes de la Independencia. El departamento de Estudios Sociales compartirá más detalles pronto.</li>
-          <li>📝 <strong>Homeroom — Preparación para MAP Testing:</strong> El homeroom de esta semana se enfocará en una presentación para ayudar a los estudiantes a entender y recordar qué esperar en las pruebas MAP, que se realizarán la semana del 7 de septiembre. Los maestros tienen acceso de solo lectura y pueden hacer su propia copia:
-            <ul>
-              <li><a href="https://docs.google.com/presentation/d/1PDIfo5pXBfXzsjL5bUX6Rf-AaEGvaJv7pHJooRe5a7A/edit?slide=id.p1#slide=id.p1" target="_blank" rel="noopener">Presentación en Inglés</a></li>
-              <li><a href="https://docs.google.com/presentation/d/1SFLZBBsOiwevyWSZykrOZxOc3Z8k35AFqqf05EPesGk/edit?usp=sharing" target="_blank" rel="noopener">Presentación en Español</a></li>
-              <li><a href="https://docs.google.com/document/d/1Bm20gT_9QEyTnSd84Lf81TbLuJNyGNdTA6zJzOCacYk/edit?usp=sharing" target="_blank" rel="noopener">Guía para el Maestro</a> — anoten la meta de cada estudiante en su lista; la necesitarán para la sesión de seguimiento de metas más adelante.</li>
-              <li><a href="https://docs.google.com/document/d/1T7reFY3vRS56cO4zlJJXIFU2vAZ2ZivjBJ9qU9b2wno/edit?tab=t.0" target="_blank" rel="noopener">Carta de NWEA MAP para Padres</a></li>
-            </ul>
-          </li>
+          <li>🎟️ <strong>Inscripción a CCC (martes 8 de septiembre):</strong> Se enviará a los estudiantes el enlace y catálogo para inscribirse en los Clubes Co-Curriculares (CCC). Deberán elegir un club durante el tiempo de CCC ese día — recuérdenles tener 2 o 3 opciones listas, ya que algunos clubes se llenan rápido.</li>
         </ul>
       </div>
     </div>
@@ -683,8 +611,8 @@
   </div>
 
   <div class="slogan">
-    "Coming together is a beginning, staying together is progress, and working together is success." — Henry Ford
-    <span class="es">"Reunirse es un comienzo, mantenerse juntos es progreso, y trabajar juntos es el éxito." — Henry Ford</span>
+    "Education is not the filling of a pail, but the lighting of a fire." — William Butler Yeats
+    <span class="es">"La educación no es llenar un balde, sino encender un fuego." — William Butler Yeats</span>
   </div>
 
   <div class="footer">
