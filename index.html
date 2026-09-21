@@ -210,6 +210,7 @@
     font-variant-numeric: tabular-nums;
   }
   .day-badge.event { background: var(--gold); color: var(--chip-gold-text); }
+  .day-badge.urgent { background: var(--clay); color: var(--chip-clay-text); }
   .day-badge.off { background: var(--divider); color: var(--ink-soft); font-size: 0.68rem; }
   .sched-label { flex: 1 1 auto; min-width: 0; font-weight: 600; font-size: 0.96rem; }
   .sched-label .es { display: block; font-weight: 400; color: var(--ink-soft); font-size: 0.88em; }
@@ -250,73 +251,6 @@
   .slogan .es { font-size: 0.92em; color: var(--ink-soft); display: block; margin-top: 10px; }
 
   .footer { text-align: center; padding: 20px; margin-top: 22px; font-size: 0.85rem; color: var(--ink-soft); }
-
-  /* ---- Mini headings / callouts reused ---- */
-  .mini-heading {
-    font-family: 'Karla', sans-serif; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.09em;
-    text-transform: uppercase; color: var(--gold); margin: 26px 0 10px;
-  }
-  .mini-heading:first-of-type { margin-top: 4px; }
-
-  /* ---- Period / test schedule table (MAP days, ceremonies) ---- */
-  .test-table { margin-top: 10px; border-radius: 8px; overflow: hidden; border: 1px solid var(--divider); }
-  .test-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 10px 16px; border-bottom: 1px solid var(--divider); align-items: center; background: var(--card); }
-  .test-row:last-child { border-bottom: none; }
-  .test-row .t-label { font-weight: 600; font-size: 0.92rem; }
-  .test-row .t-label .es { display: block; font-weight: 400; color: var(--ink-soft); font-size: 0.85em; margin-top: 1px; }
-  .test-row .t-time { font-variant-numeric: tabular-nums; color: var(--ink-soft); font-size: 0.85rem; white-space: nowrap; }
-  .test-row.break-row { background: var(--tint-standard); }
-  .test-row.break-row .t-time { color: var(--forest); }
-  .test-row.map-row { background: var(--tint-event); }
-  .test-row.map-row .t-label { color: var(--ink); font-weight: 700; }
-  .test-row.highlight-row { background: var(--tint-urgent); }
-  .test-row.highlight-row .t-label { font-weight: 700; }
-
-  /* ---- Proctor / activity reference table ---- */
-  .proc-table { display: grid; grid-template-columns: 1.3fr 1.7fr 0.7fr; margin-top: 12px; border: 1px solid var(--divider); border-radius: 8px; overflow: hidden; }
-  .proc-head { background: var(--forest); color: var(--chip-forest-text); font-family: 'Karla', sans-serif; font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 9px 12px; }
-  .proc-cell { padding: 9px 12px; border-top: 1px solid var(--divider); font-size: 0.86rem; background: var(--card); }
-  .proc-cell.section { font-weight: 700; }
-  @media (max-width: 640px) {
-    .proc-table { grid-template-columns: 1fr 1.3fr 0.6fr; }
-    .proc-head, .proc-cell { font-size: 0.72rem; padding: 7px 8px; }
-  }
-
-  /* ---- CTA button (sign-up / links) ---- */
-  .cta-btn {
-    display: inline-block; margin-top: 16px; padding: 11px 26px; background: var(--forest);
-    color: #ffffff !important; border-radius: 999px; font-weight: 700; font-size: 0.9rem;
-    text-decoration: none; letter-spacing: 0.01em;
-  }
-  .cta-btn:hover, .cta-btn:focus-visible { background: var(--gold); color: #ffffff !important; }
-  .cta-btn.placeholder { background: var(--ink-soft); }
-  .cta-note { display: block; margin-top: 8px; font-size: 0.78rem; color: var(--ink-soft); font-style: italic; }
-
-  /* ---- The Herd Report (recurring weekly status grid) ---- */
-  .herd-table { display: grid; grid-template-columns: minmax(150px, 1.3fr) 1fr 1fr; column-gap: 10px; margin-top: 20px; }
-  .herd-head {
-    font-family: 'Karla', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--ink-soft); padding-bottom: 10px; border-bottom: 2px solid var(--divider);
-  }
-  .herd-head.status { text-align: center; }
-  .herd-head-sub {
-    display: block; font-weight: 400; letter-spacing: 0; text-transform: none;
-    font-size: 0.92em; margin-top: 2px; opacity: 0.8;
-  }
-  .herd-name {
-    display: flex; align-items: center; gap: 9px; padding: 11px 0; border-bottom: 1px solid var(--divider);
-    font-weight: 600; font-size: 0.94rem; min-width: 0;
-  }
-  .herd-animal { font-size: 1.25rem; line-height: 1; flex: 0 0 auto; }
-  .herd-cell { display: flex; align-items: center; justify-content: center; padding: 11px 0; border-bottom: 1px solid var(--divider); }
-  .herd-table > *:nth-last-child(-n+3) { border-bottom: none; }
-
-  @media (max-width: 640px) {
-    .herd-table { grid-template-columns: minmax(96px, 1fr) 1fr 1fr; column-gap: 6px; }
-    .herd-name { font-size: 0.82rem; gap: 6px; }
-    .herd-head { font-size: 0.62rem; }
-    .herd-cell .tag { font-size: 0.68rem; padding: 4px 8px; }
-  }
 </style>
 
 <div class="wrap">
@@ -324,266 +258,99 @@
   <div class="masthead">
     <h1>High Standards</h1>
     <div class="subtitle">DelCampo High School Weekly Bulletin&nbsp; · &nbsp;Boletín Semanal</div>
-    <div class="date-pill">September 14 – 18, 2026</div>
+    <div class="date-pill">September 21 – 25, 2026</div>
   </div>
 
   <div class="card">
     <span class="eyebrow">Principal's Message</span>
-    <h3>🍎 A Message from the Principal <em>Mensaje del Director</em></h3>
+    <h3>📊 A Message from the Principal <em>Mensaje del Director</em></h3>
     <div class="bi-grid">
       <div class="bi-col en">
         <span class="lang-tag">English</span>
-        <p>This week we pause, even if briefly, to say something simple but important: thank you. On September 17th, Honduras celebrates Teachers' Day, and although our calendar has us focused on a short but intense week — Independence Day, MAP makeups, and the launch of our co-curricular clubs — none of that would be possible without the daily work each of you puts into this school. Teaching is one of those professions where the impact is rarely seen immediately, and yet it shapes, quietly and permanently, who our students become.</p>
-        <p>We wanted to give that some space this week, not just words. This Wednesday afternoon, right after MAP makeups wrap up, we're taking a break together: come in jeans in the morning, and bring a change of clothes for the afternoon — our sports department has planned an hour of movement and connection just for you, from Zumba to pickleball. Sign up using the link in the section below; some spots are limited. Thank you for everything you do, and happy Teachers' Day.</p>
+        <p>We're now at the midpoint of the first quarter — a natural moment to pause and take stock. By now, every teacher should have a clear picture of where each student stands: who's thriving, who needs support, and what interventions or accommodations might make the difference between where a student is and where they could be.</p>
+        <p>This week, I'd encourage each of you to take some time for self-evaluation in every class you teach. Look honestly at what's working and what isn't. Ask yourself what adjustments — big or small — would help us make a stronger impact on our students and move us closer to fulfilling our mission and vision as a school.</p>
+        <p>We're halfway through the quarter. Let's use this moment well.</p>
       </div>
       <div class="bi-col es">
         <span class="lang-tag">Español</span>
-        <p>Esta semana nos detenemos, aunque sea brevemente, para decir algo simple pero importante: gracias. El 17 de septiembre, Honduras celebra el Día del Maestro, y aunque nuestro calendario nos tiene enfocados en una semana corta pero intensa — Día de la Independencia, reposición de pruebas MAP y el lanzamiento de nuestros clubes co-curriculares — nada de eso sería posible sin el trabajo diario que cada uno de ustedes pone en esta escuela. Enseñar es una de esas profesiones donde el impacto rara vez se ve de inmediato, y sin embargo moldea, de forma silenciosa y permanente, a las personas en las que se convierten nuestros estudiantes.</p>
-        <p>Quisimos darle espacio a eso esta semana, no solo con palabras. Este miércoles por la tarde, justo después de que terminen las reposiciones de MAP, nos tomaremos una pausa juntos: vengan en jeans por la mañana y traigan un cambio de ropa para la tarde — nuestro departamento de deportes preparó una hora de movimiento y conexión solo para ustedes, desde zumba hasta pickleball. Inscríbanse con el enlace en la sección de abajo; algunos cupos son limitados. Gracias por todo lo que hacen, y feliz Día del Maestro.</p>
+        <p>Estamos en la mitad del primer trimestre — un momento natural para detenernos y hacer un balance. A estas alturas, cada maestro debería tener una idea clara de cómo está cada estudiante: quién va avanzando bien, quién necesita apoyo, y qué intervenciones o adecuaciones podrían marcar la diferencia entre dónde está un estudiante y dónde podría estar.</p>
+        <p>Esta semana los invito a tomarse un tiempo para la autoevaluación en cada una de sus clases. Miren con honestidad qué está funcionando y qué no. Pregúntense qué ajustes — grandes o pequeños — nos ayudarían a lograr un mayor impacto en nuestros estudiantes y a acercarnos al cumplimiento de nuestra misión y visión como escuela.</p>
+        <p>Vamos a la mitad del trimestre. Aprovechemos bien este momento.</p>
       </div>
     </div>
   </div>
 
-  <!-- ===== Callout — Short Week ===== -->
+  <!-- ===== Urgent — Progress Reports / Grades Deadline ===== -->
+  <div class="card rail-urgent">
+    <span class="eyebrow urgent">Urgent · Mandatory</span>
+    <h3>📋 Progress Reports — Grades Due <em>Reportes de Progreso — Fecha Límite de Notas</em></h3>
+    <div class="callout urgent">
+      <div class="bi-grid">
+        <div class="bi-col en">
+          <span class="lang-tag">English</span>
+          <p>Progress reports go home <strong>Wednesday, September 23</strong>. To make that happen, <strong>all grades must be up to date by Tuesday, September 22 at 10:00 AM</strong>, when we print them for distribution.</p>
+          <p>This is a key checkpoint at the midpoint of the quarter — please make sure your gradebook reflects an accurate, current picture of each student.</p>
+        </div>
+        <div class="bi-col es">
+          <span class="lang-tag">Español</span>
+          <p>Los reportes de progreso se enviarán a casa el <strong>miércoles 23 de septiembre</strong>. Para lograrlo, <strong>todas las notas deben estar actualizadas antes del martes 22 de septiembre a las 10:00 AM</strong>, hora en la que se imprimen para su distribución.</p>
+          <p>Este es un punto de control clave en la mitad del trimestre — por favor asegúrense de que su libro de calificaciones refleje una imagen precisa y actualizada de cada estudiante.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ===== end Progress Reports ===== -->
+
+  <!-- ===== Heads Up — Independence Month closing postponed ===== -->
   <div class="card">
-    <span class="eyebrow event">Heads Up</span>
-    <h3>🇭🇳 A Short Week <em>Una Semana Corta</em></h3>
+    <span class="eyebrow">Heads Up</span>
+    <h3>🇭🇳 Independence Month Closing — Date Change <em>Cierre del Mes de la Independencia — Cambio de Fecha</em></h3>
     <div class="bi-grid">
       <div class="bi-col en">
         <span class="lang-tag">English</span>
-        <p><strong>Monday, September 14</strong> and <strong>Tuesday, September 15</strong> are Independence Day holidays — no school. Classes resume <strong>Wednesday, September 16</strong>, straight into MAP makeups. Please help students arrive Wednesday ready to go, and don't forget your change of clothes for the afternoon!</p>
+        <p>The Independence Month closing event originally planned for <strong>Friday, September 25</strong> has been moved to <strong>Wednesday, September 30</strong>. Nothing is happening on this front this week — more details to come as we get closer.</p>
       </div>
       <div class="bi-col es">
         <span class="lang-tag">Español</span>
-        <p><strong>Lunes 14</strong> y <strong>martes 15 de septiembre</strong> son feriados por el Día de la Independencia — no hay clases. Retomamos clases el <strong>miércoles 16 de septiembre</strong>, directo con las reposiciones de MAP. Por favor ayuden a que los estudiantes lleguen listos el miércoles, ¡y no olviden su cambio de ropa para la tarde!</p>
+        <p>El evento de cierre del Mes de la Independencia, originalmente planeado para el <strong>viernes 25 de septiembre</strong>, se movió al <strong>miércoles 30 de septiembre</strong>. Esta semana no habrá actividad relacionada — más detalles conforme se acerque la fecha.</p>
       </div>
     </div>
   </div>
-  <!-- ===== end Short Week ===== -->
-
-  <!-- ===== Special Event Spotlight — MAP Makeups ===== -->
-  <div class="card rail-event">
-    <span class="eyebrow event">Special Event</span>
-    <h3>📊 MAP Makeup Days <em>Reposición de Pruebas MAP</em></h3>
-
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <p>Students in <strong>6th through 11th grade</strong> who did not complete all of their MAP exams will be called to the <strong>Blue Room</strong> to finish them on <strong>Wednesday, September 16</strong> (Makeup Day #1) and <strong>Thursday, September 17</strong> (Makeup Day #2). A list of the students who need to go will be shared every morning — <strong>only students on that day's list</strong> report to the Blue Room; everyone else stays in their normal class schedule as shown below. As soon as a student finishes their makeup exam, they'll be sent back to class normally, so please be ready to receive them mid-period.</p>
-      </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <p>Los estudiantes de <strong>6° a 11° grado</strong> que no completaron todas sus pruebas MAP serán llamados al <strong>Blue Room</strong> para terminarlas el <strong>miércoles 16 de septiembre</strong> (Día de Reposición #1) y el <strong>jueves 17 de septiembre</strong> (Día de Reposición #2). Cada mañana se compartirá la lista de estudiantes que deben asistir — <strong>solo los estudiantes en la lista de ese día</strong> se presentan al Blue Room; el resto permanece en su horario normal, tal como se muestra abajo. En cuanto un estudiante termine su prueba de reposición, será enviado de regreso a clase con normalidad, así que estén atentos para recibirlos a media hora de clase.</p>
-      </div>
-    </div>
-
-    <div class="mini-heading">Wednesday, Sept 16 — Day #6, Makeup Day 1 <span style="text-transform:none; font-weight:400; opacity:0.85;">/ Miércoles 16 — Día #6, Reposición Día 1</span></div>
-    <div class="test-table">
-      <div class="test-row"><span class="t-label">Period 1 <span class="es">Periodo 1</span></span><span class="t-time">7:25 – 8:10 AM</span></div>
-      <div class="test-row"><span class="t-label">Period 2 <span class="es">Periodo 2</span></span><span class="t-time">8:10 – 8:55 AM</span></div>
-      <div class="test-row"><span class="t-label">Period 3 <span class="es">Periodo 3</span></span><span class="t-time">9:00 – 9:45 AM</span></div>
-      <div class="test-row break-row"><span class="t-label">Break <span class="es">Descanso</span></span><span class="t-time">9:45 – 10:15 AM</span></div>
-      <div class="test-row map-row"><span class="t-label">Makeup Day #1 <span class="es">Reposición Día 1</span></span><span class="t-time">10:20 – 11:20 AM</span></div>
-      <div class="test-row"><span class="t-label">Mini Break <span class="es">Mini Descanso</span></span><span class="t-time">11:20 – 11:30 AM</span></div>
-      <div class="test-row map-row"><span class="t-label">Makeup Day #1 Continues <span class="es">Continúa Reposición Día 1</span></span><span class="t-time">11:30 AM – 12:50 PM</span></div>
-    </div>
-
-    <div class="mini-heading">Thursday, Sept 17 — Day #1, Makeup Day 2 <span style="text-transform:none; font-weight:400; opacity:0.85;">/ Jueves 17 — Día #1, Reposición Día 2</span></div>
-    <div class="test-table">
-      <div class="test-row"><span class="t-label">Period 1 <span class="es">Periodo 1</span></span><span class="t-time">7:25 – 7:35 AM</span></div>
-      <div class="test-row"><span class="t-label">Period 2 <span class="es">Periodo 2</span></span><span class="t-time">7:40 – 8:40 AM</span></div>
-      <div class="test-row break-row"><span class="t-label">Break <span class="es">Descanso</span></span><span class="t-time">8:40 – 9:05 AM</span></div>
-      <div class="test-row map-row"><span class="t-label">Makeup Day #2 <span class="es">Reposición Día 2</span></span><span class="t-time">9:05 – 10:25 AM</span></div>
-      <div class="test-row"><span class="t-label">Mini Break <span class="es">Mini Descanso</span></span><span class="t-time">10:25 – 10:35 AM</span></div>
-      <div class="test-row map-row"><span class="t-label">Makeup Day #2 Continues <span class="es">Continúa Reposición Día 2</span></span><span class="t-time">10:35 AM – 12:15 PM</span></div>
-      <div class="test-row"><span class="t-label">Back to Regular Classes (P4 &amp; P5) <span class="es">Regreso a Clases Regulares (P4 y P5)</span></span><span class="t-time">12:15 – 1:20 PM</span></div>
-      <div class="test-row break-row"><span class="t-label">Lunch <span class="es">Almuerzo</span></span><span class="t-time">1:20 – 2:05 PM</span></div>
-      <div class="test-row"><span class="t-label">Period 6 <span class="es">Periodo 6</span></span><span class="t-time">2:10 – 3:00 PM</span></div>
-    </div>
-  </div>
-  <!-- ===== end MAP Makeups ===== -->
-
-  <!-- ===== Special Event Spotlight — Teachers' Day ===== -->
-  <div class="card rail-event">
-    <span class="eyebrow event">Special Event</span>
-    <h3>🎉 Teachers' Day Celebration <em>Celebración del Día del Maestro</em></h3>
-
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <p>Although the official Teachers' Day in Honduras is <strong>September 17</strong>, we'll be commemorating it as a school on <strong>Wednesday, September 16, from 2:00 – 3:00 PM</strong>, right after MAP makeups wrap up. <strong>Move · Connect · Recharge · Enjoy</strong> — a special hour to celebrate the energy, care, and dedication you bring every day.</p>
-        <p>Come in <strong>jeans</strong> in the morning, and bring a <strong>change of clothes</strong> for the afternoon activity you choose below. Sign up using the link at the bottom — some spots are limited.</p>
-      </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <p>Aunque el Día del Maestro oficial en Honduras es el <strong>17 de septiembre</strong>, lo conmemoraremos como escuela el <strong>miércoles 16 de septiembre, de 2:00 a 3:00 PM</strong>, justo después de que terminen las reposiciones de MAP. <strong>Muévete · Conecta · Recárgate · Disfruta</strong> — una hora especial para celebrar la energía, el cuidado y la dedicación que traen cada día.</p>
-        <p>Vengan en <strong>jeans</strong> por la mañana y traigan un <strong>cambio de ropa</strong> para la actividad de la tarde que elijan abajo. Inscríbanse con el enlace al final — algunos cupos son limitados.</p>
-      </div>
-    </div>
-
-    <div class="mini-heading">Activity Options <span style="text-transform:none; font-weight:400; opacity:0.85;">/ Opciones de Actividad</span></div>
-    <div class="proc-table">
-      <div class="proc-head">Activity</div><div class="proc-head">Location</div><div class="proc-head">Lead</div>
-      <div class="proc-cell section">Zumba</div><div class="proc-cell">Blue Room</div><div class="proc-cell">—</div>
-      <div class="proc-cell section">Volleyball</div><div class="proc-cell">Green Court</div><div class="proc-cell">Mr. Luis</div>
-      <div class="proc-cell section">CrossFit</div><div class="proc-cell">In front of PE Office</div><div class="proc-cell">Mr. Guever</div>
-      <div class="proc-cell section">Table Tennis</div><div class="proc-cell">2nd Floor, The Academy</div><div class="proc-cell">Ms. Jane Figueroa</div>
-      <div class="proc-cell section">Yoga <span style="font-weight:400; color:var(--ink-soft); font-size:0.85em;">(max 20 — bring your mat)</span></div><div class="proc-cell">2nd Floor, Suppleo</div><div class="proc-cell">—</div>
-      <div class="proc-cell section">Pickleball</div><div class="proc-cell">El Corral, in front of the Plaza</div><div class="proc-cell">Mr. Jony Reyes</div>
-    </div>
-
-    <div style="text-align:center;">
-      <a class="cta-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSf5_VHcKzLaamcmjcUWSAj-VgusgK1wjsLReERBCOtDmx1UWA/viewform?usp=dialog" target="_blank" rel="noopener">Sign Up Here / Inscríbete Aquí</a>
-    </div>
-  </div>
-  <!-- ===== end Teachers' Day ===== -->
-
-  <!-- ===== Special Event Spotlight — CCC Clubs Launch ===== -->
-  <div class="card rail-event">
-    <span class="eyebrow event">Special Event</span>
-    <h3>🎈 CCC Clubs Launch Day <em>Lanzamiento de Clubes CCC</em></h3>
-
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <p><strong>Friday, September 18</strong> is our first Co-Curricular Clubs (CCC) day of the year! Students should know exactly where to go — please use <strong>Thursday's homeroom time</strong> to walk your students through the club list and confirm each of them knows their location for Friday. Starting this Friday, <strong>teachers take attendance</strong> for their own club.</p>
-      </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <p>¡El <strong>viernes 18 de septiembre</strong> es nuestro primer día de Clubes Co-Curriculares (CCC) del año! Los estudiantes deben saber exactamente a dónde ir — por favor usen el <strong>tiempo de homeroom del jueves</strong> para revisar con sus estudiantes la lista de clubes y confirmar que cada uno sabe su ubicación para el viernes. A partir de este viernes, <strong>los maestros toman asistencia</strong> de su propio club.</p>
-      </div>
-    </div>
-
-    <div style="text-align:center;">
-      <a class="cta-btn" href="https://docs.google.com/spreadsheets/d/1h8_GQKJ7arTYPsLS7n18zS8bjceNw1Vv0iGPAZZgwX4/edit?usp=sharing" target="_blank" rel="noopener">Club List &amp; Locations / Lista de Clubes</a>
-    </div>
-  </div>
-  <!-- ===== end CCC Clubs Launch ===== -->
+  <!-- ===== end Independence Month note ===== -->
 
   <div class="card">
     <span class="eyebrow">This Week</span>
     <h3>🗓️ Weekly Schedule <em>Horario Semanal</em></h3>
     <div class="schedule">
-      <div class="sched-row off">
-        <span class="day-badge off">OFF</span>
-        <span class="sched-label">Monday, September 14 <span class="es">Lunes, 14 de septiembre</span></span>
-        <span class="sched-tags"><span class="tag event">🇭🇳 Independence Day Holiday</span></span>
-      </div>
-      <div class="sched-row off">
-        <span class="day-badge off">OFF</span>
-        <span class="sched-label">Tuesday, September 15 <span class="es">Martes, 15 de septiembre</span></span>
-        <span class="sched-tags"><span class="tag event">🇭🇳 Independence Day Holiday</span></span>
+      <div class="sched-row">
+        <span class="day-badge">3</span>
+        <span class="sched-label">Monday, September 21 <span class="es">Lunes, 21 de septiembre</span></span>
+        <span class="sched-tags"></span>
       </div>
       <div class="sched-row">
-        <span class="day-badge event">6</span>
-        <span class="sched-label">Wednesday, September 16 <span class="es">Miércoles, 16 de septiembre</span></span>
-        <span class="sched-tags"><span class="tag event">📊 MAP Makeup Day 1</span><span class="tag event">🎉 Teachers' Day (PM)</span></span>
+        <span class="day-badge urgent">4</span>
+        <span class="sched-label">Tuesday, September 22 <span class="es">Martes, 22 de septiembre</span></span>
+        <span class="sched-tags"><span class="tag urgent">📋 Grades Due 10 AM</span></span>
       </div>
       <div class="sched-row">
-        <span class="day-badge event">1</span>
-        <span class="sched-label">Thursday, September 17 <span class="es">Jueves, 17 de septiembre</span></span>
-        <span class="sched-tags"><span class="tag event">📊 MAP Makeup Day 2</span><span class="tag">🎈 CCC Homeroom Prep</span></span>
+        <span class="day-badge event">5</span>
+        <span class="sched-label">Wednesday, September 23 <span class="es">Miércoles, 23 de septiembre</span></span>
+        <span class="sched-tags"><span class="tag urgent">📋 Progress Reports Home</span><span class="tag event">🎈 CCC Clubs</span></span>
       </div>
       <div class="sched-row">
-        <span class="day-badge">2</span>
-        <span class="sched-label">Friday, September 18 <span class="es">Viernes, 18 de septiembre</span></span>
-        <span class="sched-tags"><span class="tag event">🎈 CCC Clubs Launch</span></span>
+        <span class="day-badge">6</span>
+        <span class="sched-label">Thursday, September 24 <span class="es">Jueves, 24 de septiembre</span></span>
+        <span class="sched-tags"></span>
+      </div>
+      <div class="sched-row">
+        <span class="day-badge">1</span>
+        <span class="sched-label">Friday, September 25 <span class="es">Viernes, 25 de septiembre</span></span>
+        <span class="sched-tags"></span>
       </div>
     </div>
   </div>
 
-  <!-- ===== The Herd Report ===== -->
-  <div class="card">
-    <span class="eyebrow">Weekly Feature</span>
-    <h3>🐾 The Herd Report <em>Reporte de la Manada</em></h3>
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <p><em>Quick note: this report reflects last week's numbers (September 7–11), before our short week began.</em> Attendance stood at <strong>2 of 17 complete</strong>, and lesson planning at <strong>14 of 17</strong>.</p>
-        <p>I want to be clear: taking attendance and submitting lesson plans on time are <strong>mandatory professional responsibilities</strong>, not optional extras. They matter for our students and for the smooth running of our school. If something is consistently getting in the way, let's talk about it directly — but the expectation itself isn't negotiable. Thank you to those already on top of both, and let's bring these numbers up together.</p>
-      </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <p><em>Nota rápida: este reporte refleja los números de la semana pasada (7 al 11 de septiembre), antes de que comenzara nuestra semana corta.</em> La asistencia fue de <strong>2 de 17 completos</strong>, y la planificación de lecciones de <strong>14 de 17</strong>.</p>
-        <p>Quiero ser claro: tomar asistencia y entregar la planificación de lecciones a tiempo son <strong>responsabilidades profesionales obligatorias</strong>, no opcionales. Son importantes para nuestros estudiantes y para el buen funcionamiento de nuestra escuela. Si algo está interfiriendo de manera constante, hablemos de eso directamente — pero la expectativa en sí no es negociable. Gracias a quienes ya están al día en ambas, y subamos estos números juntos.</p>
-      </div>
-    </div>
-
-    <div class="herd-table" role="table" aria-label="Herd Report — attendance and planning status">
-      <div class="herd-head">Teacher <span class="herd-head-sub">Maestro</span></div>
-      <div class="herd-head status">Attendance <span class="herd-head-sub">Sep 7–11</span></div>
-      <div class="herd-head status">Planning <span class="herd-head-sub">Sep 7–11</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🐬</span>Dolphin</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🦉</span>Owl</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🐧</span>Penguin</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🦊</span>Fox</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🐨</span>Koala</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🦅</span>Eagle</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🐼</span>Panda</div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🦒</span>Giraffe</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🐳</span>Whale</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🦋</span>Butterfly</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🐙</span>Octopus</div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🐘</span>Elephant</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🦜</span>Parrot</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🐺</span>Wolf</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🐢</span>Sea Turtle</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🦭</span>Seal</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-
-      <div class="herd-name"><span class="herd-animal">🦌</span>Deer</div>
-      <div class="herd-cell"><span class="tag urgent">Incomplete</span></div>
-      <div class="herd-cell"><span class="tag">Complete</span></div>
-    </div>
-  </div>
-  <!-- ===== end The Herd Report ===== -->
+  <!-- The Herd Report is paused this week while the planning-tracking method is reviewed; resumes week of Sept 28 -->
 
   <div class="card">
     <span class="eyebrow">Reminders</span>
@@ -592,17 +359,15 @@
       <div class="bi-col en">
         <span class="lang-tag">English</span>
         <ul>
-          <li>🎈 <strong>CCC prep (Thursday homeroom):</strong> Walk students through the club list and confirm they know where to go Friday.</li>
-          <li>🎉 <strong>Teachers' Day sign-up:</strong> Choose your activity and sign up using the link in the Teachers' Day section above.</li>
-          <li>📊 <strong>MAP makeup lists:</strong> Check each morning's list before sending students to the Blue Room — only listed students go, and they return to class as soon as they finish.</li>
+          <li>📋 <strong>Grades deadline:</strong> All gradebooks must be current by Tuesday, Sept 22 at 10:00 AM for progress report printing.</li>
+          <li>[ADDITIONAL REMINDER — placeholder, let me know what to add]</li>
         </ul>
       </div>
       <div class="bi-col es">
         <span class="lang-tag">Español</span>
         <ul>
-          <li>🎈 <strong>Preparación CCC (homeroom del jueves):</strong> Revisen con los estudiantes la lista de clubes y confirmen que saben a dónde ir el viernes.</li>
-          <li>🎉 <strong>Inscripción Día del Maestro:</strong> Elijan su actividad e inscríbanse con el enlace en la sección del Día del Maestro arriba.</li>
-          <li>📊 <strong>Listas de reposición MAP:</strong> Revisen la lista de cada mañana antes de enviar estudiantes al Blue Room — solo van los que están en la lista, y regresan a clase en cuanto terminan.</li>
+          <li>📋 <strong>Fecha límite de notas:</strong> Todos los libros de calificaciones deben estar actualizados antes del martes 22 de septiembre a las 10:00 AM para la impresión de los reportes de progreso.</li>
+          <li>[RECORDATORIO ADICIONAL — marcador de posición]</li>
         </ul>
       </div>
     </div>
@@ -611,12 +376,12 @@
   <div class="card signature">
     <div class="bi-grid">
       <div class="bi-col en">
-        <p>I'm available for any questions or comments. Have a great short week,</p>
+        <p>I'm available for any questions or comments. Have a great week,</p>
         <p class="signature-name">Nicolás Rivas</p>
         <p class="signature-title">High School Principal</p>
       </div>
       <div class="bi-col es">
-        <p>Quedo atento a cualquier duda o comentario y feliz semana corta,</p>
+        <p>Quedo atento a cualquier duda o comentario y feliz semana,</p>
         <p class="signature-name">Nicolás Rivas</p>
         <p class="signature-title">Director de High School</p>
       </div>
@@ -624,8 +389,8 @@
   </div>
 
   <div class="slogan">
-    "The good teacher explains. The superior teacher demonstrates. The great teacher inspires." — William Arthur Ward
-    <span class="es">"El buen maestro explica. El maestro superior demuestra. El gran maestro inspira." — William Arthur Ward</span>
+    "[PLACEHOLDER QUOTE — let me know what you'd like here]"
+    <span class="es">"[CITA MARCADOR DE POSICIÓN]"</span>
   </div>
 
   <div class="footer">
