@@ -1,398 +1,401 @@
-<title>High Standards Draft</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>High Standards · Sept 28 – Oct 2, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --paper: #f5f7f2;
-    --card: #ffffff;
-    --ink: #22281c;
-    --ink-soft: #4b5245;
-    --forest: #2d5a27;
-    --sage: #91b48c;
-    --clay: #c74440;
-    --gold: #a8791f;
-    --divider: #e3e6dc;
-    --shadow: rgba(34,40,28,0.08);
-    --shadow-lg: rgba(34,40,28,0.14);
-    --tint-urgent: #fdeceb;
-    --tint-standard: #eef3ec;
-    --tint-event: #faf1e0;
-    --header-grad-start: #2d5a27;
-    --header-grad-end: #204119;
-    --header-text: #f7faf5;
-    --chip-forest-bg: #2d5a27; --chip-forest-text: #ffffff;
-    --chip-clay-bg: #c74440;  --chip-clay-text: #ffffff;
-    --chip-sage-bg: #e4ece1;  --chip-sage-text: #2d5a27;
-    --chip-gold-bg: #a8791f;  --chip-gold-text: #ffffff;
+  :root{
+    --green:#1B5631; --green-dark:#123D22; --green-soft:#E8F0EA;
+    --gold:#C9A84C; --gold-soft:#F7F0DC;
+    --ink:#1F2A24; --muted:#5E6B63; --line:#DDE5DF; --paper:#FFFFFF; --bg:#F4F6F3;
+    --alert:#B3412E; --alert-soft:#FBEDEA;
+    --sky:#2D6FB5; --sky-soft:#EAF2FB;
   }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.6;padding:32px 16px}
+  .page{max-width:960px;margin:0 auto;background:var(--paper);border-radius:14px;overflow:hidden;box-shadow:0 6px 30px rgba(27,86,49,.10)}
 
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --paper: #12160f;
-      --card: #1b2117;
-      --ink: #eef1e9;
-      --ink-soft: #b9c2b0;
-      --forest: #8fc088;
-      --sage: #6f9468;
-      --clay: #e5807a;
-      --gold: #d9a94a;
-      --divider: #2c3427;
-      --shadow: rgba(0,0,0,0.35);
-      --shadow-lg: rgba(0,0,0,0.5);
-      --tint-urgent: #3a211f;
-      --tint-standard: #202922;
-      --tint-event: #332a19;
-      --header-grad-start: #1c3018;
-      --header-grad-end: #101c0d;
-      --header-text: #eef1e9;
-      --chip-forest-bg: #375f31; --chip-forest-text: #eef1e9;
-      --chip-clay-bg: #8a3330;  --chip-clay-text: #f7e9e8;
-      --chip-sage-bg: #26301f;  --chip-sage-text: #a9c7a0;
-      --chip-gold-bg: #7a5a1f;  --chip-gold-text: #f6ecd6;
-    }
+  /* Header */
+  header{background:var(--green);color:#fff;padding:44px 48px 36px;position:relative}
+  header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--gold)}
+  .kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  h1{font-family:'Playfair Display',serif;font-size:56px;font-weight:800;line-height:1.05;margin:8px 0 6px}
+  .tagline{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;opacity:.9}
+  .tagline span{display:block;font-size:16px;opacity:.75}
+  .issue{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:22px;font-size:14px;font-weight:600}
+  .issue b{color:var(--gold)}
+
+  main{padding:40px 48px 16px}
+  section{margin-bottom:40px}
+  .sec-title{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .sec-title h2{font-family:'Playfair Display',serif;font-size:26px;color:var(--green);font-weight:700}
+  .sec-title h2 small{font-family:'Source Sans 3',sans-serif;font-size:15px;color:var(--muted);font-weight:600;margin-left:6px}
+  .sec-title::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+
+  .bi{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .bi > div{min-width:0}
+  .lang{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:6px}
+  .bi > div + div{border-left:1px solid var(--line);padding-left:28px}
+
+  /* Schedule strip */
+  .strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  .day{border:1px solid var(--line);border-radius:10px;padding:14px 10px;text-align:center;background:#fff}
+  .day .dow{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700}
+  .day .date{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--ink)}
+  .day .rot{display:inline-block;margin-top:6px;background:var(--green);color:#fff;border-radius:999px;padding:2px 12px;font-size:13px;font-weight:700}
+  .day .tag{display:block;margin-top:8px;font-size:12px;font-weight:600;color:var(--green);line-height:1.3}
+  .day.today{border:2px solid var(--gold);background:var(--gold-soft)}
+  .day.special{background:var(--green-soft)}
+  .strip-note{margin-top:12px;font-size:14px;color:var(--muted);text-align:center}
+  .strip-note b{color:var(--green)}
+
+  /* Message */
+  .message p + p{margin-top:10px}
+  .message .bi > div > p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:44px;float:left;line-height:.9;margin:6px 8px 0 0;color:var(--green)}
+
+  /* Events */
+  .events{display:flex;flex-direction:column;gap:12px}
+  .event{display:grid;grid-template-columns:110px 1fr;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .event .when{background:var(--green);color:#fff;padding:14px 10px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+  .event .when .d{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;line-height:1.1}
+  .event .when .r{font-size:12px;color:var(--gold);font-weight:700;margin-top:4px;text-transform:uppercase;letter-spacing:.08em}
+  .event .what{padding:14px 18px}
+  .event h3{font-size:17px;color:var(--ink);font-weight:700;margin-bottom:6px}
+  .event .bi{gap:18px}
+  .event .bi > div + div{padding-left:18px}
+  .event .bi p{font-size:15px}
+  .pending{display:inline-block;background:var(--gold-soft);color:#7A6220;border:1px dashed var(--gold);border-radius:6px;padding:1px 8px;font-size:13px;font-weight:600}
+
+  /* Color Day callout */
+  .callout{border-radius:12px;border:2px solid var(--sky);background:var(--sky-soft);padding:22px 24px}
+  .callout .head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:14px}
+  .callout .head h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--sky)}
+  .callout .head span{font-weight:700;color:var(--ink)}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+  .fact{background:#fff;border-radius:8px;padding:10px 12px;font-size:14px}
+  .fact b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--sky)}
+  .warn{background:var(--alert-soft);border-left:5px solid var(--alert);border-radius:6px;padding:14px 16px}
+  .warn .bi{gap:18px}
+  .warn .bi > div + div{border-left-color:#EFC9C1;padding-left:18px}
+  .warn p{font-size:15px}
+  .warn strong{color:var(--alert)}
+  .nos{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .no{background:#fff;border:1px solid #EFC9C1;color:var(--alert);border-radius:999px;padding:3px 12px;font-size:13px;font-weight:700}
+
+  /* Reminders */
+  ul.rem{list-style:none;display:flex;flex-direction:column;gap:10px}
+  ul.rem li{position:relative;padding-left:22px;font-size:15px}
+  ul.rem li::before{content:"";position:absolute;left:0;top:8px;width:10px;height:10px;border-radius:2px;background:var(--gold);transform:rotate(45deg)}
+
+  /* Semana Morazánica */
+  .holiday{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;border-radius:14px;padding:34px 32px;position:relative;overflow:hidden}
+  .holiday::before{content:"🌴";position:absolute;right:-10px;top:-20px;font-size:150px;opacity:.12}
+  .holiday .kicker{margin-bottom:4px}
+  .holiday h2{font-family:'Playfair Display',serif;font-size:36px;line-height:1.15;margin-bottom:4px}
+  .holiday h2 em{display:block;font-size:24px;color:var(--gold);font-style:italic;font-weight:600}
+  .holiday .dates{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}
+  .holiday .dates div{background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.5);border-radius:10px;padding:12px 16px}
+  .holiday .dates b{display:block;color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:.14em}
+  .holiday .dates span{font-size:17px;font-weight:600}
+  .holiday .bi > div + div{border-left-color:rgba(255,255,255,.2)}
+  .holiday .lang{color:var(--gold)}
+  .holiday .day1{display:inline-block;background:var(--gold);color:var(--green-dark);border-radius:999px;padding:1px 10px;font-weight:700}
+
+  /* Quote */
+  .quote{text-align:center;padding:10px 20px 0}
+  .quote blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:24px;line-height:1.4;color:var(--green);max-width:680px;margin:0 auto}
+  .quote .es{font-size:18px;color:var(--muted);margin-top:10px}
+  .quote cite{display:block;margin-top:12px;font-style:normal;font-weight:700;color:var(--gold);letter-spacing:.08em;font-size:14px;text-transform:uppercase}
+
+  /* Signature */
+  footer{border-top:1px solid var(--line);margin:24px 48px 0;padding:28px 0 40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:flex-end}
+  .sig .name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--green)}
+  .sig .role{color:var(--muted);font-size:15px}
+  .contact{text-align:right;font-size:15px}
+  .contact a{color:var(--green);font-weight:600;text-decoration:none}
+
+  /* Exam section */
+  .exam-intro{margin-bottom:18px}
+  .exam-key{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 18px;font-size:13px;color:var(--muted);font-weight:600}
+  .exam-key span{display:inline-flex;align-items:center;gap:6px}
+  .exam-key i{width:12px;height:12px;border-radius:3px;display:inline-block}
+  .k-test{background:var(--green)} .k-break{background:var(--gold)} .k-other{background:#9AA8A0}
+  .exam-days{display:flex;flex-direction:column;gap:18px}
+  .xday{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .xday-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;background:var(--green);color:#fff;padding:12px 18px}
+  .xday-head h3{font-family:'Playfair Display',serif;font-size:21px}
+  .xday-head h3 small{font-family:'Source Sans 3',sans-serif;font-size:14px;opacity:.8;font-weight:600;margin-left:8px}
+  .xday-head .pill{background:var(--gold);color:var(--green-dark);border-radius:999px;padding:2px 12px;font-size:13px;font-weight:700}
+  .slot{display:grid;grid-template-columns:150px 1fr;border-top:1px solid var(--line)}
+  .slot:first-of-type{border-top:none}
+  .slot .t{padding:12px 16px;font-weight:700;font-size:15px;color:var(--ink);border-left:5px solid #9AA8A0;background:#FAFBF9}
+  .slot .t .dur{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-top:2px}
+  .slot .c{padding:12px 16px}
+  .slot .c .lbl{font-weight:700;font-size:15px}
+  .slot .c .lbl small{font-weight:600;color:var(--muted);font-size:13px;margin-left:6px}
+  .slot.test .t{border-left-color:var(--green);background:var(--green-soft)}
+  .slot.test .c .lbl{color:var(--green)}
+  .slot.brk .t{border-left-color:var(--gold);background:var(--gold-soft)}
+  .slot.brk .c .lbl{color:#7A6220}
+  .slot.gap .t{border-left-style:dashed;background:#fff;color:var(--muted)}
+  .grades{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:8px}
+  .grades div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:14px;line-height:1.35}
+  .grades b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+  .xnote{padding:10px 18px;background:var(--gold-soft);font-size:14px;color:#6B561C;border-top:1px solid var(--line)}
+
+  @media (max-width:720px){
+    body{padding:0}
+    .page{border-radius:0}
+    header{padding:32px 20px 28px}
+    h1{font-size:40px}
+    main{padding:28px 20px 8px}
+    footer{margin:20px 20px 0}
+    .bi{grid-template-columns:1fr;gap:14px}
+    .bi > div + div,.event .bi > div + div,.warn .bi > div + div{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:14px}
+    .strip{grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}
+    .day{padding:10px 2px}.day .date{font-size:18px}.day .rot{padding:2px 6px;font-size:11px}.day .tag{font-size:10px}
+    .event{grid-template-columns:1fr}
+    .event .when{flex-direction:row;gap:10px;justify-content:flex-start;align-items:baseline;padding:10px 16px}
+    .facts,.holiday .dates{grid-template-columns:1fr}
+    .holiday{padding:26px 20px}.holiday h2{font-size:28px}
+    .contact{text-align:left}
+    .slot{grid-template-columns:1fr}
+    .slot .t{display:flex;justify-content:space-between;align-items:baseline;padding:10px 14px}
+    .slot .t .dur{margin-top:0}
+    .grades{grid-template-columns:repeat(2,minmax(0,1fr))}
   }
-  :root[data-theme="dark"] {
-    --paper: #12160f;
-    --card: #1b2117;
-    --ink: #eef1e9;
-    --ink-soft: #b9c2b0;
-    --forest: #8fc088;
-    --sage: #6f9468;
-    --clay: #e5807a;
-    --gold: #d9a94a;
-    --divider: #2c3427;
-    --shadow: rgba(0,0,0,0.35);
-    --shadow-lg: rgba(0,0,0,0.5);
-    --tint-urgent: #3a211f;
-    --tint-standard: #202922;
-    --tint-event: #332a19;
-    --header-grad-start: #1c3018;
-    --header-grad-end: #101c0d;
-    --header-text: #eef1e9;
-    --chip-forest-bg: #375f31; --chip-forest-text: #eef1e9;
-    --chip-clay-bg: #8a3330;  --chip-clay-text: #f7e9e8;
-    --chip-sage-bg: #26301f;  --chip-sage-text: #a9c7a0;
-    --chip-gold-bg: #7a5a1f;  --chip-gold-text: #f6ecd6;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    font-family: 'Karla', 'Trebuchet MS', sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
-    margin: 0;
-    padding: 0;
-    background: var(--paper);
-    color: var(--ink);
-  }
-
-  .wrap { max-width: 840px; margin: 0 auto; padding: 28px 20px 56px; }
-
-  h1, h2, h3 { font-family: 'Fraunces', Georgia, 'Times New Roman', serif; text-wrap: balance; margin: 0; }
-
-  .masthead {
-    background: linear-gradient(160deg, var(--header-grad-start), var(--header-grad-end));
-    color: var(--header-text);
-    border-radius: 14px;
-    padding: 44px 40px 34px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .masthead::after {
-    content: "";
-    position: absolute;
-    inset: auto -20% -60% -20%;
-    height: 140px;
-    background: radial-gradient(closest-side, rgba(255,255,255,0.08), transparent 70%);
-    pointer-events: none;
-  }
-  .masthead h1 { font-size: clamp(2.4rem, 5vw, 3.1rem); font-weight: 600; letter-spacing: 0.01em; }
-  .masthead .subtitle {
-    font-family: 'Karla', sans-serif;
-    font-size: 0.95rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    opacity: 0.85;
-    margin-top: 10px;
-  }
-  .masthead .date-pill {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 7px 20px;
-    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 999px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-  }
-
-  .card {
-    background: var(--card);
-    border-radius: 12px;
-    padding: 30px 34px;
-    margin-top: 22px;
-    box-shadow: 0 1px 2px var(--shadow), 0 10px 26px -18px var(--shadow-lg);
-    border-top: 4px solid var(--sage);
-  }
-  .card.rail-urgent { border-top-color: var(--clay); }
-  .card.rail-event { border-top-color: var(--gold); }
-
-  .eyebrow {
-    display: inline-block;
-    font-family: 'Karla', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 4px 11px;
-    border-radius: 999px;
-    margin-bottom: 12px;
-    background: var(--chip-sage-bg);
-    color: var(--chip-sage-text);
-  }
-  .eyebrow.urgent { background: var(--chip-clay-bg); color: var(--chip-clay-text); }
-  .eyebrow.event  { background: var(--chip-gold-bg); color: var(--chip-gold-text); }
-
-  .card h3 { font-size: 1.4rem; font-weight: 600; color: var(--ink); margin-bottom: 18px; }
-  .card h3 em { color: var(--ink-soft); font-style: normal; font-weight: 500; font-size: 0.85em; }
-
-  .bi-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; }
-  .bi-col { min-width: 0; }
-  .bi-col.en { padding-right: 24px; border-right: 1px solid var(--divider); }
-  .bi-col.es { padding-left: 0; }
-  .lang-tag {
-    display: block;
-    font-family: 'Karla', sans-serif;
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--sage);
-    margin-bottom: 10px;
-  }
-  .bi-col p { margin: 0 0 12px; color: var(--ink); }
-  .bi-col p:last-child { margin-bottom: 0; }
-  .bi-col ul { margin: 0; padding-left: 1.15em; }
-  .bi-col li { margin-bottom: 10px; }
-  .bi-col li:last-child { margin-bottom: 0; }
-  .bi-col li > ul { margin-top: 8px; padding-left: 1.1em; }
-  .bi-col li > ul li { margin-bottom: 6px; font-size: 0.94em; }
-
-  a { color: var(--forest); text-decoration: underline; text-decoration-color: var(--sage); text-underline-offset: 2px; }
-  a:hover, a:focus-visible { color: var(--gold); }
-
-  @media (max-width: 640px) {
-    .bi-grid { grid-template-columns: 1fr; row-gap: 22px; }
-    .bi-col.en { padding-right: 0; border-right: none; padding-bottom: 18px; border-bottom: 1px solid var(--divider); }
-  }
-
-  .callout { border-radius: 8px; padding: 18px 22px; margin-top: 4px; }
-  .callout.urgent   { background: var(--tint-urgent);   border-left: 3px solid var(--clay); }
-  .callout.standard { background: var(--tint-standard); border-left: 3px solid var(--forest); }
-  .callout.event    { background: var(--tint-event);    border-left: 3px solid var(--gold); }
-  .callout p { margin: 0 0 10px; }
-  .callout p:last-child { margin-bottom: 0; }
-  .callout ul { margin: 0; padding-left: 1.1em; }
-  .callout li { margin-bottom: 8px; }
-
-  .schedule { margin-top: 4px; }
-  .sched-row { display: flex; align-items: center; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--divider); }
-  .sched-row:last-child { border-bottom: none; }
-  .sched-row.off { opacity: 0.6; }
-  .day-badge {
-    flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%;
-    background: var(--forest); color: var(--chip-forest-text);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Fraunces', serif; font-weight: 600; font-size: 0.95rem;
-    font-variant-numeric: tabular-nums;
-  }
-  .day-badge.event { background: var(--gold); color: var(--chip-gold-text); }
-  .day-badge.urgent { background: var(--clay); color: var(--chip-clay-text); }
-  .day-badge.off { background: var(--divider); color: var(--ink-soft); font-size: 0.68rem; }
-  .sched-label { flex: 1 1 auto; min-width: 0; font-weight: 600; font-size: 0.96rem; }
-  .sched-label .es { display: block; font-weight: 400; color: var(--ink-soft); font-size: 0.88em; }
-  .sched-label .meta { display: block; font-weight: 400; color: var(--ink-soft); font-size: 0.82em; margin-top: 2px; }
-  .sched-tags { flex: 0 0 auto; display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; max-width: 52%; }
-  .tag {
-    font-size: 0.74rem; font-weight: 600; padding: 4px 11px; border-radius: 999px;
-    white-space: nowrap; background: var(--chip-sage-bg); color: var(--chip-sage-text);
-  }
-  .tag.urgent { background: var(--chip-clay-bg); color: var(--chip-clay-text); }
-  .tag.event  { background: var(--chip-gold-bg); color: var(--chip-gold-text); }
-
-  @media (max-width: 640px) {
-    .sched-row { flex-wrap: wrap; }
-    .sched-tags { max-width: 100%; justify-content: flex-start; margin-left: 54px; }
-  }
-
-  .quick-ref { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-  .quick-ref span {
-    background: var(--card); border: 1px solid var(--gold); color: var(--ink);
-    padding: 4px 11px; border-radius: 999px; font-size: 0.82rem;
-  }
-  .flier-frame { margin-top: 22px; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 20px -8px var(--shadow-lg); }
-  .flier-frame img { width: 100%; height: auto; display: block; }
-  .flier-caption { font-size: 0.78rem; color: var(--ink-soft); text-align: center; margin-top: 8px; }
-
-  .signature { text-align: center; padding: 6px 4px 2px; }
-  .signature .bi-grid { column-gap: 32px; }
-  .signature p { margin: 0 0 4px; font-style: italic; color: var(--ink-soft); }
-  .signature-name { font-family: 'Fraunces', serif; font-style: normal !important; font-weight: 600; font-size: 1.05rem; color: var(--ink) !important; margin-top: 6px !important; }
-  .signature-title { font-style: normal !important; color: var(--forest) !important; font-weight: 500; }
-
-  .slogan {
-    text-align: center; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem;
-    color: var(--forest); background: var(--card); border-radius: 12px; padding: 26px 30px;
-    margin-top: 22px; box-shadow: 0 1px 2px var(--shadow);
-  }
-  .slogan .es { font-size: 0.92em; color: var(--ink-soft); display: block; margin-top: 10px; }
-
-  .footer { text-align: center; padding: 20px; margin-top: 22px; font-size: 0.85rem; color: var(--ink-soft); }
 </style>
+</head>
+<body>
+<div class="page">
 
-<div class="wrap">
-
-  <div class="masthead">
-    <h1>High Standards</h1>
-    <div class="subtitle">DelCampo High School Weekly Bulletin&nbsp; · &nbsp;Boletín Semanal</div>
-    <div class="date-pill">September 21 – 25, 2026</div>
+<header>
+  <div class="kicker">DelCampo School · High School</div>
+  <h1>High Standards</h1>
+  <p class="tagline">A weekly letter for High School teachers<span>Una carta semanal para los docentes de secundaria</span></p>
+  <div class="issue">
+    <div><b>Week of</b> Sept 28 – Oct 2, 2026</div>
+    <div><b>Rotation</b> Day 2 → Day 6</div>
+    <div><b>Focus</b> Minor Subject Assessments Week</div>
   </div>
+</header>
 
-  <div class="card">
-    <span class="eyebrow">Principal's Message</span>
-    <h3>📊 A Message from the Principal <em>Mensaje del Director</em></h3>
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <p>We're now at the midpoint of the first quarter — a natural moment to pause and take stock. By now, every teacher should have a clear picture of where each student stands: who's thriving, who needs support, and what interventions or accommodations might make the difference between where a student is and where they could be.</p>
-        <p>This week, I'd encourage each of you to take some time for self-evaluation in every class you teach. Look honestly at what's working and what isn't. Ask yourself what adjustments — big or small — would help us make a stronger impact on our students and move us closer to fulfilling our mission and vision as a school.</p>
-        <p>We're halfway through the quarter. Let's use this moment well.</p>
+<main>
+
+  <!-- SCHEDULE STRIP -->
+  <section>
+    <div class="sec-title"><h2>This Week at a Glance <small>/ La semana en breve</small></h2></div>
+    <div class="strip">
+      <div class="day today"><div class="dow">Mon</div><div class="date">28</div><span class="rot">Day 2</span><span class="tag">Planning review</span></div>
+      <div class="day special"><div class="dow">Tue</div><div class="date">29</div><span class="rot">Day 3</span><span class="tag">Color Day</span></div>
+      <div class="day special"><div class="dow">Wed</div><div class="date">30</div><span class="rot">Day 4</span><span class="tag">Independence closing · special schedule</span></div>
+      <div class="day special"><div class="dow">Thu</div><div class="date">1</div><span class="rot">Day 5</span><span class="tag">StuCo oath</span></div>
+      <div class="day"><div class="dow">Fri</div><div class="date">2</div><span class="rot">Day 6</span><span class="tag">Last day before break</span></div>
+    </div>
+    <p class="strip-note">All week: <b>Minor Subject Assessments</b> · Toda la semana: <b>Evaluaciones de materias complementarias</b></p>
+  </section>
+
+  <!-- PRINCIPAL'S MESSAGE -->
+  <section class="message">
+    <div class="sec-title"><h2>From the Principal <small>/ Mensaje del Director</small></h2></div>
+    <div class="bi">
+      <div>
+        <div class="lang">English</div>
+        <p>Dear colleagues, this is a short but full week. Between minor subject assessments, Color Day, the closing of Independence Month, and our Student Council oath, our students will see us at our best in and out of the classroom.</p>
+        <p>Let's finish strong together and close this stretch with the same care you bring every day. A well-deserved break is waiting on the other side.</p>
       </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <p>Estamos en la mitad del primer trimestre — un momento natural para detenernos y hacer un balance. A estas alturas, cada maestro debería tener una idea clara de cómo está cada estudiante: quién va avanzando bien, quién necesita apoyo, y qué intervenciones o adecuaciones podrían marcar la diferencia entre dónde está un estudiante y dónde podría estar.</p>
-        <p>Esta semana los invito a tomarse un tiempo para la autoevaluación en cada una de sus clases. Miren con honestidad qué está funcionando y qué no. Pregúntense qué ajustes — grandes o pequeños — nos ayudarían a lograr un mayor impacto en nuestros estudiantes y a acercarnos al cumplimiento de nuestra misión y visión como escuela.</p>
-        <p>Vamos a la mitad del trimestre. Aprovechemos bien este momento.</p>
+      <div>
+        <div class="lang">Español</div>
+        <p>Estimados colegas, esta es una semana corta pero intensa. Entre las evaluaciones de materias complementarias, el Color Day, el cierre del Mes de la Independencia y la juramentación del Consejo Estudiantil, nuestros estudiantes nos verán dando lo mejor dentro y fuera del aula.</p>
+        <p>Cerremos juntos con fuerza y con el mismo cuidado que ponen cada día. Un merecido descanso nos espera al otro lado.</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ===== Urgent — Progress Reports / Grades Deadline ===== -->
-  <div class="card rail-urgent">
-    <span class="eyebrow urgent">Urgent · Mandatory</span>
-    <h3>📋 Progress Reports — Grades Due <em>Reportes de Progreso — Fecha Límite de Notas</em></h3>
-    <div class="callout urgent">
-      <div class="bi-grid">
-        <div class="bi-col en">
-          <span class="lang-tag">English</span>
-          <p>Progress reports go home <strong>Wednesday, September 23</strong>. To make that happen, <strong>all grades must be up to date by Tuesday, September 22 at 10:00 AM</strong>, when we print them for distribution.</p>
-          <p>This is a key checkpoint at the midpoint of the quarter — please make sure your gradebook reflects an accurate, current picture of each student.</p>
+  <!-- EVENTS -->
+  <section>
+    <div class="sec-title"><h2>Key Dates <small>/ Fechas clave</small></h2></div>
+    <div class="events">
+
+      <div class="event">
+        <div class="when"><div class="d">All week</div><div class="r">Days 2–6</div></div>
+        <div class="what">
+          <h3>Minor Subject Assessments Week</h3>
+          <div class="bi">
+            <div><p>Assessments for minor subjects take place throughout the week. Please keep students informed of dates and expectations.</p></div>
+            <div><p>Semana de evaluaciones de materias complementarias. Por favor mantengan informados a los estudiantes sobre fechas y expectativas.</p></div>
+          </div>
         </div>
-        <div class="bi-col es">
-          <span class="lang-tag">Español</span>
-          <p>Los reportes de progreso se enviarán a casa el <strong>miércoles 23 de septiembre</strong>. Para lograrlo, <strong>todas las notas deben estar actualizadas antes del martes 22 de septiembre a las 10:00 AM</strong>, hora en la que se imprimen para su distribución.</p>
-          <p>Este es un punto de control clave en la mitad del trimestre — por favor asegúrense de que su libro de calificaciones refleje una imagen precisa y actualizada de cada estudiante.</p>
+      </div>
+
+      <div class="event">
+        <div class="when"><div class="d">Tue 29</div><div class="r">Day 3</div></div>
+        <div class="what">
+          <h3>Color Day · International Day of Peace</h3>
+          <div class="bi">
+            <div><p>See the full details and dress code reminder below.</p></div>
+            <div><p>Vea los detalles completos y el recordatorio de vestimenta abajo.</p></div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- ===== end Progress Reports ===== -->
 
-  <!-- ===== Heads Up — Independence Month closing postponed ===== -->
-  <div class="card">
-    <span class="eyebrow">Heads Up</span>
-    <h3>🇭🇳 Independence Month Closing — Date Change <em>Cierre del Mes de la Independencia — Cambio de Fecha</em></h3>
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <p>The Independence Month closing event originally planned for <strong>Friday, September 25</strong> has been moved to <strong>Wednesday, September 30</strong>. Nothing is happening on this front this week — more details to come as we get closer.</p>
+      <div class="event">
+        <div class="when"><div class="d">Wed 30</div><div class="r">Day 4</div></div>
+        <div class="what">
+          <h3>Closing of Independence Month</h3>
+          <div class="bi">
+            <div><p>A special schedule will apply. <span class="pending">Schedule coming from Social Studies</span></p></div>
+            <div><p>Se aplicará un horario especial. <span class="pending">Horario pendiente de Estudios Sociales</span></p></div>
+          </div>
+        </div>
       </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <p>El evento de cierre del Mes de la Independencia, originalmente planeado para el <strong>viernes 25 de septiembre</strong>, se movió al <strong>miércoles 30 de septiembre</strong>. Esta semana no habrá actividad relacionada — más detalles conforme se acerque la fecha.</p>
-      </div>
-    </div>
-  </div>
-  <!-- ===== end Independence Month note ===== -->
 
-  <div class="card">
-    <span class="eyebrow">This Week</span>
-    <h3>🗓️ Weekly Schedule <em>Horario Semanal</em></h3>
-    <div class="schedule">
-      <div class="sched-row">
-        <span class="day-badge">3</span>
-        <span class="sched-label">Monday, September 21 <span class="es">Lunes, 21 de septiembre</span></span>
-        <span class="sched-tags"></span>
+      <div class="event">
+        <div class="when"><div class="d">Thu 1</div><div class="r">Day 5</div></div>
+        <div class="what">
+          <h3>Student Council (StuCo) Oath-Taking</h3>
+          <div class="bi">
+            <div><p>Our new Student Council will be sworn in. <span class="pending">Time &amp; place TBC</span></p></div>
+            <div><p>Juramentación del nuevo Consejo Estudiantil. <span class="pending">Hora y lugar por confirmar</span></p></div>
+          </div>
+        </div>
       </div>
-      <div class="sched-row">
-        <span class="day-badge urgent">4</span>
-        <span class="sched-label">Tuesday, September 22 <span class="es">Martes, 22 de septiembre</span></span>
-        <span class="sched-tags"><span class="tag urgent">📋 Grades Due 10 AM</span></span>
+
+    </div>
+  </section>
+
+  <!-- COLOR DAY CALLOUT -->
+  <section>
+    <div class="callout">
+      <div class="head"><h3>🕊️ Color Day</h3><span>International Day of Peace · Tuesday, September 29</span></div>
+      <div class="facts">
+        <div class="fact"><b>Dress code / Vestimenta</b>Jeans + light blue or white t-shirt<br>Jeans + camiseta celeste o blanca</div>
+        <div class="fact"><b>Cost / Costo</b>L25</div>
+        <div class="fact"><b>In support of / A beneficio de</b>TES 2026–2027</div>
       </div>
-      <div class="sched-row">
-        <span class="day-badge event">5</span>
-        <span class="sched-label">Wednesday, September 23 <span class="es">Miércoles, 23 de septiembre</span></span>
-        <span class="sched-tags"><span class="tag urgent">📋 Progress Reports Home</span><span class="tag event">🎈 CCC Clubs</span></span>
-      </div>
-      <div class="sched-row">
-        <span class="day-badge">6</span>
-        <span class="sched-label">Thursday, September 24 <span class="es">Jueves, 24 de septiembre</span></span>
-        <span class="sched-tags"></span>
-      </div>
-      <div class="sched-row">
-        <span class="day-badge">1</span>
-        <span class="sched-label">Friday, September 25 <span class="es">Viernes, 25 de septiembre</span></span>
-        <span class="sched-tags"></span>
+      <div class="warn">
+        <div class="bi">
+          <div><p><strong>Teachers, please remind students today:</strong> the following are not allowed on Color Day.</p></div>
+          <div><p><strong>Docentes, recuérdenles hoy a los estudiantes:</strong> lo siguiente no está permitido en el Color Day.</p></div>
+        </div>
+        <div class="nos"><span class="no">✕ Crocs</span><span class="no">✕ Crop tops</span><span class="no">✕ Ripped jeans / Jeans rotos</span><span class="no">✕ Leggings</span><span class="no">✕ Shorts (boys &amp; girls / niños y niñas)</span><span class="no">✕ See-through clothing / Transparencias</span><span class="no">✕ Spaghetti-strap tops / Blusas de tirantes</span></div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- The Herd Report is paused this week while the planning-tracking method is reviewed; resumes week of Sept 28 -->
-
-  <div class="card">
-    <span class="eyebrow">Reminders</span>
-    <h3>📌 Important Reminders <em>Recordatorios Importantes</em></h3>
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <ul>
-          <li>📋 <strong>Grades deadline:</strong> All gradebooks must be current by Tuesday, Sept 22 at 10:00 AM for progress report printing.</li>
+  <!-- REMINDERS -->
+  <section>
+    <div class="sec-title"><h2>Reminders <small>/ Recordatorios</small></h2></div>
+    <div class="bi">
+      <div>
+        <div class="lang">English</div>
+        <ul class="rem">
+          <li><b>First Quarter Exams begin Tuesday, October 13.</b> Please send your exams for review to your department head and to me before the break, so students can prepare. See the exam schedule below.</li>
+          <li><b>Lesson planning review today (Monday).</b> I'll be checking planning so the next Herd Report is fully up to date.</li>
+          <li><b>Color Day dress code:</b> remind your students today: no Crocs, crop tops, ripped jeans, leggings, shorts (boys and girls), see-through clothing, or spaghetti-strap tops.</li>
+          <li><b>Wednesday's special schedule</b> will be shared as soon as Social Studies sends it.</li>
+          <li><b>The Herd Report</b> takes a break this edition and returns next time.</li>
         </ul>
       </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <ul>
-          <li>📋 <strong>Fecha límite de notas:</strong> Todos los libros de calificaciones deben estar actualizados antes del martes 22 de septiembre a las 10:00 AM para la impresión de los reportes de progreso.</li>
+      <div>
+        <div class="lang">Español</div>
+        <ul class="rem">
+          <li><b>Los exámenes del primer trimestre inician el martes 13 de octubre.</b> Por favor envíen sus exámenes para revisión a su jefe de departamento y a mí antes del receso, para que los estudiantes puedan prepararse. Vea el horario de exámenes abajo.</li>
+          <li><b>Revisión de planificaciones hoy (lunes).</b> Estaré revisando las planificaciones para que el próximo Herd Report esté completamente actualizado.</li>
+          <li><b>Vestimenta del Color Day:</b> recuérdenles hoy a sus estudiantes: no Crocs, crop tops, jeans rotos, leggings, shorts (niños y niñas), transparencias ni blusas de tirantes.</li>
+          <li><b>El horario especial del miércoles</b> se compartirá en cuanto Estudios Sociales lo envíe.</li>
+          <li><b>The Herd Report</b> descansa en esta edición y regresa en la próxima.</li>
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="card signature">
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <p>I'm available for any questions or comments. Have a great week,</p>
-        <p class="signature-name">Nicolás Rivas</p>
-        <p class="signature-title">High School Principal</p>
+  <!-- EXAM SECTION -->
+  <section>
+    <div class="sec-title"><h2>First Quarter Exams <small>/ Exámenes del I trimestre</small></h2></div>
+    <div class="bi exam-intro">
+      <div><p>Exams run <b>Tuesday, October 13 to Thursday, October 15</b> (Days 2–4), right after we return. Each day has two exams with a snack break in between. Please share the order and times with your students before the break so they can prepare.</p></div>
+      <div><p>Los exámenes se realizan del <b>martes 13 al jueves 15 de octubre</b> (Días 2–4), justo a nuestro regreso. Cada día tiene dos exámenes con una merienda entre ellos. Por favor compartan el orden y los horarios con sus estudiantes antes del receso para que puedan prepararse.</p></div>
+    </div>
+    <div class="exam-key"><span><i class="k-test"></i>Exam / Examen</span><span><i class="k-break"></i>Break / Receso</span><span><i class="k-other"></i>Other / Otro</span></div>
+    <div class="exam-days">
+
+      <div class="xday">
+        <div class="xday-head"><h3>Tuesday, October 13 <small>Martes 13 de octubre</small></h3><span class="pill">Day 2</span></div>
+          <div class="slot test"><div class="t">7:25 – 9:30<span class="dur">2 h 05 min</span></div><div class="c"><div class="lbl">Test 1 <small>/ Examen 1</small></div><div class="grades"><div><b>9th</b>Civics</div><div><b>10th</b>Historia de Honduras</div><div><b>11th</b>Physics</div><div><b>12th</b>Physics</div></div></div></div>
+          <div class="slot brk"><div class="t">9:30 – 10:00<span class="dur">30 min</span></div><div class="c"><div class="lbl">Snack <small>/ Merienda</small></div></div></div>
+          <div class="slot test"><div class="t">10:00 – 12:05<span class="dur">2 h 05 min</span></div><div class="c"><div class="lbl">Test 2 <small>/ Examen 2</small></div><div class="grades"><div><b>9th</b>English</div><div><b>10th</b>English</div><div><b>11th</b>English</div><div><b>12th</b>English</div></div></div></div>
+          <div class="slot gap"><div class="t">12:05 – 1:10<span class="dur">1 h 05 min</span></div><div class="c"><div class="lbl"><span class="pending">To be confirmed</span> <small>/ <span class="pending">Por confirmar</span></small></div></div></div>
+          <div class="slot brk"><div class="t">1:10 – 1:55<span class="dur">45 min</span></div><div class="c"><div class="lbl">Lunch <small>/ Almuerzo</small></div></div></div>
+          <div class="slot other"><div class="t">1:55 – 3:00<span class="dur">1 h 05 min</span></div><div class="c"><div class="lbl">CCC's Time <small>/ Tiempo de CCC</small></div></div></div>
       </div>
-      <div class="bi-col es">
-        <p>Quedo atento a cualquier duda o comentario y feliz semana,</p>
-        <p class="signature-name">Nicolás Rivas</p>
-        <p class="signature-title">Director de High School</p>
+
+      <div class="xday">
+        <div class="xday-head"><h3>Wednesday, October 14 <small>Miércoles 14 de octubre</small></h3><span class="pill">Day 3</span></div>
+          <div class="slot test"><div class="t">7:25 – 9:45<span class="dur">2 h 20 min</span></div><div class="c"><div class="lbl">Test 1 <small>/ Examen 1</small></div><div class="grades"><div><b>9th</b>PreAP World History and Geography II</div><div><b>10th</b>AP US History</div><div><b>11th</b>AP World History: Modern</div><div><b>12th</b>Economics</div></div></div></div>
+          <div class="slot brk"><div class="t">9:45 – 10:15<span class="dur">30 min</span></div><div class="c"><div class="lbl">Snack <small>/ Merienda</small></div></div></div>
+          <div class="slot other"><div class="t">10:15 – 10:20<span class="dur">5 min</span></div><div class="c"><div class="lbl">Transition <small>/ Transición</small></div></div></div>
+          <div class="slot test"><div class="t">10:20 – 12:50<span class="dur">2 h 30 min</span></div><div class="c"><div class="lbl">Test 2 <small>/ Examen 2</small></div><div class="grades"><div><b>9th</b>Math</div><div><b>10th</b>Math</div><div><b>11th</b>Math</div><div><b>12th</b>Math</div></div></div></div>
+        <div class="xnote">⏱ Longer exams today: 2 h 20 min and 2 h 30 min. · Exámenes más largos hoy: 2 h 20 min y 2 h 30 min.</div>
+      </div>
+
+      <div class="xday">
+        <div class="xday-head"><h3>Thursday, October 15 <small>Jueves 15 de octubre</small></h3><span class="pill">Day 4</span></div>
+          <div class="slot test"><div class="t">7:25 – 9:30<span class="dur">2 h 05 min</span></div><div class="c"><div class="lbl">Test 1 <small>/ Examen 1</small></div><div class="grades"><div><b>9th</b>Español</div><div><b>10th</b>Español</div><div><b>11th</b>Español</div><div><b>12th</b>Español</div></div></div></div>
+          <div class="slot brk"><div class="t">9:30 – 10:00<span class="dur">30 min</span></div><div class="c"><div class="lbl">Snack <small>/ Merienda</small></div></div></div>
+          <div class="slot test"><div class="t">10:00 – 12:05<span class="dur">2 h 05 min</span></div><div class="c"><div class="lbl">Test 2 <small>/ Examen 2</small></div><div class="grades"><div><b>9th</b>Physical Science</div><div><b>10th</b>Biology</div><div><b>11th</b>Chemistry</div><div><b>12th</b>Chemistry</div></div></div></div>
+          <div class="slot gap"><div class="t">12:05 – 1:10<span class="dur">1 h 05 min</span></div><div class="c"><div class="lbl"><span class="pending">To be confirmed</span> <small>/ <span class="pending">Por confirmar</span></small></div></div></div>
+          <div class="slot brk"><div class="t">1:10 – 1:55<span class="dur">45 min</span></div><div class="c"><div class="lbl">Lunch <small>/ Almuerzo</small></div></div></div>
+          <div class="slot other"><div class="t">1:55 – 3:00<span class="dur">1 h 05 min</span></div><div class="c"><div class="lbl">Period 6 <small>/ Período 6</small></div></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEMANA MORAZÁNICA -->
+  <section>
+    <div class="holiday">
+      <div class="kicker">Next week · La próxima semana</div>
+      <h2>Happy Semana Morazánica!<em>¡Feliz Semana Morazánica!</em></h2>
+      <div class="dates">
+        <div><b>No classes / Sin clases</b><span>Mon Oct 5 – Fri Oct 9</span></div>
+        <div><b>We return / Regresamos</b><span>Mon Oct 12 · <span class="day1">Day 1</span></span></div>
+      </div>
+      <div class="bi">
+        <div>
+          <div class="lang">English</div>
+          <p>Rest, relax, and recharge. You've earned it. We come back on Monday, October 12 on <b>Day 1</b> of the rotation, so plan your first day back accordingly. <b>First Quarter Exams start Tuesday, October 13 (Day 2).</b></p>
+        </div>
+        <div>
+          <div class="lang">Español</div>
+          <p>Descansen, relájense y recarguen energías. Se lo han ganado. Regresamos el lunes 12 de octubre en el <b>Día 1</b> de la rotación; planifiquen su primer día de regreso en consecuencia. <b>Los exámenes del primer trimestre inician el martes 13 de octubre (Día 2).</b></p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="slogan">
-    "Education is not the filling of a pail, but the lighting of a fire." — William Butler Yeats
-    <span class="es">"La educación no es llenar un balde, sino encender un fuego." — William Butler Yeats</span>
-  </div>
+  <!-- QUOTE -->
+  <section class="quote">
+    <blockquote>"Almost everything will work again if you unplug it for a few minutes, including you."</blockquote>
+    <p class="es"><i>"Casi todo vuelve a funcionar si lo desconectas unos minutos, incluyéndote a ti."</i></p>
+    <cite>Anne Lamott</cite>
+  </section>
 
-  <div class="footer">
-    DelCampo High School &nbsp;·&nbsp; nrivas@delcamposchool.org &nbsp;·&nbsp; +504 9650-5926
+</main>
+
+<footer>
+  <div class="sig">
+    <div class="name">Nicolás Rivas Peláez</div>
+    <div class="role">High School Principal · Director de Secundaria<br>DelCampo School</div>
   </div>
+  <div class="contact">
+    <a href="mailto:nrivas@delcamposchool.org">nrivas@delcamposchool.org</a><br>
+    <a href="tel:+50496505926">+504 9650 5926</a>
+  </div>
+</footer>
 
 </div>
+</body>
+</html>
