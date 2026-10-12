@@ -68,6 +68,7 @@ td.g{font-weight:700;font-size:17px;color:var(--green-ink);width:70px;font-varia
 .subj small{display:block;font-weight:600;color:var(--muted);font-size:13px}
 .meta{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:4px;font-size:14px;color:var(--muted)}
 .room{font-weight:700;color:var(--fg);font-variant-numeric:tabular-nums}
+.split{border-top:1px dashed var(--line);margin:8px 0}
 .pending{color:var(--pending);font-weight:700;font-size:13px;margin-top:4px}
 /* personal view */
 .mine{display:none;flex-direction:column;gap:16px}
@@ -126,7 +127,7 @@ const S={
  ap1:["AP Physics 1: Algebra Based","Física I"],p11a:["Physics Sec 1","Física I"],p11b:["Physics Sec 2","Física I"],
  sem:["AP Seminar","Inglés II"],e11a:["English Sec 1","Inglés II"],e11b:["English Sec 2","Inglés II"],
  ap2:["AP Physics 2","Física 2"],p12a:["Physics Sec 1","Física 2"],p12b:["Physics Sec 2","Física 2"],
- res:["AP Research","Inglés III"],lit:["AP English Literature and Composition","Inglés III"],e12a:["English Sec 1","Inglés III"],
+ res:["AP Research","Inglés III"],lit:["AP English Literature and Composition","Inglés III"],e12a:["English Sec 1","Inglés III"],e12b:["English Sec 2","Inglés III"],
  whg:["Pre-AP World History and Geography II","Estudios Sociales"],ush:["AP US History","Historia de Estados Unidos"],
  wh:["AP World History: Modern","Historia Universal"],eco:["Economics","Introducción a la Economía"],
  alg:["Pre-AP Algebra II","Matemática"],geo:["Pre-AP Geometry and Statistics","Matemática I"],
@@ -149,35 +150,35 @@ const D=[
      "10A":[["hh","Ana Lucía Garcia",4206],["apl","Omar Gonzalez",4405]],
      "10B":[["hh","Ariel Turcios",4402],["apl","Helder Perez",4206]],
      "10C":[["hh","Oscar Reyes",4403],["apl","Sergio Andino",4301]],
-     "11A":[["ap1","Jimmy Bodden",4406],["sem","Alejandro Manzanares",4404]],
-     "11B":[["p11a","Omar Gonzalez",4207],["e11a","Jimmy Bodden",4402]],
+     "11A":[["ap1","Mario Alvarez",4406],["sem","Sara Solorzano","Blue Room"]],
+     "11B":[["p11a","Omar Gonzalez",4207],["e11a","Daysi Hernandez",4402]],
      "11C":[["p11b","Maria Fernanda Fuentes",4405],["e11b","Elha Quiñonez",4403]],
-     "12A":[["ap2","Helder Perez",4301],["res","Daysi Hernandez",4406]],
+     "12A":[["ap2","Helder Perez",4301],["res","Sara Solorzano","Blue Room"]],
      "12B":[["p12a","Juan Sebastian Lainez",4203],["lit","Celeste Amador",4203]],
-     "12C":[["p12b","Alejandro Manzanares",4205],["e12a","Karen Zelaya",4204,"English Sec 2: room and proctor to be confirmed"]]}},
+     "12C":[["p12b","Alejandro Manzanares",4205],[["e12a","Karen Zelaya",4406],["e12b","Alejandro Manzanares",4204]]]}},
  {en:"Wednesday, October 14",es:"Miércoles 14 de octubre",day:"Day 3",short:"Wed Oct 14",
   t1:["7:25 – 9:45","2 h 20 min"],sn:"9:45 – 10:15",t2:["10:20 – 12:50","2 h 30 min"],
   after:[["12:50 pm","Dismissal","Salida de estudiantes"]],
-  r:{"9A":[["whg","Jimmy Bodden",4406],["alg","Sergio Andino",4301]],
+  r:{"9A":[["whg","Alejandro Manzanares",4406],["alg","Ana Lucía Garcia",4301]],
      "9B":[["whg","Fernando Chajtur",4301],["alg","Daysi Hernandez",4205]],
      "9C":[["whg","Emilio Vasquez",4405],["alg","Oscar Reyes",4203]],
      "10A":[["ush","Elha Quiñonez",4403],["geo","Alejandro Manzanares",4406]],
      "10B":[["ush","Karen Zelaya",4207],["geo","Juan Sebastian Lainez",4206]],
-     "10C":[["ush","Helder Perez",4206],["geo","Sara Solorzano",4405]],
-     "11A":[["wh","Celeste Amador",4203],["apc11","Ana Lucía Garcia",4402]],
+     "10C":[["ush","Helder Perez",4206],["geo","Omar Gonzalez",4405]],
+     "11A":[["wh","Celeste Amador",4203],["apc11","Celeste Amador",4402]],
      "11B":[["wh","Ana Lucía Garcia",4205],["pc11","Mario Alvarez",4403]],
-     "11C":[["wh","Daysi Hernandez",4402],["pc11","Celeste Amador",4207]],
-     "12A":[["eco","Maria Fernanda Fuentes",4204],["calc","Ariel Turcios",4204]],
+     "11C":[["wh","Daysi Hernandez",4402],["pc11","Sergio Andino",4207]],
+     "12A":[["eco","Maria Fernanda Fuentes",4204],["calc","Helder Perez",4204]],
      "12B":[["eco","Oscar Reyes",4404],["apc12","Maria Fernanda Fuentes",4404]],
-     "12C":[["eco","Mario Alvarez",4208],["pc12","Helder Perez",4208]]}},
+     "12C":[["eco","Mario Alvarez",4208],["pc12","Ariel Turcios",4208]]}},
  {en:"Thursday, October 15",es:"Jueves 15 de octubre",day:"Day 4",short:"Thu Oct 15",
   t1:["7:25 – 9:30","2 h 05 min"],sn:"9:30 – 10:00",t2:["10:00 – 12:05","2 h 05 min"],
-  after:[["12:10 – 1:10","Period 5","Período 5"],["1:10 – 1:55","Lunch","Almuerzo"],["2:00 – 3:00","CCC's Time","Tiempo de CCC"]],
+  after:[["12:10 – 1:10","Period 5","Período 5"],["1:10 – 1:55","Lunch","Almuerzo"],["2:00 – 3:00","Period 6","Período 6"]],
   r:{"9A":[["spa","Alejandro Manzanares",4207],["ch9","Oscar Reyes",4207]],
      "9B":[["spa","Omar Gonzalez",4301],["ch9","Omar Gonzalez",4302]],
-     "9C":[["spa","Ariel Turcios",4402],["ch9","Jimmy Bodden",4403]],
+     "9C":[["spa","Ariel Turcios",4402],["ch9","Maria Alejandra Manzanares",4403]],
      "10A":[["asl","Emilio Vasquez",4403],["abio","Alejandro Manzanares",4404]],
-     "10B":[["asl","Helder Perez",4206],["bio","Juan Sebastian Lainez",4405]],
+     "10B":[["asl","Maria Alejandra Manzanares",4206],["bio","Juan Sebastian Lainez",4405]],
      "10C":[["asl","Sergio Andino",4406],["bio","Ariel Turcios",4206]],
      "11A":[["alit","Fernando Chajtur",4204],["ch11","Mario Alvarez",4402]],
      "11B":[["alit","Elha Quiñonez",4205],["ch11","Emilio Vasquez",4203]],
@@ -189,7 +190,9 @@ const D=[
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const subj=k=>`<div class="subj">${esc(S[k][0])}<small>${esc(S[k][1])}</small></div>`;
-const cell=e=>`${subj(e[0])}<div class="meta"><span>Room / Aula <span class="room">${e[2]}</span></span><span>${esc(e[1])}</span></div>${e[3]?`<div class="pending">${esc(e[3])}</div>`:""}`;
+const cell=e=>Array.isArray(e[0])?e.map(cell1).join('<div class="split"></div>'):cell1(e);
+const fmt=x=>(Array.isArray(x[0])?x:[x]).map(y=>`${S[y[0]][0]} · ${typeof y[2]==="number"?"Room ":""}${y[2]} · ${y[1]}`).join("  |  ");
+const cell1=e=>`${subj(e[0])}<div class="meta"><span>${typeof e[2]==="number"?"Room / Aula ":""}<span class="room">${e[2]}</span></span><span>${esc(e[1])}</span></div>${e[3]?`<div class="pending">${esc(e[3])}</div>`:""}`;
 
 function renderAll(){
   $("#all").innerHTML=D.map(d=>`
@@ -211,9 +214,9 @@ function textFor(g){
   const L=[`DelCampo School · First Quarter Exams / Exámenes del I parcial`,`Group / Sección ${g}`,""];
   D.forEach(d=>{const[a,b]=d.r[g];
     L.push(`${d.en} / ${d.es} (${d.day})`);
-    L.push(`${d.t1[0]}  ${S[a[0]][0]} · Room ${a[2]} · ${a[1]}`);
+    L.push(`${d.t1[0]}  ${fmt(a)}`);
     L.push(`${d.sn}  Snack / Merienda`);
-    L.push(`${d.t2[0]}  ${S[b[0]][0]} · Room ${b[2]} · ${b[1]}${b[3]?" ("+b[3]+")":""}`);
+    L.push(`${d.t2[0]}  ${fmt(b)}`);
     d.after.forEach(x=>L.push(`${x[0]}  ${x[1]} / ${x[2]}`));
     L.push("");});
   L.push("Please arrive at your room before the start time. / Lleguen a su aula antes de la hora de inicio.");
