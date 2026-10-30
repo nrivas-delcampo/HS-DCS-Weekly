@@ -2,384 +2,481 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>High Standards · October 26–30, 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>High Standards · Week of November 2</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --paper: #f5f7f2; --card: #ffffff; --ink: #22281c; --ink-soft: #4b5245;
-    --forest: #2d5a27; --sage: #91b48c; --clay: #c74440; --gold: #a8791f;
-    --divider: #e3e6dc; --shadow: rgba(34,40,28,0.08); --shadow-lg: rgba(34,40,28,0.14);
-    --tint-urgent: #fdeceb; --tint-standard: #eef3ec; --tint-event: #faf1e0;
-    --header-grad-start: #2d5a27; --header-grad-end: #204119; --header-text: #f7faf5;
-    --chip-forest-bg: #2d5a27; --chip-forest-text: #ffffff;
-    --chip-clay-bg: #c74440;  --chip-clay-text: #ffffff;
-    --chip-sage-bg: #e4ece1;  --chip-sage-text: #2d5a27;
-    --chip-gold-bg: #a8791f;  --chip-gold-text: #ffffff;
-    --btn-bg: #2d5a27; --btn-text: #ffffff;
-    --pink: #d63a7e; --pink-tint: #fdeef5; --pink-ink: #a3245d; --pink-chip-text: #ffffff;
+  :root{
+    --green:#1B5631; --green-dark:#123d22; --green-soft:#E6EFE8;
+    --gold:#C9A84C; --gold-soft:#F7EFD9; --gold-ink:#7a6020;
+    --ink:#1f2a24; --muted:#5b6b62; --line:#e3e8e4; --bg:#FAF8F3; --card:#fff;
+    --blue:#2F5DA8; --blue-soft:#E3ECF8;
+    --red:#B3262E; --red-soft:#FBE6E6;
+    --teal:#2C7A7B; --teal-soft:#E0F1F1;
   }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --paper: #12160f; --card: #1b2117; --ink: #eef1e9; --ink-soft: #b9c2b0;
-      --forest: #8fc088; --sage: #6f9468; --clay: #e5807a; --gold: #d9a94a;
-      --divider: #2c3427; --shadow: rgba(0,0,0,0.35); --shadow-lg: rgba(0,0,0,0.5);
-      --tint-urgent: #3a211f; --tint-standard: #202922; --tint-event: #332a19;
-      --header-grad-start: #1c3018; --header-grad-end: #101c0d; --header-text: #eef1e9;
-      --chip-forest-bg: #375f31; --chip-forest-text: #eef1e9;
-      --chip-clay-bg: #8a3330;  --chip-clay-text: #f7e9e8;
-      --chip-sage-bg: #26301f;  --chip-sage-text: #a9c7a0;
-      --chip-gold-bg: #7a5a1f;  --chip-gold-text: #f6ecd6;
-      --btn-bg: #375f31; --btn-text: #ffffff; color-scheme: dark;
-      --pink: #f07fb0; --pink-tint: #3a1f2b; --pink-ink: #f5a6c8; --pink-chip-text: #2a0f1b;
-    }
-  }
-  :root[data-theme="dark"] {
-    --paper: #12160f; --card: #1b2117; --ink: #eef1e9; --ink-soft: #b9c2b0;
-    --forest: #8fc088; --sage: #6f9468; --clay: #e5807a; --gold: #d9a94a;
-    --divider: #2c3427; --shadow: rgba(0,0,0,0.35); --shadow-lg: rgba(0,0,0,0.5);
-    --tint-urgent: #3a211f; --tint-standard: #202922; --tint-event: #332a19;
-    --header-grad-start: #1c3018; --header-grad-end: #101c0d; --header-text: #eef1e9;
-    --chip-forest-bg: #375f31; --chip-forest-text: #eef1e9;
-    --chip-clay-bg: #8a3330;  --chip-clay-text: #f7e9e8;
-    --chip-sage-bg: #26301f;  --chip-sage-text: #a9c7a0;
-    --chip-gold-bg: #7a5a1f;  --chip-gold-text: #f6ecd6;
-    --btn-bg: #375f31; --btn-text: #ffffff; color-scheme: dark;
-    --pink: #f07fb0; --pink-tint: #3a1f2b; --pink-ink: #f5a6c8; --pink-chip-text: #2a0f1b;
-  }
-  * { box-sizing: border-box; }
-  body { font-family: 'Karla', 'Trebuchet MS', sans-serif; font-size: 16px; line-height: 1.7; margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
-  .wrap { max-width: 840px; margin: 0 auto; padding: 28px 20px 56px; }
-  h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, 'Times New Roman', serif; text-wrap: balance; margin: 0; }
-  .masthead { background: linear-gradient(160deg, var(--header-grad-start), var(--header-grad-end)); color: var(--header-text); border-radius: 14px; padding: 44px 40px 34px; text-align: center; position: relative; overflow: hidden; }
-  .masthead::after { content: ""; position: absolute; inset: auto -20% -60% -20%; height: 140px; background: radial-gradient(closest-side, rgba(255,255,255,0.08), transparent 70%); pointer-events: none; }
-  .masthead h1 { font-size: clamp(2.4rem, 5vw, 3.1rem); font-weight: 600; letter-spacing: 0.01em; }
-  .masthead .subtitle { font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.85; margin-top: 10px; }
-  .masthead .date-pill { display: inline-block; margin-top: 18px; padding: 7px 20px; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.03em; }
-  .card { background: var(--card); border-radius: 12px; padding: 30px 34px; margin-top: 22px; box-shadow: 0 1px 2px var(--shadow), 0 10px 26px -18px var(--shadow-lg); border-top: 4px solid var(--sage); }
-  .card.rail-urgent { border-top-color: var(--clay); }
-  .card.rail-event { border-top-color: var(--gold); }
-  .eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; margin-bottom: 12px; background: var(--chip-sage-bg); color: var(--chip-sage-text); }
-  .eyebrow.urgent { background: var(--chip-clay-bg); color: var(--chip-clay-text); }
-  .eyebrow.event  { background: var(--chip-gold-bg); color: var(--chip-gold-text); }
-  .card h3 { font-size: 1.4rem; font-weight: 600; color: var(--ink); margin-bottom: 18px; }
-  .card h3 em { color: var(--ink-soft); font-style: normal; font-weight: 500; font-size: 0.85em; }
-  .bi-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; }
-  .bi-col { min-width: 0; }
-  .bi-col.en { padding-right: 24px; border-right: 1px solid var(--divider); }
-  .lang-tag { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); margin-bottom: 10px; }
-  .bi-col p { margin: 0 0 12px; color: var(--ink); }
-  .bi-col p:last-child { margin-bottom: 0; }
-  .bi-col ul { margin: 0; padding-left: 1.15em; }
-  .bi-col li { margin-bottom: 10px; }
-  .bi-col li:last-child { margin-bottom: 0; }
-  a { color: var(--forest); text-decoration: underline; text-decoration-color: var(--sage); text-underline-offset: 2px; }
-  a:hover, a:focus-visible { color: var(--gold); }
-  @media (max-width: 640px) {
-    .bi-grid { grid-template-columns: 1fr; row-gap: 22px; }
-    .bi-col.en { padding-right: 0; border-right: none; padding-bottom: 18px; border-bottom: 1px solid var(--divider); }
-    .card { padding: 24px 22px; }
-    .masthead { padding: 34px 22px 28px; }
-  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);font-family:'Source Sans 3',sans-serif;color:var(--ink);line-height:1.55;font-size:16px}
+  .wrap{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
+  h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.2}
 
-  /* House Spirit Week */
-  .spirit-intro { margin-bottom: 20px; }
-  .spirit-days { display: flex; flex-direction: column; gap: 12px; }
-  .spirit-day { display: grid; grid-template-columns: 92px 1fr; gap: 18px; border: 1px solid var(--divider); border-left: 4px solid var(--gold); border-radius: 10px; padding: 16px 18px; background: var(--card); }
-  .spirit-when { display: flex; flex-direction: column; align-items: flex-start; }
-  .spirit-when .dow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
-  .spirit-when .num { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; line-height: 1.1; color: var(--ink); font-variant-numeric: tabular-nums; }
-  .spirit-when .cyc { font-size: 0.78rem; color: var(--ink-soft); }
-  .spirit-body h4 { font-size: 1.12rem; font-weight: 600; color: var(--ink); }
-  .spirit-body h4 em { display: block; font-style: normal; font-weight: 500; font-size: 0.9em; color: var(--ink-soft); }
-  .spirit-body .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 8px; font-size: 0.95rem; }
-  .spirit-body .pair p { margin: 0; }
-  .spirit-body .pair p.es { color: var(--ink-soft); }
-  .pill-fee { display: inline-block; margin-top: 10px; font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 999px; background: var(--chip-gold-bg); color: var(--chip-gold-text); }
-  .spirit-day.pink { border-color: var(--pink); border-left-color: var(--pink); background: var(--pink-tint); }
-  .spirit-day.pink .dow, .spirit-day.pink h4 { color: var(--pink-ink); }
-  .spirit-day.pink .pill-fee { background: var(--pink); color: var(--pink-chip-text); }
-  .spirit-day.pink .pair p.es { color: var(--ink); }
-  .tag.pink { background: var(--pink); color: var(--pink-chip-text); }
-  .collect { margin-top: 14px; border-top: 1px dashed var(--pink); padding-top: 12px; }
-  .collect-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pink-ink); margin: 0 0 8px; }
-  .collect-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
-  .collect-item { background: var(--card); border: 1px solid var(--pink); border-radius: 8px; padding: 8px 12px; font-size: 0.9rem; line-height: 1.45; min-width: 0; }
-  .collect-item b { display: inline-block; min-width: 2.6em; font-family: 'Fraunces', serif; color: var(--pink-ink); }
-  .collect-item span { color: var(--ink-soft); font-size: 0.85em; }
-  .spirit-close { margin-top: 20px; background: var(--tint-standard); border-radius: 10px; padding: 18px 22px; text-align: center; }
-  .spirit-close p { margin: 0 0 6px; }
-  .spirit-close .es { color: var(--ink-soft); }
-  .spirit-close .cheer { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.35rem; color: var(--forest); letter-spacing: 0.04em; margin: 10px 0 0; }
-  @media (max-width: 640px) {
-    .spirit-day { grid-template-columns: 1fr; gap: 8px; }
-    .spirit-when { flex-direction: row; align-items: baseline; gap: 10px; }
-    .spirit-body .pair { grid-template-columns: 1fr; gap: 6px; }
+  /* Masthead */
+  .mast{background:var(--green);color:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(27,86,49,.18)}
+  .mast-top{padding:34px 32px 26px;text-align:center;background:radial-gradient(circle at 15% 0%,rgba(201,168,76,.22),transparent 45%),radial-gradient(circle at 90% 100%,rgba(255,255,255,.08),transparent 40%)}
+  .kicker{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .mast h1{margin:8px 0 6px;font-size:clamp(40px,7vw,68px);font-weight:800;letter-spacing:-.01em}
+  .mast .sub{font-size:17px;color:#e9dfbd}
+  .mast .sub i{display:block;font-size:15px;opacity:.85}
+  .mast-bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;background:var(--green-dark);border-top:4px solid var(--gold);padding:11px 24px;font-size:14px;font-weight:600;color:#f1ead3}
+
+  /* Cycle strip */
+  .strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:22px 0 8px}
+  .sd{background:var(--card);border-radius:14px;padding:12px 12px 13px;border-top:5px solid var(--green);box-shadow:0 3px 12px rgba(0,0,0,.05);text-align:center}
+  .sd .dn{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700}
+  .sd .dt{font-family:'Playfair Display',serif;font-size:21px;font-weight:800;color:var(--green)}
+  .sd .cy{display:inline-block;margin:4px 0 6px;background:var(--green);color:#fff;border-radius:999px;font-size:12.5px;font-weight:700;padding:2px 11px}
+  .sd .tags{display:flex;flex-wrap:wrap;justify-content:center;gap:4px}
+  .tg{font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 8px}
+  .tg.ccc{background:var(--gold-soft);color:var(--gold-ink)}
+  .tg.xmas{background:var(--red-soft);color:var(--red)}
+  .tg.hr{background:var(--blue-soft);color:var(--blue)}
+  .tg.async{background:var(--teal-soft);color:var(--teal)}
+  .tg.photo{background:#efe9fb;color:#5b3fa0}
+  .sd.wed{border-top-color:var(--teal)} .sd.wed .cy{background:var(--teal)}
+  .sd.tue,.sd.fri{border-top-color:var(--red)}
+  .sd.thu{border-top-color:var(--blue)}
+  .strip-note{text-align:center;font-size:13px;color:var(--muted);margin-bottom:26px}
+
+  /* Section cards */
+  .card{background:var(--card);border-radius:18px;box-shadow:0 6px 24px rgba(27,86,49,.07);overflow:hidden;margin-bottom:26px}
+  .card-h{padding:18px 26px;border-bottom:4px solid var(--gold);background:var(--green);color:#fff}
+  .card-h h2{margin:0;font-size:24px}
+  .card-h p{margin:3px 0 0;color:#e9dfbd;font-size:14.5px}
+  .card-h.teal{background:var(--teal)}
+  .card-b{padding:22px 26px 26px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .col .lang{font-size:11.5px;text-transform:uppercase;letter-spacing:.16em;font-weight:700;color:var(--gold-ink);margin-bottom:6px}
+  .col.es{border-left:2px solid var(--line);padding-left:26px}
+  .col p{margin:0 0 10px}
+  .col.es p,.col.es li{color:#33423a}
+
+  /* Message */
+  .msg .col p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:3em;float:left;line-height:.9;padding:4px 8px 0 0;color:var(--green)}
+
+  /* Callouts */
+  .callouts{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .callout{border-radius:16px;padding:18px 20px;border-left:6px solid}
+  .callout h3{margin:0 0 4px;font-size:19px}
+  .callout .when{font-size:13px;font-weight:700;margin-bottom:10px}
+  .callout p{margin:0 0 8px;font-size:15px}
+  .callout p.es{color:#4a5a51;font-style:italic}
+  .callout.photo{background:#f5f1fd;border-color:#7b5cc4} .callout.photo h3,.callout.photo .when{color:#5b3fa0}
+  .callout.admin{background:var(--blue-soft);border-color:var(--blue)} .callout.admin h3,.callout.admin .when{color:var(--blue)}
+  .dress{margin-top:10px;background:#fff;border-radius:10px;padding:9px 12px;font-size:14px;font-weight:600}
+
+  /* Async section */
+  .essentials{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:4px 0 22px}
+  .ess{background:var(--teal-soft);border-radius:14px;padding:14px;text-align:center}
+  .ess .ic{font-size:24px}
+  .ess b{display:block;color:var(--teal);font-size:16.5px;margin:4px 0 2px}
+  .ess span{display:block;font-size:13.5px}
+  .ess span.es{color:var(--muted);font-style:italic}
+  .flow{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 22px}
+  .flow .st{background:#fff;border:2px solid var(--teal);border-radius:999px;padding:6px 16px;font-weight:700;color:var(--teal);font-size:14.5px}
+  .flow .st i{font-weight:400;color:var(--muted)}
+  .flow .ar{color:var(--gold);font-size:20px;font-weight:800}
+  h3.sub{font-size:18px;color:var(--green);margin:0 0 10px}
+  ul.check{list-style:none;padding:0;margin:0 0 6px}
+  ul.check li{padding:5px 0 5px 28px;position:relative;font-size:15px}
+  ul.check li::before{content:"✓";position:absolute;left:4px;top:4px;color:#fff;background:var(--green);width:18px;height:18px;border-radius:50%;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .goodbad{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+  .gb{border-radius:14px;padding:14px 16px;font-size:14.5px}
+  .gb h4{margin:0 0 6px;font-size:15px}
+  .gb .es{color:var(--muted);font-style:italic;margin-top:6px}
+  .gb.good{background:var(--green-soft)} .gb.good h4{color:var(--green)}
+  .gb.bad{background:var(--red-soft)} .gb.bad h4{color:var(--red)}
+  .notes{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .note{background:var(--bg);border-radius:12px;padding:12px 14px;font-size:14.5px}
+  .note b{color:var(--green)}
+  .note .es{color:var(--muted);font-style:italic;margin-top:4px}
+  .principle{margin:22px 0 4px;text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:var(--teal)}
+  .principle span{display:block;font-size:15.5px;color:var(--muted)}
+
+  table.auth{width:100%;border-collapse:separate;border-spacing:0;margin-top:22px;font-size:14.5px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.auth caption{text-align:left;font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:var(--green);padding-bottom:10px}
+  table.auth th{background:var(--green);color:#fff;text-align:left;padding:10px 14px;font-weight:700}
+  table.auth td{padding:9px 14px;border-top:1px solid var(--line);vertical-align:top}
+  table.auth td:first-child{font-weight:800;color:var(--green);white-space:nowrap;width:110px}
+  table.auth tr:nth-child(even) td{background:#f8faf8}
+  .pill{display:inline-block;background:var(--teal-soft);color:var(--teal);border-radius:999px;padding:2px 10px;margin:2px 4px 2px 0;font-weight:600;font-size:13.5px}
+
+  /* Schedule */
+  .legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px}
+  .chip.snack{background:var(--gold-soft);color:var(--gold-ink)}
+  .chip.lunch{background:var(--green-soft);color:var(--green)}
+  .chip.hr{background:var(--blue-soft);color:var(--blue)}
+  .chip.xmas{background:var(--red-soft);color:var(--red)}
+  .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  .day{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .day-head{padding:11px 13px;color:#fff}
+  .day-head .name{font-family:'Playfair Display',serif;font-size:19px;font-weight:800}
+  .day-head .es{font-size:13px;opacity:.9}
+  .day-head .tag{display:inline-block;margin-top:5px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:rgba(255,255,255,.2);padding:3px 9px;border-radius:999px}
+  .mon .day-head{background:var(--green)}
+  .tue .day-head,.fri .day-head{background:linear-gradient(135deg,var(--red),#8c1c23)}
+  .wed .day-head{background:var(--teal)}
+  .thu .day-head{background:var(--blue)}
+  .row{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:7px 12px;border-top:1px solid var(--line);font-size:14px}
+  .row .p{font-weight:600}
+  .row .t{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .row.snack{background:var(--gold-soft)} .row.snack .p,.row.snack .t{color:var(--gold-ink);font-weight:700}
+  .row.lunch{background:var(--green-soft)} .row.lunch .p,.row.lunch .t{color:var(--green);font-weight:700}
+  .row.hr{background:var(--blue-soft)} .row.hr .p,.row.hr .t{color:var(--blue);font-weight:700}
+  .row.xmas{background:var(--red-soft)} .row.xmas .p,.row.xmas .t{color:var(--red);font-weight:700}
+  .row.out{background:#f3f5f4} .row.out .p,.row.out .t{color:var(--teal);font-weight:700}
+  .p small{display:block;font-weight:400;font-size:11.5px;opacity:.85}
+
+  /* Planning */
+  .plan-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+  .ps{background:var(--bg);border-radius:14px;padding:14px;text-align:center}
+  .ps b{display:block;font-family:'Playfair Display',serif;font-size:28px;color:var(--green);line-height:1.1}
+  .ps span{font-size:13px;color:var(--muted)}
+  .ps.big{background:var(--red-soft)} .ps.big b{color:var(--red)}
+  .ps.goal{background:var(--green)} .ps.goal b{color:#fff} .ps.goal span{color:#e9dfbd}
+  .bars{display:flex;flex-direction:column;gap:9px}
+  .bar{display:grid;grid-template-columns:110px 1fr 48px;align-items:center;gap:10px;font-size:14px}
+  .bl{font-weight:600}
+  .bt{background:#eef1ef;border-radius:999px;height:16px;overflow:hidden}
+  .bf{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--gold),#d9bc63)}
+  .bf.low{background:linear-gradient(90deg,var(--red),#d0545b)}
+  .bar.goal .bf{background:var(--green)}
+  .bar.goal .bl,.bar.goal .bv{color:var(--green);font-weight:800}
+  .bv{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+  .bars-note{font-size:12.5px;color:var(--muted);margin:10px 0 0;text-align:center}
+  @media (max-width:640px){.plan-stats{grid-template-columns:repeat(2,1fr)}.bar{grid-template-columns:84px 1fr 42px}}
+
+  /* Reminders */
+  .rem{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .ri{display:flex;gap:12px;align-items:flex-start;background:var(--bg);border-radius:12px;padding:12px 14px}
+  .ri .d{flex:none;background:var(--gold);color:#fff;border-radius:10px;padding:5px 9px;font-weight:800;font-size:12.5px;text-align:center;min-width:62px;line-height:1.25}
+  .ri p{margin:0;font-size:14.5px}
+  .ri p.es{color:var(--muted);font-style:italic}
+
+  /* Quote + signature */
+  .quote{text-align:center;padding:34px 24px;background:var(--gold-soft);border-radius:18px;margin-bottom:26px;position:relative}
+  .quote blockquote{margin:0;font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(20px,3vw,26px);color:var(--green)}
+  .quote .es{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold-ink);font-size:18px;margin-top:8px}
+  .quote cite{display:block;margin-top:12px;font-style:normal;font-weight:700;color:var(--muted);font-size:14px;letter-spacing:.05em}
+  .sig{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;background:var(--green);color:#fff;border-radius:18px;padding:22px 28px;border-bottom:5px solid var(--gold)}
+  .sig .nm{font-family:'Playfair Display',serif;font-size:22px;font-weight:700}
+  .sig .rl{color:#e9dfbd;font-size:14.5px}
+  .sig .ct{font-size:14.5px;text-align:right}
+  .sig .ct a{color:#fff;text-decoration:none;border-bottom:1px solid var(--gold)}
+
+  @media (max-width:900px){
+    .strip,.grid{grid-template-columns:repeat(2,1fr)}
+    .essentials{grid-template-columns:repeat(2,1fr)}
   }
-
-  .schedule { margin-top: 4px; }
-  .sched-row { display: flex; align-items: center; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--divider); }
-  .sched-row:last-child { border-bottom: none; }
-  .day-badge { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%; background: var(--forest); color: var(--chip-forest-text); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-weight: 600; font-size: 0.95rem; font-variant-numeric: tabular-nums; }
-  .day-badge.event { background: var(--gold); color: var(--chip-gold-text); }
-  .sched-label { flex: 1 1 auto; min-width: 0; font-weight: 600; font-size: 0.96rem; }
-  .sched-label .es { display: block; font-weight: 400; color: var(--ink-soft); font-size: 0.88em; }
-  .sched-tags { flex: 0 0 auto; display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; max-width: 52%; }
-  .tag { font-size: 0.74rem; font-weight: 600; padding: 4px 11px; border-radius: 999px; white-space: nowrap; background: var(--chip-sage-bg); color: var(--chip-sage-text); }
-  .tag.event { background: var(--chip-gold-bg); color: var(--chip-gold-text); }
-  .sched-note { margin: 14px 0 0; padding: 10px 14px; background: var(--tint-standard); border-radius: 8px; font-size: 0.9rem; color: var(--ink-soft); }
-  .sched-note strong { color: var(--forest); }
-  @media (max-width: 640px) { .sched-row { flex-wrap: wrap; } .sched-tags { max-width: 100%; justify-content: flex-start; margin-left: 54px; } }
-
-  /* Herd Report */
-  .herd-dates { margin: 0 0 14px; color: var(--ink-soft); font-size: 0.95rem; }
-  .herd-dates strong { color: var(--ink); }
-  .herd-sum { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
-  .herd-sum div { background: var(--tint-standard); border-radius: 10px; padding: 12px 16px; min-width: 0; }
-  .herd-sum b { display: block; font-family: 'Fraunces', serif; font-size: 1.5rem; color: var(--forest); font-variant-numeric: tabular-nums; line-height: 1.2; }
-  .herd-sum span { font-size: 0.86rem; color: var(--ink-soft); }
-  .herd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
-  .herd-tile { border: 1px solid var(--divider); border-radius: 10px; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
-  .herd-name { font-weight: 700; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
-  .herd-name .em { font-size: 1.25rem; line-height: 1; }
-  .herd-name small { font-weight: 400; color: var(--ink-soft); font-size: 0.82rem; }
-  .herd-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 0.82rem; }
-  .herd-row .k { color: var(--ink-soft); }
-  .st { font-size: 0.72rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
-  .st.ok { background: var(--chip-sage-bg); color: var(--chip-sage-text); }
-  .st.pend { background: var(--tint-event); color: var(--gold); border: 1px solid var(--gold); }
-  .herd-note { margin: 16px 0 0; font-size: 0.88rem; color: var(--ink-soft); font-style: italic; }
-  @media (max-width: 480px) { .herd-sum { grid-template-columns: 1fr; } }
-
-  .signature { text-align: center; padding: 6px 4px 2px; }
-  .signature p { margin: 0 0 4px; font-style: italic; color: var(--ink-soft); }
-  .signature-name { font-family: 'Fraunces', serif; font-style: normal !important; font-weight: 600; font-size: 1.05rem; color: var(--ink) !important; margin-top: 6px !important; }
-  .signature-title { font-style: normal !important; color: var(--forest) !important; font-weight: 500; }
-  .slogan { text-align: center; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem; color: var(--forest); background: var(--card); border-radius: 12px; padding: 26px 30px; margin-top: 22px; box-shadow: 0 1px 2px var(--shadow); }
-  .slogan .es { font-size: 0.92em; color: var(--ink-soft); display: block; margin-top: 10px; }
-  .footer { text-align: center; padding: 20px; margin-top: 22px; font-size: 0.85rem; color: var(--ink-soft); }
+  @media (max-width:640px){
+    .cols,.callouts,.goodbad,.notes,.rem{grid-template-columns:1fr}
+    .col.es{border-left:none;padding-left:0;border-top:2px solid var(--line);padding-top:16px}
+    .strip,.grid{grid-template-columns:1fr}
+    .card-b{padding:18px}
+    .sig .ct{text-align:left}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <div class="masthead">
-    <h1>High Standards</h1>
-    <div class="subtitle">DelCampo High School Weekly Bulletin&nbsp; · &nbsp;Boletín Semanal</div>
-    <div class="date-pill">October 26 – 30, 2026</div>
-  </div>
-
-  <div class="card">
-    <span class="eyebrow">Principal's Message</span>
-    <h3>A Message from the Principal <em>Mensaje del Director</em></h3>
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <p>We're starting the second quarter, the <strong>shortest quarter of the year</strong>. It goes by very fast, so please stay on top of everything happening in your classes from day one: grades, planning, and student follow-up.</p>
-        <p>We're making a change to how we run <strong>leveling and reinforcement activities</strong>. I'll share the details with you soon.</p>
-      </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <p>Iniciamos el II parcial, el <strong>parcial más corto del año</strong>. Pasa muy rápido, así que les pido estar al tanto de todo lo que sucede en sus clases desde el primer día: calificaciones, planificación y seguimiento a los estudiantes.</p>
-        <p>Vamos a hacer un cambio en la forma de llevar a cabo las <strong>actividades de nivelación y refuerzo</strong>. Pronto les compartiré los detalles.</p>
-      </div>
+  <!-- MASTHEAD -->
+  <header class="mast">
+    <div class="mast-top">
+      <div class="kicker">DelCampo School · High School</div>
+      <h1>High Standards</h1>
+      <div class="sub">A weekly letter for High School teachers<i>Una carta semanal para docentes de High School</i></div>
     </div>
-  </div>
-
-  <!-- ===== House Spirit Week ===== -->
-  <div class="card rail-event">
-    <span class="eyebrow event">House Spirit Week · Mon–Fri</span>
-    <h3>House Spirit Week <em>Semana del Espíritu de las Casas</em></h3>
-    <div class="bi-grid spirit-intro">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <p>Every day this week has its own theme. Here's the plan so you can help students take part and join in yourself.</p>
-      </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <p>Cada día de esta semana tiene su propio tema. Aquí está el plan para que puedan animar a los estudiantes a participar y unirse ustedes también.</p>
-      </div>
+    <div class="mast-bar">
+      <span>Week of November 2–6, 2026</span>
+      <span>Semana del 2 al 6 de noviembre de 2026</span>
     </div>
+  </header>
 
-    <div class="spirit-days">
-      <div class="spirit-day pink">
-        <div class="spirit-when"><span class="dow">Mon · Lun</span><span class="num">26</span><span class="cyc">Day 5</span></div>
-        <div class="spirit-body">
-          <h4>Pink Color Day <em>Día del Color Rosado</em></h4>
-          <div class="pair">
-            <p>Wear pink and join the fun!</p>
-            <p class="es">¡Vístete de rosado y únete a la diversión!</p>
-          </div>
-          <span class="pill-fee">Contribution · Aporte: L 25.00</span>
-          <div class="pair" style="margin-top:12px">
-            <p><strong>Assigned teachers below:</strong> check which students are wearing pink and collect L 25.00 from each. Once collected, send an envelope with the money and the <strong>list of students who paid</strong> to the office, to <strong>Miss Elba</strong>. She is collecting all the money.</p>
-            <p class="es"><strong>Docentes asignados abajo:</strong> verifiquen qué estudiantes vienen de rosado y cobren L 25.00 a cada uno. Una vez recogido, envíen un sobre con el dinero y la <strong>lista de estudiantes que pagaron</strong> a la oficina, a la <strong>señora Elba Valladares</strong>. Ella recibirá todo el dinero.</p>
-          </div>
-          <div class="collect">
-            <p class="collect-title">Who collects · Quién recoge</p>
-            <div class="collect-list">
-              <div class="collect-item"><b>9A</b> Mr. Mario Alvarez<br><span>Spanish · Español</span></div>
-              <div class="collect-item"><b>9B</b> Mr. Sergio Andino<br><span>Global History · Historia Global</span></div>
-              <div class="collect-item"><b>9C</b> Ms. Mariel Ramos &amp; Mr. Amílcar Vaquedano<br><span>Artistic Education · Educación Artística</span></div>
-              <div class="collect-item"><b>10A</b> Mr. Oscar Reyes</div>
-              <div class="collect-item"><b>10B</b> Ms. Ana Lucía García</div>
-              <div class="collect-item"><b>10C</b> Mr. Jimmy Bodden</div>
-              <div class="collect-item"><b>11th</b> Mr. Fernando Chajtur, Ms. Elha Quiñonez, Mr. Emilio Vásquez<br><span>Physics teachers, each in their own section · Docentes de Física, cada uno en su sección</span></div>
-              <div class="collect-item"><b>12th</b> Mr. Helder Pérez, Ms. Karen Zelaya, Ms. Celeste Amador<br><span>Chemistry teachers, each in their own section · Docentes de Química, cada uno en su sección</span></div>
-            </div>
-          </div>
+  <!-- CYCLE STRIP -->
+  <div class="strip">
+    <div class="sd mon"><div class="dn">Mon · Lun</div><div class="dt">Nov 2</div><span class="cy">Day 4</span><div class="tags"><span class="tg photo">📸 Photos</span></div></div>
+    <div class="sd tue"><div class="dn">Tue · Mar</div><div class="dt">Nov 3</div><span class="cy">Day 5</span><div class="tags"><span class="tg ccc">CCC</span><span class="tg xmas">🎄 Rehearsal</span></div></div>
+    <div class="sd wed"><div class="dn">Wed · Mié</div><div class="dt">Nov 4</div><span class="cy">Day 6</span><div class="tags"><span class="tg async">💻 Asynchronous</span></div></div>
+    <div class="sd thu"><div class="dn">Thu · Jue</div><div class="dt">Nov 5</div><span class="cy">Day 1</span><div class="tags"><span class="tg hr">🏫 Homeroom</span><span class="tg photo">🎥 Admin photos</span></div></div>
+    <div class="sd fri"><div class="dn">Fri · Vie</div><div class="dt">Nov 6</div><span class="cy">Day 2</span><div class="tags"><span class="tg ccc">CCC</span><span class="tg xmas">🎄 Rehearsal</span></div></div>
+  </div>
+  <div class="strip-note">Wednesday has no classes but counts as Day 6 · El miércoles no hay clases, pero cuenta como Día 6</div>
+
+  <!-- PRINCIPAL'S MESSAGE -->
+  <section class="card msg">
+    <div class="card-h"><h2>From the Principal · Del Director</h2></div>
+    <div class="card-b">
+      <div class="cols">
+        <div class="col">
+          <div class="lang">English</div>
+          <p>Dear teachers, this is a full and different kind of week. We start with cameras in our classrooms, step into our new Christmas Rehearsal schedule, and spend Wednesday learning together while our students work on their own.</p>
+          <p>Wednesday is a chance to show what our students can do independently. Short, clear, purposeful assignments will tell us a lot about what they've truly learned. Thank you for planning them with care.</p>
+          <p>Let's make it a great week, together.</p>
         </div>
-      </div>
-
-      <div class="spirit-day">
-        <div class="spirit-when"><span class="dow">Tue · Mar</span><span class="num">27</span><span class="cyc">Day 6</span></div>
-        <div class="spirit-body">
-          <h4>Show Your House Colors <em>Muestra los Colores de tu Casa</em></h4>
-          <div class="pair">
-            <p>Wear your house colors and show your pride! Get creative with crazy hair and wacky socks.</p>
-            <p class="es">¡Usa los colores de tu casa y muestra tu orgullo! Sé creativo con peinados locos y calcetines divertidos.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="spirit-day">
-        <div class="spirit-when"><span class="dow">Wed · Mié</span><span class="num">28</span><span class="cyc">Day 1</span></div>
-        <div class="spirit-body">
-          <h4>House Tournament Activities <em>Actividades del Torneo de Casas</em></h4>
-          <div class="pair">
-            <p>A day of friendly competition and teamwork: giant board games, water games, DCS Got Talent, team-building games, and art activities.</p>
-            <p class="es">Un día de sana competencia y trabajo en equipo: juegos de mesa gigantes, juegos de agua, DCS Got Talent, dinámicas de integración y actividades de arte.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="spirit-day">
-        <div class="spirit-when"><span class="dow">Thu · Jue</span><span class="num">29</span><span class="cyc">Day 2</span></div>
-        <div class="spirit-body">
-          <h4>Dress as Whiskers! <em>¡Vístete como Whiskers!</em></h4>
-          <div class="pair">
-            <p>Come dressed as our beloved Wildcat, Whiskers, or wear green and white to represent our Wildcat colors. Show your creativity and Wildcat spirit!</p>
-            <p class="es">Ven vestido como nuestro querido Wildcat, Whiskers, o usa verde y blanco para representar nuestros colores. ¡Muestra tu creatividad y tu espíritu Wildcat!</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="spirit-day">
-        <div class="spirit-when"><span class="dow">Fri · Vie</span><span class="num">30</span><span class="cyc">Day 3</span></div>
-        <div class="spirit-body">
-          <h4>Book Character Day <em>Día de Personajes de Libros</em></h4>
-          <div class="pair">
-            <p>Dress up as your favorite book character and celebrate the magic of reading!</p>
-            <p class="es">¡Disfrázate de tu personaje de libro favorito y celebra la magia de la lectura!</p>
-          </div>
+        <div class="col es">
+          <div class="lang">Español</div>
+          <p>Estimados docentes, esta es una semana llena y diferente. Empezamos con cámaras en nuestras aulas, estrenamos el horario con Ensayo Navideño y dedicamos el miércoles a aprender juntos mientras nuestros estudiantes trabajan por su cuenta.</p>
+          <p>El miércoles es una oportunidad para ver lo que nuestros estudiantes pueden hacer de forma independiente. Actividades breves, claras y con propósito nos dirán mucho sobre lo que realmente han aprendido. Gracias por planificarlas con cuidado.</p>
+          <p>Hagamos de esta una gran semana, juntos.</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="spirit-close">
-      <p>Let's make this House Spirit Week unforgettable! Show your colors, cheer for your house, and remember that teamwork, kindness, and school spirit make us stronger together.</p>
-      <p class="es">¡Hagamos de esta Semana del Espíritu de las Casas una semana inolvidable! Muestra tus colores, apoya a tu casa y recuerda que el trabajo en equipo, la amabilidad y el espíritu escolar nos hacen más fuertes juntos.</p>
-      <p class="cheer">GO, WILDCATS!</p>
-    </div>
-  </div>
-  <!-- ===== end House Spirit Week ===== -->
-
-  <div class="card">
-    <span class="eyebrow">This Week</span>
-    <h3>Weekly Schedule <em>Horario Semanal</em></h3>
-    <div class="schedule">
-      <div class="sched-row">
-        <span class="day-badge event">5</span>
-        <span class="sched-label">Monday, October 26 <span class="es">Lunes, 26 de octubre</span></span>
-        <span class="sched-tags"><span class="tag pink">Pink Color Day · L 25</span><span class="tag pink">Assigned teachers collect</span><span class="tag">CCC · Clubs</span></span>
-      </div>
-      <div class="sched-row">
-        <span class="day-badge event">6</span>
-        <span class="sched-label">Tuesday, October 27 <span class="es">Martes, 27 de octubre</span></span>
-        <span class="sched-tags"><span class="tag event">House Colors · Colores de Casa</span></span>
-      </div>
-      <div class="sched-row">
-        <span class="day-badge event">1</span>
-        <span class="sched-label">Wednesday, October 28 <span class="es">Miércoles, 28 de octubre</span></span>
-        <span class="sched-tags"><span class="tag event">House Tournament · Torneo de Casas</span></span>
-      </div>
-      <div class="sched-row">
-        <span class="day-badge event">2</span>
-        <span class="sched-label">Thursday, October 29 <span class="es">Jueves, 29 de octubre</span></span>
-        <span class="sched-tags"><span class="tag event">Dress as Whiskers</span><span class="tag">CCC · Clubs</span></span>
-      </div>
-      <div class="sched-row">
-        <span class="day-badge event">3</span>
-        <span class="sched-label">Friday, October 30 <span class="es">Viernes, 30 de octubre</span></span>
-        <span class="sched-tags"><span class="tag event">Book Character Day</span></span>
+  <!-- PHOTO CALLOUTS -->
+  <section class="card">
+    <div class="card-h"><h2>📸 Lights, Camera, Classroom · Luces, Cámara, Aula</h2><p>Marketing will be on campus twice this week · Mercadeo estará en el campus dos veces esta semana</p></div>
+    <div class="card-b">
+      <div class="callouts">
+        <div class="callout photo">
+          <h3>Monday Photo Day</h3>
+          <div class="when">Mon Nov 2 · Day 4 · Lunes de Fotos</div>
+          <p>Our <b>Marketing Department</b> will walk through the school photographing <b>teachers teaching</b> during class. They may visit your classroom at any time, so please be ready.</p>
+          <p class="es">Nuestro Departamento de Mercadeo recorrerá la escuela tomando fotos de docentes dando clase. Podrían visitar su aula en cualquier momento, así que les pedimos estar preparados.</p>
+          <div class="dress">👔 Come well dressed and neatly put together. No tie needed, just looking sharp.<br><i style="font-weight:400">Vengan bien vestidos y bien arreglados. No hace falta corbata, solo lucir muy bien.</i></div>
+        </div>
+        <div class="callout admin">
+          <h3>Administrators on Camera</h3>
+          <div class="when">Thu Nov 5 · Day 1 · Jueves</div>
+          <p>Marketing will take <b>photos and video of our principals and administrators</b>. You may see the team around campus during the day.</p>
+          <p class="es">Mercadeo tomará fotos y video de nuestros directores y personal administrativo. Es posible que vean al equipo por el campus durante el día.</p>
+        </div>
       </div>
     </div>
-    <p class="sched-note">Days 5 and 2 are always <strong>CCC days</strong> (Co-Curricular Clubs). · Los Días 5 y 2 son siempre <strong>días de CCC</strong> (Clubes Co-Curriculares).</p>
-  </div>
+  </section>
 
-  <div class="card">
-    <span class="eyebrow">The Herd Report · Paused · En pausa</span>
-    <h3>The Herd Report <em>El Reporte de la Manada</em></h3>
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <p>Thank you to everyone who took the Herd Report in the pedagogical spirit it was meant. <strong>We're pausing it for now.</strong></p>
-        <p>Our review of lesson planning showed some things that need adjusting. If your planning hasn't been meeting expectations, I'll set up a one-on-one conversation to understand what's happening and how I can support you. Remember, planning is one of our professional responsibilities.</p>
-        <p>In the meantime, please keep taking attendance carefully and keep your planning up to date. We'll keep reviewing both, and we'll keep you informed in a different way.</p>
+  <!-- ASYNC WEDNESDAY -->
+  <section class="card">
+    <div class="card-h teal"><h2>💻 Wednesday, November 4 (Day 6): Asynchronous Learning Day</h2><p>Miércoles 4 de noviembre (Día 6): Jornada de Aprendizaje Asincrónico</p></div>
+    <div class="card-b">
+      <div class="cols" style="margin-bottom:20px">
+        <div class="col"><div class="lang">English</div><p>Students work from home on Canvas while <b>teachers take part in professional development</b>. Only the <b>four authorized classes</b> per section assign work (see table below). Other classes do not assign anything.</p></div>
+        <div class="col es"><div class="lang">Español</div><p>Los estudiantes trabajan desde casa en Canvas mientras <b>los docentes participan en desarrollo profesional</b>. Solo las <b>cuatro clases autorizadas</b> por sección asignan trabajo (ver tabla abajo). Las demás clases no asignan nada.</p></div>
       </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <p>Gracias a todos los que tomaron el Reporte de la Manada con el sentido pedagógico con el que fue creado. <strong>Por ahora lo vamos a pausar.</strong></p>
-        <p>La revisión de las planificaciones mostró algunos aspectos que necesitamos ajustar. Si su planificación no ha estado cumpliendo con lo esperado, tendremos una conversación uno a uno para entender qué está pasando y cómo puedo apoyarle. Recordemos que la planificación es una de nuestras responsabilidades profesionales.</p>
-        <p>Mientras tanto, les animo a seguir tomando la asistencia de la mejor manera y a mantener su planificación al día. Seguiremos revisando ambas, y los mantendremos enterados de otra forma.</p>
+
+      <div class="essentials">
+        <div class="ess"><div class="ic">⏱️</div><b>Max 40 min</b><span>per assignment, AP included. A ceiling, not a target.</span><span class="es">Máximo 40 min por actividad, incluidos los AP.</span></div>
+        <div class="ess"><div class="ic">🗂️</div><b>Plan in Chalk</b><span>as usual, with the Canvas assignment linked.</span><span class="es">Planifique en PowerSchool Chalk con la actividad enlazada.</span></div>
+        <div class="ess"><div class="ic">📤</div><b>Publish by Tue, Nov 3</b><span>on Canvas, the school day before.</span><span class="es">Publicar en Canvas a más tardar el martes 3.</span></div>
+        <div class="ess"><div class="ic">📅</div><b>Due Thu, Nov 5</b><span>end of the day (Day 1).</span><span class="es">Entrega al final del jueves 5 (Día 1).</span></div>
+      </div>
+
+      <div class="flow">
+        <span class="st">Connect <i>· Conectar</i></span><span class="ar">→</span>
+        <span class="st">Apply <i>· Aplicar</i></span><span class="ar">→</span>
+        <span class="st">Show learning <i>· Demostrar el aprendizaje</i></span>
+      </div>
+
+      <div class="cols">
+        <div class="col">
+          <h3 class="sub">✅ Every assignment must</h3>
+          <ul class="check">
+            <li>Have <b>one clear objective</b> aligned with the curriculum</li>
+            <li>Practice content <b>already taught</b>. No new concepts.</li>
+            <li>Be doable <b>independently</b>, with directions, examples, and resources all in Canvas</li>
+            <li>State the objective, instructions, resources, estimated time, submission method, and deadline</li>
+            <li>Include <b>accommodations</b> for students who have them</li>
+          </ul>
+        </div>
+        <div class="col es">
+          <h3 class="sub">✅ Toda actividad debe</h3>
+          <ul class="check">
+            <li>Tener <b>un objetivo claro</b> alineado con el currículo</li>
+            <li>Practicar contenido <b>ya enseñado</b>. Nada de conceptos nuevos.</li>
+            <li>Poder hacerse <b>de forma independiente</b>, con instrucciones, ejemplos y recursos en Canvas</li>
+            <li>Indicar objetivo, instrucciones, recursos, tiempo estimado, forma de entrega y fecha límite</li>
+            <li>Contemplar las <b>adecuaciones</b> de los estudiantes que las tienen</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="goodbad">
+        <div class="gb good"><h4>👍 Good options · Buenas opciones</h4>Canvas quizzes, focused practice, selected math problems, data analysis, short reading responses, brief reflections<div class="es">Quizzes en Canvas, práctica enfocada, problemas seleccionados, análisis de datos, respuestas breves de lectura, reflexiones cortas</div></div>
+        <div class="gb bad"><h4>👎 Avoid · Evitar</h4>New content, long videos, long essays, full AP practice exams, group projects, anything that creates heavy grading<div class="es">Contenido nuevo, videos largos, ensayos extensos, exámenes AP completos, proyectos grupales, cualquier cosa que genere mucha revisión</div></div>
+      </div>
+
+      <div class="notes">
+        <div class="note"><b>📝 Assessment:</b> Formative only, not high-stakes. No individual feedback required. Review the evidence and address common misconceptions in your next class.<div class="es"><b>Evaluación:</b> Solo formativa. No se requiere retroalimentación individual. Revise la evidencia y aborde los errores comunes en la siguiente clase.</div></div>
+        <div class="note"><b>💬 During PD:</b> No live classes, no Canvas monitoring, no immediate replies expected. Answer student questions when regular duties resume. <b>PD details will come by email.</b><div class="es"><b>Durante el DP:</b> No hay clases en vivo, monitoreo de Canvas ni respuestas inmediatas. Responda dudas al retomar funciones. Los detalles del DP llegarán por correo.</div></div>
+      </div>
+
+      <div class="principle">Meaningful learning, not busywork.<span>Aprendizaje significativo, no trabajo sin propósito.</span></div>
+
+      <table class="auth">
+        <caption>Authorized classes · Clases autorizadas</caption>
+        <thead><tr><th>Section</th><th>Classes that assign work · Clases que asignan trabajo</th></tr></thead>
+        <tbody>
+          <tr><td>9A</td><td><span class="pill">Global History</span><span class="pill">Spanish</span><span class="pill">Pre-AP Algebra</span><span class="pill">Science</span></td></tr>
+          <tr><td>9B</td><td><span class="pill">Global History</span><span class="pill">Pre-AP English</span><span class="pill">Pre-AP Algebra</span><span class="pill">Science</span></td></tr>
+          <tr><td>9C</td><td><span class="pill">Science</span><span class="pill">Spanish</span><span class="pill">Pre-AP English</span><span class="pill">Global History</span></td></tr>
+          <tr><td>10A</td><td><span class="pill">Pre-AP Bio</span><span class="pill">Pre-AP Geometry and Statistics</span><span class="pill">AP English</span><span class="pill">AP US History</span></td></tr>
+          <tr><td>10B</td><td><span class="pill">Pre-AP Bio</span><span class="pill">AP English</span><span class="pill">Pre-AP Geometry and Statistics</span><span class="pill">AP Spanish</span></td></tr>
+          <tr><td>10C</td><td><span class="pill">Pre-AP Bio</span><span class="pill">AP Spanish</span><span class="pill">Pre-AP Geometry and Statistics</span><span class="pill">AP English</span></td></tr>
+          <tr><td>11A · 11B · 11C</td><td><span class="pill">English</span><span class="pill">AP Physics</span><span class="pill">Chemistry</span><span class="pill">Algebra</span></td></tr>
+          <tr><td>12A · 12B · 12C</td><td><span class="pill">Math</span><span class="pill">Physics</span><span class="pill">AP Cybersecurity</span><span class="pill">Chemistry</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CLASS SCHEDULE -->
+  <section class="card">
+    <div class="card-h"><h2>🕐 Class Schedule · Horario de Clases</h2><p>Starting the week of November 2 · A partir de la semana del 2 de noviembre</p></div>
+    <div class="card-b">
+      <div class="cols" style="margin-bottom:18px">
+        <div class="col"><p>Starting this week, <b>Tuesdays and Fridays follow Thursday's times</b>. The Homeroom slot becomes <b>Christmas Rehearsal</b> on those days. Thursday keeps Homeroom.</p></div>
+        <div class="col es"><p>A partir de esta semana, <b>los martes y viernes siguen el horario del jueves</b>. El espacio de Homeroom pasa a ser <b>Ensayo Navideño</b> esos días. El jueves mantiene Homeroom.</p></div>
+      </div>
+      <div class="legend">
+        <span class="chip snack">🍎 Snack / Merienda</span>
+        <span class="chip lunch">🍽️ Lunch / Almuerzo</span>
+        <span class="chip hr">🏫 Homeroom</span>
+        <span class="chip xmas">🎄 Christmas Rehearsal / Ensayo Navideño</span>
+      </div>
+      <div class="grid">
+        <div class="day mon">
+          <div class="day-head"><div class="name">Monday</div><div class="es">Lunes</div><span class="tag">Regular</span></div>
+          <div class="row"><span class="p">Period 1</span><span class="t">7:25 – 8:25</span></div>
+          <div class="row"><span class="p">Period 2</span><span class="t">8:30 – 9:30</span></div>
+          <div class="row snack"><span class="p">Snack</span><span class="t">9:30 – 10:00</span></div>
+          <div class="row"><span class="p">Period 3</span><span class="t">10:00 – 11:00</span></div>
+          <div class="row"><span class="p">Period 4</span><span class="t">11:05 – 12:05</span></div>
+          <div class="row"><span class="p">Period 5</span><span class="t">12:10 – 1:10</span></div>
+          <div class="row lunch"><span class="p">Lunch</span><span class="t">1:10 – 1:55</span></div>
+          <div class="row"><span class="p">Period 6</span><span class="t">2:00 – 3:00</span></div>
+        </div>
+        <div class="day tue">
+          <div class="day-head"><div class="name">Tuesday</div><div class="es">Martes</div><span class="tag">🎄 Rehearsal</span></div>
+          <div class="row"><span class="p">Period 1</span><span class="t">7:25 – 8:15</span></div>
+          <div class="row"><span class="p">Period 2</span><span class="t">8:20 – 9:10</span></div>
+          <div class="row snack"><span class="p">Snack</span><span class="t">9:10 – 9:40</span></div>
+          <div class="row xmas"><span class="p">Christmas Rehearsal<small>Ensayo Navideño</small></span><span class="t">9:40 – 10:40</span></div>
+          <div class="row"><span class="p">Period 3</span><span class="t">10:45 – 11:35</span></div>
+          <div class="row"><span class="p">Period 4</span><span class="t">11:40 – 12:30</span></div>
+          <div class="row"><span class="p">Period 5</span><span class="t">12:30 – 1:20</span></div>
+          <div class="row lunch"><span class="p">Lunch</span><span class="t">1:20 – 2:05</span></div>
+          <div class="row"><span class="p">Period 6</span><span class="t">2:10 – 3:00</span></div>
+        </div>
+        <div class="day wed">
+          <div class="day-head"><div class="name">Wednesday</div><div class="es">Miércoles</div><span class="tag">Early dismissal</span></div>
+          <div class="row"><span class="p">Period 1</span><span class="t">7:25 – 8:10</span></div>
+          <div class="row"><span class="p">Period 2</span><span class="t">8:10 – 8:55</span></div>
+          <div class="row"><span class="p">Period 3</span><span class="t">9:00 – 9:45</span></div>
+          <div class="row snack"><span class="p">Snack</span><span class="t">9:45 – 10:15</span></div>
+          <div class="row"><span class="p">Period 4</span><span class="t">10:20 – 11:05</span></div>
+          <div class="row"><span class="p">Period 5</span><span class="t">11:10 – 11:55</span></div>
+          <div class="row"><span class="p">Period 6</span><span class="t">12:00 – 12:50</span></div>
+          <div class="row out"><span class="p">Dismissal<small>Salida</small></span><span class="t">12:50</span></div>
+        </div>
+        <div class="day thu">
+          <div class="day-head"><div class="name">Thursday</div><div class="es">Jueves</div><span class="tag">🏫 Homeroom</span></div>
+          <div class="row"><span class="p">Period 1</span><span class="t">7:25 – 8:15</span></div>
+          <div class="row"><span class="p">Period 2</span><span class="t">8:20 – 9:10</span></div>
+          <div class="row snack"><span class="p">Snack</span><span class="t">9:10 – 9:40</span></div>
+          <div class="row hr"><span class="p">Homeroom</span><span class="t">9:40 – 10:40</span></div>
+          <div class="row"><span class="p">Period 3</span><span class="t">10:45 – 11:35</span></div>
+          <div class="row"><span class="p">Period 4</span><span class="t">11:40 – 12:30</span></div>
+          <div class="row"><span class="p">Period 5</span><span class="t">12:30 – 1:20</span></div>
+          <div class="row lunch"><span class="p">Lunch</span><span class="t">1:20 – 2:05</span></div>
+          <div class="row"><span class="p">Period 6</span><span class="t">2:10 – 3:00</span></div>
+        </div>
+        <div class="day fri">
+          <div class="day-head"><div class="name">Friday</div><div class="es">Viernes</div><span class="tag">🎄 Rehearsal</span></div>
+          <div class="row"><span class="p">Period 1</span><span class="t">7:25 – 8:15</span></div>
+          <div class="row"><span class="p">Period 2</span><span class="t">8:20 – 9:10</span></div>
+          <div class="row snack"><span class="p">Snack</span><span class="t">9:10 – 9:40</span></div>
+          <div class="row xmas"><span class="p">Christmas Rehearsal<small>Ensayo Navideño</small></span><span class="t">9:40 – 10:40</span></div>
+          <div class="row"><span class="p">Period 3</span><span class="t">10:45 – 11:35</span></div>
+          <div class="row"><span class="p">Period 4</span><span class="t">11:40 – 12:30</span></div>
+          <div class="row"><span class="p">Period 5</span><span class="t">12:30 – 1:20</span></div>
+          <div class="row lunch"><span class="p">Lunch</span><span class="t">1:20 – 2:05</span></div>
+          <div class="row"><span class="p">Period 6</span><span class="t">2:10 – 3:00</span></div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="card">
-    <span class="eyebrow">Reminders</span>
-    <h3>Important Reminders <em>Recordatorios Importantes</em></h3>
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <span class="lang-tag">English</span>
-        <ul>
-          <li><strong>Monday, Pink Color Day:</strong> If you are assigned to a section (see the Spirit Week card), check who is wearing pink and collect L 25.00 per student. Then send an envelope with the money and the list of students who paid to <strong>Miss Elba</strong> in the office.</li>
-        </ul>
+  <!-- PLANNING -->
+  <section class="card">
+    <div class="card-h"><h2>🐾 The Herd Report · Team Edition / Edición en Equipo</h2><p>Lesson planning in October, as a whole team · La planificación de octubre, como equipo</p></div>
+    <div class="card-b">
+      <div class="cols" style="margin-bottom:20px">
+        <div class="col">
+          <div class="lang">English</div>
+          <p>A lesson plan isn't paperwork. It's where good teaching begins: it tells us what students will learn, how we'll know they learned it, and it lets a colleague step in when we can't be there.</p>
+          <p>You'll remember <b>The Herd Report</b>, where each of you had an animal and we followed planning individually. We've retired the animals, and today I'm sharing the results <b>as a whole team</b> instead.</p>
+          <p>The picture, however, hasn't changed. In October, <b>only 62% of our planning was uploaded</b> on average, and on our best days only 13 of 18 teachers had their plans in Chalk. We are still not meeting this expectation, and <b>it concerns me deeply</b>. In my view, we keep falling short in one of the most important parts of our work.</p>
+          <p>Uploading your planning to <b>PowerSchool Chalk</b> is a professional responsibility that belongs to each of us. I know how full your weeks are. If something is getting in the way, come talk to me and we'll solve it together. But the expectation is clear: <b>every class, every week, planned and uploaded.</b></p>
+        </div>
+        <div class="col es">
+          <div class="lang">Español</div>
+          <p>Una planificación no es un trámite. Es donde empieza la buena enseñanza: nos dice qué aprenderán los estudiantes, cómo sabremos que lo aprendieron y permite que un colega nos cubra cuando no podemos estar.</p>
+          <p>Recordarán <b>The Herd Report</b>, donde cada uno tenía un animal y dábamos seguimiento individual a la planificación. Ya dejamos atrás los animales, y hoy les comparto los resultados <b>de manera global, como equipo</b>.</p>
+          <p>Sin embargo, el panorama no ha cambiado. En octubre, <b>solo el 62% de nuestras planificaciones estuvo en el sistema</b> en promedio, y en nuestros mejores días solo 13 de 18 docentes tenían su planificación en Chalk. Seguimos sin cumplir con esta expectativa, y <b>eso me preocupa bastante</b>. En mi opinión, seguimos quedando mal en uno de los aspectos más importantes de nuestro trabajo.</p>
+          <p>Subir la planificación a <b>PowerSchool Chalk</b> es una responsabilidad profesional de cada uno de nosotros. Sé lo llenas que están sus semanas. Si algo se los está impidiendo, búsquenme y lo resolvemos juntos. Pero la expectativa es clara: <b>cada clase, cada semana, planificada y en el sistema.</b></p>
+        </div>
       </div>
-      <div class="bi-col es">
-        <span class="lang-tag">Español</span>
-        <ul>
-          <li><strong>Lunes, Día del Color Rosado:</strong> Si tiene una sección asignada (vea la tarjeta de la Semana del Espíritu), verifique quién viene de rosado y cobre L 25.00 por estudiante. Luego envíe un sobre con el dinero y la lista de estudiantes que pagaron a la <strong>señora Elba Valladares</strong> en la oficina.</li>
-        </ul>
+
+      <div class="plan-stats">
+        <div class="ps big"><b>62%</b><span>October average<br><i>Promedio de octubre</i></span></div>
+        <div class="ps"><b>13 / 18</b><span>Best day<br><i>Mejor día</i></span></div>
+        <div class="ps"><b>9 / 18</b><span>Lowest day<br><i>Día más bajo</i></span></div>
+        <div class="ps goal"><b>18 / 18</b><span>Our goal<br><i>Nuestra meta</i></span></div>
+      </div>
+
+      <div class="bars">
+        <div class="bar"><span class="bl">Oct 1–2</span><div class="bt"><div class="bf" style="width:69%"></div></div><span class="bv">69%</span></div>
+        <div class="bar"><span class="bl">Oct 12–16</span><div class="bt"><div class="bf" style="width:70%"></div></div><span class="bv">70%</span></div>
+        <div class="bar"><span class="bl">Oct 19–23</span><div class="bt"><div class="bf low" style="width:53%"></div></div><span class="bv">53%</span></div>
+        <div class="bar"><span class="bl">Oct 26–30</span><div class="bt"><div class="bf" style="width:61%"></div></div><span class="bv">61%</span></div>
+        <div class="bar goal"><span class="bl">Goal · Meta</span><div class="bt"><div class="bf" style="width:100%"></div></div><span class="bv">100%</span></div>
+      </div>
+      <p class="bars-note">Weekly average of teachers with planning uploaded · Promedio semanal de docentes con planificación en el sistema</p>
+    </div>
+  </section>
+
+  <!-- REMINDERS -->
+  <section class="card">
+    <div class="card-h"><h2>📌 Reminders · Recordatorios</h2></div>
+    <div class="card-b">
+      <div class="rem">
+        <div class="ri"><div class="d">EVERY<br>WEEK</div><div><p>Lesson planning uploaded to PowerSchool Chalk for every class.</p><p class="es">Planificación de cada clase subida a PowerSchool Chalk.</p></div></div>
+        <div class="ri"><div class="d">MON<br>Nov 2</div><div><p>Dress sharp. Marketing may visit your class for photos.</p><p class="es">Vengan bien arreglados. Mercadeo podría visitar su clase para fotos.</p></div></div>
+        <div class="ri"><div class="d">TUE<br>Nov 3</div><div><p>Wednesday assignments published on Canvas and linked in Chalk.</p><p class="es">Actividades del miércoles publicadas en Canvas y enlazadas en Chalk.</p></div></div>
+        <div class="ri"><div class="d">WED<br>Nov 4</div><div><p>No classes. Professional development for teachers; details by email.</p><p class="es">Sin clases. Desarrollo profesional para docentes; detalles por correo.</p></div></div>
+        <div class="ri"><div class="d">THU<br>Nov 5</div><div><p>Asynchronous work due at the end of the day.</p><p class="es">Entrega del trabajo asincrónico al final del día.</p></div></div>
       </div>
     </div>
+  </section>
+
+  <!-- CLOSING QUOTE -->
+  <div class="quote">
+    <blockquote>“The art of teaching is the art of assisting discovery.”</blockquote>
+    <div class="es">«El arte de enseñar es el arte de acompañar el descubrimiento».</div>
+    <cite>— Mark Van Doren</cite>
   </div>
 
-  <div class="card signature">
-    <div class="bi-grid">
-      <div class="bi-col en">
-        <p>I'm available for any questions or comments. Have a great week,</p>
-        <p class="signature-name">Nicolás Rivas</p>
-        <p class="signature-title">High School Principal</p>
-      </div>
-      <div class="bi-col es">
-        <p>Quedo atento a cualquier duda o comentario y feliz semana,</p>
-        <p class="signature-name">Nicolás Rivas</p>
-        <p class="signature-title">Director de High School</p>
-      </div>
+  <!-- SIGNATURE -->
+  <footer class="sig">
+    <div>
+      <div class="nm">Nicolás Rivas Peláez</div>
+      <div class="rl">High School Principal · Director de High School<br>DelCampo School</div>
     </div>
-  </div>
-
-  <div class="slogan">
-    "Success is the sum of small efforts, repeated day in and day out." — Robert Collier
-    <span class="es">"El éxito es la suma de pequeños esfuerzos repetidos día tras día." — Robert Collier</span>
-  </div>
-
-  <div class="footer">
-    DelCampo High School &nbsp;·&nbsp; nrivas@delcamposchool.org &nbsp;·&nbsp; +504 9650-5926
-  </div>
+    <div class="ct">
+      ✉️ <a href="mailto:nrivas@delcamposchool.org">nrivas@delcamposchool.org</a><br>
+      📱 +504 9650 5926
+    </div>
+  </footer>
 
 </div>
 </body>
