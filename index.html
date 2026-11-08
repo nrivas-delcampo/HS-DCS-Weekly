@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>High Standards · Week of November 2</title>
+<title>High Standards · Week of November 9</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -144,7 +144,7 @@
   .ps.big{background:var(--red-soft)} .ps.big b{color:var(--red)}
   .ps.goal{background:var(--green)} .ps.goal b{color:#fff} .ps.goal span{color:#e9dfbd}
   .bars{display:flex;flex-direction:column;gap:9px}
-  .bar{display:grid;grid-template-columns:110px 1fr 48px;align-items:center;gap:10px;font-size:14px}
+  .bar{display:grid;grid-template-columns:140px 1fr 48px;align-items:center;gap:10px;font-size:14px}
   .bl{font-weight:600}
   .bt{background:#eef1ef;border-radius:999px;height:16px;overflow:hidden}
   .bf{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--gold),#d9bc63)}
@@ -153,7 +153,7 @@
   .bar.goal .bl,.bar.goal .bv{color:var(--green);font-weight:800}
   .bv{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
   .bars-note{font-size:12.5px;color:var(--muted);margin:10px 0 0;text-align:center}
-  @media (max-width:640px){.plan-stats{grid-template-columns:repeat(2,1fr)}.bar{grid-template-columns:84px 1fr 42px}}
+  @media (max-width:640px){.plan-stats{grid-template-columns:repeat(2,1fr)}.bar{grid-template-columns:110px 1fr 42px}}
 
   /* Reminders */
   .rem{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -184,6 +184,42 @@
     .card-b{padding:18px}
     .sig .ct{text-align:left}
   }
+  /* Shadowing */
+  .card-h.purple{background:#5b3fa0}
+  .shadow-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+  .sf{background:#f5f1fd;border-radius:14px;padding:14px;text-align:center}
+  .sf .ic{font-size:24px}
+  .sf b{display:block;color:#5b3fa0;font-size:16.5px;margin:4px 0 2px}
+  .sf span{display:block;font-size:13.5px}
+  .sf span.es{color:var(--muted);font-style:italic}
+  .assure{margin-top:18px;background:var(--green-soft);border-left:6px solid var(--green);border-radius:12px;padding:14px 18px;font-size:15px}
+  .assure b{color:var(--green)}
+  .assure .es{color:var(--muted);font-style:italic;margin-top:6px}
+  @media (max-width:640px){.shadow-facts{grid-template-columns:1fr}}
+  .card-h.goldh{background:var(--gold-ink)}
+  .callout.sport{background:var(--gold-soft);border-color:var(--gold)} .callout.sport h3,.callout.sport .when{color:var(--gold-ink)}
+  .tg.sport{background:var(--gold-soft);color:var(--gold-ink)}
+  .card-h.tealh{background:var(--teal)}
+  .callout.trip{background:var(--teal-soft);border-color:var(--teal)} .callout.trip h3,.callout.trip .when{color:var(--teal)}
+  .callout.trip2{background:var(--bg);border-color:var(--green)} .callout.trip2 h3,.callout.trip2 .when{color:var(--green)}
+  .timeline{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin:12px 0 4px}
+  .timeline .st{background:#fff;border-radius:999px;padding:5px 13px;font-weight:700;font-size:13.5px;border:2px solid currentColor}
+  .timeline .st i{font-weight:400;color:var(--muted);font-style:normal}
+  .timeline .ar{font-weight:800;color:var(--gold)}
+  .callout .crew{margin-top:10px;background:#fff;border-radius:10px;padding:9px 12px;font-size:14px}
+  .callout .crew i{color:var(--muted)}
+  /* Celebration */
+  .celebrate{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;border-radius:18px;overflow:hidden;margin-bottom:26px;box-shadow:0 6px 24px rgba(27,86,49,.12);border-bottom:5px solid var(--gold)}
+  .cel-top{display:flex;align-items:center;gap:22px;padding:26px 28px 18px;flex-wrap:wrap}
+  .medal{flex:none;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f4f4f4,#b9bfc4 60%,#8d949a);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#3b4247;font-family:'Playfair Display',serif;font-weight:800;box-shadow:0 0 0 5px var(--gold),0 8px 18px rgba(0,0,0,.25)}
+  .medal b{font-size:32px;line-height:1}
+  .medal span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-family:'Source Sans 3',sans-serif}
+  .cel-top .kicker{margin-bottom:4px}
+  .cel-top h2{margin:0;font-size:clamp(24px,3.6vw,32px)}
+  .cel-top p{margin:4px 0 0;color:#e9dfbd;font-size:15px}
+  .cel-body{background:#fff;color:var(--ink);padding:22px 26px 24px}
+  .cheer{margin-top:18px;text-align:center;background:var(--gold-soft);border-radius:14px;padding:14px 18px;font-weight:700;color:var(--gold-ink);font-size:16px}
+  .cheer i{display:block;font-weight:400;color:var(--muted);font-size:14.5px;margin-top:3px}
 </style>
 </head>
 <body>
@@ -197,20 +233,20 @@
       <div class="sub">A weekly letter for High School teachers<i>Una carta semanal para docentes de High School</i></div>
     </div>
     <div class="mast-bar">
-      <span>Week of November 2–6, 2026</span>
-      <span>Semana del 2 al 6 de noviembre de 2026</span>
+      <span>Week of November 9–13, 2026</span>
+      <span>Semana del 9 al 13 de noviembre de 2026</span>
     </div>
   </header>
 
   <!-- CYCLE STRIP -->
   <div class="strip">
-    <div class="sd mon"><div class="dn">Mon · Lun</div><div class="dt">Nov 2</div><span class="cy">Day 4</span><div class="tags"><span class="tg photo">📸 Photos</span></div></div>
-    <div class="sd tue"><div class="dn">Tue · Mar</div><div class="dt">Nov 3</div><span class="cy">Day 5</span><div class="tags"><span class="tg ccc">CCC</span><span class="tg xmas">🎄 Rehearsal</span></div></div>
-    <div class="sd wed"><div class="dn">Wed · Mié</div><div class="dt">Nov 4</div><span class="cy">Day 6</span><div class="tags"><span class="tg async">💻 Asynchronous</span></div></div>
-    <div class="sd thu"><div class="dn">Thu · Jue</div><div class="dt">Nov 5</div><span class="cy">Day 1</span><div class="tags"><span class="tg hr">🏫 Homeroom</span><span class="tg photo">🎥 Admin photos</span></div></div>
-    <div class="sd fri"><div class="dn">Fri · Vie</div><div class="dt">Nov 6</div><span class="cy">Day 2</span><div class="tags"><span class="tg ccc">CCC</span><span class="tg xmas">🎄 Rehearsal</span></div></div>
+    <div class="sd mon"><div class="dn">Mon · Lun</div><div class="dt">Nov 9</div><span class="cy">Day 3</span><div class="tags"><span class="tg photo">👣 Shadowing 10B</span></div></div>
+    <div class="sd tue"><div class="dn">Tue · Mar</div><div class="dt">Nov 10</div><span class="cy">Day 4</span><div class="tags"><span class="tg xmas">🎄 Rehearsal</span><span class="tg sport">🏃 Athletics 9–10</span></div></div>
+    <div class="sd wed"><div class="dn">Wed · Mié</div><div class="dt">Nov 11</div><span class="cy">Day 5</span><div class="tags"><span class="tg ccc">CCC</span><span class="tg async">12:50 dismissal</span></div></div>
+    <div class="sd thu"><div class="dn">Thu · Jue</div><div class="dt">Nov 12</div><span class="cy">Day 6</span><div class="tags"><span class="tg hr">🏫 Homeroom</span><span class="tg sport">🏃 Athletics 11–12</span><span class="tg async">🚌 9th field trip</span></div></div>
+    <div class="sd fri"><div class="dn">Fri · Vie</div><div class="dt">Nov 13</div><span class="cy">Day 1</span><div class="tags"><span class="tg xmas">🎄 Rehearsal</span></div></div>
   </div>
-  <div class="strip-note">Wednesday has no classes but counts as Day 6 · El miércoles no hay clases, pero cuenta como Día 6</div>
+  <div class="strip-note">Day 5 is a CCC (Co-Curricular Clubs) day · El Día 5 es día de CCC (Clubes Co-Curriculares)</div>
 
   <!-- PRINCIPAL'S MESSAGE -->
   <section class="card msg">
@@ -219,123 +255,180 @@
       <div class="cols">
         <div class="col">
           <div class="lang">English</div>
-          <p>Dear teachers, this is a full and different kind of week. We start with cameras in our classrooms, step into our new Christmas Rehearsal schedule, and spend Wednesday learning together while our students work on their own.</p>
-          <p>Wednesday is a chance to show what our students can do independently. Short, clear, purposeful assignments will tell us a lot about what they've truly learned. Thank you for planning them with care.</p>
-          <p>Let's make it a great week, together.</p>
+          <p>Dear colleagues, every morning, our students walk into our classrooms trusting that the hour ahead was thought through for them. Our planning is how we keep that trust. It isn't paperwork; it's the clearest sign that we, as educators, have our work organized and that we honor our commitment to every student in front of us.</p>
+          <p>When we plan with the end in mind, we start from what our students need to know and be able to do, and we build the path to get there. That commitment also reaches beyond this year. Next year, and the years after, we hand our students and our curriculum over to our colleagues. What we deliver to them should be complete, or, if it isn't yet, it should come with a clear plan to finish it well.</p>
+          <p>That's why our ongoing department conversations matter so much. They are where we align, share what's working, and make sure no student and no unit falls through the cracks between one grade and the next.</p>
+          <p>This week, 64% of our team has their plans uploaded. Let's reach 100% together. If something is getting in the way of your planning, my door is open, and we'll find a solution together.</p>
+          <p><i>With gratitude,</i></p>
         </div>
         <div class="col es">
           <div class="lang">Español</div>
-          <p>Estimados docentes, esta es una semana llena y diferente. Empezamos con cámaras en nuestras aulas, estrenamos el horario con Ensayo Navideño y dedicamos el miércoles a aprender juntos mientras nuestros estudiantes trabajan por su cuenta.</p>
-          <p>El miércoles es una oportunidad para ver lo que nuestros estudiantes pueden hacer de forma independiente. Actividades breves, claras y con propósito nos dirán mucho sobre lo que realmente han aprendido. Gracias por planificarlas con cuidado.</p>
-          <p>Hagamos de esta una gran semana, juntos.</p>
+          <p>Estimados colegas: cada mañana, nuestros estudiantes entran a nuestras aulas confiando en que la hora que tienen por delante fue pensada para ellos. Nuestra planificación es la forma en que cumplimos esa confianza. No es un trámite; es la señal más clara de que, como educadores, tenemos nuestro trabajo organizado y honramos nuestro compromiso con cada estudiante que tenemos enfrente.</p>
+          <p>Cuando planificamos con el fin en mente, partimos de lo que nuestros estudiantes necesitan saber y ser capaces de hacer, y construimos el camino para lograrlo. Ese compromiso también va más allá de este año. El próximo año, y los siguientes, entregamos a nuestros estudiantes y nuestro currículo a nuestros colegas. Lo que les entreguemos debe estar completo o, si aún no lo está, debe venir acompañado de un plan claro para terminarlo bien.</p>
+          <p>Por eso nuestras conversaciones continuas por departamento son tan importantes. Es ahí donde nos alineamos, compartimos lo que funciona y nos aseguramos de que ningún estudiante ni ninguna unidad se quede en el camino entre un grado y el siguiente.</p>
+          <p>Esta semana, el 64 % de nuestro equipo tiene su planificación subida. Lleguemos juntos al 100 %. Si algo está dificultando tu planificación, mi puerta está abierta y encontraremos juntos una solución.</p>
+          <p><i>Con gratitud,</i></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PHOTO CALLOUTS -->
-  <section class="card">
-    <div class="card-h"><h2>📸 Lights, Camera, Classroom · Luces, Cámara, Aula</h2><p>Marketing will be on campus twice this week · Mercadeo estará en el campus dos veces esta semana</p></div>
-    <div class="card-b">
-      <div class="callouts">
-        <div class="callout photo">
-          <h3>Monday Photo Day</h3>
-          <div class="when">Mon Nov 2 · Day 4 · Lunes de Fotos</div>
-          <p>Our <b>Marketing Department</b> will walk through the school photographing <b>teachers teaching</b> during class. They may visit your classroom at any time, so please be ready.</p>
-          <p class="es">Nuestro Departamento de Mercadeo recorrerá la escuela tomando fotos de docentes dando clase. Podrían visitar su aula en cualquier momento, así que les pedimos estar preparados.</p>
-          <div class="dress">👔 Come well dressed and neatly put together. No tie needed, just looking sharp.<br><i style="font-weight:400">Vengan bien vestidos y bien arreglados. No hace falta corbata, solo lucir muy bien.</i></div>
-        </div>
-        <div class="callout admin">
-          <h3>Administrators on Camera</h3>
-          <div class="when">Thu Nov 5 · Day 1 · Jueves</div>
-          <p>Marketing will take <b>photos and video of our principals and administrators</b>. You may see the team around campus during the day.</p>
-          <p class="es">Mercadeo tomará fotos y video de nuestros directores y personal administrativo. Es posible que vean al equipo por el campus durante el día.</p>
-        </div>
+  <!-- CELEBRATION -->
+  <section class="celebrate">
+    <div class="cel-top">
+      <div class="medal"><b>2nd</b><span>Place</span></div>
+      <div>
+        <div class="kicker">🐾 Proud of our Wildcats · Orgullosos de nuestros Wildcats</div>
+        <h2>Runners-up at the ABSH Basketball Tournament</h2>
+        <p>Subcampeones del Torneo de Básquetbol ABSH · American Bilingual Schools in Honduras</p>
       </div>
     </div>
-  </section>
-
-  <!-- ASYNC WEDNESDAY -->
-  <section class="card">
-    <div class="card-h teal"><h2>💻 Wednesday, November 4 (Day 6): Asynchronous Learning Day</h2><p>Miércoles 4 de noviembre (Día 6): Jornada de Aprendizaje Asincrónico</p></div>
-    <div class="card-b">
-      <div class="cols" style="margin-bottom:20px">
-        <div class="col"><div class="lang">English</div><p>Students work from home on Canvas while <b>teachers take part in professional development</b>. Only the <b>four authorized classes</b> per section assign work (see table below). Other classes do not assign anything.</p></div>
-        <div class="col es"><div class="lang">Español</div><p>Los estudiantes trabajan desde casa en Canvas mientras <b>los docentes participan en desarrollo profesional</b>. Solo las <b>cuatro clases autorizadas</b> por sección asignan trabajo (ver tabla abajo). Las demás clases no asignan nada.</p></div>
-      </div>
-
-      <div class="essentials">
-        <div class="ess"><div class="ic">⏱️</div><b>Max 40 min</b><span>per assignment, AP included. A ceiling, not a target.</span><span class="es">Máximo 40 min por actividad, incluidos los AP.</span></div>
-        <div class="ess"><div class="ic">🗂️</div><b>Plan in Chalk</b><span>as usual, with the Canvas assignment linked.</span><span class="es">Planifique en PowerSchool Chalk con la actividad enlazada.</span></div>
-        <div class="ess"><div class="ic">📤</div><b>Publish by Tue, Nov 3</b><span>on Canvas, the school day before.</span><span class="es">Publicar en Canvas a más tardar el martes 3.</span></div>
-        <div class="ess"><div class="ic">📅</div><b>Due Thu, Nov 5</b><span>end of the day (Day 1).</span><span class="es">Entrega al final del jueves 5 (Día 1).</span></div>
-      </div>
-
-      <div class="flow">
-        <span class="st">Connect <i>· Conectar</i></span><span class="ar">→</span>
-        <span class="st">Apply <i>· Aplicar</i></span><span class="ar">→</span>
-        <span class="st">Show learning <i>· Demostrar el aprendizaje</i></span>
-      </div>
-
+    <div class="cel-body">
       <div class="cols">
         <div class="col">
-          <h3 class="sub">✅ Every assignment must</h3>
-          <ul class="check">
-            <li>Have <b>one clear objective</b> aligned with the curriculum</li>
-            <li>Practice content <b>already taught</b>. No new concepts.</li>
-            <li>Be doable <b>independently</b>, with directions, examples, and resources all in Canvas</li>
-            <li>State the objective, instructions, resources, estimated time, submission method, and deadline</li>
-            <li>Include <b>accommodations</b> for students who have them</li>
-          </ul>
+          <div class="lang">English</div>
+          <p>Our Wildcats basketball team, made up entirely of High School students, took <b>second place</b> in the ABSH tournament. They faced some of the strongest schools in Honduras and earned their place in the final.</p>
+          <p>They didn't win that last game, but reaching the final against that level of competition is the result of <b>a lot of hard work</b> over a long time. Every player gave their best, and this team has real potential.</p>
         </div>
         <div class="col es">
-          <h3 class="sub">✅ Toda actividad debe</h3>
-          <ul class="check">
-            <li>Tener <b>un objetivo claro</b> alineado con el currículo</li>
-            <li>Practicar contenido <b>ya enseñado</b>. Nada de conceptos nuevos.</li>
-            <li>Poder hacerse <b>de forma independiente</b>, con instrucciones, ejemplos y recursos en Canvas</li>
-            <li>Indicar objetivo, instrucciones, recursos, tiempo estimado, forma de entrega y fecha límite</li>
-            <li>Contemplar las <b>adecuaciones</b> de los estudiantes que las tienen</li>
-          </ul>
+          <div class="lang">Español</div>
+          <p>Nuestro equipo de básquetbol de los Wildcats, formado en su totalidad por estudiantes de High School, obtuvo el <b>segundo lugar</b> en el torneo ABSH. Se enfrentaron a algunas de las escuelas más fuertes de Honduras y se ganaron su lugar en la final.</p>
+          <p>No ganaron ese último partido, pero llegar a la final ante ese nivel de competencia es el resultado de <b>mucho trabajo</b> durante mucho tiempo. Cada jugador dio lo mejor de sí, y este equipo tiene un gran potencial.</p>
         </div>
       </div>
-
-      <div class="goodbad">
-        <div class="gb good"><h4>👍 Good options · Buenas opciones</h4>Canvas quizzes, focused practice, selected math problems, data analysis, short reading responses, brief reflections<div class="es">Quizzes en Canvas, práctica enfocada, problemas seleccionados, análisis de datos, respuestas breves de lectura, reflexiones cortas</div></div>
-        <div class="gb bad"><h4>👎 Avoid · Evitar</h4>New content, long videos, long essays, full AP practice exams, group projects, anything that creates heavy grading<div class="es">Contenido nuevo, videos largos, ensayos extensos, exámenes AP completos, proyectos grupales, cualquier cosa que genere mucha revisión</div></div>
-      </div>
-
-      <div class="notes">
-        <div class="note"><b>📝 Assessment:</b> Formative only, not high-stakes. No individual feedback required. Review the evidence and address common misconceptions in your next class.<div class="es"><b>Evaluación:</b> Solo formativa. No se requiere retroalimentación individual. Revise la evidencia y aborde los errores comunes en la siguiente clase.</div></div>
-        <div class="note"><b>💬 During PD:</b> No live classes, no Canvas monitoring, no immediate replies expected. Answer student questions when regular duties resume. <b>PD details will come by email.</b><div class="es"><b>Durante el DP:</b> No hay clases en vivo, monitoreo de Canvas ni respuestas inmediatas. Responda dudas al retomar funciones. Los detalles del DP llegarán por correo.</div></div>
-      </div>
-
-      <div class="principle">Meaningful learning, not busywork.<span>Aprendizaje significativo, no trabajo sin propósito.</span></div>
-
-      <table class="auth">
-        <caption>Authorized classes · Clases autorizadas</caption>
-        <thead><tr><th>Section</th><th>Classes that assign work · Clases que asignan trabajo</th></tr></thead>
-        <tbody>
-          <tr><td>9A</td><td><span class="pill">Global History</span><span class="pill">Spanish</span><span class="pill">Pre-AP Algebra</span><span class="pill">Science</span></td></tr>
-          <tr><td>9B</td><td><span class="pill">Global History</span><span class="pill">Pre-AP English</span><span class="pill">Pre-AP Algebra</span><span class="pill">Science</span></td></tr>
-          <tr><td>9C</td><td><span class="pill">Science</span><span class="pill">Spanish</span><span class="pill">Pre-AP English</span><span class="pill">Global History</span></td></tr>
-          <tr><td>10A</td><td><span class="pill">Pre-AP Bio</span><span class="pill">Pre-AP Geometry and Statistics</span><span class="pill">AP English</span><span class="pill">AP US History</span></td></tr>
-          <tr><td>10B</td><td><span class="pill">Pre-AP Bio</span><span class="pill">AP English</span><span class="pill">Pre-AP Geometry and Statistics</span><span class="pill">AP Spanish</span></td></tr>
-          <tr><td>10C</td><td><span class="pill">Pre-AP Bio</span><span class="pill">AP Spanish</span><span class="pill">Pre-AP Geometry and Statistics</span><span class="pill">AP English</span></td></tr>
-          <tr><td>11A · 11B · 11C</td><td><span class="pill">English</span><span class="pill">AP Physics</span><span class="pill">Chemistry</span><span class="pill">Algebra</span></td></tr>
-          <tr><td>12A · 12B · 12C</td><td><span class="pill">Math</span><span class="pill">Physics</span><span class="pill">AP Cybersecurity</span><span class="pill">Chemistry</span></td></tr>
-        </tbody>
-      </table>
+      <div class="cheer">👏 When you see our Wildcats in the halls or in class, congratulate them and recognize their great work!
+        <i>Cuando vean a nuestros Wildcats en los pasillos o en clase, ¡felicítenlos y reconozcan su gran trabajo!</i></div>
     </div>
   </section>
 
+  <!-- THE SHADOWING -->
+  <section class="card">
+    <div class="card-h purple"><h2>👣 The Shadowing · El Acompañamiento</h2><p>Monday, November 9 · A full day in 10B · Lunes 9 de noviembre · Un día completo en 10B</p></div>
+    <div class="card-b">
+      <div class="shadow-facts">
+        <div class="sf"><div class="ic">📅</div><b>Mon, Nov 9 · Day 3</b><span>The whole school day</span><span class="es">Todo el día escolar</span></div>
+        <div class="sf"><div class="ic">🎒</div><b>Section 10B</b><span>Every class, every transition</span><span class="es">Cada clase, cada transición</span></div>
+        <div class="sf"><div class="ic">🔍</div><b>Agenda cancelled</b><span>The shadowing comes first</span><span class="es">Agenda cancelada: el acompañamiento es prioridad</span></div>
+      </div>
+      <div class="cols">
+        <div class="col">
+          <div class="lang">English</div>
+          <p>On Monday, I will spend the <b>entire day with 10B</b>, following their schedule from first period to dismissal. All of our principals are doing this practice, so we can gather real data on <b>schedules, student load, and how students move</b> through their day.</p>
+          <p>I want to see the school through our students' eyes: how much they carry, how their energy shifts from class to class, and how the transitions feel.</p>
+          <p><b>Because the shadowing is a priority, everything on my agenda for Monday has been cancelled.</b> I won't be available for meetings or office visits that day; if something comes up, please reach out on Tuesday.</p>
+          <p>The students don't know yet, so we'll see how it goes. Once I have my reflections, I'll share them with all of you.</p>
+        </div>
+        <div class="col es">
+          <div class="lang">Español</div>
+          <p>El lunes pasaré <b>todo el día con 10B</b>, siguiendo su horario desde el primer período hasta la salida. Todos nuestros directores están realizando esta práctica, para recoger datos reales sobre <b>horarios, carga estudiantil y desplazamientos</b> a lo largo del día.</p>
+          <p>Quiero ver la escuela con los ojos de nuestros estudiantes: cuánto cargan, cómo cambia su energía de una clase a otra y cómo se viven las transiciones.</p>
+          <p><b>Como el acompañamiento es una prioridad, toda mi agenda del lunes ha sido cancelada.</b> No estaré disponible para reuniones ni visitas a la oficina ese día; si surge algo, por favor búsquenme el martes.</p>
+          <p>Los estudiantes aún no lo saben, así que veremos cómo resulta. Cuando tenga mis reflexiones, las compartiré con todos ustedes.</p>
+        </div>
+      </div>
+      <div class="assure"><b>👩‍🏫 To 10B's teachers:</b> this is <b>never</b> about evaluating you. Please teach your class exactly as you normally would. I'm there as a student, not as an observer of your teaching.
+        <div class="es"><b>A los docentes de 10B:</b> esto <b>nunca</b> se trata de evaluarlos. Por favor, den su clase con toda naturalidad, como lo hacen siempre. Estaré ahí como un estudiante más, no como observador de su enseñanza.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATHLETICS -->
+  <section class="card">
+    <div class="card-h goldh"><h2>🏃 Athletics at the University · Atletismo en la Universidad</h2><p>100 of our students, selected to represent DelCampo · 100 de nuestros estudiantes, seleccionados para representar a DelCampo</p></div>
+    <div class="card-b">
+      <div class="timeline" style="color:var(--gold-ink)">
+        <span class="st">Regular arrival <i>· Llegada normal</i></span><span class="ar">→</span>
+        <span class="st">7:30 Cafeteria <i>· Cafetería</i></span><span class="ar">→</span>
+        <span class="st">~8:00 Departure <i>· Salida</i></span><span class="ar">→</span>
+        <span class="st">~11:00 Back at school <i>· Regreso al colegio</i></span>
+      </div>
+      <p class="bars-note" style="margin:6px 0 20px">Same plan both days · El mismo plan ambos días</p>
+      <div class="callouts">
+        <div class="callout sport">
+          <h3>9th &amp; 10th Grade</h3>
+          <div class="when">Tue Nov 10 · Day 4 · Martes · 9.º y 10.º grado</div>
+          <p><b>50 selected students</b> from 9th and 10th grade will attend an athletics event at the university.</p>
+          <p class="es">50 estudiantes seleccionados de noveno y décimo grado asistirán a un evento de atletismo en la universidad.</p>
+          <div class="crew">👥 <b>Chaperones:</b> Mrs. María Fernanda Fuentes, Mr. Johnny Reyes, Mr. Juan Sebastián Laínez<br><i>Acompañantes</i></div>
+        </div>
+        <div class="callout sport">
+          <h3>11th &amp; 12th Grade</h3>
+          <div class="when">Thu Nov 12 · Day 6 · Jueves · 11.º y 12.º grado</div>
+          <p><b>50 selected students</b> from 11th and 12th grade will attend the same athletics event.</p>
+          <p class="es">50 estudiantes seleccionados de undécimo y duodécimo grado asistirán al mismo evento de atletismo.</p>
+          <div class="crew">👥 <b>Chaperones:</b> Mrs. María Fernanda Fuentes, Mr. Johnny Reyes, Mr. Nicolás Rivas<br><i>Acompañantes</i></div>
+        </div>
+      </div>
+      <div class="cols" style="margin-top:20px">
+        <div class="col"><p>Students leave around <b>8:00</b> and are back at school around <b>11:00</b>, so expect smaller groups in the <b>first periods</b> of the day. Please help the students who attend catch up on what they missed. <b>We'll keep you posted</b> on any changes.</p></div>
+        <div class="col es"><p>Los estudiantes salen alrededor de las <b>8:00</b> y regresan al colegio alrededor de las <b>11:00</b>, así que tendrán grupos más pequeños en los <b>primeros períodos</b> del día. Por favor, apoyen a quienes asistan para que se pongan al día. <b>Los mantendremos informados</b> de cualquier cambio.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIELD TRIP -->
+  <section class="card">
+    <div class="card-h tealh"><h2>🚌 9th Grade Field Trip to Ojojona · Salida de Campo de 9.º a Ojojona</h2><p>Thursday, November 12 · Day 6 · Jueves 12 de noviembre · Día 6</p></div>
+    <div class="card-b">
+      <div class="timeline" style="color:var(--teal)">
+        <span class="st">Regular arrival <i>· Llegada normal</i></span><span class="ar">→</span>
+        <span class="st">7:30 Cafeteria <i>· Cafetería</i></span><span class="ar">→</span>
+        <span class="st">~8:00 Departure <i>· Salida</i></span><span class="ar">→</span>
+        <span class="st">End of day: return <i>· Fin del día: regreso</i></span>
+      </div>
+      <p class="bars-note" style="margin:6px 0 20px">No classes for 9th graders on the trip · Sin clases para los estudiantes de 9.º que van a la salida</p>
+      <div class="callouts">
+        <div class="callout trip">
+          <h3>Students on the trip</h3>
+          <div class="when">Led by Mrs. Daysi Hernández · Dirigida por Mrs. Daysi Hernández</div>
+          <p>Our 9th graders arrive at the regular time, go to the <b>cafeteria at 7:30</b> for something to eat, and leave for <b>Ojojona around 8:00</b>. They return at the end of the day, so <b>9th grade has no classes</b> that day. We're hoping for full attendance and will let you know how many students are going.</p>
+          <p class="es">Nuestros estudiantes de noveno llegan a la hora habitual, pasan a la <b>cafetería a las 7:30</b> para comer algo y salen hacia <b>Ojojona alrededor de las 8:00</b>. Regresan al final del día, por lo que <b>noveno no tiene clases</b> ese día. Esperamos la máxima asistencia y les informaremos cuántos estudiantes irán.</p>
+          <div class="crew">👥 <b>Chaperones:</b> Mrs. Daysi Hernández, Mrs. Allison Arguijo, and selected teachers (to be confirmed)<br><i>Acompañantes: Mrs. Daysi Hernández, Mrs. Allison Arguijo y docentes seleccionados (por confirmar)</i></div>
+        </div>
+        <div class="callout trip2">
+          <h3>Students who stay</h3>
+          <div class="when">On campus · En el colegio</div>
+          <p>9th graders who don't go on the trip stay at school and attend class. We'll design a <b>special schedule</b> for them and share it with you before Thursday.</p>
+          <p class="es">Los estudiantes de noveno que no vayan a la salida se quedan en el colegio y asisten a clases. Diseñaremos un <b>horario especial</b> para ellos y se lo compartiremos antes del jueves.</p>
+        </div>
+      </div>
+      <p class="bars-note" style="margin-top:16px"><b>We'll keep you posted</b> on numbers and chaperones · <b>Los mantendremos informados</b> sobre cantidades y acompañantes</p>
+    </div>
+  </section>
+
+  <!-- PLANNING CHECK -->
+  <section class="card">
+    <div class="card-h"><h2>📋 Planning Check · Revisión de Planificación</h2><p>Classes planned and uploaded in PowerSchool Chalk · Clases planificadas y subidas en PowerSchool Chalk</p></div>
+    <div class="card-b">
+      <div class="plan-stats">
+        <div class="ps big"><b>64%</b><span>This week<br><i>Esta semana</i></span></div>
+        <div class="ps"><b>11 / 17</b><span>Teachers ready<br><i>Docentes al día</i></span></div>
+        <div class="ps"><b>6</b><span>Still to upload<br><i>Pendientes de subir</i></span></div>
+        <div class="ps goal"><b>17 / 17</b><span>Our goal<br><i>Nuestra meta</i></span></div>
+      </div>
+
+      <div class="bars">
+        <div class="bar"><span class="bl">Mon–Wed Nov 2–4</span><div class="bt"><div class="bf" style="width:76%"></div></div><span class="bv">76%</span></div>
+        <div class="bar"><span class="bl">Thu Nov 5</span><div class="bt"><div class="bf" style="width:70%"></div></div><span class="bv">70%</span></div>
+        <div class="bar"><span class="bl">Fri Nov 6</span><div class="bt"><div class="bf low" style="width:64%"></div></div><span class="bv">64%</span></div>
+        <div class="bar"><span class="bl">Nov 9–13</span><div class="bt"><div class="bf low" style="width:64%"></div></div><span class="bv">64%</span></div>
+        <div class="bar goal"><span class="bl">Goal · Meta</span><div class="bt"><div class="bf" style="width:100%"></div></div><span class="bv">100%</span></div>
+      </div>
+      <p class="bars-note">Share of teachers with that day's classes planned and uploaded, as of Sunday, Nov 8 · Porcentaje de docentes con las clases del día planificadas y subidas, al domingo 8 de noviembre</p>
+
+      <div class="cols" style="margin-top:22px">
+        <div class="col"><p><b>Planning is not optional; it's the foundation of every good class.</b> A complete plan tells us what students will learn, how we'll know they learned it, and lets a colleague step in when we can't be there. If you're catching up, please upload your plans <b>before Monday's first period</b>.</p></div>
+        <div class="col es"><p><b>La planificación no es opcional: es la base de toda buena clase.</b> Una planificación completa nos dice qué aprenderán los estudiantes, cómo sabremos que lo aprendieron y permite que un colega nos cubra cuando no podemos estar. Si te estás poniendo al día, sube tu planificación <b>antes del primer período del lunes</b>.</p></div>
+      </div>
+    </div>
+  </section>
   <!-- CLASS SCHEDULE -->
   <section class="card">
-    <div class="card-h"><h2>🕐 Class Schedule · Horario de Clases</h2><p>Starting the week of November 2 · A partir de la semana del 2 de noviembre</p></div>
+    <div class="card-h"><h2>🕐 Class Schedule · Horario de Clases</h2><p>Christmas Rehearsal schedule continues · Continúa el horario con Ensayo Navideño</p></div>
     <div class="card-b">
       <div class="cols" style="margin-bottom:18px">
-        <div class="col"><p>Starting this week, <b>Tuesdays and Fridays follow Thursday's times</b>. The Homeroom slot becomes <b>Christmas Rehearsal</b> on those days. Thursday keeps Homeroom.</p></div>
-        <div class="col es"><p>A partir de esta semana, <b>los martes y viernes siguen el horario del jueves</b>. El espacio de Homeroom pasa a ser <b>Ensayo Navideño</b> esos días. El jueves mantiene Homeroom.</p></div>
+        <div class="col"><p>As last week, <b>Tuesdays and Fridays follow Thursday's times</b>. The Homeroom slot becomes <b>Christmas Rehearsal</b> on those days. Thursday keeps Homeroom.</p></div>
+        <div class="col es"><p>Como la semana pasada, <b>los martes y viernes siguen el horario del jueves</b>. El espacio de Homeroom pasa a ser <b>Ensayo Navideño</b> esos días. El jueves mantiene Homeroom.</p></div>
       </div>
       <div class="legend">
         <span class="chip snack">🍎 Snack / Merienda</span>
@@ -368,7 +461,7 @@
           <div class="row"><span class="p">Period 6</span><span class="t">2:10 – 3:00</span></div>
         </div>
         <div class="day wed">
-          <div class="day-head"><div class="name">Wednesday</div><div class="es">Miércoles</div><span class="tag">Early dismissal</span></div>
+          <div class="day-head"><div class="name">Wednesday</div><div class="es">Miércoles</div><span class="tag">CCC · 12:50 dismissal</span></div>
           <div class="row"><span class="p">Period 1</span><span class="t">7:25 – 8:10</span></div>
           <div class="row"><span class="p">Period 2</span><span class="t">8:10 – 8:55</span></div>
           <div class="row"><span class="p">Period 3</span><span class="t">9:00 – 9:45</span></div>
@@ -406,66 +499,29 @@
     </div>
   </section>
 
-  <!-- PLANNING -->
-  <section class="card">
-    <div class="card-h"><h2>🐾 The Herd Report · Team Edition / Edición en Equipo</h2><p>Lesson planning in October, as a whole team · La planificación de octubre, como equipo</p></div>
-    <div class="card-b">
-      <div class="cols" style="margin-bottom:20px">
-        <div class="col">
-          <div class="lang">English</div>
-          <p>A lesson plan isn't paperwork. It's where good teaching begins: it tells us what students will learn, how we'll know they learned it, and it lets a colleague step in when we can't be there.</p>
-          <p>You'll remember <b>The Herd Report</b>, where each of you had an animal and we followed planning individually. We've retired the animals, and today I'm sharing the results <b>as a whole team</b> instead.</p>
-          <p>The picture, however, hasn't changed. In October, <b>only 62% of our planning was uploaded</b> on average, and on our best days only 13 of 18 teachers had their plans in Chalk. We are still not meeting this expectation, and <b>it concerns me deeply</b>. In my view, we keep falling short in one of the most important parts of our work.</p>
-          <p>Uploading your planning to <b>PowerSchool Chalk</b> is a professional responsibility that belongs to each of us. I know how full your weeks are. If something is getting in the way, come talk to me and we'll solve it together. But the expectation is clear: <b>every class, every week, planned and uploaded.</b></p>
-        </div>
-        <div class="col es">
-          <div class="lang">Español</div>
-          <p>Una planificación no es un trámite. Es donde empieza la buena enseñanza: nos dice qué aprenderán los estudiantes, cómo sabremos que lo aprendieron y permite que un colega nos cubra cuando no podemos estar.</p>
-          <p>Recordarán <b>The Herd Report</b>, donde cada uno tenía un animal y dábamos seguimiento individual a la planificación. Ya dejamos atrás los animales, y hoy les comparto los resultados <b>de manera global, como equipo</b>.</p>
-          <p>Sin embargo, el panorama no ha cambiado. En octubre, <b>solo el 62% de nuestras planificaciones estuvo en el sistema</b> en promedio, y en nuestros mejores días solo 13 de 18 docentes tenían su planificación en Chalk. Seguimos sin cumplir con esta expectativa, y <b>eso me preocupa bastante</b>. En mi opinión, seguimos quedando mal en uno de los aspectos más importantes de nuestro trabajo.</p>
-          <p>Subir la planificación a <b>PowerSchool Chalk</b> es una responsabilidad profesional de cada uno de nosotros. Sé lo llenas que están sus semanas. Si algo se los está impidiendo, búsquenme y lo resolvemos juntos. Pero la expectativa es clara: <b>cada clase, cada semana, planificada y en el sistema.</b></p>
-        </div>
-      </div>
-
-      <div class="plan-stats">
-        <div class="ps big"><b>62%</b><span>October average<br><i>Promedio de octubre</i></span></div>
-        <div class="ps"><b>13 / 18</b><span>Best day<br><i>Mejor día</i></span></div>
-        <div class="ps"><b>9 / 18</b><span>Lowest day<br><i>Día más bajo</i></span></div>
-        <div class="ps goal"><b>18 / 18</b><span>Our goal<br><i>Nuestra meta</i></span></div>
-      </div>
-
-      <div class="bars">
-        <div class="bar"><span class="bl">Oct 1–2</span><div class="bt"><div class="bf" style="width:69%"></div></div><span class="bv">69%</span></div>
-        <div class="bar"><span class="bl">Oct 12–16</span><div class="bt"><div class="bf" style="width:70%"></div></div><span class="bv">70%</span></div>
-        <div class="bar"><span class="bl">Oct 19–23</span><div class="bt"><div class="bf low" style="width:53%"></div></div><span class="bv">53%</span></div>
-        <div class="bar"><span class="bl">Oct 26–30</span><div class="bt"><div class="bf" style="width:61%"></div></div><span class="bv">61%</span></div>
-        <div class="bar goal"><span class="bl">Goal · Meta</span><div class="bt"><div class="bf" style="width:100%"></div></div><span class="bv">100%</span></div>
-      </div>
-      <p class="bars-note">Weekly average of teachers with planning uploaded · Promedio semanal de docentes con planificación en el sistema</p>
-    </div>
-  </section>
-
   <!-- REMINDERS -->
   <section class="card">
     <div class="card-h"><h2>📌 Reminders · Recordatorios</h2></div>
     <div class="card-b">
       <div class="rem">
         <div class="ri"><div class="d">EVERY<br>WEEK</div><div><p>Lesson planning uploaded to PowerSchool Chalk for every class.</p><p class="es">Planificación de cada clase subida a PowerSchool Chalk.</p></div></div>
-        <div class="ri"><div class="d">MON<br>Nov 2</div><div><p>Dress sharp. Marketing may visit your class for photos.</p><p class="es">Vengan bien arreglados. Mercadeo podría visitar su clase para fotos.</p></div></div>
-        <div class="ri"><div class="d">TUE<br>Nov 3</div><div><p>Wednesday assignments published on Canvas and linked in Chalk.</p><p class="es">Actividades del miércoles publicadas en Canvas y enlazadas en Chalk.</p></div></div>
-        <div class="ri"><div class="d">WED<br>Nov 4</div><div><p>No classes. Professional development for teachers; details by email.</p><p class="es">Sin clases. Desarrollo profesional para docentes; detalles por correo.</p></div></div>
-        <div class="ri"><div class="d">THU<br>Nov 5</div><div><p>Asynchronous work due at the end of the day.</p><p class="es">Entrega del trabajo asincrónico al final del día.</p></div></div>
+        <div class="ri"><div class="d">MON<br>Nov 9</div><div><p>Plans still pending? Upload them before first period. I'll be shadowing 10B all day, and my agenda is cancelled.</p><p class="es">¿Planificación pendiente? Súbela antes del primer período. Estaré acompañando a 10B todo el día y mi agenda está cancelada.</p></div></div>
+        <div class="ri"><div class="d">TUE<br>Nov 10</div><div><p>50 students from 9th–10th at the university athletics event (out ~8:00–11:00).</p><p class="es">50 estudiantes de 9.º y 10.º en el evento de atletismo (fuera de ~8:00 a 11:00).</p></div></div>
+        <div class="ri"><div class="d">TUE &amp;<br>FRI</div><div><p>Thursday times, with Christmas Rehearsal at 9:40–10:40.</p><p class="es">Horario del jueves, con Ensayo Navideño de 9:40 a 10:40.</p></div></div>
+        <div class="ri"><div class="d">WED<br>Nov 11</div><div><p>Day 5: CCC day. Students are dismissed at 12:50 pm.</p><p class="es">Día 5: día de CCC. Los estudiantes salen a las 12:50 p. m.</p></div></div>
+        <div class="ri"><div class="d">THU<br>Nov 12</div><div><p>Homeroom at 9:40–10:40. 50 students from 11th–12th at the athletics event (~8:00–11:00). 9th grade field trip to Ojojona; special schedule for students who stay.</p><p class="es">Homeroom de 9:40 a 10:40. 50 estudiantes de 11.º y 12.º en el evento de atletismo (~8:00–11:00). Salida de campo de 9.º a Ojojona; horario especial para quienes se queden.</p></div></div>
+        <div class="ri"><div class="d">ALL<br>WEEK</div><div><p>Congratulate our Wildcats basketball players on their 2nd place at ABSH. 🏀</p><p class="es">Feliciten a nuestros Wildcats de básquetbol por su segundo lugar en ABSH. 🏀</p></div></div>
+        <div class="ri"><div class="d">ONGOING</div><div><p>Keep your department conversations going: vertical alignment and curriculum progress.</p><p class="es">Mantengan las conversaciones por departamento: alineación vertical y avance del currículo.</p></div></div>
       </div>
     </div>
   </section>
 
   <!-- CLOSING QUOTE -->
   <div class="quote">
-    <blockquote>“The art of teaching is the art of assisting discovery.”</blockquote>
-    <div class="es">«El arte de enseñar es el arte de acompañar el descubrimiento».</div>
-    <cite>— Mark Van Doren</cite>
+    <blockquote>“Plans are worthless, but planning is everything.”</blockquote>
+    <div class="es">«Los planes no valen nada, pero la planificación lo es todo».</div>
+    <cite>— Dwight D. Eisenhower</cite>
   </div>
-
   <!-- SIGNATURE -->
   <footer class="sig">
     <div>
