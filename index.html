@@ -208,18 +208,17 @@
   .timeline .ar{font-weight:800;color:var(--gold)}
   .callout .crew{margin-top:10px;background:#fff;border-radius:10px;padding:9px 12px;font-size:14px}
   .callout .crew i{color:var(--muted)}
-  /* Celebration */
-  .celebrate{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;border-radius:18px;overflow:hidden;margin-bottom:26px;box-shadow:0 6px 24px rgba(27,86,49,.12);border-bottom:5px solid var(--gold)}
-  .cel-top{display:flex;align-items:center;gap:22px;padding:26px 28px 18px;flex-wrap:wrap}
-  .medal{flex:none;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f4f4f4,#b9bfc4 60%,#8d949a);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#3b4247;font-family:'Playfair Display',serif;font-weight:800;box-shadow:0 0 0 5px var(--gold),0 8px 18px rgba(0,0,0,.25)}
-  .medal b{font-size:32px;line-height:1}
-  .medal span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-family:'Source Sans 3',sans-serif}
-  .cel-top .kicker{margin-bottom:4px}
-  .cel-top h2{margin:0;font-size:clamp(24px,3.6vw,32px)}
-  .cel-top p{margin:4px 0 0;color:#e9dfbd;font-size:15px}
-  .cel-body{background:#fff;color:var(--ink);padding:22px 26px 24px}
-  .cheer{margin-top:18px;text-align:center;background:var(--gold-soft);border-radius:14px;padding:14px 18px;font-weight:700;color:var(--gold-ink);font-size:16px}
-  .cheer i{display:block;font-weight:400;color:var(--muted);font-size:14.5px;margin-top:3px}
+  /* Report cards */
+  .card-h.navy{background:var(--blue)}
+  .rc-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+  .rf{background:var(--blue-soft);border-radius:14px;padding:14px;text-align:center}
+  .rf .ic{font-size:24px}
+  .rf b{display:block;color:var(--blue);font-size:16px;margin:4px 0 2px}
+  .rf span{display:block;font-size:13.5px}
+  .rf span.es{color:var(--muted);font-style:italic}
+  @media (max-width:900px){.rc-facts{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:640px){.rc-facts{grid-template-columns:1fr}}
+  .tg.rc{background:var(--blue-soft);color:var(--blue)}
 </style>
 </head>
 <body>
@@ -242,8 +241,8 @@
   <div class="strip">
     <div class="sd mon"><div class="dn">Mon · Lun</div><div class="dt">Nov 9</div><span class="cy">Day 3</span><div class="tags"><span class="tg photo">👣 Shadowing 10B</span></div></div>
     <div class="sd tue"><div class="dn">Tue · Mar</div><div class="dt">Nov 10</div><span class="cy">Day 4</span><div class="tags"><span class="tg xmas">🎄 Rehearsal</span><span class="tg sport">🏃 Athletics 9–10</span></div></div>
-    <div class="sd wed"><div class="dn">Wed · Mié</div><div class="dt">Nov 11</div><span class="cy">Day 5</span><div class="tags"><span class="tg ccc">CCC</span><span class="tg async">12:50 dismissal</span></div></div>
-    <div class="sd thu"><div class="dn">Thu · Jue</div><div class="dt">Nov 12</div><span class="cy">Day 6</span><div class="tags"><span class="tg hr">🏫 Homeroom</span><span class="tg sport">🏃 Athletics 11–12</span><span class="tg async">🚌 9th field trip</span></div></div>
+    <div class="sd wed"><div class="dn">Wed · Mié</div><div class="dt">Nov 11</div><span class="cy">Day 5</span><div class="tags"><span class="tg ccc">CCC</span><span class="tg async">12:50 dismissal</span><span class="tg rc">📧 Report cards sent</span></div></div>
+    <div class="sd thu"><div class="dn">Thu · Jue</div><div class="dt">Nov 12</div><span class="cy">Day 6</span><div class="tags"><span class="tg hr">🏫 Homeroom</span><span class="tg sport">🏃 Athletics 11–12</span><span class="tg async">🚌 9th field trip</span><span class="tg rc">📋 Report card conferences</span></div></div>
     <div class="sd fri"><div class="dn">Fri · Vie</div><div class="dt">Nov 13</div><span class="cy">Day 1</span><div class="tags"><span class="tg xmas">🎄 Rehearsal</span></div></div>
   </div>
   <div class="strip-note">Day 5 is a CCC (Co-Curricular Clubs) day · El Día 5 es día de CCC (Clubes Co-Curriculares)</div>
@@ -273,31 +272,32 @@
     </div>
   </section>
 
-  <!-- CELEBRATION -->
-  <section class="celebrate">
-    <div class="cel-top">
-      <div class="medal"><b>2nd</b><span>Place</span></div>
-      <div>
-        <div class="kicker">🐾 Proud of our Wildcats · Orgullosos de nuestros Wildcats</div>
-        <h2>Runners-up at the ABSH Basketball Tournament</h2>
-        <p>Subcampeones del Torneo de Básquetbol ABSH · American Bilingual Schools in Honduras</p>
+  <!-- REPORT CARDS -->
+  <section class="card">
+    <div class="card-h navy"><h2>📋 Report Card Conferences · Entrega de Calificaciones</h2><p>Thursday, November 12 · 3:30 – 6:30 PM · In our classrooms · Jueves 12 de noviembre · En nuestras aulas</p></div>
+    <div class="card-b">
+      <div class="rc-facts">
+        <div class="rf"><div class="ic">📧</div><b>Wed, Nov 11 · 8:00 AM</b><span>Report cards emailed to families</span><span class="es">Boletas enviadas por correo a las familias</span></div>
+        <div class="rf"><div class="ic">🗓️</div><b>Thu, Nov 12 · 3:30–6:30 PM</b><span>High School conferences</span><span class="es">Entrega de High School</span></div>
+        <div class="rf"><div class="ic">🏫</div><b>In classrooms</b><span>Each teacher in their room</span><span class="es">Cada docente en su aula</span></div>
+        <div class="rf"><div class="ic">👔</div><b>Dress sharp</b><span>Formal, professional attire</span><span class="es">Vestimenta formal y profesional</span></div>
       </div>
-    </div>
-    <div class="cel-body">
       <div class="cols">
         <div class="col">
           <div class="lang">English</div>
-          <p>Our Wildcats basketball team, made up entirely of High School students, took <b>second place</b> in the ABSH tournament. They faced some of the strongest schools in Honduras and earned their place in the final.</p>
-          <p>They didn't win that last game, but reaching the final against that level of competition is the result of <b>a lot of hard work</b> over a long time. Every player gave their best, and this team has real potential.</p>
+          <p>As we mentioned before, and following the organization planned by the Leadership Team, our <b>report card conferences are this Thursday</b>, from <b>3:30 to 6:30 PM</b>, in our classrooms.</p>
+          <p>Report cards will be <b>emailed to families on Wednesday at 8:00 AM</b>, so parents can review them before meeting with us. Each family should receive a <b>10-minute one-on-one conversation</b>, with priority given to <b>new families and students at academic risk</b>.</p>
+          <p>Please come <b>very well dressed</b>. This is one of the most important moments we share with our families, and how we present ourselves matters.</p>
+          <p style="font-size:14.5px;color:var(--muted)">Looking ahead: progress reports will be shared on <b>November 25</b>.</p>
         </div>
         <div class="col es">
           <div class="lang">Español</div>
-          <p>Nuestro equipo de básquetbol de los Wildcats, formado en su totalidad por estudiantes de High School, obtuvo el <b>segundo lugar</b> en el torneo ABSH. Se enfrentaron a algunas de las escuelas más fuertes de Honduras y se ganaron su lugar en la final.</p>
-          <p>No ganaron ese último partido, pero llegar a la final ante ese nivel de competencia es el resultado de <b>mucho trabajo</b> durante mucho tiempo. Cada jugador dio lo mejor de sí, y este equipo tiene un gran potencial.</p>
+          <p>Como ya lo habíamos mencionado, y de acuerdo con la organización planeada por el Leadership Team, recuerden que <b>la entrega de calificaciones es este jueves</b>, de <b>3:30 a 6:30 p. m.</b>, en nuestras aulas.</p>
+          <p>Las boletas se <b>enviarán por correo a las familias el miércoles a las 8:00 a. m.</b>, para que los padres puedan revisarlas antes de reunirse con nosotros. Cada familia debe recibir una <b>conversación individual de 10 minutos</b>, dando prioridad a las <b>familias nuevas y a los estudiantes en riesgo académico</b>.</p>
+          <p>Les pedimos venir <b>muy bien vestidos</b>. Este es uno de los momentos más importantes que compartimos con nuestras familias, y nuestra presentación importa.</p>
+          <p style="font-size:14.5px;color:var(--muted)">Para tener en cuenta: los reportes de progreso se compartirán el <b>25 de noviembre</b>.</p>
         </div>
       </div>
-      <div class="cheer">👏 When you see our Wildcats in the halls or in class, congratulate them and recognize their great work!
-        <i>Cuando vean a nuestros Wildcats en los pasillos o en clase, ¡felicítenlos y reconozcan su gran trabajo!</i></div>
     </div>
   </section>
 
@@ -508,9 +508,9 @@
         <div class="ri"><div class="d">MON<br>Nov 9</div><div><p>Plans still pending? Upload them before first period. I'll be shadowing 10B all day, and my agenda is cancelled.</p><p class="es">¿Planificación pendiente? Súbela antes del primer período. Estaré acompañando a 10B todo el día y mi agenda está cancelada.</p></div></div>
         <div class="ri"><div class="d">TUE<br>Nov 10</div><div><p>50 students from 9th–10th at the university athletics event (out ~8:00–11:00).</p><p class="es">50 estudiantes de 9.º y 10.º en el evento de atletismo (fuera de ~8:00 a 11:00).</p></div></div>
         <div class="ri"><div class="d">TUE &amp;<br>FRI</div><div><p>Thursday times, with Christmas Rehearsal at 9:40–10:40.</p><p class="es">Horario del jueves, con Ensayo Navideño de 9:40 a 10:40.</p></div></div>
-        <div class="ri"><div class="d">WED<br>Nov 11</div><div><p>Day 5: CCC day. Students are dismissed at 12:50 pm.</p><p class="es">Día 5: día de CCC. Los estudiantes salen a las 12:50 p. m.</p></div></div>
+        <div class="ri"><div class="d">WED<br>Nov 11</div><div><p>Day 5: CCC day. Students are dismissed at 12:50 pm. Report cards emailed to families at 8:00 AM.</p><p class="es">Día 5: día de CCC. Los estudiantes salen a las 12:50 p. m. Boletas enviadas a las familias a las 8:00 a. m.</p></div></div>
         <div class="ri"><div class="d">THU<br>Nov 12</div><div><p>Homeroom at 9:40–10:40. 50 students from 11th–12th at the athletics event (~8:00–11:00). 9th grade field trip to Ojojona; special schedule for students who stay.</p><p class="es">Homeroom de 9:40 a 10:40. 50 estudiantes de 11.º y 12.º en el evento de atletismo (~8:00–11:00). Salida de campo de 9.º a Ojojona; horario especial para quienes se queden.</p></div></div>
-        <div class="ri"><div class="d">ALL<br>WEEK</div><div><p>Congratulate our Wildcats basketball players on their 2nd place at ABSH. 🏀</p><p class="es">Feliciten a nuestros Wildcats de básquetbol por su segundo lugar en ABSH. 🏀</p></div></div>
+        <div class="ri"><div class="d">THU<br>3:30 PM</div><div><p><b>Report card conferences, 3:30–6:30 PM, in your classroom. Come very well dressed.</b></p><p class="es"><b>Entrega de calificaciones, 3:30–6:30 p. m., en su aula. Vengan muy bien vestidos.</b></p></div></div>
         <div class="ri"><div class="d">ONGOING</div><div><p>Keep your department conversations going: vertical alignment and curriculum progress.</p><p class="es">Mantengan las conversaciones por departamento: alineación vertical y avance del currículo.</p></div></div>
       </div>
     </div>
