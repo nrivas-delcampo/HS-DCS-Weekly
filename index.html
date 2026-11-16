@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>High Standards · Week of November 9</title>
+<title>High Standards · Week of November 16</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -219,6 +219,50 @@
   @media (max-width:900px){.rc-facts{grid-template-columns:repeat(2,1fr)}}
   @media (max-width:640px){.rc-facts{grid-template-columns:1fr}}
   .tg.rc{background:var(--blue-soft);color:var(--blue)}
+  /* Knowledge Bowl */
+  .card-h.kb{background:linear-gradient(135deg,var(--green),#0f3a20)}
+  .kb-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+  .kf{background:var(--green-soft);border-radius:14px;padding:14px;text-align:center}
+  .kf .ic{font-size:24px}
+  .kf b{display:block;color:var(--green);font-size:16px;margin:4px 0 2px}
+  .kf span{display:block;font-size:13.5px}
+  .kf span.es{color:var(--muted);font-style:italic}
+  .kb-days{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 6px}
+  .kd{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+  .kd-h{background:var(--green);color:#fff;padding:10px 13px}
+  .kd-h .name{font-family:'Playfair Display',serif;font-size:18px;font-weight:800}
+  .kd-h .es{font-size:12.5px;opacity:.9}
+  .kd.wed .kd-h{background:var(--teal)}
+  .kd.sat .kd-h{background:var(--gold-ink)}
+  .ev{display:flex;gap:10px;padding:7px 12px;border-top:1px solid var(--line);font-size:13.5px}
+  .ev .t{flex:none;width:62px;color:var(--muted);font-variant-numeric:tabular-nums;font-weight:600}
+  .ev .w small{display:block;color:var(--muted);font-style:italic;font-size:12px}
+  .ev.hl{background:var(--gold-soft)} .ev.hl .w{font-weight:700;color:var(--gold-ink)}
+  @media (max-width:900px){.kb-facts,.kb-days{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:640px){.kb-facts,.kb-days{grid-template-columns:1fr}}
+  /* Days off */
+  .sd.off{border-top-color:var(--gold)} .sd.off .cy{background:var(--gold-ink)}
+  .tg.kb{background:var(--green-soft);color:var(--green)}
+  .tg.none{background:#f1f1f1;color:#555}
+  .day.off .day-head{background:linear-gradient(135deg,var(--gold-ink),#5d4a17)}
+  .offbox{padding:22px 14px;text-align:center;font-size:14px;color:var(--ink)}
+  .offbox .big{font-size:30px}
+  .offbox b{display:block;color:var(--gold-ink);font-size:15.5px;margin:6px 0 2px}
+  .offbox .es{color:var(--muted);font-style:italic}
+  .tbd{background:#fff7e0;border:2px dashed var(--gold);border-radius:14px;padding:18px 20px;text-align:center;font-size:15px}
+  .tbd b{color:var(--gold-ink)}
+  .tbd .es{color:var(--muted);font-style:italic;margin-top:6px}
+  .card-h.redh{background:linear-gradient(135deg,var(--red),#8c1c23)}
+  .callout.xmas{background:var(--red-soft);border-color:var(--red)} .callout.xmas h3,.callout.xmas .when{color:var(--red)}
+  .callouts.four{grid-template-columns:repeat(2,1fr)}
+  .rule{margin:0 0 20px;background:#fff;border:2px solid var(--red);border-radius:14px;padding:14px 18px;font-size:15.5px}
+  .rule b{color:var(--red)}
+  .rule .es{color:var(--muted);font-style:italic;margin-top:6px}
+  .callout .costume{margin-top:8px;background:#fff;border-radius:10px;padding:8px 12px;font-size:14px}
+  .linkbtn{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin:22px 0 4px;background:var(--gold-soft);border:2px solid var(--gold);border-radius:14px;padding:14px 18px}
+  .linkbtn p{margin:0;font-size:15px} .linkbtn p.es{color:var(--muted);font-style:italic;font-size:14px}
+  .linkbtn a{flex:none;background:var(--green);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:9px 18px;font-size:14.5px}
+  .linkbtn a:hover{background:var(--green-dark)}
 </style>
 </head>
 <body>
@@ -232,20 +276,20 @@
       <div class="sub">A weekly letter for High School teachers<i>Una carta semanal para docentes de High School</i></div>
     </div>
     <div class="mast-bar">
-      <span>Week of November 9–13, 2026</span>
-      <span>Semana del 9 al 13 de noviembre de 2026</span>
+      <span>Week of November 16–20, 2026</span>
+      <span>Semana del 16 al 20 de noviembre de 2026</span>
     </div>
   </header>
 
   <!-- CYCLE STRIP -->
   <div class="strip">
-    <div class="sd mon"><div class="dn">Mon · Lun</div><div class="dt">Nov 9</div><span class="cy">Day 3</span><div class="tags"><span class="tg photo">👣 Shadowing 10B</span></div></div>
-    <div class="sd tue"><div class="dn">Tue · Mar</div><div class="dt">Nov 10</div><span class="cy">Day 4</span><div class="tags"><span class="tg xmas">🎄 Rehearsal</span><span class="tg sport">🏃 Athletics 9–10</span></div></div>
-    <div class="sd wed"><div class="dn">Wed · Mié</div><div class="dt">Nov 11</div><span class="cy">Day 5</span><div class="tags"><span class="tg ccc">CCC</span><span class="tg async">12:50 dismissal</span><span class="tg rc">📧 Report cards sent</span></div></div>
-    <div class="sd thu"><div class="dn">Thu · Jue</div><div class="dt">Nov 12</div><span class="cy">Day 6</span><div class="tags"><span class="tg hr">🏫 Homeroom</span><span class="tg sport">🏃 Athletics 11–12</span><span class="tg async">🚌 9th field trip</span><span class="tg rc">📋 Report card conferences</span></div></div>
-    <div class="sd fri"><div class="dn">Fri · Vie</div><div class="dt">Nov 13</div><span class="cy">Day 1</span><div class="tags"><span class="tg xmas">🎄 Rehearsal</span></div></div>
+    <div class="sd mon"><div class="dn">Mon · Lun</div><div class="dt">Nov 16</div><span class="cy">Day 2</span><div class="tags"><span class="tg ccc">CCC</span></div></div>
+    <div class="sd tue"><div class="dn">Tue · Mar</div><div class="dt">Nov 17</div><span class="cy">Day 3</span><div class="tags"><span class="tg xmas">🎄 Rehearsal</span></div></div>
+    <div class="sd wed"><div class="dn">Wed · Mié</div><div class="dt">Nov 18</div><span class="cy">Day 4</span><div class="tags"><span class="tg async">12:50 dismissal</span><span class="tg kb">🧠 KB Opening 5:00 PM</span></div></div>
+    <div class="sd thu off"><div class="dn">Thu · Jue</div><div class="dt">Nov 19</div><span class="cy">Day 5</span><div class="tags"><span class="tg none">🚫 No classes</span><span class="tg async">💻 Asynchronous</span><span class="tg kb">🧠 Knowledge Bowl</span></div></div>
+    <div class="sd fri off"><div class="dn">Fri · Vie</div><div class="dt">Nov 20</div><span class="cy">Day 6</span><div class="tags"><span class="tg none">🚫 No classes</span><span class="tg async">💻 Asynchronous</span><span class="tg kb">🧠 Knowledge Bowl</span></div></div>
   </div>
-  <div class="strip-note">Day 5 is a CCC (Co-Curricular Clubs) day · El Día 5 es día de CCC (Clubes Co-Curriculares)</div>
+  <div class="strip-note">Days 2 and 5 are CCC (Co-Curricular Clubs) days · Los Días 2 y 5 son días de CCC (Clubes Co-Curriculares)</div>
 
   <!-- PRINCIPAL'S MESSAGE -->
   <section class="card msg">
@@ -254,145 +298,165 @@
       <div class="cols">
         <div class="col">
           <div class="lang">English</div>
-          <p>Dear colleagues, every morning, our students walk into our classrooms trusting that the hour ahead was thought through for them. Our planning is how we keep that trust. It isn't paperwork; it's the clearest sign that we, as educators, have our work organized and that we honor our commitment to every student in front of us.</p>
-          <p>When we plan with the end in mind, we start from what our students need to know and be able to do, and we build the path to get there. That commitment also reaches beyond this year. Next year, and the years after, we hand our students and our curriculum over to our colleagues. What we deliver to them should be complete, or, if it isn't yet, it should come with a clear plan to finish it well.</p>
-          <p>That's why our ongoing department conversations matter so much. They are where we align, share what's working, and make sure no student and no unit falls through the cracks between one grade and the next.</p>
-          <p>This week, 64% of our team has their plans uploaded. Let's reach 100% together. If something is getting in the way of your planning, my door is open, and we'll find a solution together.</p>
+          <p>Dear colleagues, this week DelCampo opens its doors to eight schools for the AASCA Knowledge Bowl. For four days, our campus becomes the home of curiosity, quick thinking, and healthy competition, and every visitor will see who we are through the way we receive them.</p>
+          <p>Hosting asks something different from all of us. On Thursday and Friday our students won't be on campus, but their learning doesn't stop: each of our classes will continue through asynchronous work. I'm counting on that work being clear, meaningful, and connected to what we're teaching, so that no learning time is lost.</p>
+          <p>A tournament like this only happens because many people make it happen. To every teacher serving on one of <a href="https://docs.google.com/spreadsheets/d/1aR27_dP1OYmlXe74llku24hhaWSg1g23/edit?usp=sharing&amp;ouid=102401955157208293516&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">our committees</a> and supporting the event during these days: thank you. Your time and effort over these days, many of them beyond your regular schedule, are what will make our guests feel welcome.</p>
+          <p>To our team and to Mrs. Ana Lucía García, who coaches them: we are proud of you. Let's make this a tournament our guests remember.</p>
           <p><i>With gratitude,</i></p>
         </div>
         <div class="col es">
           <div class="lang">Español</div>
-          <p>Estimados colegas: cada mañana, nuestros estudiantes entran a nuestras aulas confiando en que la hora que tienen por delante fue pensada para ellos. Nuestra planificación es la forma en que cumplimos esa confianza. No es un trámite; es la señal más clara de que, como educadores, tenemos nuestro trabajo organizado y honramos nuestro compromiso con cada estudiante que tenemos enfrente.</p>
-          <p>Cuando planificamos con el fin en mente, partimos de lo que nuestros estudiantes necesitan saber y ser capaces de hacer, y construimos el camino para lograrlo. Ese compromiso también va más allá de este año. El próximo año, y los siguientes, entregamos a nuestros estudiantes y nuestro currículo a nuestros colegas. Lo que les entreguemos debe estar completo o, si aún no lo está, debe venir acompañado de un plan claro para terminarlo bien.</p>
-          <p>Por eso nuestras conversaciones continuas por departamento son tan importantes. Es ahí donde nos alineamos, compartimos lo que funciona y nos aseguramos de que ningún estudiante ni ninguna unidad se quede en el camino entre un grado y el siguiente.</p>
-          <p>Esta semana, el 64 % de nuestro equipo tiene su planificación subida. Lleguemos juntos al 100 %. Si algo está dificultando tu planificación, mi puerta está abierta y encontraremos juntos una solución.</p>
+          <p>Estimados colegas: esta semana DelCampo abre sus puertas a ocho colegios para el AASCA Knowledge Bowl. Durante cuatro días, nuestro campus se convierte en casa de la curiosidad, la agilidad mental y la sana competencia, y cada visitante verá quiénes somos a través de la forma en que lo recibimos.</p>
+          <p>Ser sede nos pide algo distinto a todos. El jueves y el viernes nuestros estudiantes no estarán en el colegio, pero su aprendizaje no se detiene: cada una de nuestras clases continuará con trabajo asincrónico. Cuento con que ese trabajo sea claro, significativo y conectado con lo que estamos enseñando, para que no se pierda tiempo de aprendizaje.</p>
+          <p>Un torneo como este solo es posible gracias a muchas personas. A cada docente que forma parte de <a href="https://docs.google.com/spreadsheets/d/1aR27_dP1OYmlXe74llku24hhaWSg1g23/edit?usp=sharing&amp;ouid=102401955157208293516&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">nuestros comités</a> y que apoya el evento durante estos días: gracias. Su tiempo y su esfuerzo durante estos días, muchas veces más allá de su horario habitual, son los que harán que nuestros invitados se sientan bienvenidos.</p>
+          <p>A nuestro equipo y a Mrs. Ana Lucía García, su entrenadora: estamos orgullosos de ustedes. Hagamos de este un torneo que nuestros invitados recuerden.</p>
           <p><i>Con gratitud,</i></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- REPORT CARDS -->
+  <!-- KNOWLEDGE BOWL -->
   <section class="card">
-    <div class="card-h navy"><h2>📋 Report Card Conferences · Entrega de Calificaciones</h2><p>Thursday, November 12 · 3:30 – 6:30 PM · In our classrooms · Jueves 12 de noviembre · En nuestras aulas</p></div>
+    <div class="card-h kb"><h2>🧠 AASCA Knowledge Bowl 2026 · We Are the Hosts</h2><p>Wednesday, November 18 – Saturday, November 21 · Eight schools at DelCampo · Del miércoles 18 al sábado 21 de noviembre · Ocho colegios en DelCampo</p></div>
     <div class="card-b">
-      <div class="rc-facts">
-        <div class="rf"><div class="ic">📧</div><b>Wed, Nov 11 · 8:00 AM</b><span>Report cards emailed to families</span><span class="es">Boletas enviadas por correo a las familias</span></div>
-        <div class="rf"><div class="ic">🗓️</div><b>Thu, Nov 12 · 3:30–6:30 PM</b><span>High School conferences</span><span class="es">Entrega de High School</span></div>
-        <div class="rf"><div class="ic">🏫</div><b>In classrooms</b><span>Each teacher in their room</span><span class="es">Cada docente en su aula</span></div>
-        <div class="rf"><div class="ic">👔</div><b>Dress sharp</b><span>Formal, professional attire</span><span class="es">Vestimenta formal y profesional</span></div>
+      <div class="kb-facts">
+        <div class="kf"><div class="ic">🏫</div><b>DelCampo hosts</b><span>Eight AASCA schools on our campus</span><span class="es">Ocho colegios AASCA en nuestro campus</span></div>
+        <div class="kf"><div class="ic">🚫</div><b>Thu 19 &amp; Fri 20</b><span>No classes for MS and HS</span><span class="es">Sin clases para MS y HS</span></div>
+        <div class="kf"><div class="ic">🏠</div><b>Students at home</b><span>Not on campus either day</span><span class="es">No vienen al colegio esos días</span></div>
+        <div class="kf"><div class="ic">💻</div><b>Asynchronous work</b><span>Learning continues from home</span><span class="es">El aprendizaje continúa desde casa</span></div>
       </div>
       <div class="cols">
         <div class="col">
           <div class="lang">English</div>
-          <p>As we mentioned before, and following the organization planned by the Leadership Team, our <b>report card conferences are this Thursday</b>, from <b>3:30 to 6:30 PM</b>, in our classrooms.</p>
-          <p>Report cards will be <b>emailed to families on Wednesday at 8:00 AM</b>, so parents can review them before meeting with us. Each family should receive a <b>10-minute one-on-one conversation</b>, with priority given to <b>new families and students at academic risk</b>.</p>
-          <p>Please come <b>very well dressed</b>. This is one of the most important moments we share with our families, and how we present ourselves matters.</p>
-          <p style="font-size:14.5px;color:var(--muted)">Looking ahead: progress reports will be shared on <b>November 25</b>.</p>
+          <p>This week we are <b>hosting the AASCA Knowledge Bowl</b>. Because our campus will be fully dedicated to the tournament, <b>there are no classes for Middle School and High School on Thursday, November 19, and Friday, November 20</b>.</p>
+          <p>Students <b>will not come to school</b> on those days. Instead, they will complete <b>asynchronous activities</b>; the plan for those activities is coming shortly (see the section below).</p>
+          <p>Wednesday is a regular short day: students are dismissed at <b>12:50 PM</b>, and the tournament opens that afternoon.</p>
         </div>
         <div class="col es">
           <div class="lang">Español</div>
-          <p>Como ya lo habíamos mencionado, y de acuerdo con la organización planeada por el Leadership Team, recuerden que <b>la entrega de calificaciones es este jueves</b>, de <b>3:30 a 6:30 p. m.</b>, en nuestras aulas.</p>
-          <p>Las boletas se <b>enviarán por correo a las familias el miércoles a las 8:00 a. m.</b>, para que los padres puedan revisarlas antes de reunirse con nosotros. Cada familia debe recibir una <b>conversación individual de 10 minutos</b>, dando prioridad a las <b>familias nuevas y a los estudiantes en riesgo académico</b>.</p>
-          <p>Les pedimos venir <b>muy bien vestidos</b>. Este es uno de los momentos más importantes que compartimos con nuestras familias, y nuestra presentación importa.</p>
-          <p style="font-size:14.5px;color:var(--muted)">Para tener en cuenta: los reportes de progreso se compartirán el <b>25 de noviembre</b>.</p>
+          <p>Esta semana somos <b>sede del AASCA Knowledge Bowl</b>. Como nuestro campus estará dedicado por completo al torneo, <b>no hay clases para Middle School ni High School el jueves 19 y el viernes 20 de noviembre</b>.</p>
+          <p>Los estudiantes <b>no vendrán al colegio</b> esos días. En su lugar, realizarán <b>actividades asincrónicas</b>; el plan de esas actividades se compartirá en breve (ver la sección siguiente).</p>
+          <p>El miércoles es un día corto normal: los estudiantes salen a las <b>12:50 p. m.</b>, y el torneo se inaugura esa tarde.</p>
         </div>
       </div>
+
+      <div class="kb-days">
+        <div class="kd wed">
+          <div class="kd-h"><div class="name">Wednesday 18</div><div class="es">Miércoles 18</div></div>
+          <div class="ev"><span class="t">4:00 PM</span><span class="w">Icebreaker activities<small>Actividades de integración</small></span></div>
+          <div class="ev"><span class="t">4:00 PM</span><span class="w">Coaches' meeting<small>Reunión de entrenadores</small></span></div>
+          <div class="ev hl"><span class="t">5:00 PM</span><span class="w">Opening Ceremonies<small>Ceremonia de inauguración</small></span></div>
+          <div class="ev"><span class="t">6:00 PM</span><span class="w">Snack<small>Merienda</small></span></div>
+        </div>
+        <div class="kd">
+          <div class="kd-h"><div class="name">Thursday 19</div><div class="es">Jueves 19</div></div>
+          <div class="ev"><span class="t">7:30 AM</span><span class="w">Arrival at DelCampo<small>Llegada a DelCampo</small></span></div>
+          <div class="ev hl"><span class="t">8:00 AM</span><span class="w">Games begin<small>Inician los juegos</small></span></div>
+          <div class="ev"><span class="t">12:30 PM</span><span class="w">Lunch for teams &amp; coaches<small>Almuerzo para equipos y entrenadores</small></span></div>
+          <div class="ev"><span class="t">1:30 PM</span><span class="w">Games continue<small>Continúan los juegos</small></span></div>
+          <div class="ev"><span class="t">3:00 PM</span><span class="w">Games end<small>Fin de los juegos</small></span></div>
+        </div>
+        <div class="kd">
+          <div class="kd-h"><div class="name">Friday 20</div><div class="es">Viernes 20</div></div>
+          <div class="ev"><span class="t">7:30 AM</span><span class="w">Arrival at DelCampo<small>Llegada a DelCampo</small></span></div>
+          <div class="ev"><span class="t">8:00 AM</span><span class="w">Games begin<small>Inician los juegos</small></span></div>
+          <div class="ev"><span class="t">11:00 AM</span><span class="w">Lunch for teams &amp; coaches<small>Almuerzo para equipos y entrenadores</small></span></div>
+          <div class="ev hl"><span class="t">1:00 PM</span><span class="w">Semifinals<small>Semifinales</small></span></div>
+          <div class="ev"><span class="t">2:30 PM</span><span class="w">Games end<small>Fin de los juegos</small></span></div>
+        </div>
+        <div class="kd sat">
+          <div class="kd-h"><div class="name">Saturday 21</div><div class="es">Sábado 21</div></div>
+          <div class="ev"><span class="t">7:30 AM</span><span class="w">Arrival at DelCampo<small>Llegada a DelCampo</small></span></div>
+          <div class="ev"><span class="t">8:00 AM</span><span class="w">3rd place games<small>Juegos por el 3.er lugar</small></span></div>
+          <div class="ev hl"><span class="t">9:30 AM</span><span class="w">Junior Varsity Final<small>Final Junior Varsity</small></span></div>
+          <div class="ev hl"><span class="t">11:00 AM</span><span class="w">Varsity Finals<small>Finales Varsity</small></span></div>
+          <div class="ev"><span class="t">12:30 PM</span><span class="w">Lunch for teams &amp; coaches<small>Almuerzo para equipos y entrenadores</small></span></div>
+          <div class="ev"><span class="t">1:00 PM</span><span class="w">Closing Ceremony<small>Ceremonia de clausura</small></span></div>
+        </div>
+      </div>
+      <div class="linkbtn">
+        <div><p><b>👥 Committee assignments:</b> check your committee, where you need to be, and at what time.</p><p class="es">Asignación de comités: revisa tu comité, dónde debes estar y a qué hora.</p></div>
+        <a href="https://docs.google.com/spreadsheets/d/1aR27_dP1OYmlXe74llku24hhaWSg1g23/edit?usp=sharing&amp;ouid=102401955157208293516&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Open committees chart · Ver comités →</a>
+      </div>
+      <p class="bars-note">Official AASCA Knowledge Bowl 2026 schedule of events · Calendario oficial de eventos del AASCA Knowledge Bowl 2026<br>🍽️ Tournament lunch is for participating teams and coaches only. Please bring or buy your own lunch · El almuerzo del torneo es solo para los equipos y entrenadores participantes. Por favor, traigan o compren su propio almuerzo.</p>
     </div>
   </section>
 
-  <!-- THE SHADOWING -->
+  <!-- ASYNCHRONOUS ACTIVITIES -->
   <section class="card">
-    <div class="card-h purple"><h2>👣 The Shadowing · El Acompañamiento</h2><p>Monday, November 9 · A full day in 10B · Lunes 9 de noviembre · Un día completo en 10B</p></div>
+    <div class="card-h tealh"><h2>💻 Asynchronous Days · Días Asincrónicos</h2><p>Thursday 19 &amp; Friday 20 · Days 5 and 6 · Jueves 19 y viernes 20 · Días 5 y 6</p></div>
     <div class="card-b">
-      <div class="shadow-facts">
-        <div class="sf"><div class="ic">📅</div><b>Mon, Nov 9 · Day 3</b><span>The whole school day</span><span class="es">Todo el día escolar</span></div>
-        <div class="sf"><div class="ic">🎒</div><b>Section 10B</b><span>Every class, every transition</span><span class="es">Cada clase, cada transición</span></div>
-        <div class="sf"><div class="ic">🔍</div><b>Agenda cancelled</b><span>The shadowing comes first</span><span class="es">Agenda cancelada: el acompañamiento es prioridad</span></div>
+      <div class="cols" style="margin-bottom:6px">
+        <div class="col"><p>On <b>Thursday 19 (Day 5)</b> and <b>Friday 20 (Day 6)</b>, students stay home. Each section receives work from <b>only 3 of the classes it has that day</b>, so the load stays manageable and balanced between core subjects and electives. <b>If your class isn't listed for a section on a given day, please don't send work;</b> instead, write <b>“No class – Knowledge Bowl”</b> in your Chalk planning for that day. It counts as planned.</p>
+        <p><b>Activities must be review only: no new topics.</b> Keep them short: students should finish in <b>30 minutes at most</b>. Post the activity in Canvas and link it in your Chalk planning.</p></div>
+        <div class="col es"><p>El <b>jueves 19 (Día 5)</b> y el <b>viernes 20 (Día 6)</b>, los estudiantes se quedan en casa. Cada sección recibe trabajo de <b>solo 3 de las clases que tiene ese día</b>, para que la carga sea manejable y equilibrada entre materias básicas y electivas. <b>Si tu clase no aparece para una sección en un día determinado, por favor no envíes trabajo;</b> en su lugar, escribe <b>«Sin clase – Knowledge Bowl»</b> en tu planificación de Chalk de ese día. Cuenta como planificado.</p>
+        <p><b>Las actividades deben ser solo de repaso: nada de temas nuevos.</b> Que sean cortas: los estudiantes deben terminarlas en <b>máximo 30 minutos</b>. Publica la actividad en Canvas y enlázala en tu planificación de Chalk.</p></div>
       </div>
-      <div class="cols">
-        <div class="col">
-          <div class="lang">English</div>
-          <p>On Monday, I will spend the <b>entire day with 10B</b>, following their schedule from first period to dismissal. All of our principals are doing this practice, so we can gather real data on <b>schedules, student load, and how students move</b> through their day.</p>
-          <p>I want to see the school through our students' eyes: how much they carry, how their energy shifts from class to class, and how the transitions feel.</p>
-          <p><b>Because the shadowing is a priority, everything on my agenda for Monday has been cancelled.</b> I won't be available for meetings or office visits that day; if something comes up, please reach out on Tuesday.</p>
-          <p>The students don't know yet, so we'll see how it goes. Once I have my reflections, I'll share them with all of you.</p>
-        </div>
-        <div class="col es">
-          <div class="lang">Español</div>
-          <p>El lunes pasaré <b>todo el día con 10B</b>, siguiendo su horario desde el primer período hasta la salida. Todos nuestros directores están realizando esta práctica, para recoger datos reales sobre <b>horarios, carga estudiantil y desplazamientos</b> a lo largo del día.</p>
-          <p>Quiero ver la escuela con los ojos de nuestros estudiantes: cuánto cargan, cómo cambia su energía de una clase a otra y cómo se viven las transiciones.</p>
-          <p><b>Como el acompañamiento es una prioridad, toda mi agenda del lunes ha sido cancelada.</b> No estaré disponible para reuniones ni visitas a la oficina ese día; si surge algo, por favor búsquenme el martes.</p>
-          <p>Los estudiantes aún no lo saben, así que veremos cómo resulta. Cuando tenga mis reflexiones, las compartiré con todos ustedes.</p>
-        </div>
-      </div>
-      <div class="assure"><b>👩‍🏫 To 10B's teachers:</b> this is <b>never</b> about evaluating you. Please teach your class exactly as you normally would. I'm there as a student, not as an observer of your teaching.
-        <div class="es"><b>A los docentes de 10B:</b> esto <b>nunca</b> se trata de evaluarlos. Por favor, den su clase con toda naturalidad, como lo hacen siempre. Estaré ahí como un estudiante más, no como observador de su enseñanza.</div>
-      </div>
+      <table class="auth">
+        <caption>Classes authorized to send asynchronous work · Clases autorizadas para enviar trabajo asincrónico</caption>
+        <thead><tr><th>Section</th><th>Thu 19 · Day 5</th><th>Fri 20 · Day 6</th></tr></thead>
+        <tbody>
+<tr><td>9A</td><td><span class=pill>Pre-AP English</span><span class=pill>Pre-AP Algebra</span><span class=pill>Civics</span></td><td><span class=pill>Global History</span><span class=pill>Spanish</span><span class=pill>ICT</span></td></tr>
+<tr><td>9B</td><td><span class=pill>Global History</span><span class=pill>Pre-AP Chemistry</span><span class=pill>Pre-AP Algebra</span></td><td><span class=pill>Civics</span><span class=pill>Pre-AP English</span><span class=pill>Spanish</span></td></tr>
+<tr><td>9C</td><td><span class=pill>Pre-AP Algebra</span><span class=pill>Spanish</span><span class=pill>Pre-AP Chemistry</span></td><td><span class=pill>Artistic Education</span><span class=pill>Pre-AP English</span><span class=pill>Global History</span></td></tr>
+<tr><td>10A</td><td><span class=pill>AP Spanish</span><span class=pill>AP Psychology</span><span class=pill>Pre-AP Geometry and Statistics</span></td><td><span class=pill>Pre-AP Biology</span><span class=pill>AP US History</span><span class=pill>AP English</span></td></tr>
+<tr><td>10B</td><td><span class=pill>AP English</span><span class=pill>AP Spanish</span><span class=pill>AP Psychology</span></td><td><span class=pill>Pre-AP Biology</span><span class=pill>Pre-AP Geometry and Statistics</span><span class=pill>Honduran History</span></td></tr>
+<tr><td>10C</td><td><span class=pill>Pre-AP Geometry and Statistics</span><span class=pill>AP Psychology</span><span class=pill>AP English</span></td><td><span class=pill>Pre-AP Biology</span><span class=pill>Honduran History</span><span class=pill>AP Spanish</span></td></tr>
+<tr><td>11A</td><td><span class=pill>AP Physics</span><span class=pill>Algebra II</span><span class=pill>IT (AP CSP)</span></td><td><span class=pill>English</span><span class=pill>Accounting &amp; Entrepreneurship</span><span class=pill>Chemistry</span></td></tr>
+<tr><td>11B</td><td><span class=pill>AP Physics</span><span class=pill>Algebra II</span><span class=pill>AP Spanish</span></td><td><span class=pill>English</span><span class=pill>Chemistry</span><span class=pill>Accounting &amp; Entrepreneurship</span></td></tr>
+<tr><td>11C</td><td><span class=pill>AP Physics</span><span class=pill>Algebra II</span><span class=pill>IT (AP CSP)</span></td><td><span class=pill>English</span><span class=pill>Chemistry</span><span class=pill>AP Spanish</span></td></tr>
+<tr><td>12A</td><td><span class=pill>AP Cybersecurity</span><span class=pill>Seminario (Spanish)</span><span class=pill>English</span></td><td><span class=pill>Pre-Calculus</span><span class=pill>Physics</span><span class=pill>Economics</span></td></tr>
+<tr><td>12B</td><td><span class=pill>Chemistry</span><span class=pill>Seminario (Spanish)</span><span class=pill>English</span></td><td><span class=pill>Pre-Calculus</span><span class=pill>Physics</span><span class=pill>AP Cybersecurity</span></td></tr>
+<tr><td>12C</td><td><span class=pill>Economics</span><span class=pill>Seminario (Spanish)</span><span class=pill>English</span></td><td><span class=pill>Pre-Calculus</span><span class=pill>Physics</span><span class=pill>Chemistry</span></td></tr>
+        </tbody>
+      </table>
+      <p class="bars-note" style="margin-top:12px">Grades 11–12: Physics, Chemistry, English and math are split into groups; each teacher sends work to their own group · En 11.º y 12.º, Física, Química, Inglés y Matemáticas están divididas en grupos; cada docente envía trabajo a su propio grupo</p>
     </div>
   </section>
 
-  <!-- ATHLETICS -->
+  <!-- CHRISTMAS PROGRAM -->
   <section class="card">
-    <div class="card-h goldh"><h2>🏃 Athletics at the University · Atletismo en la Universidad</h2><p>100 of our students, selected to represent DelCampo · 100 de nuestros estudiantes, seleccionados para representar a DelCampo</p></div>
+    <div class="card-h redh"><h2>🎄 Christmas Program · Programa Navideño</h2><p>Magical Enchanted Christmas Forest · For homeroom teachers · Para docentes de homeroom</p></div>
     <div class="card-b">
-      <div class="timeline" style="color:var(--gold-ink)">
-        <span class="st">Regular arrival <i>· Llegada normal</i></span><span class="ar">→</span>
-        <span class="st">7:30 Cafeteria <i>· Cafetería</i></span><span class="ar">→</span>
-        <span class="st">~8:00 Departure <i>· Salida</i></span><span class="ar">→</span>
-        <span class="st">~11:00 Back at school <i>· Regreso al colegio</i></span>
+      <div class="rule"><b>⚠️ Acts and costumes are final and cannot be changed.</b> Each grade's performance and costume have already been selected, and rehearsals start now based on them. Please share this with your students during Tuesday's Christmas Rehearsal: this is already a rule.
+        <div class="es"><b>Los números y vestuarios son definitivos y no se pueden cambiar.</b> La presentación y el vestuario de cada grado ya fueron seleccionados, y los ensayos comienzan ya con base en ellos. Por favor, compártanlo con sus estudiantes durante el Ensayo Navideño del martes: ya es una regla.</div>
       </div>
-      <p class="bars-note" style="margin:6px 0 20px">Same plan both days · El mismo plan ambos días</p>
-      <div class="callouts">
-        <div class="callout sport">
-          <h3>9th &amp; 10th Grade</h3>
-          <div class="when">Tue Nov 10 · Day 4 · Martes · 9.º y 10.º grado</div>
-          <p><b>50 selected students</b> from 9th and 10th grade will attend an athletics event at the university.</p>
-          <p class="es">50 estudiantes seleccionados de noveno y décimo grado asistirán a un evento de atletismo en la universidad.</p>
-          <div class="crew">👥 <b>Chaperones:</b> Mrs. María Fernanda Fuentes, Mr. Johnny Reyes, Mr. Juan Sebastián Laínez<br><i>Acompañantes</i></div>
+      <div class="callouts four">
+        <div class="callout xmas">
+          <h3>10th Grade · 10.º grado</h3>
+          <div class="when">Act #3 of 15 · Max 5 min · Número 3 de 15 · Máx. 5 min</div>
+          <p><b>Jingle Bells</b></p>
+          <p>Dramatization of scenes from <i>How the Grinch Stole Christmas</i>, featuring only the Whos, followed by a dance. Everyone dances.</p>
+          <p class="es">Dramatización de fragmentos de <i>El Grinch</i> donde solo salen «los Quién», seguida de un baile. Todos bailan.</p>
+          <div class="costume">👗 <b>Costume:</b> Whoville residents · <i>Vestuario: Villa de los Quién</i></div>
         </div>
-        <div class="callout sport">
-          <h3>11th &amp; 12th Grade</h3>
-          <div class="when">Thu Nov 12 · Day 6 · Jueves · 11.º y 12.º grado</div>
-          <p><b>50 selected students</b> from 11th and 12th grade will attend the same athletics event.</p>
-          <p class="es">50 estudiantes seleccionados de undécimo y duodécimo grado asistirán al mismo evento de atletismo.</p>
-          <div class="crew">👥 <b>Chaperones:</b> Mrs. María Fernanda Fuentes, Mr. Johnny Reyes, Mr. Nicolás Rivas<br><i>Acompañantes</i></div>
+        <div class="callout xmas">
+          <h3>9th Grade · 9.º grado</h3>
+          <div class="when">Act #7 of 15 · Max 5 min · Número 7 de 15 · Máx. 5 min</div>
+          <p><b>Dance and acrostic</b> · three selected songs</p>
+          <p>A dance and an acrostic. Everyone dances.</p>
+          <p class="es">Baile y acróstico. Todos bailan.</p>
+          <div class="costume">👗 <b>Costume:</b> reindeer · <i>Vestuario: renos</i></div>
         </div>
-      </div>
-      <div class="cols" style="margin-top:20px">
-        <div class="col"><p>Students leave around <b>8:00</b> and are back at school around <b>11:00</b>, so expect smaller groups in the <b>first periods</b> of the day. Please help the students who attend catch up on what they missed. <b>We'll keep you posted</b> on any changes.</p></div>
-        <div class="col es"><p>Los estudiantes salen alrededor de las <b>8:00</b> y regresan al colegio alrededor de las <b>11:00</b>, así que tendrán grupos más pequeños en los <b>primeros períodos</b> del día. Por favor, apoyen a quienes asistan para que se pongan al día. <b>Los mantendremos informados</b> de cualquier cambio.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FIELD TRIP -->
-  <section class="card">
-    <div class="card-h tealh"><h2>🚌 9th Grade Field Trip to Ojojona · Salida de Campo de 9.º a Ojojona</h2><p>Thursday, November 12 · Day 6 · Jueves 12 de noviembre · Día 6</p></div>
-    <div class="card-b">
-      <div class="timeline" style="color:var(--teal)">
-        <span class="st">Regular arrival <i>· Llegada normal</i></span><span class="ar">→</span>
-        <span class="st">7:30 Cafeteria <i>· Cafetería</i></span><span class="ar">→</span>
-        <span class="st">~8:00 Departure <i>· Salida</i></span><span class="ar">→</span>
-        <span class="st">End of day: return <i>· Fin del día: regreso</i></span>
-      </div>
-      <p class="bars-note" style="margin:6px 0 20px">No classes for 9th graders on the trip · Sin clases para los estudiantes de 9.º que van a la salida</p>
-      <div class="callouts">
-        <div class="callout trip">
-          <h3>Students on the trip</h3>
-          <div class="when">Led by Mrs. Daysi Hernández · Dirigida por Mrs. Daysi Hernández</div>
-          <p>Our 9th graders arrive at the regular time, go to the <b>cafeteria at 7:30</b> for something to eat, and leave for <b>Ojojona around 8:00</b>. They return at the end of the day, so <b>9th grade has no classes</b> that day. We're hoping for full attendance and will let you know how many students are going.</p>
-          <p class="es">Nuestros estudiantes de noveno llegan a la hora habitual, pasan a la <b>cafetería a las 7:30</b> para comer algo y salen hacia <b>Ojojona alrededor de las 8:00</b>. Regresan al final del día, por lo que <b>noveno no tiene clases</b> ese día. Esperamos la máxima asistencia y les informaremos cuántos estudiantes irán.</p>
-          <div class="crew">👥 <b>Chaperones:</b> Mrs. Daysi Hernández, Mrs. Allison Arguijo, and selected teachers (to be confirmed)<br><i>Acompañantes: Mrs. Daysi Hernández, Mrs. Allison Arguijo y docentes seleccionados (por confirmar)</i></div>
+        <div class="callout xmas">
+          <h3>11th Grade · 11.º grado</h3>
+          <div class="when">Act #11 of 15 · Max 5 min · Número 11 de 15 · Máx. 5 min</div>
+          <p><b>The Toy Factory</b> · Mix: Rockin' Around the Christmas Tree, Let It Snow, ABC</p>
+          <p>Theater with dance: a toy factory where the elves build the gifts.</p>
+          <p class="es">Teatro con baile: una «Fábrica de juguetes» donde los elfos construyen los regalos.</p>
+          <div class="costume">👗 <b>Costume:</b> elves · <i>Vestuario: elfos</i></div>
         </div>
-        <div class="callout trip2">
-          <h3>Students who stay</h3>
-          <div class="when">On campus · En el colegio</div>
-          <p>9th graders who don't go on the trip stay at school and attend class. We'll design a <b>special schedule</b> for them and share it with you before Thursday.</p>
-          <p class="es">Los estudiantes de noveno que no vayan a la salida se quedan en el colegio y asisten a clases. Diseñaremos un <b>horario especial</b> para ellos y se lo compartiremos antes del jueves.</p>
+        <div class="callout xmas">
+          <h3>12th Grade · 12.º grado</h3>
+          <div class="when">Act #15 of 15 · Max 5 min · Número 15 de 15 · Máx. 5 min</div>
+          <p><b>Christmas medley</b> · Jingle Bell Rock, I Saw Mommy Kissing Santa Claus, Sleigh Ride, Rudolph the Red-Nosed Reindeer, Santa Baby</p>
+          <p>Dance.</p>
+          <p class="es">Baile.</p>
+          <div class="costume">👗 <b>Costume:</b> Santa, Mrs. Claus, and reindeer · <i>Vestuario: Santa Claus, señora Claus y renos</i></div>
         </div>
       </div>
-      <p class="bars-note" style="margin-top:16px"><b>We'll keep you posted</b> on numbers and chaperones · <b>Los mantendremos informados</b> sobre cantidades y acompañantes</p>
+      <p class="bars-note" style="margin-top:14px">Shared program with Preschool · 15 acts in total · Programa compartido con Preschool · 15 números en total</p>
     </div>
   </section>
 
@@ -401,44 +465,49 @@
     <div class="card-h"><h2>📋 Planning Check · Revisión de Planificación</h2><p>Classes planned and uploaded in PowerSchool Chalk · Clases planificadas y subidas en PowerSchool Chalk</p></div>
     <div class="card-b">
       <div class="plan-stats">
-        <div class="ps big"><b>64%</b><span>This week<br><i>Esta semana</i></span></div>
-        <div class="ps"><b>11 / 17</b><span>Teachers ready<br><i>Docentes al día</i></span></div>
-        <div class="ps"><b>6</b><span>Still to upload<br><i>Pendientes de subir</i></span></div>
+        <div class="ps big"><b>47%</b><span>Full week planned<br><i>Semana completa planificada</i></span></div>
+        <div class="ps"><b>8 / 17</b><span>Teachers ready through Friday<br><i>Docentes al día hasta el viernes</i></span></div>
+        <div class="ps"><b>9</b><span>Still to upload<br><i>Pendientes de subir</i></span></div>
         <div class="ps goal"><b>17 / 17</b><span>Our goal<br><i>Nuestra meta</i></span></div>
       </div>
-
       <div class="bars">
-        <div class="bar"><span class="bl">Mon–Wed Nov 2–4</span><div class="bt"><div class="bf" style="width:76%"></div></div><span class="bv">76%</span></div>
-        <div class="bar"><span class="bl">Thu Nov 5</span><div class="bt"><div class="bf" style="width:70%"></div></div><span class="bv">70%</span></div>
-        <div class="bar"><span class="bl">Fri Nov 6</span><div class="bt"><div class="bf low" style="width:64%"></div></div><span class="bv">64%</span></div>
-        <div class="bar"><span class="bl">Nov 9–13</span><div class="bt"><div class="bf low" style="width:64%"></div></div><span class="bv">64%</span></div>
+        <div class="bar"><span class="bl">Last week · Nov 9–13</span><div class="bt"><div class="bf" style="width:88%"></div></div><span class="bv">88%</span></div>
+        <div class="bar"><span class="bl">Mon Nov 16</span><div class="bt"><div class="bf" style="width:88%"></div></div><span class="bv">88%</span></div>
+        <div class="bar"><span class="bl">Tue Nov 17</span><div class="bt"><div class="bf" style="width:76%"></div></div><span class="bv">76%</span></div>
+        <div class="bar"><span class="bl">Wed Nov 18</span><div class="bt"><div class="bf" style="width:70%"></div></div><span class="bv">70%</span></div>
+        <div class="bar"><span class="bl">Thu Nov 19 · async</span><div class="bt"><div class="bf low" style="width:47%"></div></div><span class="bv">47%</span></div>
+        <div class="bar"><span class="bl">Fri Nov 20 · async</span><div class="bt"><div class="bf low" style="width:47%"></div></div><span class="bv">47%</span></div>
+        <div class="bar"><span class="bl">Next Mon · Nov 23</span><div class="bt"><div class="bf low" style="width:29%"></div></div><span class="bv">29%</span></div>
         <div class="bar goal"><span class="bl">Goal · Meta</span><div class="bt"><div class="bf" style="width:100%"></div></div><span class="bv">100%</span></div>
       </div>
-      <p class="bars-note">Share of teachers with that day's classes planned and uploaded, as of Sunday, Nov 8 · Porcentaje de docentes con las clases del día planificadas y subidas, al domingo 8 de noviembre</p>
-
+      <p class="bars-note">Share of teachers with that day's classes planned and uploaded, as of Sunday, Nov 15 · Porcentaje de docentes con las clases del día planificadas y subidas, al domingo 15 de noviembre</p>
       <div class="cols" style="margin-top:22px">
-        <div class="col"><p><b>Planning is not optional; it's the foundation of every good class.</b> A complete plan tells us what students will learn, how we'll know they learned it, and lets a colleague step in when we can't be there. If you're catching up, please upload your plans <b>before Monday's first period</b>.</p></div>
-        <div class="col es"><p><b>La planificación no es opcional: es la base de toda buena clase.</b> Una planificación completa nos dice qué aprenderán los estudiantes, cómo sabremos que lo aprendieron y permite que un colega nos cubra cuando no podemos estar. Si te estás poniendo al día, sube tu planificación <b>antes del primer período del lunes</b>.</p></div>
+        <div class="col"><p><b>Thank you: last week we closed at 88%, up from 64%.</b> That is real progress, and it shows.</p>
+          <p><b>Planning is a must, including on asynchronous days.</b> Only 47% of us have Thursday and Friday ready. Your review activities for the authorized classes belong in Chalk, with the Canvas link, before Wednesday.</p>
+          <div class="assure"><b>📌 No activity for a class on Thursday or Friday?</b> Write <b>“No class – Knowledge Bowl”</b> in that day's Chalk planning. That note counts as your planning for that class.<div class="es"><b>¿Sin actividad para una clase el jueves o el viernes?</b> Escribe <b>«Sin clase – Knowledge Bowl»</b> en la planificación de Chalk de ese día. Esa nota cuenta como tu planificación para esa clase.</div></div>
+          <p style="margin-top:10px">And next week starts at 29%: let's get ahead.</p></div>
+        <div class="col es"><p><b>Gracias: la semana pasada cerramos en 88 %, después de estar en 64 %.</b> Es un avance real, y se nota.</p>
+          <p><b>La planificación es obligatoria, también en los días asincrónicos.</b> Solo el 47 % tiene listos el jueves y el viernes. Sus actividades de repaso para las clases autorizadas van en Chalk, con el enlace de Canvas, antes del miércoles. Para las clases sin actividad, escriban «Sin clase – Knowledge Bowl»: eso cuenta como planificación. Y la próxima semana arranca en 29 %: adelantémonos.</p></div>
       </div>
     </div>
   </section>
-  <!-- CLASS SCHEDULE -->
+
+  <!-- SCHEDULE -->
   <section class="card">
-    <div class="card-h"><h2>🕐 Class Schedule · Horario de Clases</h2><p>Christmas Rehearsal schedule continues · Continúa el horario con Ensayo Navideño</p></div>
+    <div class="card-h"><h2>🕐 Class Schedule · Horario de Clases</h2><p>A three-day week on campus · Una semana de tres días en el colegio</p></div>
     <div class="card-b">
       <div class="cols" style="margin-bottom:18px">
-        <div class="col"><p>As last week, <b>Tuesdays and Fridays follow Thursday's times</b>. The Homeroom slot becomes <b>Christmas Rehearsal</b> on those days. Thursday keeps Homeroom.</p></div>
-        <div class="col es"><p>Como la semana pasada, <b>los martes y viernes siguen el horario del jueves</b>. El espacio de Homeroom pasa a ser <b>Ensayo Navideño</b> esos días. El jueves mantiene Homeroom.</p></div>
+        <div class="col"><p><b>Tuesday follows Thursday's times</b>, with the Homeroom slot as <b>Christmas Rehearsal</b>. Wednesday is our short day. <b>Thursday and Friday have no classes</b>: students work asynchronously from home.</p></div>
+        <div class="col es"><p><b>El martes sigue el horario del jueves</b>, con el espacio de Homeroom como <b>Ensayo Navideño</b>. El miércoles es nuestro día corto. <b>El jueves y el viernes no hay clases</b>: los estudiantes trabajan de forma asincrónica desde casa.</p></div>
       </div>
       <div class="legend">
         <span class="chip snack">🍎 Snack / Merienda</span>
         <span class="chip lunch">🍽️ Lunch / Almuerzo</span>
-        <span class="chip hr">🏫 Homeroom</span>
         <span class="chip xmas">🎄 Christmas Rehearsal / Ensayo Navideño</span>
       </div>
       <div class="grid">
         <div class="day mon">
-          <div class="day-head"><div class="name">Monday</div><div class="es">Lunes</div><span class="tag">Regular</span></div>
+          <div class="day-head"><div class="name">Monday</div><div class="es">Lunes</div><span class="tag">Regular · CCC</span></div>
           <div class="row"><span class="p">Period 1</span><span class="t">7:25 – 8:25</span></div>
           <div class="row"><span class="p">Period 2</span><span class="t">8:30 – 9:30</span></div>
           <div class="row snack"><span class="p">Snack</span><span class="t">9:30 – 10:00</span></div>
@@ -461,7 +530,7 @@
           <div class="row"><span class="p">Period 6</span><span class="t">2:10 – 3:00</span></div>
         </div>
         <div class="day wed">
-          <div class="day-head"><div class="name">Wednesday</div><div class="es">Miércoles</div><span class="tag">CCC · 12:50 dismissal</span></div>
+          <div class="day-head"><div class="name">Wednesday</div><div class="es">Miércoles</div><span class="tag">12:50 dismissal</span></div>
           <div class="row"><span class="p">Period 1</span><span class="t">7:25 – 8:10</span></div>
           <div class="row"><span class="p">Period 2</span><span class="t">8:10 – 8:55</span></div>
           <div class="row"><span class="p">Period 3</span><span class="t">9:00 – 9:45</span></div>
@@ -471,29 +540,13 @@
           <div class="row"><span class="p">Period 6</span><span class="t">12:00 – 12:50</span></div>
           <div class="row out"><span class="p">Dismissal<small>Salida</small></span><span class="t">12:50</span></div>
         </div>
-        <div class="day thu">
-          <div class="day-head"><div class="name">Thursday</div><div class="es">Jueves</div><span class="tag">🏫 Homeroom</span></div>
-          <div class="row"><span class="p">Period 1</span><span class="t">7:25 – 8:15</span></div>
-          <div class="row"><span class="p">Period 2</span><span class="t">8:20 – 9:10</span></div>
-          <div class="row snack"><span class="p">Snack</span><span class="t">9:10 – 9:40</span></div>
-          <div class="row hr"><span class="p">Homeroom</span><span class="t">9:40 – 10:40</span></div>
-          <div class="row"><span class="p">Period 3</span><span class="t">10:45 – 11:35</span></div>
-          <div class="row"><span class="p">Period 4</span><span class="t">11:40 – 12:30</span></div>
-          <div class="row"><span class="p">Period 5</span><span class="t">12:30 – 1:20</span></div>
-          <div class="row lunch"><span class="p">Lunch</span><span class="t">1:20 – 2:05</span></div>
-          <div class="row"><span class="p">Period 6</span><span class="t">2:10 – 3:00</span></div>
+        <div class="day off">
+          <div class="day-head"><div class="name">Thursday</div><div class="es">Jueves</div><span class="tag">🧠 Knowledge Bowl</span></div>
+          <div class="offbox"><div class="big">💻</div><b>No classes</b>Asynchronous activities from home<div class="es">Sin clases · Actividades asincrónicas desde casa</div></div>
         </div>
-        <div class="day fri">
-          <div class="day-head"><div class="name">Friday</div><div class="es">Viernes</div><span class="tag">🎄 Rehearsal</span></div>
-          <div class="row"><span class="p">Period 1</span><span class="t">7:25 – 8:15</span></div>
-          <div class="row"><span class="p">Period 2</span><span class="t">8:20 – 9:10</span></div>
-          <div class="row snack"><span class="p">Snack</span><span class="t">9:10 – 9:40</span></div>
-          <div class="row xmas"><span class="p">Christmas Rehearsal<small>Ensayo Navideño</small></span><span class="t">9:40 – 10:40</span></div>
-          <div class="row"><span class="p">Period 3</span><span class="t">10:45 – 11:35</span></div>
-          <div class="row"><span class="p">Period 4</span><span class="t">11:40 – 12:30</span></div>
-          <div class="row"><span class="p">Period 5</span><span class="t">12:30 – 1:20</span></div>
-          <div class="row lunch"><span class="p">Lunch</span><span class="t">1:20 – 2:05</span></div>
-          <div class="row"><span class="p">Period 6</span><span class="t">2:10 – 3:00</span></div>
+        <div class="day off">
+          <div class="day-head"><div class="name">Friday</div><div class="es">Viernes</div><span class="tag">🧠 Knowledge Bowl</span></div>
+          <div class="offbox"><div class="big">💻</div><b>No classes</b>Asynchronous activities from home<div class="es">Sin clases · Actividades asincrónicas desde casa</div></div>
         </div>
       </div>
     </div>
@@ -504,13 +557,13 @@
     <div class="card-h"><h2>📌 Reminders · Recordatorios</h2></div>
     <div class="card-b">
       <div class="rem">
-        <div class="ri"><div class="d">EVERY<br>WEEK</div><div><p>Lesson planning uploaded to PowerSchool Chalk for every class.</p><p class="es">Planificación de cada clase subida a PowerSchool Chalk.</p></div></div>
-        <div class="ri"><div class="d">MON<br>Nov 9</div><div><p>Plans still pending? Upload them before first period. I'll be shadowing 10B all day, and my agenda is cancelled.</p><p class="es">¿Planificación pendiente? Súbela antes del primer período. Estaré acompañando a 10B todo el día y mi agenda está cancelada.</p></div></div>
-        <div class="ri"><div class="d">TUE<br>Nov 10</div><div><p>50 students from 9th–10th at the university athletics event (out ~8:00–11:00).</p><p class="es">50 estudiantes de 9.º y 10.º en el evento de atletismo (fuera de ~8:00 a 11:00).</p></div></div>
-        <div class="ri"><div class="d">TUE &amp;<br>FRI</div><div><p>Thursday times, with Christmas Rehearsal at 9:40–10:40.</p><p class="es">Horario del jueves, con Ensayo Navideño de 9:40 a 10:40.</p></div></div>
-        <div class="ri"><div class="d">WED<br>Nov 11</div><div><p>Day 5: CCC day. Students are dismissed at 12:50 pm. Report cards emailed to families at 8:00 AM.</p><p class="es">Día 5: día de CCC. Los estudiantes salen a las 12:50 p. m. Boletas enviadas a las familias a las 8:00 a. m.</p></div></div>
-        <div class="ri"><div class="d">THU<br>Nov 12</div><div><p>Homeroom at 9:40–10:40. 50 students from 11th–12th at the athletics event (~8:00–11:00). 9th grade field trip to Ojojona; special schedule for students who stay.</p><p class="es">Homeroom de 9:40 a 10:40. 50 estudiantes de 11.º y 12.º en el evento de atletismo (~8:00–11:00). Salida de campo de 9.º a Ojojona; horario especial para quienes se queden.</p></div></div>
-        <div class="ri"><div class="d">THU<br>3:30 PM</div><div><p><b>Report card conferences, 3:30–6:30 PM, in your classroom. Come very well dressed.</b></p><p class="es"><b>Entrega de calificaciones, 3:30–6:30 p. m., en su aula. Vengan muy bien vestidos.</b></p></div></div>
+        <div class="ri"><div class="d">EVERY<br>WEEK</div><div><p>Lesson planning uploaded to PowerSchool Chalk for every class, including asynchronous days.</p><p class="es">Planificación de cada clase subida a PowerSchool Chalk, incluidos los días asincrónicos.</p></div></div>
+        <div class="ri"><div class="d">MON<br>Nov 16</div><div><p>Day 2: CCC day. Regular schedule.</p><p class="es">Día 2: día de CCC. Horario regular.</p></div></div>
+        <div class="ri"><div class="d">TUE<br>Nov 17</div><div><p>Thursday times, with Christmas Rehearsal at 9:40–10:40. Homeroom teachers: acts and costumes are final; please share this with your students.</p><p class="es">Horario del jueves, con Ensayo Navideño de 9:40 a 10:40. Docentes de homeroom: los números y vestuarios son definitivos; por favor, compártanlo con sus estudiantes.</p></div></div>
+        <div class="ri"><div class="d">WED<br>Nov 18</div><div><p>Students are dismissed at 12:50 pm. Knowledge Bowl Opening Ceremonies at 5:00 PM.</p><p class="es">Los estudiantes salen a las 12:50 p. m. Ceremonia de inauguración del Knowledge Bowl a las 5:00 p. m.</p></div></div>
+        <div class="ri"><div class="d">THU &amp;<br>FRI</div><div><p><b>No classes for MS and HS. Students stay home: 3 short review activities per section per day (30 min max each), only from the authorized classes.</b></p><p class="es"><b>Sin clases para MS y HS. Los estudiantes se quedan en casa: 3 actividades cortas de repaso por sección por día (máximo 30 min cada una), solo de las clases autorizadas.</b></p></div></div>
+        <div class="ri"><div class="d">SAT<br>Nov 21</div><div><p>Knowledge Bowl finals and Closing Ceremony (1:00 PM).</p><p class="es">Finales del Knowledge Bowl y ceremonia de clausura (1:00 p. m.).</p></div></div>
+        <div class="ri"><div class="d">WED<br>Nov 25</div><div><p>Progress reports will be shared with families.</p><p class="es">Se compartirán los reportes de progreso con las familias.</p></div></div>
         <div class="ri"><div class="d">ONGOING</div><div><p>Keep your department conversations going: vertical alignment and curriculum progress.</p><p class="es">Mantengan las conversaciones por departamento: alineación vertical y avance del currículo.</p></div></div>
       </div>
     </div>
@@ -518,9 +571,9 @@
 
   <!-- CLOSING QUOTE -->
   <div class="quote">
-    <blockquote>“Plans are worthless, but planning is everything.”</blockquote>
-    <div class="es">«Los planes no valen nada, pero la planificación lo es todo».</div>
-    <cite>— Dwight D. Eisenhower</cite>
+    <blockquote>“Talent wins games, but teamwork and intelligence win championships.”</blockquote>
+    <div class="es">«El talento gana partidos, pero el trabajo en equipo y la inteligencia ganan campeonatos».</div>
+    <cite>— Michael Jordan</cite>
   </div>
   <!-- SIGNATURE -->
   <footer class="sig">
